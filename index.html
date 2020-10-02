@@ -1,114 +1,105 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <title>Interacto</title>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
-  <link href="css/up.min.css" rel="stylesheet">
-  <link href="css/font-awesome.css" rel="stylesheet">
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Interacto</title>
+    <link href="css/interacto.css" rel="stylesheet">
+    <!--  <link href="css/up.min.css" rel="stylesheet">-->
+    <!-- <link href="css/font-awesome.css" rel="stylesheet"> -->
+    <!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'> -->
 </head>
 
 <body>
-  <div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container">
-        <a class="brand" href="" style="font-size:22px;">Interacto</a>
-        <ul class="nav" style="font-size:18px;">
-		  <li><a href="https://github.com/interacto"><i class="icon-github"></i> Github</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
 
-  <div class="container">
-    <section class="content">
-
-<h3>Interacto</h3>
+<div>
+    <p>Interacto</p>
+    <ul>
+        <li><a href="https://github.com/interacto">Github</a></li>
+        <li><a href="https://www.npmjs.com/package/interacto">npmjs</a></li>
+        <li><a href="https://search.maven.org/search?q=interacto">Maven Central</a></li>
+    </ul>
+</div>
 
 <p>
-<b>Interacto</b> is a front-end framework for processing user interface events.
-With Interacto developers handle user interactions (DnD, drag-lock, double-click, etc.) instead of low-level UI events.
-Interacto allows developers to define how to turn a given user interaction into a (undoable) UI command.
+    <b>Interacto</b> is a front-end framework for processing user interface events.
+    With Interacto developers handle user interactions (DnD, drag-lock, double-click, etc.) instead of low-level UI
+    events.
+    Interacto allows developers to define how to turn a given user interaction into a (undoable) UI command.
 </p>
 
 <br/>
 
-<style type="text/css">
-#wrap {
-   width:100%;
-   margin:0 auto;
-}
-#left_col {
-   float:left;
-   width:55%;
-}
-#right_col {
-   float:right;
-   width:45%;
-}
-</style>
+<div id="selector">
+    <div id="lge" class="filter">
+        <button id="ts" class="btn active">TypeScript / Angular</button>
+        <button id="jfx" class="btn">JavaFX</button>
+    </div>
 
+    <div id="topic" class="filter">
+        <button id="all" class="btn active">Show all</button>
+        <button id="install" class="btn">Install</button>
+        <button id="interaction" class="btn">Interactions Examples</button>
+        <button id="cmd" class="btn">Commands Examples</button>
+        <button id="routine" class="btn">Routines Examples</button>
+        <button id="testing" class="btn">Front-end Testing</button>
+        <button id="irl" class="btn">IRL examples</button>
+    </div>
+</div>
 
-	<div id="wrap">
-		<div id="left_col">
-
-<h3>Howto</h3>
-
-<h4>JavaFX and Maven</h4>
-
+<div>
+    <div class="item jfx install">
+        <div class="box line-title">JavaFX and Maven</div>
+        <div class="left box">
 <pre><code>&lt;dependency&gt;
     &lt;groupId&gt;io.github.interacto&lt;/groupId&gt;
     &lt;artifactId&gt;interacto-java-api&lt;/artifactId&gt;
-    &lt;version&gt;${interacto.version}&lt;/version&gt;
+    &lt;version&gt;4.3.0&lt;/version&gt;
 &lt;/dependency&gt;
 &lt;dependency&gt;
     &lt;groupId&gt;io.github.interacto&lt;/groupId&gt;
     &lt;artifactId&gt;interacto-javafx&lt;/artifactId&gt;
-    &lt;version&gt;${interacto.version}&lt;/version&gt;
+    &lt;version&gt;4.3.0&lt;/version&gt;
 &lt;/dependency&gt;
 </code></pre>
+        </div>
 
-
-<p>To use development version, you have to use these Maven repositories:</p>
-
-<pre><code>&lt;repositories&gt;
-    &lt;repository&gt;
-        &lt;id&gt;mavenTriskellRelease&lt;/id&gt;
-        &lt;name&gt;http://maven.inria.fr-triskell-releases&lt;/name&gt;
-        &lt;url&gt;http://maven.inria.fr/artifactory/triskell-public-release&lt;/url&gt;
-        &lt;snapshots&gt;&lt;enabled&gt;false&lt;/enabled&gt;&lt;/snapshots&gt;
-        &lt;releases&gt;&lt;enabled&gt;true&lt;/enabled&gt;&lt;/releases&gt;
-    &lt;/repository&gt;
-    &lt;repository&gt;
-        &lt;id&gt;mavenInriaSnapshot&lt;/id&gt;
-        &lt;name&gt;http://maven.inria.fr-snapshots&lt;/name&gt;
-        &lt;url&gt;http://maven.inria.fr/artifactory/malai-public-snapshot&lt;/url&gt;
-        &lt;snapshots&gt;&lt;enabled&gt;true&lt;/enabled&gt;&lt;/snapshots&gt;
-        &lt;releases&gt;&lt;enabled&gt;false&lt;/enabled&gt;&lt;/releases&gt;
-    &lt;/repository&gt;
-    &lt;repository&gt;
-        &lt;id&gt;mavenInriaRelease&lt;/id&gt;
-        &lt;name&gt;http://maven.inria.fr-releases&lt;/name&gt;
-        &lt;url&gt;http://maven.inria.fr/artifactory/malai-public-release&lt;/url&gt;
-        &lt;snapshots&gt;&lt;enabled&gt;false&lt;/enabled&gt;&lt;/snapshots&gt;
-        &lt;releases&gt;&lt;enabled&gt;true&lt;/enabled&gt;&lt;/releases&gt;
-    &lt;/repository&gt;
-&lt;/repositories&gt;
+        <div class="center box">
+<pre><code>&lt;dependency&gt;
+    &lt;groupId&gt;io.github.interacto&lt;/groupId&gt;
+    &lt;artifactId&gt;interacto-javafx-test&lt;/artifactId&gt;
+    &lt;version&gt;4.3.0&lt;/version&gt;
+&lt;/dependency&gt;
 </code></pre>
+        </div>
 
-<h4>TypeScript</h4>
 
-TBD
 
-		</div>
-	</div>
-</section>
+
+        <div class="right box text">The library <code>interacto-javafx-test</code> is dedicated to JavaFX front-end
+            testing
+        </div>
+    </div>
+
+    <div class="item ts install">
+        <div class="line-title box">Angular and npm</div>
+        <div class="left box">
+<pre><code>npm install interacto</code></pre>
+        </div>
+
+<!--        <div class="center box">-->
+<!--        </div>-->
+
+<!--        <div class="right box text">-->
+<!--        </div>-->
+    </div>
+
 </div>
+
+
+
+<script src="js/interacto.js" type="text/javascript"></script>
 </body>
 </html>
 

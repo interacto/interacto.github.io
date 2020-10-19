@@ -181,16 +181,15 @@
         <div class="line-title box">How to start: an example</div>
         <div class="left box">
 <pre><code class="ts">ngAfterViewInit(): void {
-   buttonBinder()
-      .on(this.clearButton.nativeElement)
-      .toProduce(() => new ClearText(this.text))
-      .bind();
-}
-</code></pre>
+  buttonBinder()
+    .on(this.clearButton.nativeElement)
+    .toProduce(() => new ClearText(this.text))
+    .bind();
+}</code></pre>
             The binding operates on <code>clearButton</code> to produce a command <code>ClearText</code>.
             Bindings are defined in <code>ngAfterViewInit</code> of the component.
             <br/>
-            The binding manages the (un-)registration to the button, the creation of the command on each button click, and the move of the executed commands in a commands registry for undo/redo purposes.
+            The binding manages the (un-)registration with the button, the creation of the command on each button click, and the move of the executed commands in a commands registry for undo/redo purposes.
             <br/>
             <br/>
             A binder follows the builder pattern:
@@ -210,29 +209,29 @@
 
         <div class="right box">
 <pre><code class="ts">export class ClearText extends CommandImpl {
-    private memento: string;
+   private memento: string;
 
-    public constructor(private text: TextData) {}
+   public constructor(private text: TextData) {}
 
-    protected createMemento(): void {
-       this.memento = this.text.text;
-    }
+   protected createMemento(): void {
+     this.memento = this.text.text;
+   }
 
-    protected doCmdBody(): void {
-       this.text.text = '';
-    }
+   protected doCmdBody(): void {
+     this.text.text = '';
+   }
 
-    public undo(): void {
-       this.text.text = this.memento;
-    }
+   public undo(): void {
+     this.text.text = this.memento;
+   }
 
-    public redo(): void {
-       this.doCmdBody();
-    }
+   public redo(): void {
+     this.doCmdBody();
+   }
 
-    public getUndoName(): string {
-       return 'Clear text';
-    }
+   public getUndoName(): string {
+     return 'Clear text';
+   }
 }</code></pre>
             <code>ClearText</code> is an undoable command.
             The memento preserves the former content of text data.
@@ -247,9 +246,8 @@
         <div class="line-title box">How to select a user interaction</div>
         <div class="left box">
     <pre><code>clickBinder()
-    ...
-    .bind();
-    </code></pre>
+  ...
+  .bind();</code></pre>
             The user interaction selection is the goal of the first binding routine.
             For each user interaction provided by Interacto, a dedicated routine exists.
             Here <code>clickBinder()</code> for a <code>click</code> interaction.
@@ -274,30 +272,47 @@
         </div>
     </div>
 
+
     <div class="item ts start routine">
-        <div class="line-title box">How to register to widgets: the <code>on</code> and <code>onDynamic</code> routines</div>
+        <div class="line-title box">What are <code>i</code> and <code>c</code> in binding routines?</div>
+        <div class="left box">
+    <pre><code class="ts"></code></pre>
+
+        </div>
+
+        <div class="center box">
+
+        </div>
+
+        <div class="right box">
+
+        </div>
+    </div>
+
+
+
+
+    <div class="item ts start routine">
+        <div class="line-title box">How to register with widgets: the <code>on</code> and <code>onDynamic</code> routines</div>
         <div class="left box">
     <pre><code class="ts">buttonBinder()
-    .on(this.button.nativeElement)
-    ...
-    .bind();
-    </code></pre>
+  .on(this.button.nativeElement)
+  ...
+  .bind();</code></pre>
             The <code>on</code> routine identifies the widgets on which the user interaction will operate.
             <br/>
             A binding can operate on several widgets:
             <pre><code class="ts">buttonBinder()
-    .on(this.button1.nativeElement, this.button2.nativeElement)
-    ...
-    .bind();
-    </code></pre>
+  .on(this.button1.nativeElement, this.button2.nativeElement)
+  ...
+  .bind();</code></pre>
         </div>
 
         <div class="center box">
     <pre><code class="ts">longTouchBinder(2000)
-    .onDynamic(this.canvas.nativeElement)
-    ...
-    .bind();
-    </code></pre>
+  .onDynamic(this.canvas.nativeElement)
+  ...
+  .bind();</code></pre>
         The registration to widgets can be dynamic:<br/>
         a binding can listen for changes in the children list of a given widget.
         For each new child, the binding will operate on it.
@@ -306,30 +321,70 @@
 
         <div class="right box">
     <pre><code class="ts">dndBinder()
-    .on(this.canvas.nativeElement)
-    ...
-    .bind();
-    </code></pre>
+  .on(this.canvas.nativeElement)
+  ...
+  .bind();</code></pre>
             <b>Optimization</b>: a user interaction does not listen for all the UI events that concern it.
             <br/>
             For example a DnD is an assembly of press, drag, release, and key type events.
-            The user interaction registers to the strictly necessary events at a given instant:
+            The user interaction registers with the strictly necessary events at a given instant:
             a DnD starts with a pressure, so that the interaction listens for a pressure event.
-            The pressure must be followed by a serie of moves, so that the interaction listens for move events only, etc.
+            The pressure must be followed by moves, so that the interaction listens for move events only, etc.
         </div>
     </div>
+
+
+
+
+    <div class="item ts start routine">
+        <div class="line-title box">How to filter user interaction data: the <code>when</code> routine (and <code>strictStart</code>)</div>
+        <div class="left box">
+    <pre><code class="ts">longTouchBinder(2000)
+  .onDynamic(this.canvas.nativeElement)
+  .when(i => i.getSrcObject() instanceof SVGElement)
+  ...
+  .bind();</code></pre>
+            The <code>when</code> routine defines a contract that the user interaction data must fulfil to create/execute a command.
+        On this example <code>when</code> checks that the interaction operates on an SVG element contained by the canvas.
+        <br/>
+            If <code>when</code> is never true, the binding does not create or executed a command.<br/><br/>
+        The results of <code>when</code> may change during the execution of the interaction, for examples:<br/>
+        - it may be false on interaction start to be then true, so that the command is created only <code>when</code> is true to be executed on when the interaction ends;
+        <br/>
+        - it may be true on interaction start to be then false, so that the command is first created (and possibly updated), but never executed as <code>when</code> must be true at the end of the interaction for executing the command.
+        </div>
+
+    <div class="center box">
+    <pre><code class="ts">dndBinder()
+  .onDynamic(this.canvas.nativeElement)
+  .when(i => i.getTgtObject() instanceof SVGElement)
+  .strictStart()
+  ...
+  .bind();</code></pre>
+        The <code>strictStart</code> routine requires the routine <code>when</code> to return true on interaction start.
+        Otherwise the binding will cancel the ongoing user interaction.<br/>
+        For example with the code example, if the target object of the DnD is not an SVG element when the interaction starts,
+        then the binding will cancel the DnD.
+    </div>
+    <div class="right box">
+
+    </div>
+    </div>
+
+
+
+
 
 
     <div class="item ts start cmd">
         <div class="line-title box">Anonymous command</div>
         <div class="left box">
     <pre><code class="ts">clickBinder()
-    .on(this.canvas.nativeElement)
-    .toProduce(i => new AnonCmd(() => {
-        console.log(i.getSrcClientX());
-    }))
-    .bind();
-    </code></pre>
+  .on(this.canvas.nativeElement)
+  .toProduce(i => new AnonCmd(() => {
+     console.log(i.getSrcClientX());
+  }))
+  .bind();</code></pre>
             If you do not want to code your own command you can use the <code>AnonCmd</code> class.
         This command takes as argument a lambda to be called on the execution of the command.
         This lambda can use the interaction data.

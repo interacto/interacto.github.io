@@ -41,7 +41,7 @@
         <button id="install" class="btn">Install</button>
         <button id="start" class="btn">How to start</button>
         <button id="interaction" class="btn">Interactions Examples</button>
-        <button id="cmd" class="btn">Commands Examples</button>
+        <button id="cmd" class="btn">Commands/Undo Examples</button>
         <button id="routine" class="btn">Routines Examples</button>
         <button id="testing" class="btn">Front-end Testing</button>
         <button id="irl" class="btn">IRL examples</button>
@@ -273,7 +273,7 @@
     </div>
 
 
-    <div class="item ts start routine interaction command">
+    <div class="item ts start routine interaction cmd">
         <div class="line-title box">What are <code>i</code> and <code>c</code> in binding routines?</div>
         <div class="left box">
     <pre><code class="ts">multiTouchBinder(3)
@@ -392,7 +392,7 @@
 
 
 
-    <div class="item ts start cmd">
+    <div class="item ts cmd">
         <div class="line-title box">Anonymous command</div>
         <div class="left box">
     <pre><code class="ts">clickBinder()
@@ -410,6 +410,68 @@
         </div>
 
         <div class="right box">
+        </div>
+    </div>
+
+
+    <div class="item ts cmd start">
+        <div class="line-title box">Undo/Redo</div>
+        <div class="left box">
+<pre><code>export class DeleteAll
+    extends CommandImpl implements Undoable {
+  private mementoContent: Array<Node> = [];
+
+  public constructor(private readonly svgDoc: SVGSVGElement) {}
+
+  protected createMemento(): void {
+    this.mementoContent =
+        Array.from(this.svgDoc.children);
+  }
+
+  protected doCmdBody(): void {
+    this.redo();
+  }
+
+  public getUndoName(): string {
+    return 'Delete all the SVG elements';
+  }
+
+  public redo(): void {
+    Array.from(this.svgDoc.children)
+        .forEach(node => node.remove());
+  }
+
+  public undo(): void {
+    this.mementoContent
+        .forEach(node => this.svgDoc.appendChild(node));
+  }
+}</code></pre>
+            An undoable command has to implements the interface <code>Undoable</code>.<br/>
+            The command must then implements the methods <code>undo</code>, <code>redo</code>, and <code>getUndoName</code>.
+            The method <code>getUndoName</code> is useful to display a message in undo/redo widgets such as buttons.<br/><br/>
+            Developers do not directly call these methods:
+            when an undoable command is executed, the binding put it in a specific registry.
+            Developers should write bindings that use the predefined commands <code>Undo</code> and <code>Redo</code>, as detailed in the examples on the right.
+        </div>
+
+        <div class="center box">
+<pre><code>buttonBinder()
+  .toProduce(() => new Undo())
+  .on(this.undoButton.nativeElement)
+  .bind();</code></pre>
+            To undo the latest executed undoable command, developers should define a dedicated binding.
+            This binding must use the predefined <code>Undo</code> command that asks to undoable commands registry to undo its latest undoable command.
+            Once undone, the registry put this command on the top of a stack of redoable commands.
+        </div>
+
+        <div class="right box">
+<pre><code>buttonBinder()
+  .toProduce(() => new Redo())
+  .on(this.redoButton.nativeElement)
+  .bind();</code></pre>
+            To redo the latest undone command, developers should define a dedicated binding.
+            This binding must use the predefined <code>Redo</code> command that asks to undoable commands registry to redo its latest undone command.
+            Once redone, the registry put this command on the top of a stack of undoable commands.
         </div>
     </div>
 

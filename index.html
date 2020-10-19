@@ -273,15 +273,31 @@
     </div>
 
 
-    <div class="item ts start routine">
+    <div class="item ts start routine interaction command">
         <div class="line-title box">What are <code>i</code> and <code>c</code> in binding routines?</div>
         <div class="left box">
-    <pre><code class="ts"></code></pre>
-
+    <pre><code class="ts">multiTouchBinder(3)
+  .toProduce(i => ...)
+  .then((c, i) => ...)
+  ...
+  .bind();</code></pre>
+            The routines take different arguments.
+            For example <code>toProduce</code> and <code>then</code> take an argument <code>i</code>.
+            The type of <code>i</code> is a sub-class of <code>InteractionData</code>:
+            each user interaction exhibits specific data (we call interaction data) that routines can handle.
+            Here, the type of <code>i</code> is <code>MultiTouchData</code>.
         </div>
 
         <div class="center box">
-
+            <pre><code class="ts">multiTouchBinder(3)
+    .first((c, i) => ...)
+    .then((c, i) => ...)
+    .end((c, i) => ...)
+    ...
+    .bind();</code></pre>
+            The <code>then</code> routine (as many other routines) take an argument <code>c</code>.
+            The argument <code>c</code> refers to the ongoing command.
+            Developers can then update the command using this argument.
         </div>
 
         <div class="right box">

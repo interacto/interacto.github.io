@@ -508,20 +508,39 @@
 <!--    </div>-->
 
 
-<!--    <div class="item ts interaction">-->
-<!--        <div class="line-title box">Key Pressure, Key Typing, Keys Typing</div>-->
-<!--        <div class="left box">-->
-<!--<pre><code>-->
+    <div class="item ts interaction routine">
+        <div class="line-title box">Keyboard interactions and the <code>with</code> routine</div>
+        <div class="left box">
+<pre><code>keyTypeBinder(false)
+  .with('KeyC')
+  ...
+  .bind();</code></pre>
+            Keyboard interactions have a specific routine <code>with</code>.<br/>
+            In the example, the binding operates only if the <code>c</code> key is used.
+            This refers to the <code>code</code> of the keyboard event.<br/><br/>
+            The interaction <code>key type</code> refers to a key typing.
+        </div>
 
-<!--</code></pre>-->
-<!--        </div>-->
+        <div class="center box">
+<pre><code>keysTypeBinder()
+  .with('KeyC', 'KeyL', 'KeyE', 'KeyA', 'KeyR')
+  ...
+  .bind();</code></pre>
+        You can define several codes in the <code>with</code> routine.
+        In this example the user have to type the keys 'c' 'l' 'e' 'a' 'r' (in any order) to produce the command.<br/><br/>
+        The <code>keys type</code> interaction refers to a sequence of key typed that ends after a delay of 1 second:
+        if 1 second elapses after the last key typing, the interaction ends.
+        This permits to write a sequence and to then execute a command.
+        </div>
 
-<!--        <div class="center box">-->
-<!--        </div>-->
-
-<!--        <div class="right box">-->
-<!--        </div>-->
-<!--    </div>-->
+        <div class="right box">
+<pre><code>keyPressBinder(false)
+  ...
+  .bind();</code></pre>
+            The <code>key press</code> interaction refers to a pressure of a key.
+            This interaction takes one boolean argument: does the interaction have to capture key modifier events (true).
+        </div>
+    </div>
 
 
 </div>

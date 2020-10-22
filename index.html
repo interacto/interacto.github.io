@@ -126,41 +126,6 @@
     <!--    </div>-->
 
 
-    <!--    <div class="item ts interaction">-->
-    <!--        <div class="line-title box">Touch, Multi-touch, Tap</div>-->
-    <!--        <div class="left box">-->
-    <!--<pre><code>-->
-
-    <!--</code></pre>-->
-    <!--        </div>-->
-
-    <!--        <div class="center box">-->
-    <!--        </div>-->
-
-    <!--        <div class="right box">-->
-    <!--        </div>-->
-    <!--    </div>-->
-
-
-    <!--    <div class="item ts interaction">-->
-    <!--        <div class="line-title box">Long Touch, Swipe, Pan</div>-->
-    <!--        <div class="left box">-->
-    <!--<pre><code>-->
-
-    <!--</code></pre>-->
-    <!--        </div>-->
-
-    <!--        <div class="center box">-->
-    <!--        </div>-->
-
-    <!--        <div class="right box">-->
-    <!--        </div>-->
-    <!--    </div>-->
-
-
-
-
-
 
     <div class="item ts start cmd">
         <div class="line-title box">How to start: an example</div>
@@ -502,6 +467,71 @@
 
 
 
+    <div class="item ts interaction">
+        <div class="line-title box">Tap, Multi-touch, Touch DnD</div>
+        <div class="left box">
+            <pre><code>tapBinder(3)....bind();</code></pre>
+            The <code>tap</code> interaction consists in a set of successive taps.<br/>
+            This interaction has a single argument: the number of taps expected to end the interaction.
+            If this number of taps is not reached after a timeout (1 second by default), the interaction is cancelled.<br/>
+            The timeout (re-)starts after each tap. So a user does not have to do the interaction in one second.
+            A user have to do not next tap before one second after the last tap.
+            A user does not have to tap on the same exact location.
+        </div>
+
+        <div class="center box">
+            <pre><code>multiTouchBinder(2)....bind();</code></pre>
+            The <code>multi-touch</code> interaction implies the pressure of specific number of touches.
+            The number of required touches is the argument of the binder (here 2 touches).<br/>
+            A multi-touch starts when all its required touches have started.
+            Touches can move.
+            A multi-touch ends when the number of required touches is greater than the number of touches.<br/>
+            For example with the example, after the two touch pressures, if the user releases one of it the interaction stops.
+        </div>
+
+        <div class="right box">
+            <pre><code>touchDnDBinder()....bind();</code></pre>
+            The <code>touch DnD</code> interaction is a drag-and-drop interaction performed using one touch point.<br/>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="item ts interaction">
+        <div class="line-title box">Long Touch, Swipe, Pan</div>
+        <div class="left box">
+<pre><code>longTouchBinder(2000)...bind();</code></pre>
+        The interaction <code>long touch</code> refers to a long touch, which duration is the argument of the binder (here 2000 ms).
+        </div>
+
+        <div class="center box">
+            <pre><code>panBinder(true, 500, 50)...bind();</code></pre>
+            The <code>pan</code> interaction is a directional one-touch gesture.
+            Using one touch pressure, the user drags it in a specific direction to reach a minimal distance.<br/><br/>
+            The first argument is the direction: <code>true</code>: horizontal pan; <code>false</code>: vertical pan.<br/>
+            The second argument is the minimal distance from the starting point to the release point for validating the pan.<br/>
+            The last argument is tolerance rate in pixels accepted while executing the pan.
+        </div>
+
+        <div class="right box">
+            <pre><code>swipeBinder(true, 300, 500, 50)...bind();</code></pre>
+            The <code>swipe</code> interaction is a special kind of the <code>pan</code> interaction.
+            Using one touch pressure, the user drags it in a specific direction and with a specific velocity to reach a minimal distance.<br/><br/>
+            The first argument is the direction: <code>true</code>: horizontal swipe; <code>false</code>: vertical swipe.<br/>
+            The second argument is the minimal velocity to reach for validating the swipe. In pixels per second.<br/>
+            The third argument is the minimal distance from the starting point to the release point for validating the swipe.<br/>
+            The last argument is tolerance rate in pixels accepted while executing the swipe.
+        </div>
+    </div>
+
+
+
+
+
+
+
 
 
     <div class="item ts interaction routine">
@@ -511,7 +541,7 @@
   .with('KeyC')
   ...
   .bind();</code></pre>
-            Keyboard interactions have a specific routine <code>with</code>.<br/>
+            Keyboard interactions have a specific (optional) routine <code>with</code>.<br/>
             In the example, the binding operates only if the <code>c</code> key is used.
             This refers to the <code>code</code> of the keyboard event.<br/><br/>
             The interaction <code>key type</code> refers to a key typing.

@@ -94,37 +94,6 @@
     </div>
 
 
-    <!--    <div class="item ts interaction">-->
-    <!--        <div class="line-title box">Pressure, Click, Double-click</div>-->
-    <!--        <div class="left box">-->
-    <!--<pre><code>-->
-
-    <!--</code></pre>-->
-    <!--        </div>-->
-
-    <!--        <div class="center box">-->
-    <!--        </div>-->
-
-    <!--        <div class="right box">-->
-    <!--        </div>-->
-    <!--    </div>-->
-
-
-    <!--    <div class="item ts interaction">-->
-    <!--        <div class="line-title box">DnD, Draglock, N-click</div>-->
-    <!--        <div class="left box">-->
-    <!--<pre><code>-->
-
-    <!--</code></pre>-->
-    <!--        </div>-->
-
-    <!--        <div class="center box">-->
-    <!--        </div>-->
-
-    <!--        <div class="right box">-->
-    <!--        </div>-->
-    <!--    </div>-->
-
 
 
     <div class="item ts start cmd">
@@ -262,9 +231,8 @@
             Developers can then update the command using this argument.
         </div>
 
-        <div class="right box">
-
-        </div>
+<!--        <div class="right box">-->
+<!--        </div>-->
     </div>
 
 
@@ -360,9 +328,9 @@
             interaction starts,
             then the binding will cancel the DnD.
         </div>
-        <div class="right box">
 
-        </div>
+<!--        <div class="right box">-->
+<!--        </div>-->
     </div>
 
 
@@ -385,11 +353,11 @@
             This lambda can use the interaction data.
         </div>
 
-        <div class="center box">
-        </div>
+<!--        <div class="center box">-->
+<!--        </div>-->
 
-        <div class="right box">
-        </div>
+<!--        <div class="right box">-->
+<!--        </div>-->
     </div>
 
 
@@ -463,6 +431,60 @@
             Once redone, the registry put this command on the top of a stack of undoable commands.
         </div>
     </div>
+
+
+
+    <div class="item ts interaction">
+        <div class="line-title box">Pressure, Click, Double-click</div>
+        <div class="left box">
+            <pre><code>pressBinder()....bind();</code></pre>
+            The <code>press</code> interaction refers to a single mouse pressure.
+        </div>
+
+        <div class="center box">
+            <pre><code>clickBinder()....bind();</code></pre>
+            The <code>click</code> interaction refers to a single mouse click.
+            For touch devices, see the <code>tap</code> interaction.
+        </div>
+
+        <div class="right box">
+            <pre><code>dbleClickBinder()....bind();</code></pre>
+            The <code>double click</code> interaction refers to double click made using a mouse.<br/>
+            Moving between the two clicks cancels the interaction<br/>
+            There is a maximal duration between the two clicks. By default this duration is 300 ms but one can change it.<br/>
+            For touch devices, see the <code>tap</code> interaction.
+        </div>
+    </div>
+
+
+
+
+
+    <div class="item ts interaction">
+        <div class="line-title box">DnD, Draglock</div>
+        <div class="left box">
+            <pre><code>dndBinder(true)....bind();</code></pre>
+            The <code>DnD</code> refers to a Drag-And-Drop interaction.<br/>
+            This DnD does not aim at dragging an object from a place to another one.
+            The DnD is the sequence of a mouse pressure, followed by a set of mouse moves (at least one), that ends with a mouse release.<br/>
+            This is up to the developer to decide what to do using the DnD.<br/><br/>
+            The DnD takes one boolean argument: is the DnD cancellable (<code>true</code>) or not (<code>false</code>)?
+            To cancel a DnD, press the key <code>escape</code>.
+        </div>
+
+        <div class="center box">
+            <pre><code>dragLockBinder()....bind();</code></pre>
+            The drag-lock interaction is a special kind of DnD.<br/>
+            A drag-lock starts by double-clicking on a source node.
+            The user can then move the locked node until she double-clicks again at the dropping location.<br/>
+            To cancel a drag-lock, press the key <code>escape</code>.
+        </div>
+
+<!--        <div class="right box">-->
+<!--        </div>-->
+    </div>
+
+
 
 
 

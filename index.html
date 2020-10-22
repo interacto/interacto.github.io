@@ -40,12 +40,12 @@
     <div id="topic" class="filter">
         <button id="all" class="btn active">Show all</button>
         <button id="install" class="btn">Install</button>
-        <button id="start" class="btn">How to start</button>
-        <button id="interaction" class="btn">Interactions Examples</button>
-        <button id="cmd" class="btn">Commands/Undo Examples</button>
-        <button id="routine" class="btn">Routines Examples</button>
+        <button id="start" class="btn">How to Start</button>
+        <button id="interaction" class="btn">Interactions</button>
+        <button id="cmd" class="btn">Commands/Undo</button>
+        <button id="routine" class="btn">Routines</button>
         <button id="testing" class="btn">Front-end Testing</button>
-        <button id="irl" class="btn">IRL examples</button>
+        <button id="irl" class="btn">IRL Examples</button>
     </div>
 </div>
 
@@ -287,6 +287,25 @@
 
 
 
+    <div class="item ts routine">
+        <div class="line-title box">The routine <code>toProduce</code>: command creation</div>
+        <div class="left box">
+            <pre><code>dragLockBinder()
+   .toProduce(d => new Translate(d.getSrcObject())
+   ...bind();</code></pre>
+            The routine <code>toProduce</code> focuses on the production of a command.<br/>
+            This routine takes as argument an anonymous function that returns a command.<br/>
+            The binding calls the provided anonymous function while running to create a new command.<br/>
+            In the example, the routine <code>toProduce</code> is used to create <code>Translate</code> commands.
+        </div>
+
+        <!--        <div class="center box">-->
+        <!--        </div>-->
+
+        <!--        <div class="right box">-->
+        <!--        </div>-->
+    </div>
+
 
 
 
@@ -334,6 +353,54 @@
     </div>
 
 
+
+
+    <div class="item ts routine">
+        <div class="line-title box">The routine <code>first</code>: interaction start</div>
+        <div class="left box">
+            <pre><code>dragLockBinder()
+   .toProduce(d => new Translate(d.getSrcObject())
+   .onDynamic(this.canvas.nativeElement)
+   .first((d, c) => d.getSrcObject().setEffect(new DropShadow()))
+   .bind();</code></pre>
+            A binding calls the <code>first</code> routine right after the instantiation of a command, when the interaction starts.<br/>
+            It takes as arguments the current interaction data (<code>d</code>) and the current command (<code>c</code>).<br/>
+            The goal of <code>first</code> is to update command parameters or to provide specific user feedback at the beginning of an interaction execution.<br/>
+            For example with the example, <code>first</code> applies a blurred-shadow effect on the object to be moved.
+        </div>
+
+        <!--        <div class="center box">-->
+        <!--        </div>-->
+
+        <!--        <div class="right box">-->
+        <!--        </div>-->
+    </div>
+
+
+
+
+    <div class="item ts routine">
+        <div class="line-title box">The routine <code>then</code>: interaction update</div>
+        <div class="left box">
+            <pre><code>dragLockBinder()
+   .toProduce(d => new Translate(d.getSrcObject())
+   .onDynamic(this.canvas.nativeElement)
+   .then((d, c) => c.setCoord(
+      c.getShape().getX() + d.getEndX() - d.getSrcX(),
+      c.getShape().getY() + d.getEndY() - d.getSrcY()))
+   .bind();</code></pre>
+            On each update of the running user interaction, the <code>then</code> routine is called.<br/>
+            This routine takes as arguments the current interaction data (<code>d</code>) and the current command (<code>c</code>).<br/>
+            The main goal of the then routine is to update the parameters of the ongoing command using the current interaction data.<br/>
+            In the example, <code>then</code> updates the translation vector to move an object.
+        </div>
+
+        <!--        <div class="center box">-->
+        <!--        </div>-->
+
+        <!--        <div class="right box">-->
+        <!--        </div>-->
+    </div>
 
 
 

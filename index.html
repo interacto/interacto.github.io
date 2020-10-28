@@ -359,12 +359,12 @@
         <div class="line-title box">The routine <code>first</code>: interaction start</div>
         <div class="left box">
             <pre><code>dragLockBinder()
-   .toProduce(d => new Translate(d.getSrcObject())
+   .toProduce(i => new Translate(d.getSrcObject())
    .onDynamic(this.canvas.nativeElement)
-   .first((d, c) => d.getSrcObject().setEffect(new DropShadow()))
+   .first((i, c) => i.getSrcObject().setEffect(new DropShadow()))
    .bind();</code></pre>
             A binding calls the <code>first</code> routine right after the instantiation of a command, when the interaction starts.<br/>
-            It takes as arguments the current interaction data (<code>d</code>) and the current command (<code>c</code>).<br/>
+            It takes as arguments the current interaction data (<code>i</code>) and the current command (<code>c</code>).<br/>
             The goal of <code>first</code> is to update command parameters or to provide specific user feedback at the beginning of an interaction execution.<br/>
             For example with the example, <code>first</code> applies a blurred-shadow effect on the object to be moved.
         </div>
@@ -383,14 +383,14 @@
         <div class="line-title box">The routine <code>then</code>: interaction update</div>
         <div class="left box">
             <pre><code>dragLockBinder()
-   .toProduce(d => new Translate(d.getSrcObject())
+   .toProduce(i => new Translate(i.getSrcObject())
    .onDynamic(this.canvas.nativeElement)
-   .then((d, c) => c.setCoord(
-      c.getShape().getX() + d.getEndX() - d.getSrcX(),
-      c.getShape().getY() + d.getEndY() - d.getSrcY()))
+   .then((i, c) => c.setCoord(
+      c.getShape().getX() + i.getEndX() - i.getSrcX(),
+      c.getShape().getY() + i.getEndY() - i.getSrcY()))
    .bind();</code></pre>
             On each update of the running user interaction, the <code>then</code> routine is called.<br/>
-            This routine takes as arguments the current interaction data (<code>d</code>) and the current command (<code>c</code>).<br/>
+            This routine takes as arguments the current interaction data (<code>i</code>) and the current command (<code>c</code>).<br/>
             The main goal of the then routine is to update the parameters of the ongoing command using the current interaction data.<br/>
             In the example, <code>then</code> updates the translation vector to move an object.
         </div>
@@ -401,6 +401,51 @@
         <!--        <div class="right box">-->
         <!--        </div>-->
     </div>
+
+
+
+
+
+    <div class="item ts routine">
+        <div class="line-title box">The routine <code>end</code>, <code>cancel</code>, <code>endOrCancel</code>: Interaction Ends, Cancels, Ends or Canceled</div>
+        <div class="left box">
+            <pre><code>buttonBinder()
+   .toProduce(_i => new Clear())
+   .on(this.erase.nativeElement)
+   ....
+   .end((_c, _i) => this.status.nativeElement.textContent = 'Cleared')
+   .bind();</code></pre>
+            When the interaction ends, the binding calls the routine `end` (if the <code>when</code> predicate is respected).
+            This routine takes as arguments the current interaction data (<code>_i</code>) and the current command (<code>_c</code>).<br/>
+            In the example, <code>end</code> changes the text message of a text widget.
+        </div>
+
+        <div class="center box">
+            <pre><code>dndBinder(true)
+   .toProduce(_i => new MoveObject())
+   .on(this.canvas.nativeElement)
+   ....
+   .cancel(i => this.showCancelAnimation(i))
+   .bind();</code></pre>
+            Users can cancel some user interactions, such the DnD (when passing as argument <code>true</code> to specify that the interaction is cancellable).<br/><br/>
+            Using the DnD, pressing the <code>escape</code> key cancels the ongoing DnD: the interaction is stopped and reinitialized and the ongoing command aborted.<br/><br/>
+            So, when the interaction is cancelled the binding calls the routine <code>cancel</code>.<br/>
+            This routine takes as arguments the current interaction data (<code>i</code>).<br/>
+            In the example, <code>cancel</code> calls a method for showing an animation on the concerned node.
+        </div>
+
+        <div class="right box">
+            <pre><code>dndBinder(true)
+   ....
+   .endOrCancel(i => (i.getSrcObject() as HTMLElement).style.visibility = 'hidden')
+   .bind();</code></pre>
+            When the interaction ends or is cancelled, the binding calls the routine <code>endOrCancel</code> (if the <code>when</code> predicate is respected for <code>end</code>).<br/><br/>
+            This routine takes as arguments the current interaction data (<code>i</code>).<br/>
+            This routine does not replace <code>end</code> or <code>cancel</code>: the binding calls this routine right after <code>end</code> or <code>cancel</code>.<br/><br/>
+            In the example, <code>endOrCancel</code> changes the style of the source object of the DnD.
+        </div>
+    </div>
+
 
 
 

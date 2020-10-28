@@ -15,7 +15,7 @@
 
 <div class="header">
     <div class="box left"><a href="https://github.com/interacto">Github</a></div>
-    <div class="box left"><a href="https://www.npmjs.com/package/interacto">npmjs</a> (v4.4.0)</div>
+    <div class="box left"><a href="https://www.npmjs.com/package/interacto">npmjs</a> (v5.0.0)</div>
     <div class="box left"><a href="https://search.maven.org/search?q=interacto">Maven Central</a> (v4.3.0)</div>
 </div>
 
@@ -128,7 +128,7 @@
         </div>
 
         <div class="right box">
-<pre><code class="ts">export class ClearText extends CommandImpl {
+<pre><code class="ts">export class ClearText extends CommandBase {
    private memento: string;
 
    public constructor(private text: TextData) {}
@@ -137,7 +137,7 @@
      this.memento = this.text.text;
    }
 
-   protected doCmdBody(): void {
+   protected execution(): void {
      this.text.text = '';
    }
 
@@ -437,7 +437,7 @@
         <div class="line-title box">Undo/Redo</div>
         <div class="left box">
 <pre><code>export class DeleteAll
-    extends CommandImpl implements Undoable {
+    extends CommandBase implements Undoable {
   private mementoContent: Array<Node> = [];
 
   public constructor(private readonly svgDoc: SVGSVGElement) {}
@@ -447,12 +447,13 @@
         Array.from(this.svgDoc.children);
   }
 
-  protected doCmdBody(): void {
+  protected execution(): void {
     this.redo();
   }
 
-  public getUndoName(): string {
-    return 'Delete all the SVG elements';
+  public undo(): void {
+    this.mementoContent
+        .forEach(node => this.svgDoc.appendChild(node));
   }
 
   public redo(): void {
@@ -460,9 +461,8 @@
         .forEach(node => node.remove());
   }
 
-  public undo(): void {
-    this.mementoContent
-        .forEach(node => this.svgDoc.appendChild(node));
+  public getUndoName(): string {
+    return 'Delete all the SVG elements';
   }
 }</code></pre>
             An undoable command has to implements the interface <code>Undoable</code>.<br/>

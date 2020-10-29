@@ -121,7 +121,7 @@
         <div class="center box">
 <pre><code class="ts">export class MyComponent implements AfterViewInit {
    @ViewChild('clearbutton')
-   private clearButton: ElementRef;
+   private clearButton: ElementRef<HTMLButtonElement>;
 ...
 }</code></pre>
             <code>clearButton</code> is a property of the component class
@@ -445,6 +445,123 @@
             In the example, <code>endOrCancel</code> changes the style of the source object of the DnD.
         </div>
     </div>
+
+
+
+
+
+    <div class="item ts routine">
+        <div class="line-title box">The routine <code>log</code>: logging</div>
+        <div class="left box">
+            <pre><code>nodeBinder()
+   ....
+   .log(LogLevel.interaction)
+   .bind();</code></pre>
+   Bindings support logging systems at different levels.<br/>
+   In the example the binding logs the user interaction execution. <br/>
+   This feature is useful for debugging a binding.
+        </div>
+
+        <div class="center box">
+            There exists three logging logging levels:
+            
+            <pre><code>LogLevel.interaction</code></pre>
+            This levels logs information related to the executiong of the user interaction.<br/><br/>
+
+            <pre><code>LogLevel.command</code></pre>
+            This levels logs information related to the production of commands.<br/><br/>
+
+            <pre><code>LogLevel.binding</code></pre>
+            This levels logs information related to the behavior of the binding.
+        </div>
+
+        <!--        <div class="right box">-->
+        <!--        </div>-->
+    </div>
+
+
+
+
+
+    <div class="item ts routine">
+        <div class="line-title box">The routine <code style="font-size: smaller;">stopImmediate</code> <code style="font-size: smaller;">Propagation</code></div>
+        <div class="left box">
+            <pre><code>swipeBinder(false, 200, 100, 20)
+   ....
+   .stopImmediatePropagation()
+   .bind();</code></pre>
+The routine <code>stopImmediatePropagation</code> follows the same idea that the method <code>stopImmediatePropagation</code> of the class <code>Event</code>:
+it stops the propagation of the current event processed by the user interaction to the next bindings (and their user interaction)
+        </div>
+
+        <div class="center box">
+            See the documentation related to <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/stopImmediatePropagation"><code>Event.stopImmediatePropagation()</code></a>
+        </div>
+
+        <div class="right box">
+            An example:
+            <pre><code>longTouchBinder(2000)
+    ....
+    // Consumes the events before the 
+    // multi-touch interaction use them
+    .stopImmediatePropagation()
+    .bind();
+          
+multiTouchBinder(2)
+    ....
+    .bind();</code></pre>
+    In this example the first binding consumes the touch event its long touch interaction will process.<br/>
+    This prevents the multi-touch interaction to start while doing a long touch.
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="item ts routine">
+        <div class="line-title box">The routine <code style="font-size: smaller;">preventDefault</code></div>
+        <div class="left box">
+            <pre><code>longTouchBinder(2000)
+   // Prevents the context menu to pop-up
+   .preventDefault()
+   .bind();</code></pre>
+The routine <code>preventDefault</code> follows the same idea that the method <code>preventDefault</code> of the class <code>Event</code>:
+it stops the default behavior of the browser on the event.<br/><br/>
+
+In the example, a long touch will lead the browser to show the context menu.
+The use of <code>preventDefault</code> prevents this default behavior.
+
+        </div>
+
+        <div class="center box">
+            See the documentation related to <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault"><code>Event.preventDefault()</code></a>
+        </div>
+
+        <!-- <div class="right box"> -->
+        <!-- </div> -->
+    </div>
+
+
+
+
+
+
+    <div class="item ts routine">
+        <div class="line-title box">The routine <code>throttle</code></div>
+        <div class="left box">
+This routine is not implemented in TypeScript yet (even if provided by the API, this has no effect).
+        </div>
+
+        <!-- <div class="center box"> -->
+        <!-- </div> -->
+
+        <!-- <div class="right box"> -->
+        <!-- </div> -->
+    </div>
+
+
 
 
 
@@ -780,6 +897,55 @@
     </div>
 
 
+
+
+
+    <div class="item ts irl">
+        <div class="line-title box">stackoverflow questions</div>
+        <div class="left box">
+            <h3>Undo/redo in an Angular canvas whiteboard</h3>
+            In this <a href="https://stackoverflow.com/questions/62237719/implementing-undo-and-redo-in-canvas-whiteboard-using-typescript/64563793">stackoverflow question</a> 
+            we show how to create two undoable commands (to add and erase shapes), and how to use them on an HTML canvas in an Angular app.
+        </div>
+
+        <!-- <div class="center box"> -->
+        <!-- </div> -->
+
+        <!-- <div class="right box"> -->
+        <!-- </div> -->
+    </div>
+
+
+
+    <div class="item ts irl">
+        <div class="line-title box">Demonstration apps</div>
+        <div class="left box">
+            We developed <a href="https://github.com/interacto/example-angular">an Angular app</a> to illustrate the different features.<br/><br/>
+        </div>
+
+        <!-- <div class="center box"> -->
+        <!-- </div> -->
+
+        <!-- <div class="right box"> -->
+        <!-- </div> -->
+    </div>
+
+
+    <div class="item jfx irl">
+        <div class="line-title box">Applications that use Interacto</div>
+        <div class="left box">
+            <h3>LaTeXDraw</h3>
+            <a href="https://github.com/latexdraw/latexdraw">A vector drawing editor for LaTeX</a>
+        </div>
+
+        <div class="center box">
+            <h3>Spoon Visualisation</h3>
+            <a href="https://github.com/INRIA/spoon/tree/master/spoon-visualisation">A tool for visualizing Java (Spoon) ASTs (abstract syntax tree)</a>.<br/>
+        </div>
+
+        <!-- <div class="right box"> -->
+        <!-- </div> -->
+    </div>
 
 
 </div>

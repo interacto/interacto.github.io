@@ -128,7 +128,7 @@
         </div>
 
         <div class="right box">
-<pre><code class="ts">export class ClearText extends CommandBase {
+<pre><code class="ts">export class ClearText extends CommandBase implements Undoable {
    private memento: string;
 
    public constructor(private text: TextData) {}

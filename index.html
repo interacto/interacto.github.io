@@ -131,7 +131,7 @@
 <pre><code class="ts">export class ClearText extends CommandBase implements Undoable {
    private memento: string;
 
-   public constructor(private text: TextData) {}
+   public constructor(private text: TextData) { super(); }
 
    protected createMemento(): void {
      this.memento = this.text.text;
@@ -146,7 +146,7 @@
    }
 
    public redo(): void {
-     this.doCmdBody();
+     this.execution();
    }
 
    public getUndoName(): string {
@@ -602,7 +602,7 @@ This routine is not implemented in TypeScript yet (even if provided by the API, 
     extends CommandBase implements Undoable {
   private mementoContent: Array<Node> = [];
 
-  public constructor(private readonly svgDoc: SVGSVGElement) {}
+  public constructor(private readonly svgDoc: SVGSVGElement) { super(); }
 
   protected createMemento(): void {
     this.mementoContent =

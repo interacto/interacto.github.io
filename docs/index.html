@@ -1,0 +1,533 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>interacto</title>
+	<meta name="description" content="Documentation for interacto">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.json" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">interacto</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1>interacto</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<p><a href="https://ci.inria.fr/malai/view/Latexdraw/job/interacto-ts"><img src="https://ci.inria.fr/malai/buildStatus/icon?job=interacto-ts" alt="Build Status"></a>
+					<a href="https://www.npmjs.com/package/interacto"><img src="https://img.shields.io/npm/v/interacto" alt="npm"></a>
+				<a href="https://www.npmjs.com/package/interacto"><img src="https://img.shields.io/npm/dm/interacto" alt="npm"></a></p>
+				<a href="#interacto" id="interacto" style="color: inherit; text-decoration: none;">
+					<h1>Interacto</h1>
+				</a>
+				<p>The TypeScript implementation of <a href="https://github.com/interacto/">Interacto</a>.</p>
+				<p><strong>Interacto</strong> is a front-end framework for processing user interface events.<br>
+					With <strong>Interacto</strong> developers handle user interactions (DnD, drag-lock, double-click, button click, pan, multi-touch, etc.) instead of low-level UI events.<br>
+					Developers configure how to turn a selected user interaction into a (undoable) UI command using a fluent API.<br/>
+				Interacto also provides a native support for undo/redo operations.</p>
+				<p>See <a href="https://interacto.github.io">https://interacto.github.io</a> for usages and documentation.</p>
+				<a href="#how-to-install" id="how-to-install" style="color: inherit; text-decoration: none;">
+					<h1>How to install</h1>
+				</a>
+				<p>Using npm:</p>
+				<pre><code>npm install <span class="hljs-built_in">int</span>eracto</code></pre>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_binder_basebinder_.html">&quot;api/binder/<wbr>Base<wbr>Binder&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_binder_basebinderbuilder_.html">&quot;api/binder/<wbr>Base<wbr>Binder<wbr>Builder&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_binder_baseupdatebinder_.html">&quot;api/binder/<wbr>Base<wbr>Update<wbr>Binder&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_binder_baseupdatebinderbuilder_.html">&quot;api/binder/<wbr>Base<wbr>Update<wbr>Binder<wbr>Builder&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_binder_cmdbinder_.html">&quot;api/binder/<wbr>Cmd<wbr>Binder&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_binder_cmdbinderbuilder_.html">&quot;api/binder/<wbr>Cmd<wbr>Binder<wbr>Builder&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_binder_cmdupdatebinder_.html">&quot;api/binder/<wbr>Cmd<wbr>Update<wbr>Binder&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_binder_cmdupdatebinderbuilder_.html">&quot;api/binder/<wbr>Cmd<wbr>Update<wbr>Binder<wbr>Builder&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_binder_interactionbinder_.html">&quot;api/binder/<wbr>Interaction<wbr>Binder&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_binder_interactionbinderbuilder_.html">&quot;api/binder/<wbr>Interaction<wbr>Binder<wbr>Builder&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_binder_interactioncmdbinder_.html">&quot;api/binder/<wbr>Interaction<wbr>Cmd<wbr>Binder&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_binder_interactioncmdupdatebinder_.html">&quot;api/binder/<wbr>Interaction<wbr>Cmd<wbr>Update<wbr>Binder&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_binder_interactionupdatebinder_.html">&quot;api/binder/<wbr>Interaction<wbr>Update<wbr>Binder&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_binder_interactionupdatebinderbuilder_.html">&quot;api/binder/<wbr>Interaction<wbr>Update<wbr>Binder<wbr>Builder&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_binder_keybinderbuilder_.html">&quot;api/binder/<wbr>Key<wbr>Binder<wbr>Builder&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_binder_keyinteractionbinder_.html">&quot;api/binder/<wbr>Key<wbr>Interaction<wbr>Binder&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_binder_keyinteractionbinderbuilder_.html">&quot;api/binder/<wbr>Key<wbr>Interaction<wbr>Binder<wbr>Builder&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_binder_keyinteractioncmdbinder_.html">&quot;api/binder/<wbr>Key<wbr>Interaction<wbr>Cmd<wbr>Binder&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_binder_keyinteractioncmdupdatebinder_.html">&quot;api/binder/<wbr>Key<wbr>Interaction<wbr>Cmd<wbr>Update<wbr>Binder&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_binder_keyinteractionupdatebinder_.html">&quot;api/binder/<wbr>Key<wbr>Interaction<wbr>Update<wbr>Binder&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_binding_binding_.html">&quot;api/binding/<wbr>Binding&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_binding_bindings_.html">&quot;api/binding/<wbr>Bindings&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_binding_bindingsobserver_.html">&quot;api/binding/<wbr>Bindings<wbr>Observer&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_binding_mustbeundoablecmdexception_.html">&quot;api/binding/<wbr>Must<wbr>BeUndoable<wbr>Cmd<wbr>Exception&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_command_command_.html">&quot;api/command/<wbr>Command&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_fsm_eventtype_.html">&quot;api/fsm/<wbr>Event<wbr>Type&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_fsm_fsm_.html">&quot;api/fsm/FSM&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_fsm_fsmhandler_.html">&quot;api/fsm/FSMHandler&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_fsm_inputstate_.html">&quot;api/fsm/<wbr>Input<wbr>State&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_fsm_outputstate_.html">&quot;api/fsm/<wbr>Output<wbr>State&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_fsm_state_.html">&quot;api/fsm/<wbr>State&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_fsm_transition_.html">&quot;api/fsm/<wbr>Transition&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_interaction_interaction_.html">&quot;api/interaction/<wbr>Interaction&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_interaction_interactiondata_.html">&quot;api/interaction/<wbr>Interaction<wbr>Data&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_interaction_keydata_.html">&quot;api/interaction/<wbr>Key<wbr>Data&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_interaction_keysdata_.html">&quot;api/interaction/<wbr>Keys<wbr>Data&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_interaction_multitouchdata_.html">&quot;api/interaction/<wbr>Multi<wbr>Touch<wbr>Data&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_interaction_pointdata_.html">&quot;api/interaction/<wbr>Point<wbr>Data&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_interaction_pointsdata_.html">&quot;api/interaction/<wbr>Points<wbr>Data&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_interaction_scrolldata_.html">&quot;api/interaction/<wbr>Scroll<wbr>Data&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_interaction_srctgtpointsdata_.html">&quot;api/interaction/<wbr>Src<wbr>Tgt<wbr>Points<wbr>Data&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_interaction_srctgttouchdata_.html">&quot;api/interaction/<wbr>Src<wbr>Tgt<wbr>Touch<wbr>Data&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_interaction_tapdata_.html">&quot;api/interaction/<wbr>Tap<wbr>Data&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_interaction_touchdata_.html">&quot;api/interaction/<wbr>Touch<wbr>Data&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_interaction_widgetdata_.html">&quot;api/interaction/<wbr>Widget<wbr>Data&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_logging_configlog_.html">&quot;api/logging/<wbr>Config<wbr>Log&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_logging_loglevel_.html">&quot;api/logging/<wbr>Log<wbr>Level&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_api_undo_undoable_.html">&quot;api/undo/<wbr>Undoable&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_binder_binder_.html">&quot;impl/binder/<wbr>Binder&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_binder_keysbinder_.html">&quot;impl/binder/<wbr>Keys<wbr>Binder&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_binder_updatebinder_.html">&quot;impl/binder/<wbr>Update<wbr>Binder&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_binding_anonbinding_.html">&quot;impl/binding/<wbr>Anon<wbr>Binding&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_binding_bindingimpl_.html">&quot;impl/binding/<wbr>Binding<wbr>Impl&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_command_anoncmd_.html">&quot;impl/command/<wbr>Anon<wbr>Cmd&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_command_commandbase_.html">&quot;impl/command/<wbr>Command<wbr>Base&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_command_commandsregistry_.html">&quot;impl/command/<wbr>Commands<wbr>Registry&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_command_library_redo_.html">&quot;impl/command/library/<wbr>Redo&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_command_library_undo_.html">&quot;impl/command/library/<wbr>Undo&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_fsm_boxcheckpressedtransition_.html">&quot;impl/fsm/<wbr>Box<wbr>Check<wbr>Pressed<wbr>Transition&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_fsm_buttonpressedtransition_.html">&quot;impl/fsm/<wbr>Button<wbr>Pressed<wbr>Transition&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_fsm_cancelfsmexception_.html">&quot;impl/fsm/<wbr>CancelFSMException&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_fsm_cancellingstate_.html">&quot;impl/fsm/<wbr>Cancelling<wbr>State&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_fsm_clicktransition_.html">&quot;impl/fsm/<wbr>Click<wbr>Transition&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_fsm_colorpickedtransition_.html">&quot;impl/fsm/<wbr>Color<wbr>Picked<wbr>Transition&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_fsm_comboboxtransition_.html">&quot;impl/fsm/<wbr>Combo<wbr>Box<wbr>Transition&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_fsm_concurrentfsm_.html">&quot;impl/fsm/<wbr>ConcurrentFSM&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_fsm_datepickedtransition_.html">&quot;impl/fsm/<wbr>Date<wbr>Picked<wbr>Transition&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_fsm_escapekeypressuretransition_.html">&quot;impl/fsm/<wbr>Escape<wbr>Key<wbr>Pressure<wbr>Transition&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_fsm_events_.html">&quot;impl/fsm/<wbr>Events&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_fsm_fsmdatahandler_.html">&quot;impl/fsm/FSMData<wbr>Handler&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_fsm_fsmimpl_.html">&quot;impl/fsm/FSMImpl&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_fsm_hyperlinktransition_.html">&quot;impl/fsm/<wbr>Hyper<wbr>Link<wbr>Transition&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_fsm_initstate_.html">&quot;impl/fsm/<wbr>Init<wbr>State&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_fsm_keypressuretransition_.html">&quot;impl/fsm/<wbr>Key<wbr>Pressure<wbr>Transition&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_fsm_keyreleasetransition_.html">&quot;impl/fsm/<wbr>Key<wbr>Release<wbr>Transition&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_fsm_movetransition_.html">&quot;impl/fsm/<wbr>Move<wbr>Transition&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_fsm_outputstatebase_.html">&quot;impl/fsm/<wbr>Output<wbr>State<wbr>Base&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_fsm_pressuretransition_.html">&quot;impl/fsm/<wbr>Pressure<wbr>Transition&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_fsm_releasetransition_.html">&quot;impl/fsm/<wbr>Release<wbr>Transition&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_fsm_scrolltransition_.html">&quot;impl/fsm/<wbr>Scroll<wbr>Transition&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_fsm_spinnerchangedtransition_.html">&quot;impl/fsm/<wbr>Spinner<wbr>Changed<wbr>Transition&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_fsm_statebase_.html">&quot;impl/fsm/<wbr>State<wbr>Base&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_fsm_stdstate_.html">&quot;impl/fsm/<wbr>Std<wbr>State&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_fsm_subfsmtransition_.html">&quot;impl/fsm/<wbr>SubFSMTransition&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_fsm_terminalstate_.html">&quot;impl/fsm/<wbr>Terminal<wbr>State&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_fsm_textinputchangedtransition_.html">&quot;impl/fsm/<wbr>Text<wbr>Input<wbr>Changed<wbr>Transition&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_fsm_timeouttransition_.html">&quot;impl/fsm/<wbr>Timeout<wbr>Transition&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_fsm_touchmovetransition_.html">&quot;impl/fsm/<wbr>Touch<wbr>Move<wbr>Transition&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_fsm_touchpressuretransition_.html">&quot;impl/fsm/<wbr>Touch<wbr>Pressure<wbr>Transition&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_fsm_touchreleasetransition_.html">&quot;impl/fsm/<wbr>Touch<wbr>Release<wbr>Transition&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_fsm_transitionbase_.html">&quot;impl/fsm/<wbr>Transition<wbr>Base&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_fsm_widgettransition_.html">&quot;impl/fsm/<wbr>Widget<wbr>Transition&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_concurrentinteraction_.html">&quot;impl/interaction/<wbr>Concurrent<wbr>Interaction&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_interactionbase_.html">&quot;impl/interaction/<wbr>Interaction<wbr>Base&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_library_boxchecked_.html">&quot;impl/interaction/library/<wbr>Box<wbr>Checked&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_library_buttonpressed_.html">&quot;impl/interaction/library/<wbr>Button<wbr>Pressed&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_library_click_.html">&quot;impl/interaction/library/<wbr>Click&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_library_clicks_.html">&quot;impl/interaction/library/<wbr>Clicks&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_library_colorpicked_.html">&quot;impl/interaction/library/<wbr>Color<wbr>Picked&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_library_comboboxselected_.html">&quot;impl/interaction/library/<wbr>Combo<wbr>Box<wbr>Selected&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_library_datepicked_.html">&quot;impl/interaction/library/<wbr>Date<wbr>Picked&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_library_dnd_.html">&quot;impl/interaction/library/<wbr>DnD&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_library_doubleclick_.html">&quot;impl/interaction/library/<wbr>Double<wbr>Click&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_library_draglock_.html">&quot;impl/interaction/library/<wbr>Drag<wbr>Lock&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_library_hyperlinkclicked_.html">&quot;impl/interaction/library/<wbr>Hyper<wbr>Link<wbr>Clicked&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_library_keydataimpl_.html">&quot;impl/interaction/library/<wbr>Key<wbr>Data<wbr>Impl&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_library_keypressed_.html">&quot;impl/interaction/library/<wbr>Key<wbr>Pressed&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_library_keytyped_.html">&quot;impl/interaction/library/<wbr>Key<wbr>Typed&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_library_keysdataimpl_.html">&quot;impl/interaction/library/<wbr>Keys<wbr>Data<wbr>Impl&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_library_keyspressed_.html">&quot;impl/interaction/library/<wbr>Keys<wbr>Pressed&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_library_keystyped_.html">&quot;impl/interaction/library/<wbr>Keys<wbr>Typed&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_library_longpress_.html">&quot;impl/interaction/library/<wbr>Long<wbr>Press&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_library_longtouch_.html">&quot;impl/interaction/library/<wbr>Long<wbr>Touch&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_library_multitouch_.html">&quot;impl/interaction/library/<wbr>Multi<wbr>Touch&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_library_multitouchdataimpl_.html">&quot;impl/interaction/library/<wbr>Multi<wbr>Touch<wbr>Data<wbr>Impl&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_library_pan_.html">&quot;impl/interaction/library/<wbr>Pan&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_library_pointdataimpl_.html">&quot;impl/interaction/library/<wbr>Point<wbr>Data<wbr>Impl&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_library_pointsdataimpl_.html">&quot;impl/interaction/library/<wbr>Points<wbr>Data<wbr>Impl&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_library_press_.html">&quot;impl/interaction/library/<wbr>Press&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_library_scroll_.html">&quot;impl/interaction/library/<wbr>Scroll&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_library_scrolldataimpl_.html">&quot;impl/interaction/library/<wbr>Scroll<wbr>Data<wbr>Impl&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_library_spinnerchanged_.html">&quot;impl/interaction/library/<wbr>Spinner<wbr>Changed&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_library_srctgtpointsdataimpl_.html">&quot;impl/interaction/library/<wbr>Src<wbr>Tgt<wbr>Points<wbr>Data<wbr>Impl&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_library_srctgttouchdataimpl_.html">&quot;impl/interaction/library/<wbr>Src<wbr>Tgt<wbr>Touch<wbr>Data<wbr>Impl&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_library_swipe_.html">&quot;impl/interaction/library/<wbr>Swipe&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_library_tap_.html">&quot;impl/interaction/library/<wbr>Tap&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_library_tapdataimpl_.html">&quot;impl/interaction/library/<wbr>Tap<wbr>Data<wbr>Impl&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_library_textinputchanged_.html">&quot;impl/interaction/library/<wbr>Text<wbr>Input<wbr>Changed&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_library_touchdataimpl_.html">&quot;impl/interaction/library/<wbr>Touch<wbr>Data<wbr>Impl&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_library_touchdnd_.html">&quot;impl/interaction/library/<wbr>Touch<wbr>DnD&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_interaction_library_widgetdataimpl_.html">&quot;impl/interaction/library/<wbr>Widget<wbr>Data<wbr>Impl&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_undo_undocollector_.html">&quot;impl/undo/<wbr>Undo<wbr>Collector&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_impl_util_arrayutil_.html">&quot;impl/util/<wbr>Array<wbr>Util&quot;</a>
+					</li>
+					<li class=" tsd-kind-module">
+						<a href="modules/_interacto_.html">&quot;interacto&quot;</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

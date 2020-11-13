@@ -1,0 +1,1279 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>BindingImpl | interacto</title>
+	<meta name="description" content="Documentation for interacto">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.json" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="../index.html" class="title">interacto</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../globals.html">Globals</a>
+				</li>
+				<li>
+					<a href="../modules/_impl_binding_bindingimpl_.html">&quot;impl/binding/BindingImpl&quot;</a>
+				</li>
+				<li>
+					<a href="_impl_binding_bindingimpl_.bindingimpl.html">BindingImpl</a>
+				</li>
+			</ul>
+			<h1>Class BindingImpl&lt;C, I, D&gt;</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<section class="tsd-panel tsd-comment">
+				<div class="tsd-comment tsd-typography">
+					<div class="lead">
+						<p>The base class to do bindings, i.e. bindings between user interactions and (undoable) commands.</p>
+					</div>
+					<dl class="tsd-comment-tags">
+						<dt>author</dt>
+						<dd><p>Arnaud BLOUIN</p>
+						</dd>
+					</dl>
+				</div>
+			</section>
+			<section class="tsd-panel tsd-type-parameters">
+				<h3>Type parameters</h3>
+				<ul class="tsd-type-parameters">
+					<li>
+						<h4>C<span class="tsd-signature-symbol">: </span><a href="../interfaces/_api_command_command_.command.html" class="tsd-signature-type">Command</a></h4>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>The type of the command that will produce this binding.</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<h4>I<span class="tsd-signature-symbol">: </span><a href="../interfaces/_api_interaction_interaction_.interaction.html" class="tsd-signature-type">Interaction</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>The type of the interaction that will use this binding.</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<h4>D<span class="tsd-signature-symbol">: </span><a href="../interfaces/_api_interaction_interactiondata_.interactiondata.html" class="tsd-signature-type">InteractionData</a></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">BindingImpl</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<a href="_impl_binding_anonbinding_.anonbinding.html" class="tsd-signature-type">AnonBinding</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel">
+				<h3>Implements</h3>
+				<ul class="tsd-hierarchy">
+					<li><a href="../interfaces/_api_binding_binding_.binding.html" class="tsd-signature-type">Binding</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">I</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span></li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<h2>Index</h2>
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_impl_binding_bindingimpl_.bindingimpl.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-private-protected">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="_impl_binding_bindingimpl_.bindingimpl.html#activated" class="tsd-kind-icon">activated</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="_impl_binding_bindingimpl_.bindingimpl.html#aslogbinding" class="tsd-kind-icon">as<wbr>Log<wbr>Binding</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="_impl_binding_bindingimpl_.bindingimpl.html#aslogcmd" class="tsd-kind-icon">as<wbr>Log<wbr>Cmd</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="_impl_binding_bindingimpl_.bindingimpl.html#cmd" class="tsd-kind-icon">cmd</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="_impl_binding_bindingimpl_.bindingimpl.html#cmdproducer" class="tsd-kind-icon">cmd<wbr>Producer</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="_impl_binding_bindingimpl_.bindingimpl.html#cmdsproduced" class="tsd-kind-icon">cmds<wbr>Produced</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="_impl_binding_bindingimpl_.bindingimpl.html#continuouscmdexec" class="tsd-kind-icon">continuous<wbr>Cmd<wbr>Exec</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="_impl_binding_bindingimpl_.bindingimpl.html#interaction" class="tsd-kind-icon">interaction</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="_impl_binding_bindingimpl_.bindingimpl.html#timecancelled" class="tsd-kind-icon">time<wbr>Cancelled</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><a href="_impl_binding_bindingimpl_.bindingimpl.html#timeended" class="tsd-kind-icon">time<wbr>Ended</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="_impl_binding_bindingimpl_.bindingimpl.html#aftercmdexecuted" class="tsd-kind-icon">after<wbr>Cmd<wbr>Executed</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_impl_binding_bindingimpl_.bindingimpl.html#cancel" class="tsd-kind-icon">cancel</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_impl_binding_bindingimpl_.bindingimpl.html#cancelcontinouswitheffectscmd" class="tsd-kind-icon">cancel<wbr>Continous<wbr>With<wbr>Effects<wbr>Cmd</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_impl_binding_bindingimpl_.bindingimpl.html#clearevents" class="tsd-kind-icon">clear<wbr>Events</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="_impl_binding_bindingimpl_.bindingimpl.html#createandinitcommand" class="tsd-kind-icon">create<wbr>And<wbr>Init<wbr>Command</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><a href="_impl_binding_bindingimpl_.bindingimpl.html#createcommand" class="tsd-kind-icon">create<wbr>Command</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_impl_binding_bindingimpl_.bindingimpl.html#end" class="tsd-kind-icon">end</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_impl_binding_bindingimpl_.bindingimpl.html#endorcancel" class="tsd-kind-icon">end<wbr>OrCancel</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><a href="_impl_binding_bindingimpl_.bindingimpl.html#executecmd" class="tsd-kind-icon">execute<wbr>Cmd</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_impl_binding_bindingimpl_.bindingimpl.html#first" class="tsd-kind-icon">first</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_impl_binding_bindingimpl_.bindingimpl.html#fsmcancels" class="tsd-kind-icon">fsm<wbr>Cancels</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_impl_binding_bindingimpl_.bindingimpl.html#fsmstarts" class="tsd-kind-icon">fsm<wbr>Starts</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_impl_binding_bindingimpl_.bindingimpl.html#fsmstops" class="tsd-kind-icon">fsm<wbr>Stops</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_impl_binding_bindingimpl_.bindingimpl.html#fsmupdates" class="tsd-kind-icon">fsm<wbr>Updates</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_impl_binding_bindingimpl_.bindingimpl.html#getcommand" class="tsd-kind-icon">get<wbr>Command</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_impl_binding_bindingimpl_.bindingimpl.html#getinteraction" class="tsd-kind-icon">get<wbr>Interaction</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_impl_binding_bindingimpl_.bindingimpl.html#gettimescancelled" class="tsd-kind-icon">get<wbr>Times<wbr>Cancelled</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_impl_binding_bindingimpl_.bindingimpl.html#gettimesended" class="tsd-kind-icon">get<wbr>Times<wbr>Ended</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_impl_binding_bindingimpl_.bindingimpl.html#ifcannotexecutecmd" class="tsd-kind-icon">if<wbr>Cannot<wbr>Execute<wbr>Cmd</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_impl_binding_bindingimpl_.bindingimpl.html#ifcmdhadeffects" class="tsd-kind-icon">if<wbr>Cmd<wbr>Had<wbr>Effects</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_impl_binding_bindingimpl_.bindingimpl.html#ifcmdhadnoeffect" class="tsd-kind-icon">if<wbr>Cmd<wbr>Had<wbr>NoEffect</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_impl_binding_bindingimpl_.bindingimpl.html#isactivated" class="tsd-kind-icon">is<wbr>Activated</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_impl_binding_bindingimpl_.bindingimpl.html#iscontinuouscmdexec" class="tsd-kind-icon">is<wbr>Continuous<wbr>Cmd<wbr>Exec</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_impl_binding_bindingimpl_.bindingimpl.html#isrunning" class="tsd-kind-icon">is<wbr>Running</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_impl_binding_bindingimpl_.bindingimpl.html#isstrictstart" class="tsd-kind-icon">is<wbr>Strict<wbr>Start</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_impl_binding_bindingimpl_.bindingimpl.html#loginteraction" class="tsd-kind-icon">log<wbr>Interaction</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_impl_binding_bindingimpl_.bindingimpl.html#produces" class="tsd-kind-icon">produces</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_impl_binding_bindingimpl_.bindingimpl.html#setactivated" class="tsd-kind-icon">set<wbr>Activated</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_impl_binding_bindingimpl_.bindingimpl.html#setlogbinding" class="tsd-kind-icon">set<wbr>Log<wbr>Binding</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_impl_binding_bindingimpl_.bindingimpl.html#setlogcmd" class="tsd-kind-icon">set<wbr>Log<wbr>Cmd</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_impl_binding_bindingimpl_.bindingimpl.html#then" class="tsd-kind-icon">then</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_impl_binding_bindingimpl_.bindingimpl.html#uninstallbinding" class="tsd-kind-icon">uninstall<wbr>Binding</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="_impl_binding_bindingimpl_.bindingimpl.html#when" class="tsd-kind-icon">when</a></li>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Binding<wbr>Impl<span class="tsd-signature-symbol">(</span>continuousExecution<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, interaction<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">I</span>, cmdProducer<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>i<span class="tsd-signature-symbol">?: </span><a href="" class="tsd-signature-type">D</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">C</span>, widgets<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EventTarget</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_impl_binding_bindingimpl_.bindingimpl.html" class="tsd-signature-type">BindingImpl</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L65">src/impl/binding/BindingImpl.ts:65</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Creates a binding.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>continuousExecution: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>Specifies whether the command must be executed on each step of the interaction.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>interaction: <span class="tsd-signature-type">I</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The user interaction of the binding.</p>
+										</div>
+									</div>
+								</li>
+								<li>
+									<h5>cmdProducer: <span class="tsd-signature-symbol">(</span>i<span class="tsd-signature-symbol">?: </span><a href="" class="tsd-signature-type">D</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">C</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The type of the command that will be created. Used to instantiate the command by reflexivity.
+											The class must be public and must have a constructor with no parameter.</p>
+										</div>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-signature">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>i<span class="tsd-signature-symbol">?: </span><a href="" class="tsd-signature-type">D</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5><span class="tsd-flag ts-flagOptional">Optional</span> i: <a href="" class="tsd-signature-type">D</a></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">C</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5>widgets: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EventTarget</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<div class="lead">
+											<p>The widgets on which the binding will operate.</p>
+										</div>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_impl_binding_bindingimpl_.bindingimpl.html" class="tsd-signature-type">BindingImpl</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-private-protected">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="activated" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> activated</h3>
+					<div class="tsd-signature tsd-kind-icon">activated<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L43">src/impl/binding/BindingImpl.ts:43</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="aslogbinding" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> as<wbr>Log<wbr>Binding</h3>
+					<div class="tsd-signature tsd-kind-icon">as<wbr>Log<wbr>Binding<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L39">src/impl/binding/BindingImpl.ts:39</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="aslogcmd" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> as<wbr>Log<wbr>Cmd</h3>
+					<div class="tsd-signature tsd-kind-icon">as<wbr>Log<wbr>Cmd<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L41">src/impl/binding/BindingImpl.ts:41</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="cmd" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagOptional">Optional</span> cmd</h3>
+					<div class="tsd-signature tsd-kind-icon">cmd<span class="tsd-signature-symbol">:</span> <a href="" class="tsd-signature-type">C</a></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L53">src/impl/binding/BindingImpl.ts:53</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The current action in progress.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="cmdproducer" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> cmd<wbr>Producer</h3>
+					<div class="tsd-signature tsd-kind-icon">cmd<wbr>Producer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>i<span class="tsd-signature-symbol">?: </span><a href="" class="tsd-signature-type">D</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">C</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L63">src/impl/binding/BindingImpl.ts:63</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The command class to instantiate.</p>
+						</div>
+					</div>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-signature">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>i<span class="tsd-signature-symbol">?: </span><a href="" class="tsd-signature-type">D</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> i: <a href="" class="tsd-signature-type">D</a></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">C</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="cmdsproduced" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> cmds<wbr>Produced</h3>
+					<div class="tsd-signature tsd-kind-icon">cmds<wbr>Produced<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Subject</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L65">src/impl/binding/BindingImpl.ts:65</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="continuouscmdexec" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> continuous<wbr>Cmd<wbr>Exec</h3>
+					<div class="tsd-signature tsd-kind-icon">continuous<wbr>Cmd<wbr>Exec<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L58">src/impl/binding/BindingImpl.ts:58</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>Specifies whether the command must be executed on each step of the interaction.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="interaction" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> interaction</h3>
+					<div class="tsd-signature tsd-kind-icon">interaction<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">I</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L48">src/impl/binding/BindingImpl.ts:48</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>The source interaction.</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="timecancelled" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> time<wbr>Cancelled</h3>
+					<div class="tsd-signature tsd-kind-icon">time<wbr>Cancelled<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L37">src/impl/binding/BindingImpl.ts:37</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+					<a name="timeended" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> time<wbr>Ended</h3>
+					<div class="tsd-signature tsd-kind-icon">time<wbr>Ended<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L35">src/impl/binding/BindingImpl.ts:35</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+					<a name="aftercmdexecuted" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> after<wbr>Cmd<wbr>Executed</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">after<wbr>Cmd<wbr>Executed<span class="tsd-signature-symbol">(</span>cmd<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span>, ok<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L324">src/impl/binding/BindingImpl.ts:324</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>cmd: <span class="tsd-signature-type">C</span></h5>
+								</li>
+								<li>
+									<h5>ok: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="cancel" class="tsd-anchor"></a>
+					<h3>cancel</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">cancel<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_api_binding_binding_.binding.html">Binding</a>.<a href="../interfaces/_api_binding_binding_.binding.html#cancel">cancel</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L124">src/impl/binding/BindingImpl.ts:124</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="cancelcontinouswitheffectscmd" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> cancel<wbr>Continous<wbr>With<wbr>Effects<wbr>Cmd</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">cancel<wbr>Continous<wbr>With<wbr>Effects<wbr>Cmd<span class="tsd-signature-symbol">(</span>c<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L190">src/impl/binding/BindingImpl.ts:190</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>c: <span class="tsd-signature-type">C</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="clearevents" class="tsd-anchor"></a>
+					<h3>clear<wbr>Events</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">clear<wbr>Events<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_api_binding_binding_.binding.html">Binding</a>.<a href="../interfaces/_api_binding_binding_.binding.html#clearevents">clearEvents</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L95">src/impl/binding/BindingImpl.ts:95</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+					<a name="createandinitcommand" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> create<wbr>And<wbr>Init<wbr>Command</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>And<wbr>Init<wbr>Command<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L297">src/impl/binding/BindingImpl.ts:297</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+					<a name="createcommand" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagProtected">Protected</span> create<wbr>Command</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Command<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L103">src/impl/binding/BindingImpl.ts:103</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>creates the command of the binding. If the attribute &#39;cmd&#39; is not null, nothing will be done.</p>
+								</div>
+							</div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">C</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
+							<p>The created command or undefined if an error occurred</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="end" class="tsd-anchor"></a>
+					<h3>end</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">end<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_api_binding_binding_.binding.html">Binding</a>.<a href="../interfaces/_api_binding_binding_.binding.html#end">end</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L120">src/impl/binding/BindingImpl.ts:120</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="endorcancel" class="tsd-anchor"></a>
+					<h3>end<wbr>OrCancel</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">end<wbr>OrCancel<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_api_binding_binding_.binding.html">Binding</a>.<a href="../interfaces/_api_binding_binding_.binding.html#endorcancel">endOrCancel</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L128">src/impl/binding/BindingImpl.ts:128</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-private">
+					<a name="executecmd" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagPrivate">Private</span> execute<wbr>Cmd</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-private">
+						<li class="tsd-signature tsd-kind-icon">execute<wbr>Cmd<span class="tsd-signature-symbol">(</span>cmd<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L320">src/impl/binding/BindingImpl.ts:320</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>cmd: <span class="tsd-signature-type">C</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="first" class="tsd-anchor"></a>
+					<h3>first</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">first<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_api_binding_binding_.binding.html">Binding</a>.<a href="../interfaces/_api_binding_binding_.binding.html#first">first</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L112">src/impl/binding/BindingImpl.ts:112</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="fsmcancels" class="tsd-anchor"></a>
+					<h3>fsm<wbr>Cancels</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">fsm<wbr>Cancels<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_api_binding_binding_.binding.html">Binding</a>.<a href="../interfaces/_api_binding_binding_.binding.html#fsmcancels">fsmCancels</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L168">src/impl/binding/BindingImpl.ts:168</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="fsmstarts" class="tsd-anchor"></a>
+					<h3>fsm<wbr>Starts</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">fsm<wbr>Starts<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_api_binding_binding_.binding.html">Binding</a>.<a href="../interfaces/_api_binding_binding_.binding.html#fsmstarts">fsmStarts</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L201">src/impl/binding/BindingImpl.ts:201</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="fsmstops" class="tsd-anchor"></a>
+					<h3>fsm<wbr>Stops</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">fsm<wbr>Stops<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_api_binding_binding_.binding.html">Binding</a>.<a href="../interfaces/_api_binding_binding_.binding.html#fsmstops">fsmStops</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L263">src/impl/binding/BindingImpl.ts:263</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="fsmupdates" class="tsd-anchor"></a>
+					<h3>fsm<wbr>Updates</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">fsm<wbr>Updates<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_api_binding_binding_.binding.html">Binding</a>.<a href="../interfaces/_api_binding_binding_.binding.html#fsmupdates">fsmUpdates</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L229">src/impl/binding/BindingImpl.ts:229</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getcommand" class="tsd-anchor"></a>
+					<h3>get<wbr>Command</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Command<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_api_binding_binding_.binding.html">Binding</a>.<a href="../interfaces/_api_binding_binding_.binding.html#getcommand">getCommand</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L149">src/impl/binding/BindingImpl.ts:149</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">C</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">undefined</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getinteraction" class="tsd-anchor"></a>
+					<h3>get<wbr>Interaction</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Interaction<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">I</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_api_binding_binding_.binding.html">Binding</a>.<a href="../interfaces/_api_binding_binding_.binding.html#getinteraction">getInteraction</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L144">src/impl/binding/BindingImpl.ts:144</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">I</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="gettimescancelled" class="tsd-anchor"></a>
+					<h3>get<wbr>Times<wbr>Cancelled</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Times<wbr>Cancelled<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_api_binding_binding_.binding.html">Binding</a>.<a href="../interfaces/_api_binding_binding_.binding.html#gettimescancelled">getTimesCancelled</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L424">src/impl/binding/BindingImpl.ts:424</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="gettimesended" class="tsd-anchor"></a>
+					<h3>get<wbr>Times<wbr>Ended</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Times<wbr>Ended<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_api_binding_binding_.binding.html">Binding</a>.<a href="../interfaces/_api_binding_binding_.binding.html#gettimesended">getTimesEnded</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L420">src/impl/binding/BindingImpl.ts:420</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="ifcannotexecutecmd" class="tsd-anchor"></a>
+					<h3>if<wbr>Cannot<wbr>Execute<wbr>Cmd</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">if<wbr>Cannot<wbr>Execute<wbr>Cmd<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_api_binding_binding_.binding.html">Binding</a>.<a href="../interfaces/_api_binding_binding_.binding.html#ifcannotexecutecmd">ifCannotExecuteCmd</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L140">src/impl/binding/BindingImpl.ts:140</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="ifcmdhadeffects" class="tsd-anchor"></a>
+					<h3>if<wbr>Cmd<wbr>Had<wbr>Effects</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">if<wbr>Cmd<wbr>Had<wbr>Effects<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_api_binding_binding_.binding.html">Binding</a>.<a href="../interfaces/_api_binding_binding_.binding.html#ifcmdhadeffects">ifCmdHadEffects</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L136">src/impl/binding/BindingImpl.ts:136</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="ifcmdhadnoeffect" class="tsd-anchor"></a>
+					<h3>if<wbr>Cmd<wbr>Had<wbr>NoEffect</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">if<wbr>Cmd<wbr>Had<wbr>NoEffect<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_api_binding_binding_.binding.html">Binding</a>.<a href="../interfaces/_api_binding_binding_.binding.html#ifcmdhadnoeffect">ifCmdHadNoEffect</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L132">src/impl/binding/BindingImpl.ts:132</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="isactivated" class="tsd-anchor"></a>
+					<h3>is<wbr>Activated</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Activated<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_api_binding_binding_.binding.html">Binding</a>.<a href="../interfaces/_api_binding_binding_.binding.html#isactivated">isActivated</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L154">src/impl/binding/BindingImpl.ts:154</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="iscontinuouscmdexec" class="tsd-anchor"></a>
+					<h3>is<wbr>Continuous<wbr>Cmd<wbr>Exec</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Continuous<wbr>Cmd<wbr>Exec<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_api_binding_binding_.binding.html">Binding</a>.<a href="../interfaces/_api_binding_binding_.binding.html#iscontinuouscmdexec">isContinuousCmdExec</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L375">src/impl/binding/BindingImpl.ts:375</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="isrunning" class="tsd-anchor"></a>
+					<h3>is<wbr>Running</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Running<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_api_binding_binding_.binding.html">Binding</a>.<a href="../interfaces/_api_binding_binding_.binding.html#isrunning">isRunning</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L159">src/impl/binding/BindingImpl.ts:159</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="isstrictstart" class="tsd-anchor"></a>
+					<h3>is<wbr>Strict<wbr>Start</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Strict<wbr>Start<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_api_binding_binding_.binding.html">Binding</a>.<a href="../interfaces/_api_binding_binding_.binding.html#isstrictstart">isStrictStart</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L164">src/impl/binding/BindingImpl.ts:164</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="loginteraction" class="tsd-anchor"></a>
+					<h3>log<wbr>Interaction</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">log<wbr>Interaction<span class="tsd-signature-symbol">(</span>log<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L412">src/impl/binding/BindingImpl.ts:412</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Logs information related to the user interaction.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>log: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>True: information related to the user interaction will be logged</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="produces" class="tsd-anchor"></a>
+					<h3>produces</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">produces<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_api_binding_binding_.binding.html">Binding</a>.<a href="../interfaces/_api_binding_binding_.binding.html#produces">produces</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L416">src/impl/binding/BindingImpl.ts:416</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setactivated" class="tsd-anchor"></a>
+					<h3>set<wbr>Activated</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Activated<span class="tsd-signature-symbol">(</span>activated<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_api_binding_binding_.binding.html">Binding</a>.<a href="../interfaces/_api_binding_binding_.binding.html#setactivated">setActivated</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L380">src/impl/binding/BindingImpl.ts:380</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>activated: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setlogbinding" class="tsd-anchor"></a>
+					<h3>set<wbr>Log<wbr>Binding</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Log<wbr>Binding<span class="tsd-signature-symbol">(</span>log<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L396">src/impl/binding/BindingImpl.ts:396</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Logs information related to the binding.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>log: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>True: information will be logged</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setlogcmd" class="tsd-anchor"></a>
+					<h3>set<wbr>Log<wbr>Cmd</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Log<wbr>Cmd<span class="tsd-signature-symbol">(</span>log<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L404">src/impl/binding/BindingImpl.ts:404</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Logs information related to the command creation.</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>log: <span class="tsd-signature-type">boolean</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>True: information related to the command creation will be logged</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="then" class="tsd-anchor"></a>
+					<h3>then</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">then<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_api_binding_binding_.binding.html">Binding</a>.<a href="../interfaces/_api_binding_binding_.binding.html#then">then</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L116">src/impl/binding/BindingImpl.ts:116</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="uninstallbinding" class="tsd-anchor"></a>
+					<h3>uninstall<wbr>Binding</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">uninstall<wbr>Binding<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_api_binding_binding_.binding.html">Binding</a>.<a href="../interfaces/_api_binding_binding_.binding.html#uninstallbinding">uninstallBinding</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L366">src/impl/binding/BindingImpl.ts:366</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="when" class="tsd-anchor"></a>
+					<h3>when</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">when<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_api_binding_binding_.binding.html">Binding</a>.<a href="../interfaces/_api_binding_binding_.binding.html#when">when</a></p>
+								<ul>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binding/BindingImpl.ts#L91">src/impl/binding/BindingImpl.ts:91</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="../globals.html"><em>Globals</em></a>
+					</li>
+					<li class="current tsd-kind-module">
+						<a href="../modules/_impl_binding_bindingimpl_.html">&quot;impl/binding/<wbr>Binding<wbr>Impl&quot;</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+				<ul class="current">
+					<li class="current tsd-kind-class tsd-parent-kind-module tsd-has-type-parameter">
+						<a href="_impl_binding_bindingimpl_.bindingimpl.html" class="tsd-kind-icon">Binding<wbr>Impl</a>
+						<ul>
+							<li class=" tsd-kind-constructor tsd-parent-kind-class">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#constructor" class="tsd-kind-icon">constructor</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#activated" class="tsd-kind-icon">activated</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#aslogbinding" class="tsd-kind-icon">as<wbr>Log<wbr>Binding</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#aslogcmd" class="tsd-kind-icon">as<wbr>Log<wbr>Cmd</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#cmd" class="tsd-kind-icon">cmd</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#cmdproducer" class="tsd-kind-icon">cmd<wbr>Producer</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#cmdsproduced" class="tsd-kind-icon">cmds<wbr>Produced</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#continuouscmdexec" class="tsd-kind-icon">continuous<wbr>Cmd<wbr>Exec</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#interaction" class="tsd-kind-icon">interaction</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#timecancelled" class="tsd-kind-icon">time<wbr>Cancelled</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-protected">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#timeended" class="tsd-kind-icon">time<wbr>Ended</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#aftercmdexecuted" class="tsd-kind-icon">after<wbr>Cmd<wbr>Executed</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#cancel" class="tsd-kind-icon">cancel</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#cancelcontinouswitheffectscmd" class="tsd-kind-icon">cancel<wbr>Continous<wbr>With<wbr>Effects<wbr>Cmd</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#clearevents" class="tsd-kind-icon">clear<wbr>Events</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#createandinitcommand" class="tsd-kind-icon">create<wbr>And<wbr>Init<wbr>Command</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-protected">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#createcommand" class="tsd-kind-icon">create<wbr>Command</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#end" class="tsd-kind-icon">end</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#endorcancel" class="tsd-kind-icon">end<wbr>OrCancel</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-private">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#executecmd" class="tsd-kind-icon">execute<wbr>Cmd</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#first" class="tsd-kind-icon">first</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#fsmcancels" class="tsd-kind-icon">fsm<wbr>Cancels</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#fsmstarts" class="tsd-kind-icon">fsm<wbr>Starts</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#fsmstops" class="tsd-kind-icon">fsm<wbr>Stops</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#fsmupdates" class="tsd-kind-icon">fsm<wbr>Updates</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#getcommand" class="tsd-kind-icon">get<wbr>Command</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#getinteraction" class="tsd-kind-icon">get<wbr>Interaction</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#gettimescancelled" class="tsd-kind-icon">get<wbr>Times<wbr>Cancelled</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#gettimesended" class="tsd-kind-icon">get<wbr>Times<wbr>Ended</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#ifcannotexecutecmd" class="tsd-kind-icon">if<wbr>Cannot<wbr>Execute<wbr>Cmd</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#ifcmdhadeffects" class="tsd-kind-icon">if<wbr>Cmd<wbr>Had<wbr>Effects</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#ifcmdhadnoeffect" class="tsd-kind-icon">if<wbr>Cmd<wbr>Had<wbr>NoEffect</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#isactivated" class="tsd-kind-icon">is<wbr>Activated</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#iscontinuouscmdexec" class="tsd-kind-icon">is<wbr>Continuous<wbr>Cmd<wbr>Exec</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#isrunning" class="tsd-kind-icon">is<wbr>Running</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#isstrictstart" class="tsd-kind-icon">is<wbr>Strict<wbr>Start</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#loginteraction" class="tsd-kind-icon">log<wbr>Interaction</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#produces" class="tsd-kind-icon">produces</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#setactivated" class="tsd-kind-icon">set<wbr>Activated</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#setlogbinding" class="tsd-kind-icon">set<wbr>Log<wbr>Binding</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#setlogcmd" class="tsd-kind-icon">set<wbr>Log<wbr>Cmd</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#then" class="tsd-kind-icon">then</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#uninstallbinding" class="tsd-kind-icon">uninstall<wbr>Binding</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="_impl_binding_bindingimpl_.bindingimpl.html#when" class="tsd-kind-icon">when</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+				<ul class="after-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+</body>
+</html>

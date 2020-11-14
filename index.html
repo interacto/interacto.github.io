@@ -692,7 +692,7 @@ This routine is not implemented in TypeScript yet (even if provided by the API, 
 
 
     <div class="item ts interaction">
-        <div class="line-title box">DnD, Draglock, N-clicks</div>
+        <div class="line-title box">DnD, Draglock</div>
         <div class="left box">
             <pre><code>dndBinder(true)....bind();</code></pre>
             The <code>DnD</code> refers to a Drag-And-Drop interaction.<br/>
@@ -712,14 +712,29 @@ This routine is not implemented in TypeScript yet (even if provided by the API, 
         </div>
 
        <div class="right box">
-        <pre><code>clicksBinder(3)....bind();</code></pre>
-        The N-clicks interaction permits a user to click N times.<br/>
-        For example, a double-click refers to <code>clicksBinder(2)</code>.
-        An N-click interaction stops after a delay of 1 second without any click.<br/>
-        For example, if one clicks two times and stops for one second, the binding based on <code>clicksBinder(3)</code> does not produce any command.<br/>
-        if one clicks three times, the same binding produces one command.<br/>
-        if one clicks four times and stops for one second, this binding produces one command.
+           Using these two interactions, the variable <code>i</code> in the routines (ie the interaction data) or of type <code>SrcTgtPointsData</code>.<br/>
+        <img src="img/srctgtpointdata.svg" alt="interaction data"  />
        </div>
+    </div>
+
+
+    <div class="item ts interaction">
+        <div class="line-title box">N-clicks</div>
+        <div class="left box">
+            <pre><code>clicksBinder(3)....bind();</code></pre>
+            The N-clicks interaction permits a user to click N times.<br/>
+            For example, a double-click refers to <code>clicksBinder(2)</code>.
+            An N-click interaction stops after a delay of 1 second without any click.<br/>
+            For example, if one clicks two times and stops for one second, the binding based on <code>clicksBinder(3)</code> does not produce any command.<br/>
+            if one clicks three times, the same binding produces one command.<br/>
+            if one clicks four times and stops for one second, this binding produces one command.
+        </div>
+
+        <div class="center box">
+        </div>
+
+       <!-- <div class="right box">
+       </div> -->
     </div>
 
 

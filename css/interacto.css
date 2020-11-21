@@ -29,7 +29,18 @@ pre > code {
     text-align: left;
     display: inline-block;
 	float: left;
-	width: 30%;
+    width: 30%;
+    
+}
+
+.centerv {
+    transform: translateY(50%);
+}
+
+.logo{
+    text-align: left;
+    display: inline-block;
+	float: left;
 }
 
 .center {

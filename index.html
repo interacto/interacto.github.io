@@ -713,6 +713,30 @@ This routine is not implemented in TypeScript yet (even if provided by the API, 
     </div>
 
 
+    <div class="item ts interaction">
+        <div class="line-title box">Click, Pressure, etc.: how to use point data</div>
+        <div class="left box">
+Click-like interactions provide <code>PointData</code> interaction data:
+<img src="img/pointData.svg" alt="pointdata" />
+        </div>
+
+        <div class="center box">
+For example, if you want to get the HTML element at the origin of a click to get the value of its attribute <code>x</code>:
+<pre><code>clickBinder()
+  .toProduce(i => { // (i: PointData)
+    const elt = (i.getSrcObject() as Element).getAttribute('x');
+    ...
+  })....bind();
+</code></pre>
+This example uses <code>toProduce</code> but this works for any routine that provides an <code>i</code> parameter (eg <code>first</code>, <code>then</code>).
+        </div>
+
+        <div class="right box">
+
+        </div>
+    </div>
+
+
 
 
 

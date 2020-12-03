@@ -291,6 +291,30 @@
 
 
     <div class="item ts routine">
+        <div class="line-title box">Angular: using <code>on</code> with <code>ViewChildren</code></div>
+
+        <div class="left box">
+            Let's say you have a property in you Angular component that refers to a list of divs:
+            <pre><code class="ts">@ViewChildren('divs')
+private divs: QueryList&#60;ElementRef&#60;HTMLDivElement&#62;&#62;;</code></pre>
+
+To register all the <code>div</code> of <code>divs</code>, you can write this <code>on</code> routine:
+    <pre><code class="ts">clickBinder()
+  .on(...this.divs.toArray().map(e => e.nativeElement))
+  ....bind();</code></pre>
+  This converts the <code>queryList</code> as an array of <code>div</code> objects.
+        </div>
+
+        <!-- <div class="center box">
+        </div> -->
+
+        <!-- <div class="right box">
+        </div> -->
+    </div>
+
+
+
+    <div class="item ts routine">
         <div class="line-title box">The routine <code>toProduce</code>: command creation</div>
         <div class="left box">
             <pre><code>dragLockBinder()

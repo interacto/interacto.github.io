@@ -718,6 +718,8 @@ This routine is not implemented in TypeScript yet (even if provided by the API, 
         <div class="left box">
 Click-like interactions provide <code>PointData</code> interaction data:
 <img src="img/pointData.svg" alt="pointdata" />
+<br/>
+The documentation of this interface is <a href="https://interacto.github.io/docs/interfaces/_api_interaction_pointdata_.pointdata.html">defined here</a>.
         </div>
 
         <div class="center box">
@@ -763,8 +765,89 @@ This example uses <code>toProduce</code> but this works for any routine that pro
        <div class="right box">
            Using these two interactions, the variable <code>i</code> in the routines (the interaction data) is of type <code>SrcTgtPointsData</code>.<br/>
         <img src="img/srctgtpointdata.svg" alt="SrcTgtPointsData" />
+        <br/>
+        The documentation of this interface is <a href="https://interacto.github.io/docs/interfaces/_api_interaction_srctgtpointsdata_.srctgtpointsdata.html">defined here</a>.
        </div>
     </div>
+
+
+    <div class="item ts interaction command routine">
+        <div class="line-title box">Drag-n-Drop (DnD) examples</div>
+        <div class="left box">
+            A drag-and-drop interaction follows this sequence of mouse events:<br/>
+            one pressure, one or several moves, one release.<br/>
+            Using Interacto, the routine <code>first</code> captures the instant when the DnD starts.<br/>
+            The routine <code>then</code> captures when the DnD is running (i.e. on move).<br/>
+            The routine <code>end</code> captures when the DnD stops (i.e. on release).<br/>
+            For example this binding draws a line in an HTML canvas 
+            (see <a href="https://stackoverflow.com/questions/62237719/implementing-undo-and-redo-in-canvas-whiteboard-using-typescript/64563793#64563793">the full example</a>):<br/>
+            <pre><code>const rect = this.canvas.nativeElement.getBoundingClientRect();
+dndBinder(false)
+  // The command to produce
+  .toProduce(() => new AddShape(this.canvas.nativeElement))
+  // What to do when the interaction starts
+  .first((c: AddShape, i: SrcTgtTouchData) => {
+    // Note that i refers to the current data of the DnD.
+    // See the class diagram of SrcTgtTouchData above.
+    // And c refers to the ongoing command that can be updated here
+    c.shape.lines.push([i.getSrcClientX() - rect.left, i.getSrcClientY() - rect.top]);
+  })
+  // What to do when the interaction updates
+  .then((c: AddShape, i: SrcTgtTouchData) => {
+    // The values of 'i' change on each change of the DnD
+    c.shape.lines.push([i.getTgtClientX() - rect.left, i.getTgtClientY() - rect.top]);
+  })
+  // When the interaction stops
+  .end((c: AddShape, i: SrcTgtTouchData) => {
+    //...
+  })
+  // On which widget the interaction operates
+  .on(this.canvas.nativeElement)
+  // continuous execution means that the command is executed each time the interaction updates
+  .continuousExecution()
+  .bind();</code></pre>
+        </div>
+
+        <div class="center box">
+            The command used in the previous box is partly defined as follows:
+            <pre><code>export class Shape { lines: Array<[number, number]> = []; }
+  export class AddShape extends CommandBase implements Undoable {
+  shape: Shape;
+  mementoData: ImageData;
+
+  constructor(private canvas: HTMLCanvasElement) {
+    this.shape = new Shape();
+  }
+  protected createMemento() {
+    const rect = this.canvas.getBoundingClientRect();
+    this.mementoData = this.canvas.getContext('2d').getImageData(0, 0, rect.width, rect.height);
+  }
+  protected execution(): void {
+    const cx = this.canvas.getContext('2d');
+    cx.beginPath();
+    cx.moveTo(this.shape.lines[this.shape.lines.length - 2][0], this.shape.lines[this.shape.lines.length - 2][1]);
+    cx.lineTo(this.shape.lines[this.shape.lines.length - 1][0], this.shape.lines[this.shape.lines.length - 1][1]);
+    cx.stroke();
+  }
+  canExecute(): boolean {
+    return this.shape.lines.length > 1;
+  }
+  redo(): void {
+    this.drawShape();
+  }
+  undo(): void {
+    this.canvas.getContext('2d').putImageData(this.mementoData, 0, 0);
+  }
+  // ...
+}}</code></pre>
+        </div>
+
+       <!-- <div class="right box">
+       </div> -->
+    </div>
+
+
+
 
 
     <div class="item ts interaction">
@@ -782,6 +865,8 @@ This example uses <code>toProduce</code> but this works for any routine that pro
         <div class="center box">
             Using an N-clicks interaction, the variable <code>i</code> in the routines (the interaction data) is of type <code>PointsData</code>.<br/>
             <img src="img/pointsdata.svg" alt="PointsData" />
+            <br/>
+        The documentation of this interface is <a href="https://interacto.github.io/docs/interfaces/_api_interaction_pointsdata_.pointsdata.html">defined here</a>.
         </div>
 
        <!-- <div class="right box">
@@ -969,8 +1054,9 @@ This example uses <code>toProduce</code> but this works for any routine that pro
   .on(this.textarea.nativeElement)
   ...
   .bind();</code></pre>
-            The <code>text input</code> interaction refers to the use of a text input widget (eg a <code>textarea</code>).<br/>
-            Using this interaction, the user can write texts. After a stop of 1 second (default value that one can change) the command is executed.
+            The text input interaction refers to the use of a text input widget (eg a <code>textarea</code>).<br/>
+            <b>Warning</b>: the binding triggers the command after a delay of x seconds after the last key interaction from the user 
+            (x being 1 second by default, but can be changed: <code>textInputBinder(2)</code> uses a delay of 2 seconds). 
         </div>
 
         <div class="center box">

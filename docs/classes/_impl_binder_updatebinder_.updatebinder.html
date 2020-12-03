@@ -74,11 +74,6 @@
 					<div class="lead">
 						<p>The base binding builder for bindings where commands can be updated while the user interaction is running.</p>
 					</div>
-					<dl class="tsd-comment-tags">
-						<dt>author</dt>
-						<dd><p>Arnaud Blouin</p>
-						</dd>
-					</dl>
 				</div>
 			</section>
 			<section class="tsd-panel tsd-type-parameters">
@@ -198,14 +193,14 @@
 					<a name="constructor" class="tsd-anchor"></a>
 					<h3>constructor</h3>
 					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">new <wbr>Update<wbr>Binder<span class="tsd-signature-symbol">(</span>observer<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_api_binding_bindingsobserver_.bindingsobserver.html" class="tsd-signature-type">BindingsObserver</a>, throttleTimeout<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, continuousCmdExecution<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span>, strict<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span>, initCmd<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>c<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span>, i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span>, checkConditions<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span>, cmdProducer<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">)</span>, widgets<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EventTarget</span><span class="tsd-signature-symbol">&gt;</span>, dynamicNodes<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Node</span><span class="tsd-signature-symbol">&gt;</span>, interactionSupplier<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">I</span><span class="tsd-signature-symbol">)</span>, onEnd<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>c<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span>, i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span>, logLevels<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../enums/_api_logging_loglevel_.loglevel.html" class="tsd-signature-type">LogLevel</a><span class="tsd-signature-symbol">&gt;</span>, hadNoEffectFct<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>c<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span>, i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span>, hadEffectsFct<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>c<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span>, i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span>, cannotExecFct<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>c<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span>, i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span>, updateFct<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>c<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span>, i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span>, cancelFct<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span>, endOrCancelFct<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span>, stopProga<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span>, prevent<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_impl_binder_updatebinder_.updatebinder.html" class="tsd-signature-type">UpdateBinder</a></li>
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Update<wbr>Binder<span class="tsd-signature-symbol">(</span>observer<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_api_binding_bindingsobserver_.bindingsobserver.html" class="tsd-signature-type">BindingsObserver</a>, throttleTimeout<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span>, continuousCmdExecution<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span>, strict<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span>, initCmd<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>c<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span>, i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span>, checkConditions<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span>, cmdProducer<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">)</span>, widgets<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">ReadonlyArray</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EventTarget</span><span class="tsd-signature-symbol">&gt;</span>, dynamicNodes<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">ReadonlyArray</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Node</span><span class="tsd-signature-symbol">&gt;</span>, interactionSupplier<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">I</span><span class="tsd-signature-symbol">)</span>, onEnd<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>c<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span>, i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span>, logLevels<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">ReadonlyArray</span><span class="tsd-signature-symbol">&lt;</span><a href="../enums/_api_logging_loglevel_.loglevel.html" class="tsd-signature-type">LogLevel</a><span class="tsd-signature-symbol">&gt;</span>, hadNoEffectFct<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>c<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span>, i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span>, hadEffectsFct<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>c<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span>, i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span>, cannotExecFct<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>c<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span>, i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span>, updateFct<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>c<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span>, i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span>, cancelFct<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span>, endOrCancelFct<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span>, stopProga<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span>, prevent<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">false</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">true</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_impl_binder_updatebinder_.updatebinder.html" class="tsd-signature-type">UpdateBinder</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_impl_binder_binder_.binder.html">Binder</a>.<a href="_impl_binder_binder_.binder.html#constructor">constructor</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/UpdateBinder.ts#L44">src/impl/binder/UpdateBinder.ts:44</a></li>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/UpdateBinder.ts#L43">src/impl/binder/UpdateBinder.ts:43</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -232,10 +227,10 @@
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> cmdProducer: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">)</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> widgets: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EventTarget</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> widgets: <span class="tsd-signature-type">ReadonlyArray</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EventTarget</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> dynamicNodes: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Node</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> dynamicNodes: <span class="tsd-signature-type">ReadonlyArray</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Node</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> interactionSupplier: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">I</span><span class="tsd-signature-symbol">)</span></h5>
@@ -244,7 +239,7 @@
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> onEnd: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>c<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span>, i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></h5>
 								</li>
 								<li>
-									<h5><span class="tsd-flag ts-flagOptional">Optional</span> logLevels: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../enums/_api_logging_loglevel_.loglevel.html" class="tsd-signature-type">LogLevel</a><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> logLevels: <span class="tsd-signature-type">ReadonlyArray</span><span class="tsd-signature-symbol">&lt;</span><a href="../enums/_api_logging_loglevel_.loglevel.html" class="tsd-signature-type">LogLevel</a><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 								<li>
 									<h5><span class="tsd-flag ts-flagOptional">Optional</span> hadNoEffectFct: <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>c<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span>, i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></h5>
@@ -284,7 +279,7 @@
 					<div class="tsd-signature tsd-kind-icon">_strict<wbr>Start<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/UpdateBinder.ts#L42">src/impl/binder/UpdateBinder.ts:42</a></li>
+							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/UpdateBinder.ts#L41">src/impl/binder/UpdateBinder.ts:41</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -294,7 +289,7 @@
 					<div class="tsd-signature tsd-kind-icon">cancel<wbr>Fct<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/UpdateBinder.ts#L36">src/impl/binder/UpdateBinder.ts:36</a></li>
+							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/UpdateBinder.ts#L35">src/impl/binder/UpdateBinder.ts:35</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -305,7 +300,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_impl_binder_binder_.binder.html">Binder</a>.<a href="_impl_binder_binder_.binder.html#cannotexecfct">cannotExecFct</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/Binder.ts#L50">src/impl/binder/Binder.ts:50</a></li>
+							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/Binder.ts#L49">src/impl/binder/Binder.ts:49</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -316,7 +311,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_impl_binder_binder_.binder.html">Binder</a>.<a href="_impl_binder_binder_.binder.html#checkconditions">checkConditions</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/Binder.ts#L36">src/impl/binder/Binder.ts:36</a></li>
+							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/Binder.ts#L35">src/impl/binder/Binder.ts:35</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -327,7 +322,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_impl_binder_binder_.binder.html">Binder</a>.<a href="_impl_binder_binder_.binder.html#cmdproducer">cmdProducer</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/Binder.ts#L38">src/impl/binder/Binder.ts:38</a></li>
+							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/Binder.ts#L37">src/impl/binder/Binder.ts:37</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -337,18 +332,18 @@
 					<div class="tsd-signature tsd-kind-icon">continuous<wbr>Cmd<wbr>Execution<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/UpdateBinder.ts#L40">src/impl/binder/UpdateBinder.ts:40</a></li>
+							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/UpdateBinder.ts#L39">src/impl/binder/UpdateBinder.ts:39</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 					<a name="dynamicnodes" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> dynamic<wbr>Nodes</h3>
-					<div class="tsd-signature tsd-kind-icon">dynamic<wbr>Nodes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Node</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">dynamic<wbr>Nodes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ReadonlyArray</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Node</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_impl_binder_binder_.binder.html">Binder</a>.<a href="_impl_binder_binder_.binder.html#dynamicnodes">dynamicNodes</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/Binder.ts#L42">src/impl/binder/Binder.ts:42</a></li>
+							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/Binder.ts#L41">src/impl/binder/Binder.ts:41</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -358,7 +353,7 @@
 					<div class="tsd-signature tsd-kind-icon">end<wbr>OrCancel<wbr>Fct<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/UpdateBinder.ts#L38">src/impl/binder/UpdateBinder.ts:38</a></li>
+							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/UpdateBinder.ts#L37">src/impl/binder/UpdateBinder.ts:37</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -369,7 +364,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_impl_binder_binder_.binder.html">Binder</a>.<a href="_impl_binder_binder_.binder.html#hadeffectsfct">hadEffectsFct</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/Binder.ts#L46">src/impl/binder/Binder.ts:46</a></li>
+							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/Binder.ts#L45">src/impl/binder/Binder.ts:45</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -380,7 +375,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_impl_binder_binder_.binder.html">Binder</a>.<a href="_impl_binder_binder_.binder.html#hadnoeffectfct">hadNoEffectFct</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/Binder.ts#L48">src/impl/binder/Binder.ts:48</a></li>
+							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/Binder.ts#L47">src/impl/binder/Binder.ts:47</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -391,7 +386,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_impl_binder_binder_.binder.html">Binder</a>.<a href="_impl_binder_binder_.binder.html#initcmd">initCmd</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/Binder.ts#L34">src/impl/binder/Binder.ts:34</a></li>
+							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/Binder.ts#L33">src/impl/binder/Binder.ts:33</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -402,18 +397,18 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_impl_binder_binder_.binder.html">Binder</a>.<a href="_impl_binder_binder_.binder.html#interactionsupplier">interactionSupplier</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/Binder.ts#L44">src/impl/binder/Binder.ts:44</a></li>
+							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/Binder.ts#L43">src/impl/binder/Binder.ts:43</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 					<a name="loglevels" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> log<wbr>Levels</h3>
-					<div class="tsd-signature tsd-kind-icon">log<wbr>Levels<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../enums/_api_logging_loglevel_.loglevel.html" class="tsd-signature-type">LogLevel</a><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">log<wbr>Levels<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ReadonlyArray</span><span class="tsd-signature-symbol">&lt;</span><a href="../enums/_api_logging_loglevel_.loglevel.html" class="tsd-signature-type">LogLevel</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_impl_binder_binder_.binder.html">Binder</a>.<a href="_impl_binder_binder_.binder.html#loglevels">logLevels</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/Binder.ts#L54">src/impl/binder/Binder.ts:54</a></li>
+							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/Binder.ts#L53">src/impl/binder/Binder.ts:53</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -424,7 +419,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_impl_binder_binder_.binder.html">Binder</a>.<a href="_impl_binder_binder_.binder.html#observer">observer</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/Binder.ts#L60">src/impl/binder/Binder.ts:60</a></li>
+							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/Binder.ts#L59">src/impl/binder/Binder.ts:59</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -435,7 +430,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_impl_binder_binder_.binder.html">Binder</a>.<a href="_impl_binder_binder_.binder.html#onend">onEnd</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/Binder.ts#L52">src/impl/binder/Binder.ts:52</a></li>
+							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/Binder.ts#L51">src/impl/binder/Binder.ts:51</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -446,7 +441,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_impl_binder_binder_.binder.html">Binder</a>.<a href="_impl_binder_binder_.binder.html#prevdef">prevDef</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/Binder.ts#L58">src/impl/binder/Binder.ts:58</a></li>
+							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/Binder.ts#L57">src/impl/binder/Binder.ts:57</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -457,7 +452,7 @@
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_impl_binder_binder_.binder.html">Binder</a>.<a href="_impl_binder_binder_.binder.html#stoppropanow">stopPropaNow</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/Binder.ts#L56">src/impl/binder/Binder.ts:56</a></li>
+							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/Binder.ts#L55">src/impl/binder/Binder.ts:55</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -467,7 +462,7 @@
 					<div class="tsd-signature tsd-kind-icon">throttle<wbr>Timeout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/UpdateBinder.ts#L44">src/impl/binder/UpdateBinder.ts:44</a></li>
+							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/UpdateBinder.ts#L43">src/impl/binder/UpdateBinder.ts:43</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -477,18 +472,18 @@
 					<div class="tsd-signature tsd-kind-icon">update<wbr>Fct<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>c<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span>, i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/UpdateBinder.ts#L34">src/impl/binder/UpdateBinder.ts:34</a></li>
+							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/UpdateBinder.ts#L33">src/impl/binder/UpdateBinder.ts:33</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 					<a name="widgets" class="tsd-anchor"></a>
 					<h3><span class="tsd-flag ts-flagProtected">Protected</span> widgets</h3>
-					<div class="tsd-signature tsd-kind-icon">widgets<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EventTarget</span><span class="tsd-signature-symbol">&gt;</span></div>
+					<div class="tsd-signature tsd-kind-icon">widgets<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">ReadonlyArray</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EventTarget</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<p>Inherited from <a href="_impl_binder_binder_.binder.html">Binder</a>.<a href="_impl_binder_binder_.binder.html#widgets">widgets</a></p>
 						<ul>
-							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/Binder.ts#L40">src/impl/binder/Binder.ts:40</a></li>
+							<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/Binder.ts#L39">src/impl/binder/Binder.ts:39</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -507,7 +502,7 @@
 								<p>Implementation of <a href="../interfaces/_api_binder_interactioncmdupdatebinder_.interactioncmdupdatebinder.html">InteractionCmdUpdateBinder</a>.<a href="../interfaces/_api_binder_interactioncmdupdatebinder_.interactioncmdupdatebinder.html#bind">bind</a></p>
 								<p>Overrides <a href="_impl_binder_binder_.binder.html">Binder</a>.<a href="_impl_binder_binder_.binder.html#bind">bind</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/UpdateBinder.ts#L161">src/impl/binder/UpdateBinder.ts:161</a></li>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/UpdateBinder.ts#L160">src/impl/binder/UpdateBinder.ts:160</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_api_binding_binding_.binding.html" class="tsd-signature-type">Binding</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">I</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -524,7 +519,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/UpdateBinder.ts#L75">src/impl/binder/UpdateBinder.ts:75</a></li>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/UpdateBinder.ts#L74">src/impl/binder/UpdateBinder.ts:74</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -566,7 +561,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_api_binder_interactioncmdupdatebinder_.interactioncmdupdatebinder.html">InteractionCmdUpdateBinder</a>.<a href="../interfaces/_api_binder_interactioncmdupdatebinder_.interactioncmdupdatebinder.html#continuousexecution">continuousExecution</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/UpdateBinder.ts#L69">src/impl/binder/UpdateBinder.ts:69</a></li>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/UpdateBinder.ts#L68">src/impl/binder/UpdateBinder.ts:68</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="_impl_binder_updatebinder_.updatebinder.html" class="tsd-signature-type">UpdateBinder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">I</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -584,7 +579,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_impl_binder_binder_.binder.html">Binder</a>.<a href="_impl_binder_binder_.binder.html#duplicate">duplicate</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/UpdateBinder.ts#L152">src/impl/binder/UpdateBinder.ts:152</a></li>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/UpdateBinder.ts#L151">src/impl/binder/UpdateBinder.ts:151</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="_impl_binder_updatebinder_.updatebinder.html" class="tsd-signature-type">UpdateBinder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">I</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -602,7 +597,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_impl_binder_binder_.binder.html">Binder</a>.<a href="_impl_binder_binder_.binder.html#end">end</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/UpdateBinder.ts#L127">src/impl/binder/UpdateBinder.ts:127</a></li>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/UpdateBinder.ts#L126">src/impl/binder/UpdateBinder.ts:126</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -646,7 +641,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/UpdateBinder.ts#L81">src/impl/binder/UpdateBinder.ts:81</a></li>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/UpdateBinder.ts#L80">src/impl/binder/UpdateBinder.ts:80</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -688,7 +683,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_impl_binder_binder_.binder.html">Binder</a>.<a href="_impl_binder_binder_.binder.html#first">first</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/UpdateBinder.ts#L107">src/impl/binder/UpdateBinder.ts:107</a></li>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/UpdateBinder.ts#L106">src/impl/binder/UpdateBinder.ts:106</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -733,7 +728,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_impl_binder_binder_.binder.html">Binder</a>.<a href="_impl_binder_binder_.binder.html#ifcannotexecute">ifCannotExecute</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/UpdateBinder.ts#L123">src/impl/binder/UpdateBinder.ts:123</a></li>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/UpdateBinder.ts#L122">src/impl/binder/UpdateBinder.ts:122</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -778,7 +773,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_impl_binder_binder_.binder.html">Binder</a>.<a href="_impl_binder_binder_.binder.html#ifhadeffects">ifHadEffects</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/UpdateBinder.ts#L115">src/impl/binder/UpdateBinder.ts:115</a></li>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/UpdateBinder.ts#L114">src/impl/binder/UpdateBinder.ts:114</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -823,7 +818,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_impl_binder_binder_.binder.html">Binder</a>.<a href="_impl_binder_binder_.binder.html#ifhadnoeffect">ifHadNoEffect</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/UpdateBinder.ts#L119">src/impl/binder/UpdateBinder.ts:119</a></li>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/UpdateBinder.ts#L118">src/impl/binder/UpdateBinder.ts:118</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -861,7 +856,7 @@
 					<a name="log" class="tsd-anchor"></a>
 					<h3>log</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">log<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>level<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../enums/_api_logging_loglevel_.loglevel.html" class="tsd-signature-type">LogLevel</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_impl_binder_updatebinder_.updatebinder.html" class="tsd-signature-type">UpdateBinder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">I</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">log<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>level<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ReadonlyArray</span><span class="tsd-signature-symbol">&lt;</span><a href="../enums/_api_logging_loglevel_.loglevel.html" class="tsd-signature-type">LogLevel</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_impl_binder_updatebinder_.updatebinder.html" class="tsd-signature-type">UpdateBinder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">I</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -869,13 +864,13 @@
 								<p>Implementation of <a href="../interfaces/_api_binder_interactioncmdupdatebinder_.interactioncmdupdatebinder.html">InteractionCmdUpdateBinder</a>.<a href="../interfaces/_api_binder_interactioncmdupdatebinder_.interactioncmdupdatebinder.html#log">log</a></p>
 								<p>Overrides <a href="_impl_binder_binder_.binder.html">Binder</a>.<a href="_impl_binder_binder_.binder.html#log">log</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/UpdateBinder.ts#L131">src/impl/binder/UpdateBinder.ts:131</a></li>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/UpdateBinder.ts#L130">src/impl/binder/UpdateBinder.ts:130</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>level: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../enums/_api_logging_loglevel_.loglevel.html" class="tsd-signature-type">LogLevel</a><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>level: <span class="tsd-signature-type">ReadonlyArray</span><span class="tsd-signature-symbol">&lt;</span><a href="../enums/_api_logging_loglevel_.loglevel.html" class="tsd-signature-type">LogLevel</a><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_impl_binder_updatebinder_.updatebinder.html" class="tsd-signature-type">UpdateBinder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">I</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -886,7 +881,7 @@
 					<a name="on" class="tsd-anchor"></a>
 					<h3>on</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
-						<li class="tsd-signature tsd-kind-icon">on<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>widget<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EventTarget</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_impl_binder_updatebinder_.updatebinder.html" class="tsd-signature-type">UpdateBinder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">I</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">on<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">...</span>widget<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ReadonlyArray</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EventTarget</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_impl_binder_updatebinder_.updatebinder.html" class="tsd-signature-type">UpdateBinder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">I</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
@@ -894,13 +889,13 @@
 								<p>Implementation of <a href="../interfaces/_api_binder_interactioncmdupdatebinder_.interactioncmdupdatebinder.html">InteractionCmdUpdateBinder</a>.<a href="../interfaces/_api_binder_interactioncmdupdatebinder_.interactioncmdupdatebinder.html#on">on</a></p>
 								<p>Overrides <a href="_impl_binder_binder_.binder.html">Binder</a>.<a href="_impl_binder_binder_.binder.html#on">on</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/UpdateBinder.ts#L99">src/impl/binder/UpdateBinder.ts:99</a></li>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/UpdateBinder.ts#L98">src/impl/binder/UpdateBinder.ts:98</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>widget: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EventTarget</span><span class="tsd-signature-symbol">&gt;</span></h5>
+									<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>widget: <span class="tsd-signature-type">ReadonlyArray</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EventTarget</span><span class="tsd-signature-symbol">&gt;</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="_impl_binder_updatebinder_.updatebinder.html" class="tsd-signature-type">UpdateBinder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">I</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -919,7 +914,7 @@
 								<p>Implementation of <a href="../interfaces/_api_binder_interactioncmdupdatebinder_.interactioncmdupdatebinder.html">InteractionCmdUpdateBinder</a>.<a href="../interfaces/_api_binder_interactioncmdupdatebinder_.interactioncmdupdatebinder.html#ondynamic">onDynamic</a></p>
 								<p>Overrides <a href="_impl_binder_binder_.binder.html">Binder</a>.<a href="_impl_binder_binder_.binder.html#ondynamic">onDynamic</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/UpdateBinder.ts#L103">src/impl/binder/UpdateBinder.ts:103</a></li>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/UpdateBinder.ts#L102">src/impl/binder/UpdateBinder.ts:102</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -944,7 +939,7 @@
 								<p>Implementation of <a href="../interfaces/_api_binder_interactioncmdupdatebinder_.interactioncmdupdatebinder.html">InteractionCmdUpdateBinder</a>.<a href="../interfaces/_api_binder_interactioncmdupdatebinder_.interactioncmdupdatebinder.html#preventdefault">preventDefault</a></p>
 								<p>Overrides <a href="_impl_binder_binder_.binder.html">Binder</a>.<a href="_impl_binder_binder_.binder.html#preventdefault">preventDefault</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/UpdateBinder.ts#L139">src/impl/binder/UpdateBinder.ts:139</a></li>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/UpdateBinder.ts#L138">src/impl/binder/UpdateBinder.ts:138</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="_impl_binder_updatebinder_.updatebinder.html" class="tsd-signature-type">UpdateBinder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">I</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -963,7 +958,7 @@
 								<p>Implementation of <a href="../interfaces/_api_binder_interactioncmdupdatebinder_.interactioncmdupdatebinder.html">InteractionCmdUpdateBinder</a>.<a href="../interfaces/_api_binder_interactioncmdupdatebinder_.interactioncmdupdatebinder.html#stopimmediatepropagation">stopImmediatePropagation</a></p>
 								<p>Overrides <a href="_impl_binder_binder_.binder.html">Binder</a>.<a href="_impl_binder_binder_.binder.html#stopimmediatepropagation">stopImmediatePropagation</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/UpdateBinder.ts#L135">src/impl/binder/UpdateBinder.ts:135</a></li>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/UpdateBinder.ts#L134">src/impl/binder/UpdateBinder.ts:134</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="_impl_binder_updatebinder_.updatebinder.html" class="tsd-signature-type">UpdateBinder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">I</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -981,7 +976,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_api_binder_interactioncmdupdatebinder_.interactioncmdupdatebinder.html">InteractionCmdUpdateBinder</a>.<a href="../interfaces/_api_binder_interactioncmdupdatebinder_.interactioncmdupdatebinder.html#strictstart">strictStart</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/UpdateBinder.ts#L87">src/impl/binder/UpdateBinder.ts:87</a></li>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/UpdateBinder.ts#L86">src/impl/binder/UpdateBinder.ts:86</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-returns-title">Returns <a href="_impl_binder_updatebinder_.updatebinder.html" class="tsd-signature-type">UpdateBinder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">I</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -998,7 +993,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/UpdateBinder.ts#L63">src/impl/binder/UpdateBinder.ts:63</a></li>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/UpdateBinder.ts#L62">src/impl/binder/UpdateBinder.ts:62</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1043,7 +1038,7 @@
 							<aside class="tsd-sources">
 								<p>Implementation of <a href="../interfaces/_api_binder_interactioncmdupdatebinder_.interactioncmdupdatebinder.html">InteractionCmdUpdateBinder</a>.<a href="../interfaces/_api_binder_interactioncmdupdatebinder_.interactioncmdupdatebinder.html#throttle">throttle</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/UpdateBinder.ts#L93">src/impl/binder/UpdateBinder.ts:93</a></li>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/UpdateBinder.ts#L92">src/impl/binder/UpdateBinder.ts:92</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1067,7 +1062,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_impl_binder_binder_.binder.html">Binder</a>.<a href="_impl_binder_binder_.binder.html#toproduce">toProduce</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/UpdateBinder.ts#L148">src/impl/binder/UpdateBinder.ts:148</a></li>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/UpdateBinder.ts#L147">src/impl/binder/UpdateBinder.ts:147</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -1115,7 +1110,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_impl_binder_binder_.binder.html">Binder</a>.<a href="_impl_binder_binder_.binder.html#usinginteraction">usingInteraction</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/UpdateBinder.ts#L143">src/impl/binder/UpdateBinder.ts:143</a></li>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/UpdateBinder.ts#L142">src/impl/binder/UpdateBinder.ts:142</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -1160,7 +1155,7 @@
 							<aside class="tsd-sources">
 								<p>Overrides <a href="_impl_binder_binder_.binder.html">Binder</a>.<a href="_impl_binder_binder_.binder.html#when">when</a></p>
 								<ul>
-									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/6b54798/src/impl/binder/UpdateBinder.ts#L111">src/impl/binder/UpdateBinder.ts:111</a></li>
+									<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/cecc0ad/src/impl/binder/UpdateBinder.ts#L110">src/impl/binder/UpdateBinder.ts:110</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>

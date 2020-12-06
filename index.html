@@ -173,7 +173,7 @@
     <div class="item ts start interaction routine">
         <div class="line-title box">How to select a user interaction</div>
         <div class="left box">
-    <pre><code>clickBinder()
+    <pre><code class="ts">clickBinder()
   ...
   .bind();</code></pre>
             The user interaction selection is the goal of the first binding routine.
@@ -317,7 +317,7 @@ To register all the <code>div</code> of <code>divs</code>, you can write this <c
     <div class="item ts routine">
         <div class="line-title box">The routine <code>toProduce</code>: command creation</div>
         <div class="left box">
-            <pre><code>dragLockBinder()
+            <pre><code class="ts">dragLockBinder()
    .toProduce(d => new Translate(d.getSrcObject())
    ...bind();</code></pre>
             The routine <code>toProduce</code> focuses on the production of a command.<br/>
@@ -385,7 +385,7 @@ To register all the <code>div</code> of <code>divs</code>, you can write this <c
     <div class="item ts routine">
         <div class="line-title box">The routine <code>first</code>: interaction start</div>
         <div class="left box">
-            <pre><code>dragLockBinder()
+            <pre><code class="ts">dragLockBinder()
    .toProduce(i => new Translate(d.getSrcObject())
    .onDynamic(this.canvas.nativeElement)
    .first((i, c) => i.getSrcObject().setEffect(new DropShadow()))
@@ -409,7 +409,7 @@ To register all the <code>div</code> of <code>divs</code>, you can write this <c
     <div class="item ts routine">
         <div class="line-title box">The routine <code>then</code>: interaction update</div>
         <div class="left box">
-            <pre><code>dragLockBinder()
+            <pre><code class="ts">dragLockBinder()
    .toProduce(i => new Translate(i.getSrcObject())
    .onDynamic(this.canvas.nativeElement)
    .then((i, c) => c.setCoord(
@@ -436,7 +436,7 @@ To register all the <code>div</code> of <code>divs</code>, you can write this <c
     <div class="item ts routine">
         <div class="line-title box">The routine <code>end</code>, <code>cancel</code>, <code>endOrCancel</code>: Interaction Ends, Cancels, Ends or Canceled</div>
         <div class="left box">
-            <pre><code>buttonBinder()
+            <pre><code class="ts">buttonBinder()
    .toProduce(_i => new Clear())
    .on(this.erase.nativeElement)
    ....
@@ -448,7 +448,7 @@ To register all the <code>div</code> of <code>divs</code>, you can write this <c
         </div>
 
         <div class="center box">
-            <pre><code>dndBinder(true)
+            <pre><code class="ts">dndBinder(true)
    .toProduce(_i => new MoveObject())
    .on(this.canvas.nativeElement)
    ....
@@ -462,7 +462,7 @@ To register all the <code>div</code> of <code>divs</code>, you can write this <c
         </div>
 
         <div class="right box">
-            <pre><code>dndBinder(true)
+            <pre><code class="ts">dndBinder(true)
    ....
    .endOrCancel(i => (i.getSrcObject() as HTMLElement).style.visibility = 'hidden')
    .bind();</code></pre>
@@ -480,7 +480,7 @@ To register all the <code>div</code> of <code>divs</code>, you can write this <c
     <div class="item ts routine">
         <div class="line-title box">The routine <code>log</code>: logging</div>
         <div class="left box">
-            <pre><code>nodeBinder()
+            <pre><code class="ts">nodeBinder()
    ....
    .log(LogLevel.interaction)
    .bind();</code></pre>
@@ -513,7 +513,7 @@ To register all the <code>div</code> of <code>divs</code>, you can write this <c
     <div class="item ts routine">
         <div class="line-title box">The routine <code style="font-size: smaller;">stopImmediate</code> <code style="font-size: smaller;">Propagation</code></div>
         <div class="left box">
-            <pre><code>swipeBinder(false, 200, 100, 20)
+            <pre><code class="ts">swipeBinder(false, 200, 100, 20)
    ....
    .stopImmediatePropagation()
    .bind();</code></pre>
@@ -527,7 +527,7 @@ it stops the propagation of the current event processed by the user interaction 
 
         <div class="right box">
             An example:
-            <pre><code>longTouchBinder(2000)
+            <pre><code class="ts">longTouchBinder(2000)
     ....
     // Consumes the events before the 
     // multi-touch interaction use them
@@ -550,7 +550,7 @@ multiTouchBinder(2)
     <div class="item ts routine">
         <div class="line-title box">The routine <code style="font-size: smaller;">preventDefault</code></div>
         <div class="left box">
-            <pre><code>longTouchBinder(2000)
+            <pre><code class="ts">longTouchBinder(2000)
    // Prevents the context menu to pop-up
    .preventDefault()
    .bind();</code></pre>
@@ -625,7 +625,7 @@ This routine is not implemented in TypeScript yet (even if provided by the API, 
     <div class="item ts cmd start">
         <div class="line-title box">Undo/Redo</div>
         <div class="left box">
-<pre><code>export class DeleteAll
+<pre><code class="ts">export class DeleteAll
     extends CommandBase implements Undoable {
   private mementoContent: Array<Node> = [];
 
@@ -666,7 +666,7 @@ This routine is not implemented in TypeScript yet (even if provided by the API, 
         </div>
 
         <div class="center box">
-<pre><code>buttonBinder()
+<pre><code class="ts">buttonBinder()
   .toProduce(() => new Undo())
   .on(this.undoButton.nativeElement)
   .bind();</code></pre>
@@ -677,7 +677,7 @@ This routine is not implemented in TypeScript yet (even if provided by the API, 
         </div>
 
         <div class="right box">
-<pre><code>buttonBinder()
+<pre><code class="ts">buttonBinder()
   .toProduce(() => new Redo())
   .on(this.redoButton.nativeElement)
   .bind();</code></pre>
@@ -693,18 +693,18 @@ This routine is not implemented in TypeScript yet (even if provided by the API, 
     <div class="item ts interaction">
         <div class="line-title box">Pressure, Click, Double-click</div>
         <div class="left box">
-            <pre><code>pressBinder()....bind();</code></pre>
+            <pre><code class="ts">pressBinder()....bind();</code></pre>
             The <code>press</code> interaction refers to a single mouse pressure.
         </div>
 
         <div class="center box">
-            <pre><code>clickBinder()....bind();</code></pre>
+            <pre><code class="ts">clickBinder()....bind();</code></pre>
             The <code>click</code> interaction refers to a single mouse click.
             For touch devices, see the <code>tap</code> interaction.
         </div>
 
         <div class="right box">
-            <pre><code>dbleClickBinder()....bind();</code></pre>
+            <pre><code class="ts">dbleClickBinder()....bind();</code></pre>
             The <code>double click</code> interaction refers to double click made using a mouse.<br/>
             Moving between the two clicks cancels the interaction<br/>
             There is a maximal duration between the two clicks. By default this duration is 300 ms but one can change it.<br/>
@@ -724,7 +724,7 @@ The documentation of this interface is <a href="https://interacto.github.io/docs
 
         <div class="center box">
 For example, if you want to get the HTML element at the origin of a click to get the value of its attribute <code>x</code>:
-<pre><code>clickBinder()
+<pre><code class="ts">clickBinder()
   .toProduce(i => { // (i: PointData)
     const elt = (i.getSrcObject() as Element).getAttribute('x');
     ...
@@ -745,7 +745,7 @@ This example uses <code>toProduce</code> but this works for any routine that pro
     <div class="item ts interaction">
         <div class="line-title box">DnD, Draglock</div>
         <div class="left box">
-            <pre><code>dndBinder(true)....bind();</code></pre>
+            <pre><code class="ts">dndBinder(true)....bind();</code></pre>
             The <code>DnD</code> refers to a Drag-And-Drop interaction.<br/>
             This DnD does not aim at dragging an object from a place to another one.
             The DnD is the sequence of a mouse pressure, followed by a set of mouse moves (at least one), that ends with a mouse release.<br/>
@@ -755,7 +755,7 @@ This example uses <code>toProduce</code> but this works for any routine that pro
         </div>
 
         <div class="center box">
-            <pre><code>dragLockBinder()....bind();</code></pre>
+            <pre><code class="ts">dragLockBinder()....bind();</code></pre>
             The drag-lock interaction is a special kind of DnD.<br/>
             A drag-lock starts by double-clicking on a source node.
             The user can then move the locked node until she double-clicks again at the dropping location.<br/>
@@ -781,7 +781,7 @@ This example uses <code>toProduce</code> but this works for any routine that pro
             The routine <code>end</code> captures when the DnD stops (i.e. on release).<br/>
             For example this binding draws a line in an HTML canvas 
             (see <a href="https://stackoverflow.com/questions/62237719/implementing-undo-and-redo-in-canvas-whiteboard-using-typescript/64563793#64563793">the full example</a>):<br/>
-            <pre><code>const rect = this.canvas.nativeElement.getBoundingClientRect();
+            <pre><code class="ts">const rect = this.canvas.nativeElement.getBoundingClientRect();
 dndBinder(false)
   // The command to produce
   .toProduce(() => new AddShape(this.canvas.nativeElement))
@@ -810,7 +810,7 @@ dndBinder(false)
 
         <div class="center box">
             The command used in the previous box is partly defined as follows:
-            <pre><code>export class AddShape extends CommandBase implements Undoable {
+            <pre><code class="ts">export class AddShape extends CommandBase implements Undoable {
   shape: Shape;
   mementoData: ImageData;
 
@@ -852,7 +852,7 @@ dndBinder(false)
     <div class="item ts interaction">
         <div class="line-title box">N-clicks</div>
         <div class="left box">
-            <pre><code>clicksBinder(3)....bind();</code></pre>
+            <pre><code class="ts">clicksBinder(3)....bind();</code></pre>
             The N-clicks interaction permits a user to click N times.<br/>
             For example, a double-click refers to <code>clicksBinder(2)</code>.
             An N-click interaction stops after a delay of 1 second without any click.<br/>
@@ -878,7 +878,7 @@ dndBinder(false)
     <div class="item ts interaction">
         <div class="line-title box">Long pressure</div>
         <div class="left box">
-            <pre><code>longPressBinder(2000)...bind();</code></pre>
+            <pre><code class="ts">longPressBinder(2000)...bind();</code></pre>
             The interaction <code>long pressure</code> is similar to a long touch but using a mouse instead of a touch device.
             The expected duration of the pressure is the argument of the binder (here 2000 ms).
         </div>
@@ -897,7 +897,7 @@ dndBinder(false)
     <div class="item ts interaction">
         <div class="line-title box">Tap, Multi-touch, Touch DnD</div>
         <div class="left box">
-            <pre><code>tapBinder(3)....bind();</code></pre>
+            <pre><code class="ts">tapBinder(3)....bind();</code></pre>
             The <code>tap</code> interaction consists in a set of successive taps.<br/>
             This interaction has a single argument: the number of taps expected to end the interaction.
             If this number of taps is not reached after a timeout (1 second by default), the interaction is cancelled.<br/>
@@ -907,7 +907,7 @@ dndBinder(false)
         </div>
 
         <div class="center box">
-            <pre><code>multiTouchBinder(2)....bind();</code></pre>
+            <pre><code class="ts">multiTouchBinder(2)....bind();</code></pre>
             The <code>multi-touch</code> interaction implies the pressure of specific number of touches.
             The number of required touches is the argument of the binder (here 2 touches).<br/>
             A multi-touch starts when all its required touches have started.
@@ -917,7 +917,7 @@ dndBinder(false)
         </div>
 
         <div class="right box">
-            <pre><code>touchDnDBinder()....bind();</code></pre>
+            <pre><code class="ts">touchDnDBinder()....bind();</code></pre>
             The <code>touch DnD</code> interaction is a drag-and-drop interaction performed using one touch point.<br/>
         </div>
     </div>
@@ -929,12 +929,12 @@ dndBinder(false)
     <div class="item ts interaction">
         <div class="line-title box">Long Touch, Swipe, Pan</div>
         <div class="left box">
-<pre><code>longTouchBinder(2000)...bind();</code></pre>
+<pre><code class="ts">longTouchBinder(2000)...bind();</code></pre>
         The interaction <code>long touch</code> refers to a long touch, which duration is the argument of the binder (here 2000 ms).
         </div>
 
         <div class="center box">
-            <pre><code>panBinder(true, 500, 50)...bind();</code></pre>
+            <pre><code class="ts">panBinder(true, 500, 50)...bind();</code></pre>
             The <code>pan</code> interaction is a directional one-touch gesture.
             Using one touch pressure, the user drags it in a specific direction to reach a minimal distance.<br/><br/>
             The first argument is the direction: <code>true</code>: horizontal pan; <code>false</code>: vertical pan.<br/>
@@ -943,7 +943,7 @@ dndBinder(false)
         </div>
 
         <div class="right box">
-            <pre><code>swipeBinder(true, 300, 500, 50)...bind();</code></pre>
+            <pre><code class="ts">swipeBinder(true, 300, 500, 50)...bind();</code></pre>
             The <code>swipe</code> interaction is a special kind of the <code>pan</code> interaction.
             Using one touch pressure, the user drags it in a specific direction and with a specific velocity to reach a minimal distance.<br/><br/>
             The first argument is the direction: <code>true</code>: horizontal swipe; <code>false</code>: vertical swipe.<br/>
@@ -964,7 +964,7 @@ dndBinder(false)
     <div class="item ts interaction routine">
         <div class="line-title box">Keyboard interactions and the <code>with</code> routine</div>
         <div class="left box">
-<pre><code>keyTypeBinder(false)
+<pre><code class="ts">keyTypeBinder(false)
   .with('KeyC')
   ...
   .bind();</code></pre>
@@ -975,7 +975,7 @@ dndBinder(false)
         </div>
 
         <div class="center box">
-<pre><code>keysTypeBinder()
+<pre><code class="ts">keysTypeBinder()
   .with('KeyC', 'KeyL', 'KeyE', 'KeyA', 'KeyR')
   ...
   .bind();</code></pre>
@@ -989,7 +989,7 @@ dndBinder(false)
         </div>
 
         <div class="right box">
-<pre><code>keyPressBinder(false)
+<pre><code class="ts">keyPressBinder(false)
   ...
   .bind();</code></pre>
             The <code>key press</code> interaction refers to a pressure of a key.
@@ -1005,17 +1005,17 @@ dndBinder(false)
     <div class="item ts interaction">
         <div class="line-title box">Button, Checkbox, Color</div>
         <div class="left box">
-            <pre><code>buttonBinder()....bind();</code></pre>
+            <pre><code class="ts">buttonBinder()....bind();</code></pre>
             The combox box interaction refers to the use of an HTML <code>button</code>.
         </div>
 
         <div class="center box">
-            <pre><code>checkboxBinder()....bind();</code></pre>
+            <pre><code class="ts">checkboxBinder()....bind();</code></pre>
             The combox box interaction refers to the use of an HTML <code>input</code> of type <code>checkbox</code>.
         </div>
 
         <div class="right box">
-            <pre><code>colorPickerBinder()....bind();</code></pre>
+            <pre><code class="ts">colorPickerBinder()....bind();</code></pre>
             The combox box interaction refers to the use of an HTML <code>input</code> of type <code>color</code>.
         </div>
     </div>
@@ -1027,17 +1027,17 @@ dndBinder(false)
     <div class="item ts interaction">
         <div class="line-title box">Combobox, Date, Hyperlink</div>
         <div class="left box">
-            <pre><code>comboBoxBinder()....bind();</code></pre>
+            <pre><code class="ts">comboBoxBinder()....bind();</code></pre>
             The combox box interaction refers to the use of an HTML <code>select</code> widget.
         </div>
 
         <div class="center box">
-            <pre><code>dateBinder()....bind();</code></pre>
+            <pre><code class="ts">dateBinder()....bind();</code></pre>
             The combox box interaction refers to the use of an HTML date widget.
         </div>
 
         <div class="right box">
-            <pre><code>hyperlinkBinder()....bind();</code></pre>
+            <pre><code class="ts">hyperlinkBinder()....bind();</code></pre>
             The combox box interaction refers to the use of an HTML <code>anchor</code>.
         </div>
     </div>
@@ -1046,10 +1046,10 @@ dndBinder(false)
 
 
 
-    <div class="item ts interaction">
+    <div class="item ts interaction command">
         <div class="line-title box">Text Input, Spinner, Scroll</div>
         <div class="left box">
-<pre><code>textInputBinder()
+<pre><code class="ts">textInputBinder()
   .on(this.textarea.nativeElement)
   ...
   .bind();</code></pre>
@@ -1059,19 +1059,58 @@ dndBinder(false)
         </div>
 
         <div class="center box">
-<pre><code>spinnerBinder()
+<pre><code class="ts">textInputBinder()
+  .on(this.code.nativeElement)
+  .toProduce(() => new UpdateCode(this.http, this.dataSource))
+  .then((c: UpdateCode, i: WidgetData&#60;HTMLInputElement | HTMLTextAreaElement&#62;) => {
+    c.code = i.getWidget().value);
+  })
+  .bind();</code></pre>
+  In this code, the timeout delay of the text input interaction is 3 seconds.<br/><br/>
+  Each time the user types text (and when the interaction stops) the routine <code>then</code> is called (developers can for example update the command).<br/><br/>
+  The documentation of the <code>WidgetData</code> interaction data <a href="https://interacto.github.io/docs/interfaces/_api_interaction_widgetdata_.widgetdata.html">is here</a>.
+  <img src="img/widgetData.svg" alt="widgetdata" />
+        </div>
+
+        <div class="right box">
+<pre><code class="ts">export class UpdateCode extends CommandBase {
+  code: string;
+  constructor(private readonly http: HttpClient, 
+    private dataSource: MatTreeNestedDataSource<ASTNode>){}
+
+  protected execution(): void {
+    this.http
+      .post('spoon/ast', { code: this.code })
+      .subscribe((ast: ASTNode) => {
+        this.dataSource.data = [ast];
+      });
+  }
+}</code></pre>
+This code is another example of a command (the command used in the next-door box).<br/>
+It shows how one can send REST queries from commands.<br/>
+<code>dataSource</code> is the data source of an Angular Material tree.
+        </div>
+    </div>
+    
+    <div class="item ts interaction">
+        <div class="line-title box">Spinner, Scroll</div>
+        <div class="left box">
+<pre><code class="ts">spinnerBinder()
   .on(this.inputElt.nativeElement)
   ...
   .bind();</code></pre>
             The <code>spinner</code> interaction refers to the use of an HTML input element.
         </div>
 
-        <div class="right box">
-<pre><code>scrollBinder()
+        <div class="center box">
+<pre><code class="ts">scrollBinder()
   ...
   .bind();</code></pre>
             The <code>scroll</code> interaction refers to scrolling.
         </div>
+
+<!--        <div class="right box">-->
+<!--        </div>-->
     </div>
 
 

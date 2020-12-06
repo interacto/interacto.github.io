@@ -93,6 +93,11 @@ pre > code {
     border-radius: 4px
 }
 
+.box > img {
+    display:block;
+    margin:auto;"
+}
+
 .filter {
     display: inline;
     margin: 10px;

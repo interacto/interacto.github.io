@@ -1062,8 +1062,8 @@ dndBinder(false)
   ...
   .bind();</code></pre>
             The text input interaction refers to the use of a text input widget (eg a <code>textarea</code>).<br/>
-            <b>Warning</b>: the binding triggers the command after a delay of x seconds after the last key interaction from the user 
-            (x being 1 second by default, but can be changed: <code>textInputBinder(2)</code> uses a delay of 2 seconds). 
+            <b>Warning</b>: the binding triggers the command after a delay of 1 second after the last key interaction from the user 
+            (the delay can be changed: <code>textInputBinder(2)</code> uses a delay of 2 seconds). 
         </div>
 
         <div class="center box">
@@ -1071,7 +1071,7 @@ dndBinder(false)
   .on(this.code.nativeElement)
   .toProduce(() => new UpdateCode(this.http, this.dataSource))
   .then((c: UpdateCode, i: WidgetData&#60;HTMLInputElement | HTMLTextAreaElement&#62;) => {
-    c.code = i.getWidget().value);
+    c.code = i.getWidget().value;
   })
   .bind();</code></pre>
   In this code, the timeout delay of the text input interaction is 3 seconds.<br/><br/>

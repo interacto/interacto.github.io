@@ -118,7 +118,12 @@
             A binder follows the builder pattern:
             it configures the binding to define how to turn the selected user interaction into commands.
             <br/>
-            The terminal routine <code>bind()</code> builds the binding.
+            The terminal routine <code>bind()</code> builds the binding.<br/><br/>
+            
+<pre><code class="ts">.toProduce(() => new ClearText(this.text))</code></pre>
+Note that the <code>toProduce</code> routine must produce a command (ie, an instance of <code>CommandBase</code>).<br/>
+See the code of <code>ClearText</code> on the right.
+See also the <code>AnonCmd</code> command introduced in this documentation if you do not want to define a class command.
         </div>
 
         <div class="center box">

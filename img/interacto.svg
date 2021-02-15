@@ -12,7 +12,7 @@
    viewBox="0 0 12.7 12.7"
    version="1.1"
    id="svg8"
-   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15)"
    sodipodi:docname="interacto.svg"
    inkscape:export-filename="/home/ablouin/image.png"
    inkscape:export-xdpi="1000"
@@ -26,9 +26,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="7.9999999"
-     inkscape:cx="23.427741"
-     inkscape:cy="36.235355"
+     inkscape:zoom="22.627417"
+     inkscape:cx="28.915318"
+     inkscape:cy="22.133656"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -36,7 +36,7 @@
      units="px"
      inkscape:window-width="1920"
      inkscape:window-height="1025"
-     inkscape:window-x="0"
+     inkscape:window-x="3840"
      inkscape:window-y="28"
      inkscape:window-maximized="1" />
   <metadata
@@ -60,13 +60,11 @@
        d="M 4.7818664,2.0655219 10.134116,1.4154276 6.1622327,6.467216 8.4224454,6.8058319 4.2896913,11.707017 5.6342029,7.9710331 3.3739902,7.6324172 Z"
        id="path28"
        sodipodi:nodetypes="cccccccc" />
-    <rect
-       style="fill:#ffffff;fill-opacity:1;stroke-width:0.0111669;stroke-miterlimit:4;stroke-dasharray:none"
+    <path
        id="rect872"
-       width="5.6090436"
-       height="0.52878344"
-       x="3.781955"
-       y="3.3591852"
-       transform="matrix(0.99296388,-0.11841766,0.14448085,0.9895076,0,0)" />
+       style="fill:#ffffff;fill-opacity:1;stroke-width:0.00500086;stroke-miterlimit:4;stroke-dasharray:none;stroke:none;stroke-opacity:1"
+       transform="matrix(0.99296388,-0.11841766,0.14448085,0.9895076,0,0)"
+       d="M 4.1281576,3.3619462 9.0559853,3.3593355 8.5269915,3.875402 3.914372,3.884312 Z"
+       sodipodi:nodetypes="ccccc" />
   </g>
 </svg>

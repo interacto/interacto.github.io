@@ -1,0 +1,29 @@
+{
+  "name": "interacto-doc",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Interacto doc",
+  "author": "Rémi Daniel",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean"
+  },
+  "dependencies": {
+    "gatsby": "^3.6.2",
+    "gatsby-plugin-image": "^1.6.0",
+    "gatsby-plugin-sharp": "^3.6.0",
+    "gatsby-remark-prismjs": "^5.3.0",
+    "gatsby-source-filesystem": "^3.6.0",
+    "gatsby-transformer-remark": "^4.3.0",
+    "gatsby-transformer-sharp": "^3.6.0",
+    "prismjs": "^1.23.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}

@@ -14,13 +14,7 @@ ngAfterViewInit(): void {
 ```
 
 ```java
-private void ngAfterViewInitJava() {
-    buttonBinder()
-    .on(this.clearButton.nativeElement)
-    .toProduce(() => new ClearText(this.text))
-    .bind();
-    // Do Java stuff
-}
+    // This is only to demonstrate the collapsing feature, no code here.
 ```
 
 

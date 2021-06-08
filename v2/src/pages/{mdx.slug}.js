@@ -13,12 +13,16 @@ const userLang = "TypeScript / Angular"
 const CollapsiblePre = props => {
     let codeLang;
     // Detects the language of the block from the <pre> HTML element class attribute
-    if(props.className === "language-ts") {
+    if(props.className === "language-ts" || props.className === "language-typescript") {
         codeLang = "TypeScript / Angular";
     } else if(props.className === "language-java") {
         codeLang = "JavaFX";
     } else if(props.className === "language-html") {
         codeLang = "HTML";
+    } else if(props.className === "language-bash") {
+    codeLang = "Bash";
+    } else if(props.className === "language-xml") {
+        codeLang = "XML";
     }
     if(codeLang !== userLang && (codeLang === "JavaFX" || codeLang === "TypeScript / Angular")) {
         // Collapse either Java or TS code blocks if their language is not the primary one

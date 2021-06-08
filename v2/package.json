@@ -21,11 +21,15 @@
     "gatsby-plugin-image": "^1.6.0",
     "gatsby-plugin-mdx": "^2.6.0",
     "gatsby-plugin-sharp": "^3.6.0",
+    "gatsby-remark-images": "^5.3.0",
     "gatsby-remark-prismjs": "^5.3.0",
     "gatsby-source-filesystem": "^3.6.0",
     "gatsby-transformer-sharp": "^3.6.0",
     "prismjs": "^1.23.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "postcss": "^8.3.0"
   }
 }

@@ -23,7 +23,11 @@ class Layout extends React.Component {
                         height={60}
                         className={logo}/>
                     <h1>INTERACTO <span className={highlight}>DOCS</span></h1>
-                    <div className={search}>Search bar goes here</div>
+                    <span className={search}>
+                        <a href={'https://github.com/interacto'}>Github</a>
+                        <a href={'https://interacto.github.io/docs/index.html'}>TSDoc</a>
+                        Search bar goes here
+                    </span>
                 </nav>
                 <nav className={sidebar}>
                     <ul>

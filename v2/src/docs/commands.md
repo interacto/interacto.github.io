@@ -1,5 +1,4 @@
 ---
-slug: "/docs/commands"
 title: "Commands"
 ---
 

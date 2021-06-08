@@ -1,5 +1,4 @@
 ---
-slug: "/docs/installation"
 title: "Installation"
 ---
 

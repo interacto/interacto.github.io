@@ -1,9 +1,9 @@
 ---
-slug: "/docs/how-to-start"
 title: "How to start"
 ---
 
 ## An example
+
 ```ts
 ngAfterViewInit(): void {
     buttonBinder()
@@ -13,20 +13,31 @@ ngAfterViewInit(): void {
 }
 ```
 
+```java
+private void ngAfterViewInitJava() {
+    buttonBinder()
+    .on(this.clearButton.nativeElement)
+    .toProduce(() => new ClearText(this.text))
+    .bind();
+    // Do Java stuff
+}
+```
+
+
 The binding operates on `clearButton` to produce a command `ClearText`. Bindings are defined in `ngAfterViewInit` of the component.
 The binding manages the (un-)registration with the button, the creation of the command on each button click, and the move of the executed commands in a commands registry for undo/redo purposes.
 
 A binder follows the builder pattern: it configures the binding to define how to turn the selected user interaction into commands.
 The terminal routine bind() builds the binding.
 
-```typescript
+```ts
 .toProduce(() => new ClearText(this.text))
 ```
 
 Note that the `toProduce` routine must produce a command (ie, an instance of `CommandBase`).
 See the code of `ClearText` on the right. See also the `AnonCmd` command introduced in this documentation if you do not want to define a class command.
 
-```typescript
+```ts
 export class MyComponent implements AfterViewInit {
     @ViewChild('clearbutton')
     private clearButton: ElementRef;
@@ -41,7 +52,7 @@ This property refers to an HTML tag defined in the HTML document of the Angular 
 <button #clearButton>Clear</button>
 ```
 
-```typescript
+```ts
 export class ClearText extends CommandBase implements Undoable {
     private memento: string;
     

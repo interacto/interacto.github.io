@@ -1,5 +1,4 @@
 ---
-slug: "/docs"
 title: "Interacto Documentation"
 ---
 

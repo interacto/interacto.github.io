@@ -1,0 +1,18 @@
+@import "../css/typography.css";
+
+.header{
+    cursor: pointer;
+}
+
+.content {
+    margin-left: 10px;
+}
+
+.container {
+    /*margin-bottom: 10px;*/
+}
+
+.chevron {
+    position: absolute;
+    right: 10px;
+}

@@ -1,10 +1,9 @@
 ---
 title: "Interactions"
+index: 3
 ---
 
-## Interactions
-
-### How to select a user interaction
+## How to select a user interaction
 
 ```ts
 clickBinder()
@@ -22,7 +21,7 @@ Routines for standard mouse-based interactions:
 
 Some of these routines will be covered in the following sections.
 
-### Pressure, Click, Double-click
+## Pressure, Click, Double-click
 
 ```ts
 pressBinder()
@@ -51,7 +50,7 @@ Moving between the two clicks cancels the interaction
 There is a maximal duration between the two clicks. By default this duration is 300 ms but one can change it.
 For touch devices, see the `tap` interaction.
 
-### DnD, Draglock
+## DnD, Draglock
 
 ```ts
 dndBinder(true)
@@ -84,7 +83,7 @@ Using these two interactions, the variable `i` in the routines (the interaction 
 
 The documentation of this interface is defined [here](https://interacto.github.io/docs/interfaces/srctgtpointsdata.html).
 
-### Keyboard interactions and the `with` routine
+## Keyboard interactions and the `with` routine
 
 ```ts
 keyTypeBinder(false)

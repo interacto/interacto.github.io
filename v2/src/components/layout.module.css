@@ -1,9 +1,13 @@
 @import "../css/typography.css";
 
+/*Global rules*/
+
 :root {
     --highlight-color: #AA0000;
     --border-color: #e5e5e5;
     font-family: "Roboto Regular", Georgia, sans-serif;
+    scroll-behavior: smooth;
+
 }
 
 a {
@@ -11,31 +15,16 @@ a {
 }
 
 h1 {
-    font-family: "Roboto Black", Georgia, sans-serif;;
+    font-family: "Roboto Black", Georgia, sans-serif;
 }
+
+/*Local rules*/
 
 .main {
 }
 
-
 .highlight {
     color: var(--highlight-color);
-}
-
-.sidebar {
-    max-height:100vh;
-    min-height:100vh;
-    width: 200px;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 60px;
-    overflow-x: hidden;
-    background-color: #e5e5e5;
-    overflow-y: auto;
-    border-right-style: solid;
-    border-width: 1px;
-    border-color: var(--border-color);
 }
 
 .toolbar {
@@ -53,52 +42,34 @@ h1 {
     border-color: var(--border-color);
 }
 
+.toolbarElement {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 .search {
     position: absolute;
     right: 30px;
     text-align: right;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search a {
+    display: flex;
+    align-items: center;
 }
 
 .logo {
     max-width:100%;
     max-height: 100%;
-    /*width: 100%;*/
-    /*height: 100%;*/
 }
 
 .body {
     position: absolute;
     top: 75px;
-    left: 300px;
+    left: 350px;
     right: 100px;
     padding-bottom: 30px;
-    /*padding-left: 15px;*/
-    /*padding-top: 15px;*/
 }
-
-.sidebar button {
-    cursor: pointer;
-    background-color: #e5e5e5;
-    width: 100%;
-    min-height: 35px;
-    border-style: none;
-    color: black;
-    border-width: thin;
-    text-align: left;
-    font-family: "Roboto Regular", Georgia, sans-serif;
-    font-size: 21px;
-    padding-left: 15px;
-    padding-top: 7px;
-    padding-bottom: 7px;
-
-}
-
-.sidebar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-/*code {*/
-/*    background-color: #e5e5e5;*/
-/*}*/

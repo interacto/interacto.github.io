@@ -1,5 +1,6 @@
 ---
-title: "Welcome to the Interacto Documentation"
+title: "Home"
+index: 0
 ---
 
 ## What is Interacto?

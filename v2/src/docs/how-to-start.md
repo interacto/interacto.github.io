@@ -1,5 +1,6 @@
 ---
 title: "How to start"
+index: 2
 ---
 
 ## An example

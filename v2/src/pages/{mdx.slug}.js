@@ -1,9 +1,9 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/layout";
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import {MDXProvider} from "@mdx-js/react";
 import Collapsible from "../components/collapsible";
+import '../css/anchors.css'
 
 // The primary language, either TS or Java
 // The one not chosen as primary will have its code blocks collapsed by default
@@ -26,10 +26,10 @@ const CollapsiblePre = props => {
     }
     if(codeLang !== userLang && (codeLang === "JavaFX" || codeLang === "TypeScript / Angular")) {
         // Collapse either Java or TS code blocks if their language is not the primary one
-        return <Collapsible lang={codeLang} isOpened={false}><pre {...props}/></Collapsible>
+        return <Collapsible title={codeLang} isOpened={false}><pre {...props}/></Collapsible>
     } else {
         // Code blocks for the primary language and other languages (ex: HTML) are expanded by default
-        return <Collapsible lang={codeLang} isOpened={true}><pre {...props}/></Collapsible>
+        return <Collapsible title={codeLang} isOpened={true}><pre {...props}/></Collapsible>
     }
 }
 
@@ -44,17 +44,15 @@ export default function Template({
     const { mdx } = data // holds the page data
     const { frontmatter, body } = mdx
     return (
-        <Layout>
                 <div>
                     <h1>{frontmatter.title}</h1>
                     <MDXProvider components={components}> {/*Replaces some default HTML elements by custom ones for the render*/}
                         <MDXRenderer>{body}</MDXRenderer> {/*Renders the page's mdx content*/}
                     </MDXProvider>
                 </div>
-        </Layout>
     )
 }
-export const pageQery = graphql`
+export const pageQuery = graphql`
   query POST_BY_SLUG($slug: String) {
     mdx(slug: { eq: $slug }) {
       id

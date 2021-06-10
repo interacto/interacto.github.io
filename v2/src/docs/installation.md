@@ -1,5 +1,6 @@
 ---
 title: "Installation"
+index: 1
 ---
 
 ## Angular and npm

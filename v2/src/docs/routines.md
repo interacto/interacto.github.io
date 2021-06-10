@@ -1,5 +1,6 @@
 ---
 title: "Routines"
+index: 5
 ---
 
 ## What are `i` and `c` in binding routines?

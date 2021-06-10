@@ -17,15 +17,29 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         gatsbyRemarkPlugins: [
-            `gatsby-remark-prismjs`,
-            {
-              resolve: `gatsby-remark-images`,
-              options: {
-                maxWidth: 590,
-              },
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              // Should offset when clicking header links, currently bugged?
+              // TODO: monitor https://github.com/gatsbyjs/gatsby/issues/31747
+              offsetY: 100,
             },
+          },
+          `gatsby-remark-prismjs`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
         ],
         extensions: [`.md`, `.mdx`],
+      },
+    },
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve(`./src/components/layout`),
       },
     },
   ],

@@ -1,6 +1,6 @@
 @import "../css/typography.css";
 
-.header{
+.header {
     cursor: pointer;
     border-style: none;
     padding: 7px 10px 10px;
@@ -12,18 +12,17 @@
     align-items: center;
 }
 
-button {
-    font-family: "Roboto Regular", Georgia, sans-serif;
+.container {
+    margin-bottom: 10px;
 }
 
 .content > pre {
-    border-style: none;
-    border-radius: 0 5px 5px 5px;
-    font-size: 14px;
-    margin-top: 0; /*Overrides the default margin of the code block to remove the gap between header and block*/
-    font-family: "Roboto Regular", Georgia, sans-serif;
+    margin-top: 0 !important; /*Overrides the default margin of the code block to remove the gap between header and block*/
+    border-radius: 0 5px 5px 5px !important;
+
 }
 
-.container {
-    margin-bottom: 10px;
+.codeBlock {
+    border-radius: 0 5px 5px 5px;
+    margin-top: 0;
 }

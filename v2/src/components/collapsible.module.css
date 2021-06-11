@@ -19,7 +19,6 @@
 .content > pre {
     margin-top: 0 !important; /*Overrides the default margin of the code block to remove the gap between header and block*/
     border-radius: 0 5px 5px 5px !important;
-
 }
 
 .codeBlock {

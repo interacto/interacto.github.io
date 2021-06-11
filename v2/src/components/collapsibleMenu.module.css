@@ -2,17 +2,50 @@
 
 .header{
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
 .content {
-    margin-left: 10px;
+
 }
 
 .container {
-    /*margin-bottom: 10px;*/
+
 }
 
 .chevron {
     position: absolute;
     right: 10px;
+}
+
+.header button {
+    cursor: pointer;
+    background-color: #e5e5e5;
+    width: 100%;
+    min-height: 50px;
+    border-style: none;
+    color: black;
+    text-align: left;
+    font-family: "Roboto Regular", Georgia, sans-serif;
+    font-size: 21px;
+    padding-left: 15px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+
+}
+
+.header:hover button{
+        background-color: var(--highlight-color);
+        color: white;
+        stroke: white;
+        fill: white;
+}
+
+.header:hover svg {
+    stroke: white;
+}
+
+.chevron > button {
+    background-color: Transparent;
 }

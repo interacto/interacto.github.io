@@ -71,21 +71,21 @@ export default function Navigation() {
                 // Displays the sidebar with the automatically generated index
                 <nav className={sidebar}>
                     <ul>
-                        {orderPages(data.allMdx.nodes).map(item =>
+                        {orderPages(data.allMdx.nodes).map(page =>
                             // Creates a menu element for every page
-                            <li key={item.slug}>
-                                {item.headings.length > 1 ?
-                                    // If there are several sections (h2-level headings) for the page, then we create a submenu with a link to each section
-                                    <CollapsibleMenu title={item.frontmatter.title} isOpened={false}>
+                            <li key={page.slug}>
+                                {page.headings.length > 0 ?
+                                    // If there are any sections (h2-level headings) for the page, then we create a submenu with a link to each section
+                                    <CollapsibleMenu title={page.frontmatter.title} isOpened={false} headerUrl={'/' + page.slug}>
                                         <div className={submenu}>
-                                            {item.headings.map(heading =>
+                                            {page.headings.map(heading =>
                                                 // Creates a button linking to one of the sections of the page for every section
-                                                <button onClick={()=> navigate('/' + item.slug + '#' + formatToUrl(heading.value))}>{heading.value}</button>
+                                                <button onClick={()=> navigate('/' + page.slug + '#' + formatToUrl(heading.value))}>{heading.value}</button>
                                             )}
                                         </div>
                                     </CollapsibleMenu>
-                                    : // If there is no more than one section (h2-level heading), then no section links are created
-                                    <button onClick={()=> navigate('/' + item.slug)}>{item.frontmatter.title}</button>
+                                    : // If there are no sections (h2-level headings), then no section links are created
+                                    <button onClick={()=> navigate('/' + page.slug)}>{page.frontmatter.title}</button>
                                 }
                             </li>
                         )}

@@ -14,11 +14,6 @@
 
 }
 
-.chevron {
-    position: absolute;
-    right: 10px;
-}
-
 .header button {
     cursor: pointer;
     background-color: #e5e5e5;
@@ -46,6 +41,13 @@
     stroke: white;
 }
 
+
+.chevron {
+
+}
+
 .chevron > button {
     background-color: Transparent;
+    width: 100%;
+    padding-right: 15px;
 }

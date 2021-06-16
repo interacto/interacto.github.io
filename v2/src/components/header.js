@@ -1,14 +1,14 @@
 import * as React from 'react'
-import { toolbar } from './layout.module.css'
-import { logo } from './layout.module.css'
-import { search } from './layout.module.css'
+import { header } from './header.module.css'
+import { logo } from './header.module.css'
+import { headerRight } from './header.module.css'
 import { highlight } from './layout.module.css'
 
 import {StaticImage} from "gatsby-plugin-image"
 
 const Header = () => (
     <header>
-        <nav className={toolbar} >
+        <nav className={header} >
             <StaticImage
                 src={'../images/interacto-logo.png'}
                 alt={'Interacto logo'}
@@ -17,7 +17,7 @@ const Header = () => (
                 height={60}
                 className={logo}/>
             <h1>INTERACTO <span className={highlight}>DOCS</span></h1>
-            <span className={search}>
+            <span className={headerRight}>
                 <a href={'https://github.com/interacto'}>
                     <StaticImage src={'../images/github.png'} alt={'Github logo'} layout={'constrained'} height={30} loading={"eager"}/>
                 </a>

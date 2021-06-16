@@ -20,9 +20,6 @@ module.exports = {
           {
             resolve: `gatsby-remark-autolink-headers`,
             options: {
-              // Should offset when clicking header links, currently bugged?
-              // TODO: monitor https://github.com/gatsbyjs/gatsby/issues/31747
-              offsetY: 100,
             },
           },
           `gatsby-remark-prismjs`,

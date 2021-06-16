@@ -80,7 +80,10 @@ export default function Navigation() {
                                         <div className={submenu}>
                                             {page.headings.map(heading =>
                                                 // Creates a button linking to one of the sections of the page for every section
-                                                <button onClick={()=> navigate('/' + page.slug + '#' + formatToUrl(heading.value))}>{heading.value}</button>
+                                                <button onClick={()=> navigate('/' + page.slug + '#' + formatToUrl(heading.value))}
+                                                        key={page.slug + '/' + heading.value}>
+                                                    {heading.value}
+                                                </button>
                                             )}
                                         </div>
                                     </CollapsibleMenu>

@@ -27,8 +27,15 @@
     padding-left: 15px;
     padding-top: 7px;
     padding-bottom: 7px;
-
 }
+
+.chevron > button {
+    background-color: Transparent;
+    width: 100%;
+    padding-right: 15px;
+}
+
+/*Changes the color of the header button and its text+chevron when hovered*/
 
 .header:hover button{
         background-color: var(--highlight-color);
@@ -39,15 +46,4 @@
 
 .header:hover svg {
     stroke: white;
-}
-
-
-.chevron {
-
-}
-
-.chevron > button {
-    background-color: Transparent;
-    width: 100%;
-    padding-right: 15px;
 }

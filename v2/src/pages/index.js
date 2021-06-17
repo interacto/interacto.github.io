@@ -1,12 +1,18 @@
 import * as React from "react"
 import {navigate} from "../../.cache/commonjs/gatsby-browser-entry";
 
-const IndexPage = () => {
+class IndexPage extends React.Component {
+//const IndexPage = () => {
+//    navigate('/home');
+  componentDidMount() {
     navigate('/home');
-
-  return (
+  }
+  
+  render() {
+    return (
       <></>
   )
+  }
 }
 
 export default IndexPage

@@ -9,9 +9,7 @@ class IndexPage extends React.Component {
   }
   
   render() {
-    return (
-      <></>
-  )
+    return <p></p>;
   }
 }
 

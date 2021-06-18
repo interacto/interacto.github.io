@@ -13,7 +13,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "gatsby build && gh-pages -d public -r git@github.com:interacto/interacto.github.io.git"
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public -r git@github.com:interacto/interacto.github.io.git"
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",

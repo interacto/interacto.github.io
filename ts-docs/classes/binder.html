@@ -6,7 +6,29 @@
 	<title>Binder | interacto</title>
 	<meta name="description" content="Documentation for interacto">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
+	<style type="text/css">:root {
+  --color-background: #fdfdfd;
+  --color-text: #222;
+  --color-text-aside: #707070;
+  --color-link: #4da6ff;
+  --color-menu-divider: #eee;
+  --color-menu-divider-focus: #000;
+  --color-menu-label: #707070;
+  --color-panel: #fff;
+  --color-panel-divider: #eee;
+  --color-comment-tag: #707070;
+  --color-comment-tag-text: #fff;
+  --color-code-background: rgba(0, 0, 0, 0.04);
+  --color-ts: #9600ff;
+  --color-ts-interface: #647f1b;
+  --color-ts-enum: #937210;
+  --color-ts-class: #0672de;
+  --color-ts-private: #707070;
+  --color-toolbar: #fff;
+  --color-toolbar-text: #333;
+}
+
+/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
 /* ==========================================================================
  * * HTML5 display definitions
  * * ========================================================================== */
@@ -1593,14 +1615,14 @@ ul.tsd-descriptions > li > :last-child > :last-child > :last-child,
   }
 }
 body {
-  background: #fdfdfd;
+  background: var(--color-background);
   font-family: "Segoe UI", sans-serif;
   font-size: 16px;
-  color: #222;
+  color: var(--color-text);
 }
 
 a {
-  color: #4da6ff;
+  color: var(--color-link);
   text-decoration: none;
 }
 a:hover {
@@ -1612,7 +1634,7 @@ code, pre {
   padding: 0.2em;
   margin: 0;
   font-size: 14px;
-  background-color: rgba(0, 0, 0, 0.04);
+  background-color: var(--color-code-background);
 }
 
 pre {
@@ -1678,7 +1700,7 @@ blockquote {
     padding: 20px 20px 0 0;
     max-width: 450px;
     visibility: hidden;
-    background-color: #fff;
+    background-color: var(--color-panel);
     transform: translate(100%, 0);
   }
   html.default .col-menu > *:last-child {
@@ -1738,7 +1760,7 @@ html.default.has-menu .col-content {
 .tsd-page-title {
   padding: 70px 0 20px 0;
   margin: 0 0 40px 0;
-  background: #fff;
+  background: var(--color-panel);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
 }
 .tsd-page-title h1 {
@@ -1748,10 +1770,10 @@ html.default.has-menu .col-content {
 .tsd-breadcrumb {
   margin: 0;
   padding: 0;
-  color: #707070;
+  color: var(--color-text-aside);
 }
 .tsd-breadcrumb a {
-  color: #707070;
+  color: var(--color-text-aside);
   text-decoration: none;
 }
 .tsd-breadcrumb a:hover {
@@ -1824,8 +1846,8 @@ dl.tsd-comment-tags dt {
   padding: 1px 5px;
   margin: 0 10px 0 0;
   border-radius: 4px;
-  border: 1px solid #707070;
-  color: #707070;
+  border: 1px solid var(--color-comment-tag);
+  color: var(--color-comment-tag);
   font-size: 0.8em;
   font-weight: normal;
 }
@@ -1895,7 +1917,7 @@ dl.tsd-comment-tags p {
     top: 40px;
     right: 20px;
     height: auto;
-    background-color: #fff;
+    background-color: var(--color-panel);
     visibility: hidden;
     transform: translate(50%, 0);
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
@@ -1917,11 +1939,11 @@ dl.tsd-comment-tags p {
 }
 
 footer {
-  border-top: 1px solid #eee;
-  background-color: #fff;
+  border-top: 1px solid var(--color-panel-divider);
+  background-color: var(--color-panel);
 }
 footer.with-border-bottom {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--color-panel-divider);
 }
 footer .tsd-legend-group {
   font-size: 0;
@@ -1959,7 +1981,7 @@ footer .tsd-legend {
 .tsd-index-panel h3 {
   margin: 0 -20px 10px -20px;
   padding: 0 20px 10px 20px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--color-panel-divider);
 }
 .tsd-index-panel ul.tsd-index-list {
   -webkit-column-count: 3;
@@ -2003,39 +2025,39 @@ footer .tsd-legend {
 }
 .tsd-index-panel a,
 .tsd-index-panel .tsd-parent-kind-module a {
-  color: #9600ff;
+  color: var(--color-ts);
 }
 .tsd-index-panel .tsd-parent-kind-interface a {
-  color: #647F1B;
+  color: var(--color-ts-interface);
 }
 .tsd-index-panel .tsd-parent-kind-enum a {
-  color: #937210;
+  color: var(--color-ts-enum);
 }
 .tsd-index-panel .tsd-parent-kind-class a {
-  color: #0672DE;
+  color: var(--color-ts-class);
 }
 .tsd-index-panel .tsd-kind-module a {
-  color: #9600ff;
+  color: var(--color-ts);
 }
 .tsd-index-panel .tsd-kind-interface a {
-  color: #647F1B;
+  color: var(--color-ts-interface);
 }
 .tsd-index-panel .tsd-kind-enum a {
-  color: #937210;
+  color: var(--color-ts-enum);
 }
 .tsd-index-panel .tsd-kind-class a {
-  color: #0672DE;
+  color: var(--color-ts-class);
 }
 .tsd-index-panel .tsd-is-private a {
-  color: #707070;
+  color: var(--color-ts-private);
 }
 
 .tsd-flag {
   display: inline-block;
   padding: 1px 5px;
   border-radius: 4px;
-  color: #fff;
-  background-color: #707070;
+  color: var(--color-comment-tag-text);
+  background-color: var(--color-comment-tag);
   text-indent: 0;
   font-size: 14px;
   font-weight: normal;
@@ -2055,19 +2077,19 @@ footer .tsd-legend {
   border-bottom: none;
 }
 .tsd-member a[data-tsd-kind] {
-  color: #9600ff;
+  color: var(--color-ts);
 }
 .tsd-member a[data-tsd-kind=Interface] {
-  color: #647F1B;
+  color: var(--color-ts-interface);
 }
 .tsd-member a[data-tsd-kind=Enum] {
-  color: #937210;
+  color: var(--color-ts-enum);
 }
 .tsd-member a[data-tsd-kind=Class] {
-  color: #0672DE;
+  color: var(--color-ts-class);
 }
 .tsd-member a[data-tsd-kind=Private] {
-  color: #707070;
+  color: var(--color-ts-private);
 }
 
 .tsd-navigation {
@@ -2078,7 +2100,7 @@ footer .tsd-legend {
   padding-top: 2px;
   padding-bottom: 2px;
   border-left: 2px solid transparent;
-  color: #222;
+  color: var(--color-text);
   text-decoration: none;
   transition: border-left-color 0.1s;
 }
@@ -2121,10 +2143,10 @@ footer .tsd-legend {
   padding-left: 105px;
 }
 .tsd-navigation.primary > ul {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--color-panel-divider);
 }
 .tsd-navigation.primary li {
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--color-panel-divider);
 }
 .tsd-navigation.primary li.current > a {
   font-weight: bold;
@@ -2132,7 +2154,7 @@ footer .tsd-legend {
 .tsd-navigation.primary li.label span {
   display: block;
   padding: 20px 0 6px 5px;
-  color: #707070;
+  color: var(--color-menu-label);
 }
 .tsd-navigation.primary li.globals + li > span, .tsd-navigation.primary li.globals + li > a {
   padding-top: 20px;
@@ -2172,16 +2194,16 @@ footer .tsd-legend {
   padding-left: 125px;
 }
 .tsd-navigation.secondary ul.current a {
-  border-left-color: #eee;
+  border-left-color: var(--color-panel-divider);
 }
 .tsd-navigation.secondary li.focus > a,
 .tsd-navigation.secondary ul.current li.focus > a {
-  border-left-color: #000;
+  border-left-color: var(--color-menu-divider-focus);
 }
 .tsd-navigation.secondary li.current {
   margin-top: 20px;
   margin-bottom: 20px;
-  border-left-color: #eee;
+  border-left-color: var(--color-panel-divider);
 }
 .tsd-navigation.secondary li.current > a {
   font-weight: bold;
@@ -2196,7 +2218,7 @@ footer .tsd-legend {
 .tsd-panel {
   margin: 20px 0;
   padding: 20px;
-  background-color: #fff;
+  background-color: var(--color-panel);
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
 }
 .tsd-panel:empty {
@@ -2205,7 +2227,7 @@ footer .tsd-legend {
 .tsd-panel > h1, .tsd-panel > h2, .tsd-panel > h3 {
   margin: 1.5em -20px 10px -20px;
   padding: 0 20px 10px 20px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--color-panel-divider);
 }
 .tsd-panel > h1.tsd-before-signature, .tsd-panel > h2.tsd-before-signature, .tsd-panel > h3.tsd-before-signature {
   margin-bottom: 0;
@@ -2267,7 +2289,7 @@ footer .tsd-legend {
   outline: 0;
   border: 0;
   background: transparent;
-  color: #222;
+  color: var(--color-text);
 }
 #tsd-search .field label {
   position: absolute;
@@ -2290,17 +2312,17 @@ footer .tsd-legend {
 }
 #tsd-search .results li {
   padding: 0 10px;
-  background-color: #fdfdfd;
+  background-color: var(--color-background);
 }
 #tsd-search .results li:nth-child(even) {
-  background-color: #fff;
+  background-color: var(--color-panel);
 }
 #tsd-search .results li.state {
   display: none;
 }
 #tsd-search .results li.current,
 #tsd-search .results li:hover {
-  background-color: #eee;
+  background-color: var(--color-panel-divider);
 }
 #tsd-search .results a {
   display: block;
@@ -2309,11 +2331,11 @@ footer .tsd-legend {
   top: 10px;
 }
 #tsd-search .results span.parent {
-  color: #707070;
+  color: var(--color-text-aside);
   font-weight: normal;
 }
 #tsd-search.has-focus {
-  background-color: #eee;
+  background-color: var(--color-panel-divider);
 }
 #tsd-search.has-focus .field input {
   top: 0;
@@ -2336,7 +2358,7 @@ footer .tsd-legend {
 .tsd-signature {
   margin: 0 0 1em 0;
   padding: 10px;
-  border: 1px solid #eee;
+  border: 1px solid var(--color-panel-divider);
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 14px;
   overflow-x: auto;
@@ -2361,7 +2383,7 @@ footer .tsd-legend {
 }
 
 .tsd-signature-symbol {
-  color: #707070;
+  color: var(--color-text-aside);
   font-weight: normal;
 }
 
@@ -2373,7 +2395,7 @@ footer .tsd-legend {
 .tsd-signatures {
   padding: 0;
   margin: 0 0 1em 0;
-  border: 1px solid #eee;
+  border: 1px solid var(--color-panel-divider);
 }
 .tsd-signatures .tsd-signature {
   margin: 0;
@@ -2384,7 +2406,7 @@ footer .tsd-legend {
   border-top-width: 0;
 }
 .tsd-signatures .tsd-signature.current {
-  background-color: #eee;
+  background-color: var(--color-panel-divider);
 }
 .tsd-signatures.active > .tsd-signature {
   cursor: pointer;
@@ -2458,11 +2480,11 @@ ul.tsd-type-parameters .tsd-comment {
 
 .tsd-sources {
   font-size: 14px;
-  color: #707070;
+  color: var(--color-text-aside);
   margin: 0 0 1em 0;
 }
 .tsd-sources a {
-  color: #707070;
+  color: var(--color-text-aside);
   text-decoration: underline;
 }
 .tsd-sources ul, .tsd-sources p {
@@ -2480,13 +2502,13 @@ ul.tsd-type-parameters .tsd-comment {
   left: 0;
   width: 100%;
   height: 40px;
-  color: #333;
-  background: #fff;
-  border-bottom: 1px solid #eee;
+  color: var(--color-toolbar-text);
+  background: var(--color-toolbar);
+  border-bottom: 1px solid var(--color-panel-divider);
   transition: transform 0.3s linear;
 }
 .tsd-page-toolbar a {
-  color: #333;
+  color: var(--color-toolbar-text);
   text-decoration: none;
 }
 .tsd-page-toolbar a.title {
@@ -2546,7 +2568,7 @@ ul.tsd-type-parameters .tsd-comment {
 }
 .tsd-widget.active {
   opacity: 1;
-  background-color: #eee;
+  background-color: var(--color-panel-divider);
 }
 .tsd-widget.no-caption {
   width: 40px;
@@ -2615,16 +2637,16 @@ input[type=checkbox]:checked + .tsd-widget:before {
 }
 .tsd-select .tsd-select-list li {
   padding: 0 20px 0 0;
-  background-color: #fdfdfd;
+  background-color: var(--color-background);
 }
 .tsd-select .tsd-select-list li:before {
   background-position: 40px 0;
 }
 .tsd-select .tsd-select-list li:nth-child(even) {
-  background-color: #fff;
+  background-color: var(--color-panel);
 }
 .tsd-select .tsd-select-list li:hover {
-  background-color: #eee;
+  background-color: var(--color-panel-divider);
 }
 .tsd-select .tsd-select-list li.selected:before {
   background-position: -200px 0;
@@ -2909,7 +2931,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/binder/Binder.ts#L66">src/impl/binder/Binder.ts:66</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/binder/Binder.ts#L66">src/impl/binder/Binder.ts:66</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -2946,12 +2968,36 @@ img {
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 				<a name="cannotexecfn" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagOptional">Optional</span> cannot<wbr>Exec<wbr>Fn</h3>
-				<div class="tsd-signature tsd-kind-icon">cannot<wbr>Exec<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>c<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span>, i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></div>
+				<div class="tsd-signature tsd-kind-icon">cannot<wbr>Exec<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>c<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span>, i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/binder/Binder.ts#L52">src/impl/binder/Binder.ts:52</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/binder/Binder.ts#L52">src/impl/binder/Binder.ts:52</a></li>
 					</ul>
 				</aside>
+				<div class="tsd-type-declaration">
+					<h4>Type declaration</h4>
+					<ul class="tsd-parameters">
+						<li class="tsd-parameter-signature">
+							<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-class">
+								<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>c<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span>, i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+							</ul>
+							<ul class="tsd-descriptions">
+								<li class="tsd-description">
+									<h4 class="tsd-parameters-title">Parameters</h4>
+									<ul class="tsd-parameters">
+										<li>
+											<h5>c: <span class="tsd-signature-type">C</span></h5>
+										</li>
+										<li>
+											<h5>i: <span class="tsd-signature-type">D</span></h5>
+										</li>
+									</ul>
+									<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 				<a name="dynamicnodes" class="tsd-anchor"></a>
@@ -2959,49 +3005,145 @@ img {
 				<div class="tsd-signature tsd-kind-icon">dynamic<wbr>Nodes<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-type">Node</span><span class="tsd-signature-symbol">[]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/binder/Binder.ts#L44">src/impl/binder/Binder.ts:44</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/binder/Binder.ts#L44">src/impl/binder/Binder.ts:44</a></li>
 					</ul>
 				</aside>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 				<a name="endfn" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagOptional">Optional</span> end<wbr>Fn</h3>
-				<div class="tsd-signature tsd-kind-icon">end<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>c<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span>, i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></div>
+				<div class="tsd-signature tsd-kind-icon">end<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>c<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span>, i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/binder/Binder.ts#L54">src/impl/binder/Binder.ts:54</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/binder/Binder.ts#L54">src/impl/binder/Binder.ts:54</a></li>
 					</ul>
 				</aside>
+				<div class="tsd-type-declaration">
+					<h4>Type declaration</h4>
+					<ul class="tsd-parameters">
+						<li class="tsd-parameter-signature">
+							<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-class">
+								<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>c<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span>, i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+							</ul>
+							<ul class="tsd-descriptions">
+								<li class="tsd-description">
+									<h4 class="tsd-parameters-title">Parameters</h4>
+									<ul class="tsd-parameters">
+										<li>
+											<h5>c: <span class="tsd-signature-type">C</span></h5>
+										</li>
+										<li>
+											<h5>i: <span class="tsd-signature-type">D</span></h5>
+										</li>
+									</ul>
+									<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 				<a name="firstfn" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagOptional">Optional</span> first<wbr>Fn</h3>
-				<div class="tsd-signature tsd-kind-icon">first<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>c<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span>, i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></div>
+				<div class="tsd-signature tsd-kind-icon">first<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>c<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span>, i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/binder/Binder.ts#L36">src/impl/binder/Binder.ts:36</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/binder/Binder.ts#L36">src/impl/binder/Binder.ts:36</a></li>
 					</ul>
 				</aside>
+				<div class="tsd-type-declaration">
+					<h4>Type declaration</h4>
+					<ul class="tsd-parameters">
+						<li class="tsd-parameter-signature">
+							<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-class">
+								<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>c<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span>, i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+							</ul>
+							<ul class="tsd-descriptions">
+								<li class="tsd-description">
+									<h4 class="tsd-parameters-title">Parameters</h4>
+									<ul class="tsd-parameters">
+										<li>
+											<h5>c: <span class="tsd-signature-type">C</span></h5>
+										</li>
+										<li>
+											<h5>i: <span class="tsd-signature-type">D</span></h5>
+										</li>
+									</ul>
+									<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 				<a name="hadeffectsfn" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagOptional">Optional</span> had<wbr>Effects<wbr>Fn</h3>
-				<div class="tsd-signature tsd-kind-icon">had<wbr>Effects<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>c<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span>, i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></div>
+				<div class="tsd-signature tsd-kind-icon">had<wbr>Effects<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>c<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span>, i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/binder/Binder.ts#L48">src/impl/binder/Binder.ts:48</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/binder/Binder.ts#L48">src/impl/binder/Binder.ts:48</a></li>
 					</ul>
 				</aside>
+				<div class="tsd-type-declaration">
+					<h4>Type declaration</h4>
+					<ul class="tsd-parameters">
+						<li class="tsd-parameter-signature">
+							<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-class">
+								<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>c<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span>, i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+							</ul>
+							<ul class="tsd-descriptions">
+								<li class="tsd-description">
+									<h4 class="tsd-parameters-title">Parameters</h4>
+									<ul class="tsd-parameters">
+										<li>
+											<h5>c: <span class="tsd-signature-type">C</span></h5>
+										</li>
+										<li>
+											<h5>i: <span class="tsd-signature-type">D</span></h5>
+										</li>
+									</ul>
+									<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 				<a name="hadnoeffectfn" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagOptional">Optional</span> had<wbr>NoEffect<wbr>Fn</h3>
-				<div class="tsd-signature tsd-kind-icon">had<wbr>NoEffect<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>c<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span>, i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></div>
+				<div class="tsd-signature tsd-kind-icon">had<wbr>NoEffect<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>c<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span>, i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/binder/Binder.ts#L50">src/impl/binder/Binder.ts:50</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/binder/Binder.ts#L50">src/impl/binder/Binder.ts:50</a></li>
 					</ul>
 				</aside>
+				<div class="tsd-type-declaration">
+					<h4>Type declaration</h4>
+					<ul class="tsd-parameters">
+						<li class="tsd-parameter-signature">
+							<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-class">
+								<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>c<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span>, i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+							</ul>
+							<ul class="tsd-descriptions">
+								<li class="tsd-description">
+									<h4 class="tsd-parameters-title">Parameters</h4>
+									<ul class="tsd-parameters">
+										<li>
+											<h5>c: <span class="tsd-signature-type">C</span></h5>
+										</li>
+										<li>
+											<h5>i: <span class="tsd-signature-type">D</span></h5>
+										</li>
+									</ul>
+									<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 				<a name="loglevels" class="tsd-anchor"></a>
@@ -3009,29 +3151,50 @@ img {
 				<div class="tsd-signature tsd-kind-icon">log<wbr>Levels<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">readonly </span><a href="../enums/loglevel.html" class="tsd-signature-type" data-tsd-kind="Enumeration">LogLevel</a><span class="tsd-signature-symbol">[]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/binder/Binder.ts#L58">src/impl/binder/Binder.ts:58</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/binder/Binder.ts#L58">src/impl/binder/Binder.ts:58</a></li>
 					</ul>
 				</aside>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 				<a name="observer" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagOptional">Optional</span> observer</h3>
-				<div class="tsd-signature tsd-kind-icon">observer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/bindingsobserver.html" class="tsd-signature-type" data-tsd-kind="Interface">BindingsObserver</a></div>
+				<div class="tsd-signature tsd-kind-icon">observer<span class="tsd-signature-symbol">:</span> <a href="../interfaces/bindingsobserver.html" class="tsd-signature-type" data-tsd-kind="Interface">BindingsObserver</a></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/binder/Binder.ts#L64">src/impl/binder/Binder.ts:64</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/binder/Binder.ts#L64">src/impl/binder/Binder.ts:64</a></li>
 					</ul>
 				</aside>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 				<a name="onerrfn" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagOptional">Optional</span> on<wbr>Err<wbr>Fn</h3>
-				<div class="tsd-signature tsd-kind-icon">on<wbr>Err<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>ex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span></div>
+				<div class="tsd-signature tsd-kind-icon">on<wbr>Err<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>ex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/binder/Binder.ts#L56">src/impl/binder/Binder.ts:56</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/binder/Binder.ts#L56">src/impl/binder/Binder.ts:56</a></li>
 					</ul>
 				</aside>
+				<div class="tsd-type-declaration">
+					<h4>Type declaration</h4>
+					<ul class="tsd-parameters">
+						<li class="tsd-parameter-signature">
+							<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-class">
+								<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>ex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">unknown</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+							</ul>
+							<ul class="tsd-descriptions">
+								<li class="tsd-description">
+									<h4 class="tsd-parameters-title">Parameters</h4>
+									<ul class="tsd-parameters">
+										<li>
+											<h5>ex: <span class="tsd-signature-type">unknown</span></h5>
+										</li>
+									</ul>
+									<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 				<a name="prevdefault" class="tsd-anchor"></a>
@@ -3039,19 +3202,40 @@ img {
 				<div class="tsd-signature tsd-kind-icon">prev<wbr>Default<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/binder/Binder.ts#L62">src/impl/binder/Binder.ts:62</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/binder/Binder.ts#L62">src/impl/binder/Binder.ts:62</a></li>
 					</ul>
 				</aside>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 				<a name="producefn" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagOptional">Optional</span> produce<wbr>Fn</h3>
-				<div class="tsd-signature tsd-kind-icon">produce<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">)</span></div>
+				<div class="tsd-signature tsd-kind-icon">produce<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">C</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/binder/Binder.ts#L40">src/impl/binder/Binder.ts:40</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/binder/Binder.ts#L40">src/impl/binder/Binder.ts:40</a></li>
 					</ul>
 				</aside>
+				<div class="tsd-type-declaration">
+					<h4>Type declaration</h4>
+					<ul class="tsd-parameters">
+						<li class="tsd-parameter-signature">
+							<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-class">
+								<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">C</span></li>
+							</ul>
+							<ul class="tsd-descriptions">
+								<li class="tsd-description">
+									<h4 class="tsd-parameters-title">Parameters</h4>
+									<ul class="tsd-parameters">
+										<li>
+											<h5>i: <span class="tsd-signature-type">D</span></h5>
+										</li>
+									</ul>
+									<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">C</span></h4>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 				<a name="stoppropagation" class="tsd-anchor"></a>
@@ -3059,7 +3243,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">stop<wbr>Propagation<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/binder/Binder.ts#L60">src/impl/binder/Binder.ts:60</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/binder/Binder.ts#L60">src/impl/binder/Binder.ts:60</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3069,29 +3253,65 @@ img {
 				<div class="tsd-signature tsd-kind-icon">undo<wbr>History<span class="tsd-signature-symbol">:</span> <a href="undohistory.html" class="tsd-signature-type" data-tsd-kind="Class">UndoHistory</a></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/binder/Binder.ts#L66">src/impl/binder/Binder.ts:66</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/binder/Binder.ts#L66">src/impl/binder/Binder.ts:66</a></li>
 					</ul>
 				</aside>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 				<a name="usingfn" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagOptional">Optional</span> using<wbr>Fn</h3>
-				<div class="tsd-signature tsd-kind-icon">using<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">I</span><span class="tsd-signature-symbol">)</span></div>
+				<div class="tsd-signature tsd-kind-icon">using<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">I</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/binder/Binder.ts#L46">src/impl/binder/Binder.ts:46</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/binder/Binder.ts#L46">src/impl/binder/Binder.ts:46</a></li>
 					</ul>
 				</aside>
+				<div class="tsd-type-declaration">
+					<h4>Type declaration</h4>
+					<ul class="tsd-parameters">
+						<li class="tsd-parameter-signature">
+							<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-class">
+								<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">I</span></li>
+							</ul>
+							<ul class="tsd-descriptions">
+								<li class="tsd-description">
+									<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">I</span></h4>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 				<a name="whenfn" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagOptional">Optional</span> when<wbr>Fn</h3>
-				<div class="tsd-signature tsd-kind-icon">when<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">(</span>i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span></div>
+				<div class="tsd-signature tsd-kind-icon">when<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span>i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">boolean</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/binder/Binder.ts#L38">src/impl/binder/Binder.ts:38</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/binder/Binder.ts#L38">src/impl/binder/Binder.ts:38</a></li>
 					</ul>
 				</aside>
+				<div class="tsd-type-declaration">
+					<h4>Type declaration</h4>
+					<ul class="tsd-parameters">
+						<li class="tsd-parameter-signature">
+							<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-class">
+								<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>i<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+							</ul>
+							<ul class="tsd-descriptions">
+								<li class="tsd-description">
+									<h4 class="tsd-parameters-title">Parameters</h4>
+									<ul class="tsd-parameters">
+										<li>
+											<h5>i: <span class="tsd-signature-type">D</span></h5>
+										</li>
+									</ul>
+									<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-protected">
 				<a name="widgets" class="tsd-anchor"></a>
@@ -3099,7 +3319,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">widgets<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-type">EventTarget</span><span class="tsd-signature-symbol">[]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/binder/Binder.ts#L42">src/impl/binder/Binder.ts:42</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/binder/Binder.ts#L42">src/impl/binder/Binder.ts:42</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3117,9 +3337,14 @@ img {
 						<aside class="tsd-sources">
 							<p>Implementation of <a href="../interfaces/interactioncmdbinder.html">InteractionCmdBinder</a>.<a href="../interfaces/interactioncmdbinder.html#bind">bind</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/binder/Binder.ts#L176">src/impl/binder/Binder.ts:176</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/binder/Binder.ts#L176">src/impl/binder/Binder.ts:176</a></li>
 							</ul>
 						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Executes the builder to create and install the binding on the instrument.</p>
+							</div>
+						</div>
 						<h4 class="tsd-returns-title">Returns <a href="../interfaces/binding.html" class="tsd-signature-type" data-tsd-kind="Interface">Binding</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">I</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span></h4>
 					</li>
 				</ul>
@@ -3133,8 +3358,9 @@ img {
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
+							<p>Implementation of <a href="../interfaces/interactioncmdbinder.html">InteractionCmdBinder</a>.<a href="../interfaces/interactioncmdbinder.html#catch">catch</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/binder/Binder.ts#L158">src/impl/binder/Binder.ts:158</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/binder/Binder.ts#L158">src/impl/binder/Binder.ts:158</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3175,7 +3401,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/binder/Binder.ts#L81">src/impl/binder/Binder.ts:81</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/binder/Binder.ts#L81">src/impl/binder/Binder.ts:81</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <a href="binder.html" class="tsd-signature-type" data-tsd-kind="Class">Binder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">I</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -3191,10 +3417,17 @@ img {
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
+							<p>Implementation of <a href="../interfaces/interactioncmdbinder.html">InteractionCmdBinder</a>.<a href="../interfaces/interactioncmdbinder.html#end">end</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/binder/Binder.ts#L134">src/impl/binder/Binder.ts:134</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/binder/Binder.ts#L134">src/impl/binder/Binder.ts:134</a></li>
 							</ul>
 						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Specifies what to do end when an interaction ends (when the last event of the interaction has occurred, but just after
+								the interaction is reinitialised and the command finally executed and discarded / saved).</p>
+							</div>
+						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
@@ -3223,6 +3456,7 @@ img {
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <a href="binder.html" class="tsd-signature-type" data-tsd-kind="Class">Binder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">I</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						<p>The builder to chain the building configuration.</p>
 					</li>
 				</ul>
 			</section>
@@ -3235,10 +3469,17 @@ img {
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
+							<p>Implementation of <a href="../interfaces/interactioncmdbinder.html">InteractionCmdBinder</a>.<a href="../interfaces/interactioncmdbinder.html#first">first</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/binder/Binder.ts#L104">src/impl/binder/Binder.ts:104</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/binder/Binder.ts#L104">src/impl/binder/Binder.ts:104</a></li>
 							</ul>
 						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Specifies the initialisation of the command when the interaction starts.
+								Each time the interaction starts, an instance of the command is created and configured by the given callback.</p>
+							</div>
+						</div>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
@@ -3267,6 +3508,7 @@ img {
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <a href="binder.html" class="tsd-signature-type" data-tsd-kind="Class">Binder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">I</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						<p>The builder to chain the building configuration.</p>
 					</li>
 				</ul>
 			</section>
@@ -3279,8 +3521,9 @@ img {
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
+							<p>Implementation of <a href="../interfaces/interactioncmdbinder.html">InteractionCmdBinder</a>.<a href="../interfaces/interactioncmdbinder.html#ifcannotexecute">ifCannotExecute</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/binder/Binder.ts#L128">src/impl/binder/Binder.ts:128</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/binder/Binder.ts#L128">src/impl/binder/Binder.ts:128</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3323,8 +3566,9 @@ img {
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
+							<p>Implementation of <a href="../interfaces/interactioncmdbinder.html">InteractionCmdBinder</a>.<a href="../interfaces/interactioncmdbinder.html#ifhadeffects">ifHadEffects</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/binder/Binder.ts#L116">src/impl/binder/Binder.ts:116</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/binder/Binder.ts#L116">src/impl/binder/Binder.ts:116</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3367,8 +3611,9 @@ img {
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
+							<p>Implementation of <a href="../interfaces/interactioncmdbinder.html">InteractionCmdBinder</a>.<a href="../interfaces/interactioncmdbinder.html#ifhadnoeffect">ifHadNoEffect</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/binder/Binder.ts#L122">src/impl/binder/Binder.ts:122</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/binder/Binder.ts#L122">src/impl/binder/Binder.ts:122</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3413,7 +3658,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Implementation of <a href="../interfaces/interactioncmdbinder.html">InteractionCmdBinder</a>.<a href="../interfaces/interactioncmdbinder.html#log">log</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/binder/Binder.ts#L140">src/impl/binder/Binder.ts:140</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/binder/Binder.ts#L140">src/impl/binder/Binder.ts:140</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3430,20 +3675,20 @@ img {
 				<a name="on" class="tsd-anchor"></a>
 				<h3>on</h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-					<li class="tsd-signature tsd-kind-icon">on<span class="tsd-signature-symbol">(</span>widget<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">EventTarget</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/eltref.html" class="tsd-signature-type" data-tsd-kind="Interface">EltRef</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EventTarget</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">readonly </span><a href="../modules.html#widget" class="tsd-signature-type" data-tsd-kind="Type alias">Widget</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EventTarget</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span>, <span class="tsd-signature-symbol">...</span>widgets<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">readonly </span><a href="../modules.html#widget" class="tsd-signature-type" data-tsd-kind="Type alias">Widget</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EventTarget</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="binder.html" class="tsd-signature-type" data-tsd-kind="Class">Binder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">I</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<li class="tsd-signature tsd-kind-icon">on<span class="tsd-signature-symbol">(</span>widget<span class="tsd-signature-symbol">: </span><a href="../modules.html#widget" class="tsd-signature-type" data-tsd-kind="Type alias">Widget</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EventTarget</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">readonly </span><a href="../modules.html#widget" class="tsd-signature-type" data-tsd-kind="Type alias">Widget</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EventTarget</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span>, <span class="tsd-signature-symbol">...</span>widgets<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">readonly </span><a href="../modules.html#widget" class="tsd-signature-type" data-tsd-kind="Type alias">Widget</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EventTarget</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="binder.html" class="tsd-signature-type" data-tsd-kind="Class">Binder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">I</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<p>Implementation of <a href="../interfaces/interactioncmdbinder.html">InteractionCmdBinder</a>.<a href="../interfaces/interactioncmdbinder.html#on">on</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/binder/Binder.ts#L83">src/impl/binder/Binder.ts:83</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/binder/Binder.ts#L83">src/impl/binder/Binder.ts:83</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
-								<h5>widget: <span class="tsd-signature-type">EventTarget</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/eltref.html" class="tsd-signature-type" data-tsd-kind="Interface">EltRef</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EventTarget</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">readonly </span><a href="../modules.html#widget" class="tsd-signature-type" data-tsd-kind="Type alias">Widget</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EventTarget</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h5>
+								<h5>widget: <a href="../modules.html#widget" class="tsd-signature-type" data-tsd-kind="Type alias">Widget</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EventTarget</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-symbol">readonly </span><a href="../modules.html#widget" class="tsd-signature-type" data-tsd-kind="Type alias">Widget</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EventTarget</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h5>
 							</li>
 							<li>
 								<h5><span class="tsd-flag ts-flagRest">Rest</span> <span class="tsd-signature-symbol">...</span>widgets: <span class="tsd-signature-symbol">readonly </span><a href="../modules.html#widget" class="tsd-signature-type" data-tsd-kind="Type alias">Widget</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">EventTarget</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">[]</span></h5>
@@ -3464,7 +3709,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Implementation of <a href="../interfaces/interactioncmdbinder.html">InteractionCmdBinder</a>.<a href="../interfaces/interactioncmdbinder.html#ondynamic">onDynamic</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/binder/Binder.ts#L97">src/impl/binder/Binder.ts:97</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/binder/Binder.ts#L97">src/impl/binder/Binder.ts:97</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3488,7 +3733,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Implementation of <a href="../interfaces/interactioncmdbinder.html">InteractionCmdBinder</a>.<a href="../interfaces/interactioncmdbinder.html#preventdefault">preventDefault</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/binder/Binder.ts#L152">src/impl/binder/Binder.ts:152</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/binder/Binder.ts#L152">src/impl/binder/Binder.ts:152</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <a href="binder.html" class="tsd-signature-type" data-tsd-kind="Class">Binder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">I</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -3506,7 +3751,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Implementation of <a href="../interfaces/interactioncmdbinder.html">InteractionCmdBinder</a>.<a href="../interfaces/interactioncmdbinder.html#stopimmediatepropagation">stopImmediatePropagation</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/binder/Binder.ts#L146">src/impl/binder/Binder.ts:146</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/binder/Binder.ts#L146">src/impl/binder/Binder.ts:146</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <a href="binder.html" class="tsd-signature-type" data-tsd-kind="Class">Binder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">I</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">D</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -3522,8 +3767,9 @@ img {
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
+							<p>Implementation of <a href="../interfaces/interactionbinder.html">InteractionBinder</a>.<a href="../interfaces/interactionbinder.html#toproduce">toProduce</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/binder/Binder.ts#L170">src/impl/binder/Binder.ts:170</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/binder/Binder.ts#L170">src/impl/binder/Binder.ts:170</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -3569,10 +3815,16 @@ img {
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
+							<p>Implementation of <a href="../interfaces/cmdbinder.html">CmdBinder</a>.<a href="../interfaces/cmdbinder.html#usinginteraction">usingInteraction</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/binder/Binder.ts#L164">src/impl/binder/Binder.ts:164</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/binder/Binder.ts#L164">src/impl/binder/Binder.ts:164</a></li>
 							</ul>
 						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>Defines how to create the user interaction that the binding will use to create UI commands.</p>
+							</div>
+						</div>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
 						<ul class="tsd-type-parameters">
 							<li>
@@ -3601,6 +3853,7 @@ img {
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <a href="binder.html" class="tsd-signature-type" data-tsd-kind="Class">Binder</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">C</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">I2</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">D2</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						<p>A clone of the current builder to chain the building configuration.</p>
 					</li>
 				</ul>
 			</section>
@@ -3613,8 +3866,9 @@ img {
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
+							<p>Implementation of <a href="../interfaces/interactioncmdbinder.html">InteractionCmdBinder</a>.<a href="../interfaces/interactioncmdbinder.html#when">when</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/binder/Binder.ts#L110">src/impl/binder/Binder.ts:110</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/binder/Binder.ts#L110">src/impl/binder/Binder.ts:110</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3824,7 +4078,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Viewport\": () => /* binding */ Viewport\n/* harmony export */ });\n/* harmony import */ var _EventTarget__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../EventTarget */ \"./default/assets/js/src/typedoc/EventTarget.ts\");\n/* harmony import */ var _utils_trottle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/trottle */ \"./default/assets/js/src/typedoc/utils/trottle.ts\");\nvar __extends = (undefined && undefined.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    };\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\n\n\n/**\n * A global service that monitors the window size and scroll position.\n */\nvar Viewport = /** @class */ (function (_super) {\n    __extends(Viewport, _super);\n    /**\n     * Create new Viewport instance.\n     */\n    function Viewport() {\n        var _this = _super.call(this) || this;\n        /**\n         * The current scroll position.\n         */\n        _this.scrollTop = 0;\n        /**\n         * The previous scrollTop.\n         */\n        _this.lastY = 0;\n        /**\n         * The width of the window.\n         */\n        _this.width = 0;\n        /**\n         * The height of the window.\n         */\n        _this.height = 0;\n        /**\n         * Boolean indicating whether the toolbar is shown.\n         */\n        _this.showToolbar = true;\n        _this.toolbar = (document.querySelector(\".tsd-page-toolbar\"));\n        _this.secondaryNav = (document.querySelector(\".tsd-navigation.secondary\"));\n        window.addEventListener(\"scroll\", (0,_utils_trottle__WEBPACK_IMPORTED_MODULE_1__.throttle)(function () { return _this.onScroll(); }, 10));\n        window.addEventListener(\"resize\", (0,_utils_trottle__WEBPACK_IMPORTED_MODULE_1__.throttle)(function () { return _this.onResize(); }, 10));\n        _this.onResize();\n        _this.onScroll();\n        return _this;\n    }\n    /**\n     * Trigger a resize event.\n     */\n    Viewport.prototype.triggerResize = function () {\n        var event = new CustomEvent(\"resize\", {\n            detail: {\n                width: this.width,\n                height: this.height,\n            },\n        });\n        this.dispatchEvent(event);\n    };\n    /**\n     * Triggered when the size of the window has changed.\n     */\n    Viewport.prototype.onResize = function () {\n        this.width = window.innerWidth || 0;\n        this.height = window.innerHeight || 0;\n        var event = new CustomEvent(\"resize\", {\n            detail: {\n                width: this.width,\n                height: this.height,\n            },\n        });\n        this.dispatchEvent(event);\n    };\n    /**\n     * Triggered when the user scrolled the viewport.\n     */\n    Viewport.prototype.onScroll = function () {\n        this.scrollTop = window.scrollY || 0;\n        var event = new CustomEvent(\"scroll\", {\n            detail: {\n                scrollTop: this.scrollTop,\n            },\n        });\n        this.dispatchEvent(event);\n        this.hideShowToolbar();\n    };\n    /**\n     * Handle hiding/showing of the toolbar.\n     */\n    Viewport.prototype.hideShowToolbar = function () {\n        var isShown = this.showToolbar;\n        this.showToolbar = this.lastY >= this.scrollTop || this.scrollTop === 0;\n        if (isShown !== this.showToolbar) {\n            this.toolbar.classList.toggle(\"tsd-page-toolbar--hide\");\n            this.secondaryNav.classList.toggle(\"tsd-navigation--toolbar-hide\");\n        }\n        this.lastY = this.scrollTop;\n    };\n    Viewport.instance = new Viewport();\n    return Viewport;\n}(_EventTarget__WEBPACK_IMPORTED_MODULE_0__.EventTarget));\n\n\n\n//# sourceURL=webpack:///./default/assets/js/src/typedoc/services/Viewport.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Viewport\": () => /* binding */ Viewport\n/* harmony export */ });\n/* harmony import */ var _EventTarget__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../EventTarget */ \"./default/assets/js/src/typedoc/EventTarget.ts\");\n/* harmony import */ var _utils_trottle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/trottle */ \"./default/assets/js/src/typedoc/utils/trottle.ts\");\nvar __extends = (undefined && undefined.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    };\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\n\n\n/**\n * A global service that monitors the window size and scroll position.\n */\nvar Viewport = /** @class */ (function (_super) {\n    __extends(Viewport, _super);\n    /**\n     * Create new Viewport instance.\n     */\n    function Viewport() {\n        var _this = _super.call(this) || this;\n        /**\n         * The current scroll position.\n         */\n        _this.scrollTop = 0;\n        /**\n         * The previous scrollTop.\n         */\n        _this.lastY = 0;\n        /**\n         * The width of the window.\n         */\n        _this.width = 0;\n        /**\n         * The height of the window.\n         */\n        _this.height = 0;\n        /**\n         * Boolean indicating whether the toolbar is shown.\n         */\n        _this.showToolbar = true;\n        _this.toolbar = (document.querySelector(\".tsd-page-toolbar\"));\n        _this.secondaryNav = (document.querySelector(\".tsd-navigation.secondary\"));\n        window.addEventListener(\"scroll\", (0,_utils_trottle__WEBPACK_IMPORTED_MODULE_1__.throttle)(function () { return _this.onScroll(); }, 10));\n        window.addEventListener(\"resize\", (0,_utils_trottle__WEBPACK_IMPORTED_MODULE_1__.throttle)(function () { return _this.onResize(); }, 10));\n        _this.onResize();\n        _this.onScroll();\n        return _this;\n    }\n    /**\n     * Trigger a resize event.\n     */\n    Viewport.prototype.triggerResize = function () {\n        var event = new CustomEvent(\"resize\", {\n            detail: {\n                width: this.width,\n                height: this.height,\n            },\n        });\n        this.dispatchEvent(event);\n    };\n    /**\n     * Triggered when the size of the window has changed.\n     */\n    Viewport.prototype.onResize = function () {\n        this.width = window.innerWidth || 0;\n        this.height = window.innerHeight || 0;\n        var event = new CustomEvent(\"resize\", {\n            detail: {\n                width: this.width,\n                height: this.height,\n            },\n        });\n        this.dispatchEvent(event);\n    };\n    /**\n     * Triggered when the user scrolled the viewport.\n     */\n    Viewport.prototype.onScroll = function () {\n        this.scrollTop = window.scrollY || 0;\n        var event = new CustomEvent(\"scroll\", {\n            detail: {\n                scrollTop: this.scrollTop,\n            },\n        });\n        this.dispatchEvent(event);\n        this.hideShowToolbar();\n    };\n    /**\n     * Handle hiding/showing of the toolbar.\n     */\n    Viewport.prototype.hideShowToolbar = function () {\n        var isShown = this.showToolbar;\n        this.showToolbar = this.lastY >= this.scrollTop || this.scrollTop <= 0;\n        if (isShown !== this.showToolbar) {\n            this.toolbar.classList.toggle(\"tsd-page-toolbar--hide\");\n            this.secondaryNav.classList.toggle(\"tsd-navigation--toolbar-hide\");\n        }\n        this.lastY = this.scrollTop;\n    };\n    Viewport.instance = new Viewport();\n    return Viewport;\n}(_EventTarget__WEBPACK_IMPORTED_MODULE_0__.EventTarget));\n\n\n\n//# sourceURL=webpack:///./default/assets/js/src/typedoc/services/Viewport.ts?");
 
 /***/ }),
 

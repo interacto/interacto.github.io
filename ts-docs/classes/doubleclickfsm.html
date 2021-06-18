@@ -6,7 +6,29 @@
 	<title>DoubleClickFSM | interacto</title>
 	<meta name="description" content="Documentation for interacto">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
+	<style type="text/css">:root {
+  --color-background: #fdfdfd;
+  --color-text: #222;
+  --color-text-aside: #707070;
+  --color-link: #4da6ff;
+  --color-menu-divider: #eee;
+  --color-menu-divider-focus: #000;
+  --color-menu-label: #707070;
+  --color-panel: #fff;
+  --color-panel-divider: #eee;
+  --color-comment-tag: #707070;
+  --color-comment-tag-text: #fff;
+  --color-code-background: rgba(0, 0, 0, 0.04);
+  --color-ts: #9600ff;
+  --color-ts-interface: #647f1b;
+  --color-ts-enum: #937210;
+  --color-ts-class: #0672de;
+  --color-ts-private: #707070;
+  --color-toolbar: #fff;
+  --color-toolbar-text: #333;
+}
+
+/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
 /* ==========================================================================
  * * HTML5 display definitions
  * * ========================================================================== */
@@ -1593,14 +1615,14 @@ ul.tsd-descriptions > li > :last-child > :last-child > :last-child,
   }
 }
 body {
-  background: #fdfdfd;
+  background: var(--color-background);
   font-family: "Segoe UI", sans-serif;
   font-size: 16px;
-  color: #222;
+  color: var(--color-text);
 }
 
 a {
-  color: #4da6ff;
+  color: var(--color-link);
   text-decoration: none;
 }
 a:hover {
@@ -1612,7 +1634,7 @@ code, pre {
   padding: 0.2em;
   margin: 0;
   font-size: 14px;
-  background-color: rgba(0, 0, 0, 0.04);
+  background-color: var(--color-code-background);
 }
 
 pre {
@@ -1678,7 +1700,7 @@ blockquote {
     padding: 20px 20px 0 0;
     max-width: 450px;
     visibility: hidden;
-    background-color: #fff;
+    background-color: var(--color-panel);
     transform: translate(100%, 0);
   }
   html.default .col-menu > *:last-child {
@@ -1738,7 +1760,7 @@ html.default.has-menu .col-content {
 .tsd-page-title {
   padding: 70px 0 20px 0;
   margin: 0 0 40px 0;
-  background: #fff;
+  background: var(--color-panel);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
 }
 .tsd-page-title h1 {
@@ -1748,10 +1770,10 @@ html.default.has-menu .col-content {
 .tsd-breadcrumb {
   margin: 0;
   padding: 0;
-  color: #707070;
+  color: var(--color-text-aside);
 }
 .tsd-breadcrumb a {
-  color: #707070;
+  color: var(--color-text-aside);
   text-decoration: none;
 }
 .tsd-breadcrumb a:hover {
@@ -1824,8 +1846,8 @@ dl.tsd-comment-tags dt {
   padding: 1px 5px;
   margin: 0 10px 0 0;
   border-radius: 4px;
-  border: 1px solid #707070;
-  color: #707070;
+  border: 1px solid var(--color-comment-tag);
+  color: var(--color-comment-tag);
   font-size: 0.8em;
   font-weight: normal;
 }
@@ -1895,7 +1917,7 @@ dl.tsd-comment-tags p {
     top: 40px;
     right: 20px;
     height: auto;
-    background-color: #fff;
+    background-color: var(--color-panel);
     visibility: hidden;
     transform: translate(50%, 0);
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
@@ -1917,11 +1939,11 @@ dl.tsd-comment-tags p {
 }
 
 footer {
-  border-top: 1px solid #eee;
-  background-color: #fff;
+  border-top: 1px solid var(--color-panel-divider);
+  background-color: var(--color-panel);
 }
 footer.with-border-bottom {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--color-panel-divider);
 }
 footer .tsd-legend-group {
   font-size: 0;
@@ -1959,7 +1981,7 @@ footer .tsd-legend {
 .tsd-index-panel h3 {
   margin: 0 -20px 10px -20px;
   padding: 0 20px 10px 20px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--color-panel-divider);
 }
 .tsd-index-panel ul.tsd-index-list {
   -webkit-column-count: 3;
@@ -2003,39 +2025,39 @@ footer .tsd-legend {
 }
 .tsd-index-panel a,
 .tsd-index-panel .tsd-parent-kind-module a {
-  color: #9600ff;
+  color: var(--color-ts);
 }
 .tsd-index-panel .tsd-parent-kind-interface a {
-  color: #647F1B;
+  color: var(--color-ts-interface);
 }
 .tsd-index-panel .tsd-parent-kind-enum a {
-  color: #937210;
+  color: var(--color-ts-enum);
 }
 .tsd-index-panel .tsd-parent-kind-class a {
-  color: #0672DE;
+  color: var(--color-ts-class);
 }
 .tsd-index-panel .tsd-kind-module a {
-  color: #9600ff;
+  color: var(--color-ts);
 }
 .tsd-index-panel .tsd-kind-interface a {
-  color: #647F1B;
+  color: var(--color-ts-interface);
 }
 .tsd-index-panel .tsd-kind-enum a {
-  color: #937210;
+  color: var(--color-ts-enum);
 }
 .tsd-index-panel .tsd-kind-class a {
-  color: #0672DE;
+  color: var(--color-ts-class);
 }
 .tsd-index-panel .tsd-is-private a {
-  color: #707070;
+  color: var(--color-ts-private);
 }
 
 .tsd-flag {
   display: inline-block;
   padding: 1px 5px;
   border-radius: 4px;
-  color: #fff;
-  background-color: #707070;
+  color: var(--color-comment-tag-text);
+  background-color: var(--color-comment-tag);
   text-indent: 0;
   font-size: 14px;
   font-weight: normal;
@@ -2055,19 +2077,19 @@ footer .tsd-legend {
   border-bottom: none;
 }
 .tsd-member a[data-tsd-kind] {
-  color: #9600ff;
+  color: var(--color-ts);
 }
 .tsd-member a[data-tsd-kind=Interface] {
-  color: #647F1B;
+  color: var(--color-ts-interface);
 }
 .tsd-member a[data-tsd-kind=Enum] {
-  color: #937210;
+  color: var(--color-ts-enum);
 }
 .tsd-member a[data-tsd-kind=Class] {
-  color: #0672DE;
+  color: var(--color-ts-class);
 }
 .tsd-member a[data-tsd-kind=Private] {
-  color: #707070;
+  color: var(--color-ts-private);
 }
 
 .tsd-navigation {
@@ -2078,7 +2100,7 @@ footer .tsd-legend {
   padding-top: 2px;
   padding-bottom: 2px;
   border-left: 2px solid transparent;
-  color: #222;
+  color: var(--color-text);
   text-decoration: none;
   transition: border-left-color 0.1s;
 }
@@ -2121,10 +2143,10 @@ footer .tsd-legend {
   padding-left: 105px;
 }
 .tsd-navigation.primary > ul {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--color-panel-divider);
 }
 .tsd-navigation.primary li {
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--color-panel-divider);
 }
 .tsd-navigation.primary li.current > a {
   font-weight: bold;
@@ -2132,7 +2154,7 @@ footer .tsd-legend {
 .tsd-navigation.primary li.label span {
   display: block;
   padding: 20px 0 6px 5px;
-  color: #707070;
+  color: var(--color-menu-label);
 }
 .tsd-navigation.primary li.globals + li > span, .tsd-navigation.primary li.globals + li > a {
   padding-top: 20px;
@@ -2172,16 +2194,16 @@ footer .tsd-legend {
   padding-left: 125px;
 }
 .tsd-navigation.secondary ul.current a {
-  border-left-color: #eee;
+  border-left-color: var(--color-panel-divider);
 }
 .tsd-navigation.secondary li.focus > a,
 .tsd-navigation.secondary ul.current li.focus > a {
-  border-left-color: #000;
+  border-left-color: var(--color-menu-divider-focus);
 }
 .tsd-navigation.secondary li.current {
   margin-top: 20px;
   margin-bottom: 20px;
-  border-left-color: #eee;
+  border-left-color: var(--color-panel-divider);
 }
 .tsd-navigation.secondary li.current > a {
   font-weight: bold;
@@ -2196,7 +2218,7 @@ footer .tsd-legend {
 .tsd-panel {
   margin: 20px 0;
   padding: 20px;
-  background-color: #fff;
+  background-color: var(--color-panel);
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
 }
 .tsd-panel:empty {
@@ -2205,7 +2227,7 @@ footer .tsd-legend {
 .tsd-panel > h1, .tsd-panel > h2, .tsd-panel > h3 {
   margin: 1.5em -20px 10px -20px;
   padding: 0 20px 10px 20px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--color-panel-divider);
 }
 .tsd-panel > h1.tsd-before-signature, .tsd-panel > h2.tsd-before-signature, .tsd-panel > h3.tsd-before-signature {
   margin-bottom: 0;
@@ -2267,7 +2289,7 @@ footer .tsd-legend {
   outline: 0;
   border: 0;
   background: transparent;
-  color: #222;
+  color: var(--color-text);
 }
 #tsd-search .field label {
   position: absolute;
@@ -2290,17 +2312,17 @@ footer .tsd-legend {
 }
 #tsd-search .results li {
   padding: 0 10px;
-  background-color: #fdfdfd;
+  background-color: var(--color-background);
 }
 #tsd-search .results li:nth-child(even) {
-  background-color: #fff;
+  background-color: var(--color-panel);
 }
 #tsd-search .results li.state {
   display: none;
 }
 #tsd-search .results li.current,
 #tsd-search .results li:hover {
-  background-color: #eee;
+  background-color: var(--color-panel-divider);
 }
 #tsd-search .results a {
   display: block;
@@ -2309,11 +2331,11 @@ footer .tsd-legend {
   top: 10px;
 }
 #tsd-search .results span.parent {
-  color: #707070;
+  color: var(--color-text-aside);
   font-weight: normal;
 }
 #tsd-search.has-focus {
-  background-color: #eee;
+  background-color: var(--color-panel-divider);
 }
 #tsd-search.has-focus .field input {
   top: 0;
@@ -2336,7 +2358,7 @@ footer .tsd-legend {
 .tsd-signature {
   margin: 0 0 1em 0;
   padding: 10px;
-  border: 1px solid #eee;
+  border: 1px solid var(--color-panel-divider);
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 14px;
   overflow-x: auto;
@@ -2361,7 +2383,7 @@ footer .tsd-legend {
 }
 
 .tsd-signature-symbol {
-  color: #707070;
+  color: var(--color-text-aside);
   font-weight: normal;
 }
 
@@ -2373,7 +2395,7 @@ footer .tsd-legend {
 .tsd-signatures {
   padding: 0;
   margin: 0 0 1em 0;
-  border: 1px solid #eee;
+  border: 1px solid var(--color-panel-divider);
 }
 .tsd-signatures .tsd-signature {
   margin: 0;
@@ -2384,7 +2406,7 @@ footer .tsd-legend {
   border-top-width: 0;
 }
 .tsd-signatures .tsd-signature.current {
-  background-color: #eee;
+  background-color: var(--color-panel-divider);
 }
 .tsd-signatures.active > .tsd-signature {
   cursor: pointer;
@@ -2458,11 +2480,11 @@ ul.tsd-type-parameters .tsd-comment {
 
 .tsd-sources {
   font-size: 14px;
-  color: #707070;
+  color: var(--color-text-aside);
   margin: 0 0 1em 0;
 }
 .tsd-sources a {
-  color: #707070;
+  color: var(--color-text-aside);
   text-decoration: underline;
 }
 .tsd-sources ul, .tsd-sources p {
@@ -2480,13 +2502,13 @@ ul.tsd-type-parameters .tsd-comment {
   left: 0;
   width: 100%;
   height: 40px;
-  color: #333;
-  background: #fff;
-  border-bottom: 1px solid #eee;
+  color: var(--color-toolbar-text);
+  background: var(--color-toolbar);
+  border-bottom: 1px solid var(--color-panel-divider);
   transition: transform 0.3s linear;
 }
 .tsd-page-toolbar a {
-  color: #333;
+  color: var(--color-toolbar-text);
   text-decoration: none;
 }
 .tsd-page-toolbar a.title {
@@ -2546,7 +2568,7 @@ ul.tsd-type-parameters .tsd-comment {
 }
 .tsd-widget.active {
   opacity: 1;
-  background-color: #eee;
+  background-color: var(--color-panel-divider);
 }
 .tsd-widget.no-caption {
   width: 40px;
@@ -2615,16 +2637,16 @@ input[type=checkbox]:checked + .tsd-widget:before {
 }
 .tsd-select .tsd-select-list li {
   padding: 0 20px 0 0;
-  background-color: #fdfdfd;
+  background-color: var(--color-background);
 }
 .tsd-select .tsd-select-list li:before {
   background-position: 40px 0;
 }
 .tsd-select .tsd-select-list li:nth-child(even) {
-  background-color: #fff;
+  background-color: var(--color-panel);
 }
 .tsd-select .tsd-select-list li:hover {
-  background-color: #eee;
+  background-color: var(--color-panel-divider);
 }
 .tsd-select .tsd-select-list li.selected:before {
   background-position: -200px 0;
@@ -2685,7 +2707,7 @@ img {
 		<li class="current tsd-kind-class">
 			<a href="doubleclickfsm.html" class="tsd-kind-icon">Double<wbr>ClickFSM</a>
 			<ul>
-				<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
+				<li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
 					<a href="doubleclickfsm.html#constructor" class="tsd-kind-icon">constructor</a>
 				</li>
 				<li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
@@ -2888,7 +2910,7 @@ img {
 					<section class="tsd-index-section ">
 						<h3>Constructors</h3>
 						<ul class="tsd-index-list">
-							<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><a href="doubleclickfsm.html#constructor" class="tsd-kind-icon">constructor</a></li>
+							<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="doubleclickfsm.html#constructor" class="tsd-kind-icon">constructor</a></li>
 						</ul>
 					</section>
 					<section class="tsd-index-section ">
@@ -2964,18 +2986,18 @@ img {
 		</section>
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>Constructors</h2>
-			<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
+			<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
 				<a name="constructor" class="tsd-anchor"></a>
 				<h3>constructor</h3>
-				<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited">
+				<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
 					<li class="tsd-signature tsd-kind-icon">new <wbr>Double<wbr>ClickFSM<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="doubleclickfsm.html" class="tsd-signature-type" data-tsd-kind="Class">DoubleClickFSM</a></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
-							<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#constructor">constructor</a></p>
+							<p>Overrides <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#constructor">constructor</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/interaction/library/DoubleClick.ts#L56">src/impl/interaction/library/DoubleClick.ts:56</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/interaction/library/DoubleClick.ts#L56">src/impl/interaction/library/DoubleClick.ts:56</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <a href="doubleclickfsm.html" class="tsd-signature-type" data-tsd-kind="Class">DoubleClickFSM</a></h4>
@@ -2992,7 +3014,7 @@ img {
 				<aside class="tsd-sources">
 					<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#_currentstate">_currentState</a></p>
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L59">src/impl/fsm/FSMImpl.ts:59</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L59">src/impl/fsm/FSMImpl.ts:59</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3003,7 +3025,7 @@ img {
 				<aside class="tsd-sources">
 					<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#_inner">_inner</a></p>
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L39">src/impl/fsm/FSMImpl.ts:39</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L39">src/impl/fsm/FSMImpl.ts:39</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3014,7 +3036,7 @@ img {
 				<aside class="tsd-sources">
 					<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#_startingstate">_startingState</a></p>
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L49">src/impl/fsm/FSMImpl.ts:49</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L49">src/impl/fsm/FSMImpl.ts:49</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3035,17 +3057,17 @@ img {
 				<aside class="tsd-sources">
 					<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#aslogfsm">asLogFSM</a></p>
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L37">src/impl/fsm/FSMImpl.ts:37</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L37">src/impl/fsm/FSMImpl.ts:37</a></li>
 					</ul>
 				</aside>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private">
 				<a name="checkbutton" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagPrivate">Private</span> <span class="tsd-flag ts-flagOptional">Optional</span> check<wbr>Button</h3>
-				<div class="tsd-signature tsd-kind-icon">check<wbr>Button<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
+				<div class="tsd-signature tsd-kind-icon">check<wbr>Button<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/interaction/library/DoubleClick.ts#L56">src/impl/interaction/library/DoubleClick.ts:56</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/interaction/library/DoubleClick.ts#L56">src/impl/interaction/library/DoubleClick.ts:56</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3056,29 +3078,29 @@ img {
 				<aside class="tsd-sources">
 					<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#currentstatepublisher">currentStatePublisher</a></p>
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L61">src/impl/fsm/FSMImpl.ts:61</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L61">src/impl/fsm/FSMImpl.ts:61</a></li>
 					</ul>
 				</aside>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 				<a name="currentsubfsm" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagOptional">Optional</span> current<wbr>SubFSM</h3>
-				<div class="tsd-signature tsd-kind-icon">current<wbr>SubFSM<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/fsm.html" class="tsd-signature-type" data-tsd-kind="Interface">FSM</a></div>
+				<div class="tsd-signature tsd-kind-icon">current<wbr>SubFSM<span class="tsd-signature-symbol">:</span> <a href="../interfaces/fsm.html" class="tsd-signature-type" data-tsd-kind="Interface">FSM</a></div>
 				<aside class="tsd-sources">
 					<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#currentsubfsm">currentSubFSM</a></p>
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L87">src/impl/fsm/FSMImpl.ts:87</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L87">src/impl/fsm/FSMImpl.ts:87</a></li>
 					</ul>
 				</aside>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 				<a name="currenttimeout" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagOptional">Optional</span> current<wbr>Timeout</h3>
-				<div class="tsd-signature tsd-kind-icon">current<wbr>Timeout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="timeouttransition.html" class="tsd-signature-type" data-tsd-kind="Class">TimeoutTransition</a></div>
+				<div class="tsd-signature tsd-kind-icon">current<wbr>Timeout<span class="tsd-signature-symbol">:</span> <a href="timeouttransition.html" class="tsd-signature-type" data-tsd-kind="Class">TimeoutTransition</a></div>
 				<aside class="tsd-sources">
 					<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#currenttimeout">currentTimeout</a></p>
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L85">src/impl/fsm/FSMImpl.ts:85</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L85">src/impl/fsm/FSMImpl.ts:85</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3090,11 +3112,11 @@ img {
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-protected">
 				<a name="datahandler" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagProtected">Protected</span> <span class="tsd-flag ts-flagOptional">Optional</span> data<wbr>Handler</h3>
-				<div class="tsd-signature tsd-kind-icon">data<wbr>Handler<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/fsmdatahandler.html" class="tsd-signature-type" data-tsd-kind="Interface">FSMDataHandler</a></div>
+				<div class="tsd-signature tsd-kind-icon">data<wbr>Handler<span class="tsd-signature-symbol">:</span> <a href="../interfaces/fsmdatahandler.html" class="tsd-signature-type" data-tsd-kind="Interface">FSMDataHandler</a></div>
 				<aside class="tsd-sources">
 					<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#datahandler">dataHandler</a></p>
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L35">src/impl/fsm/FSMImpl.ts:35</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L35">src/impl/fsm/FSMImpl.ts:35</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3105,7 +3127,7 @@ img {
 				<aside class="tsd-sources">
 					<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#eventstoprocess">eventsToProcess</a></p>
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L80">src/impl/fsm/FSMImpl.ts:80</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L80">src/impl/fsm/FSMImpl.ts:80</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3124,7 +3146,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">first<wbr>ClickFSM<span class="tsd-signature-symbol">:</span> <a href="clickfsm.html" class="tsd-signature-type" data-tsd-kind="Class">ClickFSM</a></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/interaction/library/DoubleClick.ts#L52">src/impl/interaction/library/DoubleClick.ts:52</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/interaction/library/DoubleClick.ts#L52">src/impl/interaction/library/DoubleClick.ts:52</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3135,7 +3157,7 @@ img {
 				<aside class="tsd-sources">
 					<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#handlers">handlers</a></p>
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L71">src/impl/fsm/FSMImpl.ts:71</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L71">src/impl/fsm/FSMImpl.ts:71</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3151,7 +3173,7 @@ img {
 				<aside class="tsd-sources">
 					<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#initstate">initState</a></p>
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L57">src/impl/fsm/FSMImpl.ts:57</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L57">src/impl/fsm/FSMImpl.ts:57</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3161,7 +3183,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">snd<wbr>ClickFSM<span class="tsd-signature-symbol">:</span> <a href="clickfsm.html" class="tsd-signature-type" data-tsd-kind="Class">ClickFSM</a></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/interaction/library/DoubleClick.ts#L54">src/impl/interaction/library/DoubleClick.ts:54</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/interaction/library/DoubleClick.ts#L54">src/impl/interaction/library/DoubleClick.ts:54</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3172,7 +3194,7 @@ img {
 				<aside class="tsd-sources">
 					<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#started">started</a></p>
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L55">src/impl/fsm/FSMImpl.ts:55</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L55">src/impl/fsm/FSMImpl.ts:55</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3189,7 +3211,7 @@ img {
 				<aside class="tsd-sources">
 					<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#states">states</a></p>
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L66">src/impl/fsm/FSMImpl.ts:66</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L66">src/impl/fsm/FSMImpl.ts:66</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3200,11 +3222,11 @@ img {
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
 				<a name="timegap" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagPrivate">Private</span> <span class="tsd-flag ts-flagStatic">Static</span> time<wbr>Gap</h3>
+				<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagPrivate">Private</span> time<wbr>Gap</h3>
 				<div class="tsd-signature tsd-kind-icon">time<wbr>Gap<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = 300</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/interaction/library/DoubleClick.ts#L30">src/impl/interaction/library/DoubleClick.ts:30</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/interaction/library/DoubleClick.ts#L30">src/impl/interaction/library/DoubleClick.ts:30</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3215,11 +3237,11 @@ img {
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-private tsd-is-static">
 				<a name="timegapsupplier" class="tsd-anchor"></a>
-				<h3><span class="tsd-flag ts-flagPrivate">Private</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> <span class="tsd-flag ts-flagStatic">Static</span> time<wbr>Gap<wbr>Supplier</h3>
+				<h3><span class="tsd-flag ts-flagStatic">Static</span> <span class="tsd-flag ts-flagPrivate">Private</span> <span class="tsd-flag ts-flagReadonly">Readonly</span> time<wbr>Gap<wbr>Supplier</h3>
 				<div class="tsd-signature tsd-kind-icon">time<wbr>Gap<wbr>Supplier<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> = ...</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/interaction/library/DoubleClick.ts#L33">src/impl/interaction/library/DoubleClick.ts:33</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/interaction/library/DoubleClick.ts#L33">src/impl/interaction/library/DoubleClick.ts:33</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3257,7 +3279,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#addhandler">addHandler</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L340">src/impl/fsm/FSMImpl.ts:340</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L340">src/impl/fsm/FSMImpl.ts:340</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3281,7 +3303,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#addremaningeventstoprocess">addRemaningEventsToProcess</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L219">src/impl/fsm/FSMImpl.ts:219</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L219">src/impl/fsm/FSMImpl.ts:219</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3305,7 +3327,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#addstate">addState</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L271">src/impl/fsm/FSMImpl.ts:271</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L271">src/impl/fsm/FSMImpl.ts:271</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3337,7 +3359,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Overrides <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#buildfsm">buildFSM</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/interaction/library/DoubleClick.ts#L71">src/impl/interaction/library/DoubleClick.ts:71</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/interaction/library/DoubleClick.ts#L71">src/impl/interaction/library/DoubleClick.ts:71</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3361,7 +3383,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#checktimeouttransition">checkTimeoutTransition</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L327">src/impl/fsm/FSMImpl.ts:327</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L327">src/impl/fsm/FSMImpl.ts:327</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3385,7 +3407,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#currentstateobservable">currentStateObservable</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L121">src/impl/fsm/FSMImpl.ts:121</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L121">src/impl/fsm/FSMImpl.ts:121</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Observable</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><a href="../interfaces/outputstate.html" class="tsd-signature-type" data-tsd-kind="Interface">OutputState</a><span class="tsd-signature-symbol">, </span><a href="../interfaces/outputstate.html" class="tsd-signature-type" data-tsd-kind="Interface">OutputState</a><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -3403,7 +3425,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#enterstdstate">enterStdState</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L186">src/impl/fsm/FSMImpl.ts:186</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L186">src/impl/fsm/FSMImpl.ts:186</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3427,7 +3449,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Overrides <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#fullreinit">fullReinit</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/interaction/library/DoubleClick.ts#L113">src/impl/interaction/library/DoubleClick.ts:113</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/interaction/library/DoubleClick.ts#L113">src/impl/interaction/library/DoubleClick.ts:113</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -3444,7 +3466,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/interaction/library/DoubleClick.ts#L108">src/impl/interaction/library/DoubleClick.ts:108</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/interaction/library/DoubleClick.ts#L108">src/impl/interaction/library/DoubleClick.ts:108</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -3462,7 +3484,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#getcurrentstate">getCurrentState</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L117">src/impl/fsm/FSMImpl.ts:117</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L117">src/impl/fsm/FSMImpl.ts:117</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <a href="../interfaces/outputstate.html" class="tsd-signature-type" data-tsd-kind="Interface">OutputState</a></h4>
@@ -3480,7 +3502,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#getdatahandler">getDataHandler</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L165">src/impl/fsm/FSMImpl.ts:165</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L165">src/impl/fsm/FSMImpl.ts:165</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">undefined</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/fsmdatahandler.html" class="tsd-signature-type" data-tsd-kind="Interface">FSMDataHandler</a></h4>
@@ -3498,7 +3520,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#geteventstoprocess">getEventsToProcess</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L443">src/impl/fsm/FSMImpl.ts:443</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L443">src/impl/fsm/FSMImpl.ts:443</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-type">Event</span><span class="tsd-signature-symbol">[]</span></h4>
@@ -3516,7 +3538,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#getinitstate">getInitState</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L447">src/impl/fsm/FSMImpl.ts:447</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L447">src/impl/fsm/FSMImpl.ts:447</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <a href="../interfaces/outputstate.html" class="tsd-signature-type" data-tsd-kind="Interface">OutputState</a></h4>
@@ -3534,7 +3556,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#getinner">getInner</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L129">src/impl/fsm/FSMImpl.ts:129</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L129">src/impl/fsm/FSMImpl.ts:129</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -3552,7 +3574,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#getstartingstate">getStartingState</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L435">src/impl/fsm/FSMImpl.ts:435</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L435">src/impl/fsm/FSMImpl.ts:435</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <a href="../interfaces/state.html" class="tsd-signature-type" data-tsd-kind="Interface">State</a></h4>
@@ -3570,7 +3592,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#getstates">getStates</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L431">src/impl/fsm/FSMImpl.ts:431</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L431">src/impl/fsm/FSMImpl.ts:431</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-symbol">readonly </span><a href="../interfaces/state.html" class="tsd-signature-type" data-tsd-kind="Interface">State</a><span class="tsd-signature-symbol">[]</span></h4>
@@ -3588,7 +3610,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#isstarted">isStarted</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L194">src/impl/fsm/FSMImpl.ts:194</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L194">src/impl/fsm/FSMImpl.ts:194</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
@@ -3606,7 +3628,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Overrides <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#log">log</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/interaction/library/DoubleClick.ts#L65">src/impl/interaction/library/DoubleClick.ts:65</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/interaction/library/DoubleClick.ts#L65">src/impl/interaction/library/DoubleClick.ts:65</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3630,7 +3652,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#notifyhandleroncancel">notifyHandlerOnCancel</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L417">src/impl/fsm/FSMImpl.ts:417</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L417">src/impl/fsm/FSMImpl.ts:417</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3653,7 +3675,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#notifyhandleronstart">notifyHandlerOnStart</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L351">src/impl/fsm/FSMImpl.ts:351</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L351">src/impl/fsm/FSMImpl.ts:351</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3676,7 +3698,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#notifyhandleronstop">notifyHandlerOnStop</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L395">src/impl/fsm/FSMImpl.ts:395</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L395">src/impl/fsm/FSMImpl.ts:395</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3699,7 +3721,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#notifyhandleronupdate">notifyHandlerOnUpdate</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L373">src/impl/fsm/FSMImpl.ts:373</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L373">src/impl/fsm/FSMImpl.ts:373</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3722,7 +3744,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#oncancelling">onCancelling</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L237">src/impl/fsm/FSMImpl.ts:237</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L237">src/impl/fsm/FSMImpl.ts:237</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -3740,7 +3762,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#onstarting">onStarting</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L247">src/impl/fsm/FSMImpl.ts:247</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L247">src/impl/fsm/FSMImpl.ts:247</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -3758,7 +3780,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#onterminating">onTerminating</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L226">src/impl/fsm/FSMImpl.ts:226</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L226">src/impl/fsm/FSMImpl.ts:226</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3781,7 +3803,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#ontimeout">onTimeout</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L300">src/impl/fsm/FSMImpl.ts:300</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L300">src/impl/fsm/FSMImpl.ts:300</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -3799,7 +3821,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#onupdating">onUpdating</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L258">src/impl/fsm/FSMImpl.ts:258</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L258">src/impl/fsm/FSMImpl.ts:258</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3822,7 +3844,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#process">process</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L133">src/impl/fsm/FSMImpl.ts:133</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L133">src/impl/fsm/FSMImpl.ts:133</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3846,7 +3868,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#processremainingevents">processRemainingEvents</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L207">src/impl/fsm/FSMImpl.ts:207</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L207">src/impl/fsm/FSMImpl.ts:207</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3869,7 +3891,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Overrides <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#reinit">reinit</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/interaction/library/DoubleClick.ts#L119">src/impl/interaction/library/DoubleClick.ts:119</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/interaction/library/DoubleClick.ts#L119">src/impl/interaction/library/DoubleClick.ts:119</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -3887,7 +3909,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#removehandler">removeHandler</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L344">src/impl/fsm/FSMImpl.ts:344</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L344">src/impl/fsm/FSMImpl.ts:344</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3910,7 +3932,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/interaction/library/DoubleClick.ts#L101">src/impl/interaction/library/DoubleClick.ts:101</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/interaction/library/DoubleClick.ts#L101">src/impl/interaction/library/DoubleClick.ts:101</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3934,7 +3956,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#setcurrentstate">setCurrentState</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L198">src/impl/fsm/FSMImpl.ts:198</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L198">src/impl/fsm/FSMImpl.ts:198</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3958,7 +3980,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#setcurrentsubfsm">setCurrentSubFSM</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L113">src/impl/fsm/FSMImpl.ts:113</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L113">src/impl/fsm/FSMImpl.ts:113</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3982,7 +4004,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#setinner">setInner</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L125">src/impl/fsm/FSMImpl.ts:125</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L125">src/impl/fsm/FSMImpl.ts:125</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4006,7 +4028,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#setstartingstate">setStartingState</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L439">src/impl/fsm/FSMImpl.ts:439</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L439">src/impl/fsm/FSMImpl.ts:439</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4030,7 +4052,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#stopcurrenttimeout">stopCurrentTimeout</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L313">src/impl/fsm/FSMImpl.ts:313</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L313">src/impl/fsm/FSMImpl.ts:313</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -4048,7 +4070,7 @@ img {
 						<aside class="tsd-sources">
 							<p>Inherited from <a href="fsmimpl.html">FSMImpl</a>.<a href="fsmimpl.html#uninstall">uninstall</a></p>
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/FSMImpl.ts#L451">src/impl/fsm/FSMImpl.ts:451</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/FSMImpl.ts#L451">src/impl/fsm/FSMImpl.ts:451</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -4065,7 +4087,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/interaction/library/DoubleClick.ts#L38">src/impl/interaction/library/DoubleClick.ts:38</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/interaction/library/DoubleClick.ts#L38">src/impl/interaction/library/DoubleClick.ts:38</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
@@ -4083,7 +4105,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/interaction/library/DoubleClick.ts#L46">src/impl/interaction/library/DoubleClick.ts:46</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/interaction/library/DoubleClick.ts#L46">src/impl/interaction/library/DoubleClick.ts:46</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4283,7 +4305,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Viewport\": () => /* binding */ Viewport\n/* harmony export */ });\n/* harmony import */ var _EventTarget__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../EventTarget */ \"./default/assets/js/src/typedoc/EventTarget.ts\");\n/* harmony import */ var _utils_trottle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/trottle */ \"./default/assets/js/src/typedoc/utils/trottle.ts\");\nvar __extends = (undefined && undefined.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    };\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\n\n\n/**\n * A global service that monitors the window size and scroll position.\n */\nvar Viewport = /** @class */ (function (_super) {\n    __extends(Viewport, _super);\n    /**\n     * Create new Viewport instance.\n     */\n    function Viewport() {\n        var _this = _super.call(this) || this;\n        /**\n         * The current scroll position.\n         */\n        _this.scrollTop = 0;\n        /**\n         * The previous scrollTop.\n         */\n        _this.lastY = 0;\n        /**\n         * The width of the window.\n         */\n        _this.width = 0;\n        /**\n         * The height of the window.\n         */\n        _this.height = 0;\n        /**\n         * Boolean indicating whether the toolbar is shown.\n         */\n        _this.showToolbar = true;\n        _this.toolbar = (document.querySelector(\".tsd-page-toolbar\"));\n        _this.secondaryNav = (document.querySelector(\".tsd-navigation.secondary\"));\n        window.addEventListener(\"scroll\", (0,_utils_trottle__WEBPACK_IMPORTED_MODULE_1__.throttle)(function () { return _this.onScroll(); }, 10));\n        window.addEventListener(\"resize\", (0,_utils_trottle__WEBPACK_IMPORTED_MODULE_1__.throttle)(function () { return _this.onResize(); }, 10));\n        _this.onResize();\n        _this.onScroll();\n        return _this;\n    }\n    /**\n     * Trigger a resize event.\n     */\n    Viewport.prototype.triggerResize = function () {\n        var event = new CustomEvent(\"resize\", {\n            detail: {\n                width: this.width,\n                height: this.height,\n            },\n        });\n        this.dispatchEvent(event);\n    };\n    /**\n     * Triggered when the size of the window has changed.\n     */\n    Viewport.prototype.onResize = function () {\n        this.width = window.innerWidth || 0;\n        this.height = window.innerHeight || 0;\n        var event = new CustomEvent(\"resize\", {\n            detail: {\n                width: this.width,\n                height: this.height,\n            },\n        });\n        this.dispatchEvent(event);\n    };\n    /**\n     * Triggered when the user scrolled the viewport.\n     */\n    Viewport.prototype.onScroll = function () {\n        this.scrollTop = window.scrollY || 0;\n        var event = new CustomEvent(\"scroll\", {\n            detail: {\n                scrollTop: this.scrollTop,\n            },\n        });\n        this.dispatchEvent(event);\n        this.hideShowToolbar();\n    };\n    /**\n     * Handle hiding/showing of the toolbar.\n     */\n    Viewport.prototype.hideShowToolbar = function () {\n        var isShown = this.showToolbar;\n        this.showToolbar = this.lastY >= this.scrollTop || this.scrollTop === 0;\n        if (isShown !== this.showToolbar) {\n            this.toolbar.classList.toggle(\"tsd-page-toolbar--hide\");\n            this.secondaryNav.classList.toggle(\"tsd-navigation--toolbar-hide\");\n        }\n        this.lastY = this.scrollTop;\n    };\n    Viewport.instance = new Viewport();\n    return Viewport;\n}(_EventTarget__WEBPACK_IMPORTED_MODULE_0__.EventTarget));\n\n\n\n//# sourceURL=webpack:///./default/assets/js/src/typedoc/services/Viewport.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Viewport\": () => /* binding */ Viewport\n/* harmony export */ });\n/* harmony import */ var _EventTarget__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../EventTarget */ \"./default/assets/js/src/typedoc/EventTarget.ts\");\n/* harmony import */ var _utils_trottle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/trottle */ \"./default/assets/js/src/typedoc/utils/trottle.ts\");\nvar __extends = (undefined && undefined.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    };\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\n\n\n/**\n * A global service that monitors the window size and scroll position.\n */\nvar Viewport = /** @class */ (function (_super) {\n    __extends(Viewport, _super);\n    /**\n     * Create new Viewport instance.\n     */\n    function Viewport() {\n        var _this = _super.call(this) || this;\n        /**\n         * The current scroll position.\n         */\n        _this.scrollTop = 0;\n        /**\n         * The previous scrollTop.\n         */\n        _this.lastY = 0;\n        /**\n         * The width of the window.\n         */\n        _this.width = 0;\n        /**\n         * The height of the window.\n         */\n        _this.height = 0;\n        /**\n         * Boolean indicating whether the toolbar is shown.\n         */\n        _this.showToolbar = true;\n        _this.toolbar = (document.querySelector(\".tsd-page-toolbar\"));\n        _this.secondaryNav = (document.querySelector(\".tsd-navigation.secondary\"));\n        window.addEventListener(\"scroll\", (0,_utils_trottle__WEBPACK_IMPORTED_MODULE_1__.throttle)(function () { return _this.onScroll(); }, 10));\n        window.addEventListener(\"resize\", (0,_utils_trottle__WEBPACK_IMPORTED_MODULE_1__.throttle)(function () { return _this.onResize(); }, 10));\n        _this.onResize();\n        _this.onScroll();\n        return _this;\n    }\n    /**\n     * Trigger a resize event.\n     */\n    Viewport.prototype.triggerResize = function () {\n        var event = new CustomEvent(\"resize\", {\n            detail: {\n                width: this.width,\n                height: this.height,\n            },\n        });\n        this.dispatchEvent(event);\n    };\n    /**\n     * Triggered when the size of the window has changed.\n     */\n    Viewport.prototype.onResize = function () {\n        this.width = window.innerWidth || 0;\n        this.height = window.innerHeight || 0;\n        var event = new CustomEvent(\"resize\", {\n            detail: {\n                width: this.width,\n                height: this.height,\n            },\n        });\n        this.dispatchEvent(event);\n    };\n    /**\n     * Triggered when the user scrolled the viewport.\n     */\n    Viewport.prototype.onScroll = function () {\n        this.scrollTop = window.scrollY || 0;\n        var event = new CustomEvent(\"scroll\", {\n            detail: {\n                scrollTop: this.scrollTop,\n            },\n        });\n        this.dispatchEvent(event);\n        this.hideShowToolbar();\n    };\n    /**\n     * Handle hiding/showing of the toolbar.\n     */\n    Viewport.prototype.hideShowToolbar = function () {\n        var isShown = this.showToolbar;\n        this.showToolbar = this.lastY >= this.scrollTop || this.scrollTop <= 0;\n        if (isShown !== this.showToolbar) {\n            this.toolbar.classList.toggle(\"tsd-page-toolbar--hide\");\n            this.secondaryNav.classList.toggle(\"tsd-navigation--toolbar-hide\");\n        }\n        this.lastY = this.scrollTop;\n    };\n    Viewport.instance = new Viewport();\n    return Viewport;\n}(_EventTarget__WEBPACK_IMPORTED_MODULE_0__.EventTarget));\n\n\n\n//# sourceURL=webpack:///./default/assets/js/src/typedoc/services/Viewport.ts?");
 
 /***/ }),
 

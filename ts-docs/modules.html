@@ -6,7 +6,29 @@
 	<title>interacto | interacto</title>
 	<meta name="description" content="Documentation for interacto">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<style type="text/css">/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
+	<style type="text/css">:root {
+  --color-background: #fdfdfd;
+  --color-text: #222;
+  --color-text-aside: #707070;
+  --color-link: #4da6ff;
+  --color-menu-divider: #eee;
+  --color-menu-divider-focus: #000;
+  --color-menu-label: #707070;
+  --color-panel: #fff;
+  --color-panel-divider: #eee;
+  --color-comment-tag: #707070;
+  --color-comment-tag-text: #fff;
+  --color-code-background: rgba(0, 0, 0, 0.04);
+  --color-ts: #9600ff;
+  --color-ts-interface: #647f1b;
+  --color-ts-enum: #937210;
+  --color-ts-class: #0672de;
+  --color-ts-private: #707070;
+  --color-toolbar: #fff;
+  --color-toolbar-text: #333;
+}
+
+/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
 /* ==========================================================================
  * * HTML5 display definitions
  * * ========================================================================== */
@@ -1593,14 +1615,14 @@ ul.tsd-descriptions > li > :last-child > :last-child > :last-child,
   }
 }
 body {
-  background: #fdfdfd;
+  background: var(--color-background);
   font-family: "Segoe UI", sans-serif;
   font-size: 16px;
-  color: #222;
+  color: var(--color-text);
 }
 
 a {
-  color: #4da6ff;
+  color: var(--color-link);
   text-decoration: none;
 }
 a:hover {
@@ -1612,7 +1634,7 @@ code, pre {
   padding: 0.2em;
   margin: 0;
   font-size: 14px;
-  background-color: rgba(0, 0, 0, 0.04);
+  background-color: var(--color-code-background);
 }
 
 pre {
@@ -1678,7 +1700,7 @@ blockquote {
     padding: 20px 20px 0 0;
     max-width: 450px;
     visibility: hidden;
-    background-color: #fff;
+    background-color: var(--color-panel);
     transform: translate(100%, 0);
   }
   html.default .col-menu > *:last-child {
@@ -1738,7 +1760,7 @@ html.default.has-menu .col-content {
 .tsd-page-title {
   padding: 70px 0 20px 0;
   margin: 0 0 40px 0;
-  background: #fff;
+  background: var(--color-panel);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.35);
 }
 .tsd-page-title h1 {
@@ -1748,10 +1770,10 @@ html.default.has-menu .col-content {
 .tsd-breadcrumb {
   margin: 0;
   padding: 0;
-  color: #707070;
+  color: var(--color-text-aside);
 }
 .tsd-breadcrumb a {
-  color: #707070;
+  color: var(--color-text-aside);
   text-decoration: none;
 }
 .tsd-breadcrumb a:hover {
@@ -1824,8 +1846,8 @@ dl.tsd-comment-tags dt {
   padding: 1px 5px;
   margin: 0 10px 0 0;
   border-radius: 4px;
-  border: 1px solid #707070;
-  color: #707070;
+  border: 1px solid var(--color-comment-tag);
+  color: var(--color-comment-tag);
   font-size: 0.8em;
   font-weight: normal;
 }
@@ -1895,7 +1917,7 @@ dl.tsd-comment-tags p {
     top: 40px;
     right: 20px;
     height: auto;
-    background-color: #fff;
+    background-color: var(--color-panel);
     visibility: hidden;
     transform: translate(50%, 0);
     box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
@@ -1917,11 +1939,11 @@ dl.tsd-comment-tags p {
 }
 
 footer {
-  border-top: 1px solid #eee;
-  background-color: #fff;
+  border-top: 1px solid var(--color-panel-divider);
+  background-color: var(--color-panel);
 }
 footer.with-border-bottom {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--color-panel-divider);
 }
 footer .tsd-legend-group {
   font-size: 0;
@@ -1959,7 +1981,7 @@ footer .tsd-legend {
 .tsd-index-panel h3 {
   margin: 0 -20px 10px -20px;
   padding: 0 20px 10px 20px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--color-panel-divider);
 }
 .tsd-index-panel ul.tsd-index-list {
   -webkit-column-count: 3;
@@ -2003,39 +2025,39 @@ footer .tsd-legend {
 }
 .tsd-index-panel a,
 .tsd-index-panel .tsd-parent-kind-module a {
-  color: #9600ff;
+  color: var(--color-ts);
 }
 .tsd-index-panel .tsd-parent-kind-interface a {
-  color: #647F1B;
+  color: var(--color-ts-interface);
 }
 .tsd-index-panel .tsd-parent-kind-enum a {
-  color: #937210;
+  color: var(--color-ts-enum);
 }
 .tsd-index-panel .tsd-parent-kind-class a {
-  color: #0672DE;
+  color: var(--color-ts-class);
 }
 .tsd-index-panel .tsd-kind-module a {
-  color: #9600ff;
+  color: var(--color-ts);
 }
 .tsd-index-panel .tsd-kind-interface a {
-  color: #647F1B;
+  color: var(--color-ts-interface);
 }
 .tsd-index-panel .tsd-kind-enum a {
-  color: #937210;
+  color: var(--color-ts-enum);
 }
 .tsd-index-panel .tsd-kind-class a {
-  color: #0672DE;
+  color: var(--color-ts-class);
 }
 .tsd-index-panel .tsd-is-private a {
-  color: #707070;
+  color: var(--color-ts-private);
 }
 
 .tsd-flag {
   display: inline-block;
   padding: 1px 5px;
   border-radius: 4px;
-  color: #fff;
-  background-color: #707070;
+  color: var(--color-comment-tag-text);
+  background-color: var(--color-comment-tag);
   text-indent: 0;
   font-size: 14px;
   font-weight: normal;
@@ -2055,19 +2077,19 @@ footer .tsd-legend {
   border-bottom: none;
 }
 .tsd-member a[data-tsd-kind] {
-  color: #9600ff;
+  color: var(--color-ts);
 }
 .tsd-member a[data-tsd-kind=Interface] {
-  color: #647F1B;
+  color: var(--color-ts-interface);
 }
 .tsd-member a[data-tsd-kind=Enum] {
-  color: #937210;
+  color: var(--color-ts-enum);
 }
 .tsd-member a[data-tsd-kind=Class] {
-  color: #0672DE;
+  color: var(--color-ts-class);
 }
 .tsd-member a[data-tsd-kind=Private] {
-  color: #707070;
+  color: var(--color-ts-private);
 }
 
 .tsd-navigation {
@@ -2078,7 +2100,7 @@ footer .tsd-legend {
   padding-top: 2px;
   padding-bottom: 2px;
   border-left: 2px solid transparent;
-  color: #222;
+  color: var(--color-text);
   text-decoration: none;
   transition: border-left-color 0.1s;
 }
@@ -2121,10 +2143,10 @@ footer .tsd-legend {
   padding-left: 105px;
 }
 .tsd-navigation.primary > ul {
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--color-panel-divider);
 }
 .tsd-navigation.primary li {
-  border-top: 1px solid #eee;
+  border-top: 1px solid var(--color-panel-divider);
 }
 .tsd-navigation.primary li.current > a {
   font-weight: bold;
@@ -2132,7 +2154,7 @@ footer .tsd-legend {
 .tsd-navigation.primary li.label span {
   display: block;
   padding: 20px 0 6px 5px;
-  color: #707070;
+  color: var(--color-menu-label);
 }
 .tsd-navigation.primary li.globals + li > span, .tsd-navigation.primary li.globals + li > a {
   padding-top: 20px;
@@ -2172,16 +2194,16 @@ footer .tsd-legend {
   padding-left: 125px;
 }
 .tsd-navigation.secondary ul.current a {
-  border-left-color: #eee;
+  border-left-color: var(--color-panel-divider);
 }
 .tsd-navigation.secondary li.focus > a,
 .tsd-navigation.secondary ul.current li.focus > a {
-  border-left-color: #000;
+  border-left-color: var(--color-menu-divider-focus);
 }
 .tsd-navigation.secondary li.current {
   margin-top: 20px;
   margin-bottom: 20px;
-  border-left-color: #eee;
+  border-left-color: var(--color-panel-divider);
 }
 .tsd-navigation.secondary li.current > a {
   font-weight: bold;
@@ -2196,7 +2218,7 @@ footer .tsd-legend {
 .tsd-panel {
   margin: 20px 0;
   padding: 20px;
-  background-color: #fff;
+  background-color: var(--color-panel);
   box-shadow: 0 0 4px rgba(0, 0, 0, 0.25);
 }
 .tsd-panel:empty {
@@ -2205,7 +2227,7 @@ footer .tsd-legend {
 .tsd-panel > h1, .tsd-panel > h2, .tsd-panel > h3 {
   margin: 1.5em -20px 10px -20px;
   padding: 0 20px 10px 20px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid var(--color-panel-divider);
 }
 .tsd-panel > h1.tsd-before-signature, .tsd-panel > h2.tsd-before-signature, .tsd-panel > h3.tsd-before-signature {
   margin-bottom: 0;
@@ -2267,7 +2289,7 @@ footer .tsd-legend {
   outline: 0;
   border: 0;
   background: transparent;
-  color: #222;
+  color: var(--color-text);
 }
 #tsd-search .field label {
   position: absolute;
@@ -2290,17 +2312,17 @@ footer .tsd-legend {
 }
 #tsd-search .results li {
   padding: 0 10px;
-  background-color: #fdfdfd;
+  background-color: var(--color-background);
 }
 #tsd-search .results li:nth-child(even) {
-  background-color: #fff;
+  background-color: var(--color-panel);
 }
 #tsd-search .results li.state {
   display: none;
 }
 #tsd-search .results li.current,
 #tsd-search .results li:hover {
-  background-color: #eee;
+  background-color: var(--color-panel-divider);
 }
 #tsd-search .results a {
   display: block;
@@ -2309,11 +2331,11 @@ footer .tsd-legend {
   top: 10px;
 }
 #tsd-search .results span.parent {
-  color: #707070;
+  color: var(--color-text-aside);
   font-weight: normal;
 }
 #tsd-search.has-focus {
-  background-color: #eee;
+  background-color: var(--color-panel-divider);
 }
 #tsd-search.has-focus .field input {
   top: 0;
@@ -2336,7 +2358,7 @@ footer .tsd-legend {
 .tsd-signature {
   margin: 0 0 1em 0;
   padding: 10px;
-  border: 1px solid #eee;
+  border: 1px solid var(--color-panel-divider);
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
   font-size: 14px;
   overflow-x: auto;
@@ -2361,7 +2383,7 @@ footer .tsd-legend {
 }
 
 .tsd-signature-symbol {
-  color: #707070;
+  color: var(--color-text-aside);
   font-weight: normal;
 }
 
@@ -2373,7 +2395,7 @@ footer .tsd-legend {
 .tsd-signatures {
   padding: 0;
   margin: 0 0 1em 0;
-  border: 1px solid #eee;
+  border: 1px solid var(--color-panel-divider);
 }
 .tsd-signatures .tsd-signature {
   margin: 0;
@@ -2384,7 +2406,7 @@ footer .tsd-legend {
   border-top-width: 0;
 }
 .tsd-signatures .tsd-signature.current {
-  background-color: #eee;
+  background-color: var(--color-panel-divider);
 }
 .tsd-signatures.active > .tsd-signature {
   cursor: pointer;
@@ -2458,11 +2480,11 @@ ul.tsd-type-parameters .tsd-comment {
 
 .tsd-sources {
   font-size: 14px;
-  color: #707070;
+  color: var(--color-text-aside);
   margin: 0 0 1em 0;
 }
 .tsd-sources a {
-  color: #707070;
+  color: var(--color-text-aside);
   text-decoration: underline;
 }
 .tsd-sources ul, .tsd-sources p {
@@ -2480,13 +2502,13 @@ ul.tsd-type-parameters .tsd-comment {
   left: 0;
   width: 100%;
   height: 40px;
-  color: #333;
-  background: #fff;
-  border-bottom: 1px solid #eee;
+  color: var(--color-toolbar-text);
+  background: var(--color-toolbar);
+  border-bottom: 1px solid var(--color-panel-divider);
   transition: transform 0.3s linear;
 }
 .tsd-page-toolbar a {
-  color: #333;
+  color: var(--color-toolbar-text);
   text-decoration: none;
 }
 .tsd-page-toolbar a.title {
@@ -2546,7 +2568,7 @@ ul.tsd-type-parameters .tsd-comment {
 }
 .tsd-widget.active {
   opacity: 1;
-  background-color: #eee;
+  background-color: var(--color-panel-divider);
 }
 .tsd-widget.no-caption {
   width: 40px;
@@ -2615,16 +2637,16 @@ input[type=checkbox]:checked + .tsd-widget:before {
 }
 .tsd-select .tsd-select-list li {
   padding: 0 20px 0 0;
-  background-color: #fdfdfd;
+  background-color: var(--color-background);
 }
 .tsd-select .tsd-select-list li:before {
   background-position: 40px 0;
 }
 .tsd-select .tsd-select-list li:nth-child(even) {
-  background-color: #fff;
+  background-color: var(--color-panel);
 }
 .tsd-select .tsd-select-list li:hover {
-  background-color: #eee;
+  background-color: var(--color-panel-divider);
 }
 .tsd-select .tsd-select-list li.selected:before {
   background-position: -200px 0;
@@ -2878,6 +2900,39 @@ img {
 			<a href="classes/longtouch.html" class="tsd-kind-icon">Long<wbr>Touch</a>
 		</li>
 		<li class=" tsd-kind-class">
+			<a href="classes/mouseentertransition.html" class="tsd-kind-icon">Mouseenter<wbr>Transition</a>
+		</li>
+		<li class=" tsd-kind-class">
+			<a href="classes/mouseleavetransition.html" class="tsd-kind-icon">Mouseleave<wbr>Transition</a>
+		</li>
+		<li class=" tsd-kind-class">
+			<a href="classes/mousemove.html" class="tsd-kind-icon">Mousemove</a>
+		</li>
+		<li class=" tsd-kind-class">
+			<a href="classes/mousemovefsm.html" class="tsd-kind-icon">MousemoveFSM</a>
+		</li>
+		<li class=" tsd-kind-class">
+			<a href="classes/mousemovetransition.html" class="tsd-kind-icon">Mousemove<wbr>Transition</a>
+		</li>
+		<li class=" tsd-kind-class">
+			<a href="classes/mouseout.html" class="tsd-kind-icon">Mouseout</a>
+		</li>
+		<li class=" tsd-kind-class">
+			<a href="classes/mouseoutfsm.html" class="tsd-kind-icon">MouseoutFSM</a>
+		</li>
+		<li class=" tsd-kind-class">
+			<a href="classes/mouseouttransition.html" class="tsd-kind-icon">Mouseout<wbr>Transition</a>
+		</li>
+		<li class=" tsd-kind-class">
+			<a href="classes/mouseover.html" class="tsd-kind-icon">Mouseover</a>
+		</li>
+		<li class=" tsd-kind-class">
+			<a href="classes/mouseoverfsm.html" class="tsd-kind-icon">MouseoverFSM</a>
+		</li>
+		<li class=" tsd-kind-class">
+			<a href="classes/mouseovertransition.html" class="tsd-kind-icon">Mouseover<wbr>Transition</a>
+		</li>
+		<li class=" tsd-kind-class">
 			<a href="classes/movetransition.html" class="tsd-kind-icon">Move<wbr>Transition</a>
 		</li>
 		<li class=" tsd-kind-class">
@@ -2936,6 +2991,12 @@ img {
 		</li>
 		<li class=" tsd-kind-class">
 			<a href="classes/scrolltransition.html" class="tsd-kind-icon">Scroll<wbr>Transition</a>
+		</li>
+		<li class=" tsd-kind-class tsd-has-type-parameter">
+			<a href="classes/setproperties.html" class="tsd-kind-icon">Set<wbr>Properties</a>
+		</li>
+		<li class=" tsd-kind-class tsd-has-type-parameter">
+			<a href="classes/setproperty.html" class="tsd-kind-icon">Set<wbr>Property</a>
 		</li>
 		<li class=" tsd-kind-class">
 			<a href="classes/spinnerchanged.html" class="tsd-kind-icon">Spinner<wbr>Changed</a>
@@ -3004,6 +3065,9 @@ img {
 			<a href="classes/touchreleasetransition.html" class="tsd-kind-icon">Touch<wbr>Release<wbr>Transition</a>
 		</li>
 		<li class=" tsd-kind-class tsd-has-type-parameter">
+			<a href="classes/transferarrayitem.html" class="tsd-kind-icon">Transfer<wbr>Array<wbr>Item</a>
+		</li>
+		<li class=" tsd-kind-class tsd-has-type-parameter">
 			<a href="classes/transitionbase.html" class="tsd-kind-icon">Transition<wbr>Base</a>
 		</li>
 		<li class=" tsd-kind-class">
@@ -3014,6 +3078,9 @@ img {
 		</li>
 		<li class=" tsd-kind-class">
 			<a href="classes/undohistoryimpl.html" class="tsd-kind-icon">Undo<wbr>History<wbr>Impl</a>
+		</li>
+		<li class=" tsd-kind-class">
+			<a href="classes/undoablecommand.html" class="tsd-kind-icon">Undoable<wbr>Command</a>
 		</li>
 		<li class=" tsd-kind-class tsd-has-type-parameter">
 			<a href="classes/updatebinder.html" class="tsd-kind-icon">Update<wbr>Binder</a>
@@ -3413,6 +3480,17 @@ img {
 							<li class="tsd-kind-class"><a href="classes/longpress.html" class="tsd-kind-icon">Long<wbr>Press</a></li>
 							<li class="tsd-kind-class"><a href="classes/longpressfsm.html" class="tsd-kind-icon">Long<wbr>PressFSM</a></li>
 							<li class="tsd-kind-class"><a href="classes/longtouch.html" class="tsd-kind-icon">Long<wbr>Touch</a></li>
+							<li class="tsd-kind-class"><a href="classes/mouseentertransition.html" class="tsd-kind-icon">Mouseenter<wbr>Transition</a></li>
+							<li class="tsd-kind-class"><a href="classes/mouseleavetransition.html" class="tsd-kind-icon">Mouseleave<wbr>Transition</a></li>
+							<li class="tsd-kind-class"><a href="classes/mousemove.html" class="tsd-kind-icon">Mousemove</a></li>
+							<li class="tsd-kind-class"><a href="classes/mousemovefsm.html" class="tsd-kind-icon">MousemoveFSM</a></li>
+							<li class="tsd-kind-class"><a href="classes/mousemovetransition.html" class="tsd-kind-icon">Mousemove<wbr>Transition</a></li>
+							<li class="tsd-kind-class"><a href="classes/mouseout.html" class="tsd-kind-icon">Mouseout</a></li>
+							<li class="tsd-kind-class"><a href="classes/mouseoutfsm.html" class="tsd-kind-icon">MouseoutFSM</a></li>
+							<li class="tsd-kind-class"><a href="classes/mouseouttransition.html" class="tsd-kind-icon">Mouseout<wbr>Transition</a></li>
+							<li class="tsd-kind-class"><a href="classes/mouseover.html" class="tsd-kind-icon">Mouseover</a></li>
+							<li class="tsd-kind-class"><a href="classes/mouseoverfsm.html" class="tsd-kind-icon">MouseoverFSM</a></li>
+							<li class="tsd-kind-class"><a href="classes/mouseovertransition.html" class="tsd-kind-icon">Mouseover<wbr>Transition</a></li>
 							<li class="tsd-kind-class"><a href="classes/movetransition.html" class="tsd-kind-icon">Move<wbr>Transition</a></li>
 							<li class="tsd-kind-class"><a href="classes/multitouch.html" class="tsd-kind-icon">Multi<wbr>Touch</a></li>
 							<li class="tsd-kind-class"><a href="classes/multitouchdataimpl.html" class="tsd-kind-icon">Multi<wbr>Touch<wbr>Data<wbr>Impl</a></li>
@@ -3433,6 +3511,8 @@ img {
 							<li class="tsd-kind-class"><a href="classes/scrolldataimpl.html" class="tsd-kind-icon">Scroll<wbr>Data<wbr>Impl</a></li>
 							<li class="tsd-kind-class"><a href="classes/scrollfsm.html" class="tsd-kind-icon">ScrollFSM</a></li>
 							<li class="tsd-kind-class"><a href="classes/scrolltransition.html" class="tsd-kind-icon">Scroll<wbr>Transition</a></li>
+							<li class="tsd-kind-class tsd-has-type-parameter"><a href="classes/setproperties.html" class="tsd-kind-icon">Set<wbr>Properties</a></li>
+							<li class="tsd-kind-class tsd-has-type-parameter"><a href="classes/setproperty.html" class="tsd-kind-icon">Set<wbr>Property</a></li>
 							<li class="tsd-kind-class"><a href="classes/spinnerchanged.html" class="tsd-kind-icon">Spinner<wbr>Changed</a></li>
 							<li class="tsd-kind-class"><a href="classes/spinnerchangedfsm.html" class="tsd-kind-icon">Spinner<wbr>ChangedFSM</a></li>
 							<li class="tsd-kind-class"><a href="classes/spinnerchangedtransition.html" class="tsd-kind-icon">Spinner<wbr>Changed<wbr>Transition</a></li>
@@ -3455,10 +3535,12 @@ img {
 							<li class="tsd-kind-class"><a href="classes/touchmovetransition.html" class="tsd-kind-icon">Touch<wbr>Move<wbr>Transition</a></li>
 							<li class="tsd-kind-class"><a href="classes/touchpressuretransition.html" class="tsd-kind-icon">Touch<wbr>Pressure<wbr>Transition</a></li>
 							<li class="tsd-kind-class"><a href="classes/touchreleasetransition.html" class="tsd-kind-icon">Touch<wbr>Release<wbr>Transition</a></li>
+							<li class="tsd-kind-class tsd-has-type-parameter"><a href="classes/transferarrayitem.html" class="tsd-kind-icon">Transfer<wbr>Array<wbr>Item</a></li>
 							<li class="tsd-kind-class tsd-has-type-parameter"><a href="classes/transitionbase.html" class="tsd-kind-icon">Transition<wbr>Base</a></li>
 							<li class="tsd-kind-class"><a href="classes/undo.html" class="tsd-kind-icon">Undo</a></li>
 							<li class="tsd-kind-class"><a href="classes/undohistory.html" class="tsd-kind-icon">Undo<wbr>History</a></li>
 							<li class="tsd-kind-class"><a href="classes/undohistoryimpl.html" class="tsd-kind-icon">Undo<wbr>History<wbr>Impl</a></li>
+							<li class="tsd-kind-class"><a href="classes/undoablecommand.html" class="tsd-kind-icon">Undoable<wbr>Command</a></li>
 							<li class="tsd-kind-class tsd-has-type-parameter"><a href="classes/updatebinder.html" class="tsd-kind-icon">Update<wbr>Binder</a></li>
 							<li class="tsd-kind-class tsd-has-type-parameter"><a href="classes/widgetdataimpl.html" class="tsd-kind-icon">Widget<wbr>Data<wbr>Impl</a></li>
 							<li class="tsd-kind-class tsd-has-type-parameter"><a href="classes/widgettransition.html" class="tsd-kind-icon">Widget<wbr>Transition</a></li>
@@ -3591,7 +3673,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Event<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">typeof </span><a href="modules.html#eventtypes" class="tsd-signature-type" data-tsd-kind="Variable">eventTypes</a><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">]</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/api/fsm/EventType.ts#L37">src/api/fsm/EventType.ts:37</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/api/fsm/EventType.ts#L42">src/api/fsm/EventType.ts:42</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3606,7 +3688,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Partial<wbr>Anchor<wbr>Binder<span class="tsd-signature-symbol">:</span> <a href="interfaces/interactionbinder.html" class="tsd-signature-type" data-tsd-kind="Interface">InteractionBinder</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/interaction.html" class="tsd-signature-type" data-tsd-kind="Interface">Interaction</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/widgetdata.html" class="tsd-signature-type" data-tsd-kind="Interface">WidgetData</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">HTMLAnchorElement</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="interfaces/widgetdata.html" class="tsd-signature-type" data-tsd-kind="Interface">WidgetData</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">HTMLAnchorElement</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/api/binding/Bindings.ts#L42">src/api/binding/Bindings.ts:42</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/api/binding/Bindings.ts#L42">src/api/binding/Bindings.ts:42</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3616,7 +3698,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Partial<wbr>Button<wbr>Binder<span class="tsd-signature-symbol">:</span> <a href="interfaces/interactionbinder.html" class="tsd-signature-type" data-tsd-kind="Interface">InteractionBinder</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/interaction.html" class="tsd-signature-type" data-tsd-kind="Interface">Interaction</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/widgetdata.html" class="tsd-signature-type" data-tsd-kind="Interface">WidgetData</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">HTMLButtonElement</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="interfaces/widgetdata.html" class="tsd-signature-type" data-tsd-kind="Interface">WidgetData</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">HTMLButtonElement</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/api/binding/Bindings.ts#L38">src/api/binding/Bindings.ts:38</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/api/binding/Bindings.ts#L38">src/api/binding/Bindings.ts:38</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3626,7 +3708,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Partial<wbr>Input<wbr>Binder<span class="tsd-signature-symbol">:</span> <a href="interfaces/interactionbinder.html" class="tsd-signature-type" data-tsd-kind="Interface">InteractionBinder</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/interaction.html" class="tsd-signature-type" data-tsd-kind="Interface">Interaction</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/widgetdata.html" class="tsd-signature-type" data-tsd-kind="Interface">WidgetData</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">HTMLInputElement</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="interfaces/widgetdata.html" class="tsd-signature-type" data-tsd-kind="Interface">WidgetData</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">HTMLInputElement</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/api/binding/Bindings.ts#L39">src/api/binding/Bindings.ts:39</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/api/binding/Bindings.ts#L39">src/api/binding/Bindings.ts:39</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3636,7 +3718,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Partial<wbr>Key<wbr>Binder<span class="tsd-signature-symbol">:</span> <a href="interfaces/keyinteractionbinder.html" class="tsd-signature-type" data-tsd-kind="Interface">KeyInteractionBinder</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/interaction.html" class="tsd-signature-type" data-tsd-kind="Interface">Interaction</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/keydata.html" class="tsd-signature-type" data-tsd-kind="Interface">KeyData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="interfaces/keydata.html" class="tsd-signature-type" data-tsd-kind="Interface">KeyData</a><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/api/binding/Bindings.ts#L54">src/api/binding/Bindings.ts:54</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/api/binding/Bindings.ts#L54">src/api/binding/Bindings.ts:54</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3646,7 +3728,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Partial<wbr>Keys<wbr>Binder<span class="tsd-signature-symbol">:</span> <a href="interfaces/keyinteractionupdatebinder.html" class="tsd-signature-type" data-tsd-kind="Interface">KeyInteractionUpdateBinder</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/interaction.html" class="tsd-signature-type" data-tsd-kind="Interface">Interaction</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/keysdata.html" class="tsd-signature-type" data-tsd-kind="Interface">KeysData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="interfaces/keysdata.html" class="tsd-signature-type" data-tsd-kind="Interface">KeysData</a><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/api/binding/Bindings.ts#L55">src/api/binding/Bindings.ts:55</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/api/binding/Bindings.ts#L55">src/api/binding/Bindings.ts:55</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3656,7 +3738,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Partial<wbr>Multi<wbr>Touch<wbr>Binder<span class="tsd-signature-symbol">:</span> <a href="interfaces/interactionupdatebinder.html" class="tsd-signature-type" data-tsd-kind="Interface">InteractionUpdateBinder</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/interaction.html" class="tsd-signature-type" data-tsd-kind="Interface">Interaction</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/multitouchdata.html" class="tsd-signature-type" data-tsd-kind="Interface">MultiTouchData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="interfaces/multitouchdata.html" class="tsd-signature-type" data-tsd-kind="Interface">MultiTouchData</a><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/api/binding/Bindings.ts#L46">src/api/binding/Bindings.ts:46</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/api/binding/Bindings.ts#L46">src/api/binding/Bindings.ts:46</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3666,7 +3748,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Partial<wbr>Point<wbr>Binder<span class="tsd-signature-symbol">:</span> <a href="interfaces/interactionbinder.html" class="tsd-signature-type" data-tsd-kind="Interface">InteractionBinder</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/interaction.html" class="tsd-signature-type" data-tsd-kind="Interface">Interaction</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/pointdata.html" class="tsd-signature-type" data-tsd-kind="Interface">PointData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="interfaces/pointdata.html" class="tsd-signature-type" data-tsd-kind="Interface">PointData</a><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/api/binding/Bindings.ts#L49">src/api/binding/Bindings.ts:49</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/api/binding/Bindings.ts#L49">src/api/binding/Bindings.ts:49</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3676,7 +3758,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Partial<wbr>Point<wbr>Src<wbr>Tgt<wbr>Binder<span class="tsd-signature-symbol">:</span> <a href="interfaces/interactionupdatebinder.html" class="tsd-signature-type" data-tsd-kind="Interface">InteractionUpdateBinder</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/interaction.html" class="tsd-signature-type" data-tsd-kind="Interface">Interaction</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/srctgtpointsdata.html" class="tsd-signature-type" data-tsd-kind="Interface">SrcTgtPointsData</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/pointdata.html" class="tsd-signature-type" data-tsd-kind="Interface">PointData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="interfaces/srctgtpointsdata.html" class="tsd-signature-type" data-tsd-kind="Interface">SrcTgtPointsData</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/pointdata.html" class="tsd-signature-type" data-tsd-kind="Interface">PointData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/api/binding/Bindings.ts#L53">src/api/binding/Bindings.ts:53</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/api/binding/Bindings.ts#L53">src/api/binding/Bindings.ts:53</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3686,7 +3768,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Partial<wbr>Points<wbr>Binder<span class="tsd-signature-symbol">:</span> <a href="interfaces/interactionupdatebinder.html" class="tsd-signature-type" data-tsd-kind="Interface">InteractionUpdateBinder</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/interaction.html" class="tsd-signature-type" data-tsd-kind="Interface">Interaction</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/pointsdata.html" class="tsd-signature-type" data-tsd-kind="Interface">PointsData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="interfaces/pointsdata.html" class="tsd-signature-type" data-tsd-kind="Interface">PointsData</a><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/api/binding/Bindings.ts#L52">src/api/binding/Bindings.ts:52</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/api/binding/Bindings.ts#L52">src/api/binding/Bindings.ts:52</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3696,7 +3778,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Partial<wbr>Scroll<wbr>Binder<span class="tsd-signature-symbol">:</span> <a href="interfaces/interactionbinder.html" class="tsd-signature-type" data-tsd-kind="Interface">InteractionBinder</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/interaction.html" class="tsd-signature-type" data-tsd-kind="Interface">Interaction</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/scrolldata.html" class="tsd-signature-type" data-tsd-kind="Interface">ScrollData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="interfaces/scrolldata.html" class="tsd-signature-type" data-tsd-kind="Interface">ScrollData</a><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/api/binding/Bindings.ts#L50">src/api/binding/Bindings.ts:50</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/api/binding/Bindings.ts#L50">src/api/binding/Bindings.ts:50</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3706,7 +3788,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Partial<wbr>Select<wbr>Binder<span class="tsd-signature-symbol">:</span> <a href="interfaces/interactionbinder.html" class="tsd-signature-type" data-tsd-kind="Interface">InteractionBinder</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/interaction.html" class="tsd-signature-type" data-tsd-kind="Interface">Interaction</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/widgetdata.html" class="tsd-signature-type" data-tsd-kind="Interface">WidgetData</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">HTMLSelectElement</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="interfaces/widgetdata.html" class="tsd-signature-type" data-tsd-kind="Interface">WidgetData</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">HTMLSelectElement</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/api/binding/Bindings.ts#L40">src/api/binding/Bindings.ts:40</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/api/binding/Bindings.ts#L40">src/api/binding/Bindings.ts:40</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3716,7 +3798,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Partial<wbr>Spinner<wbr>Binder<span class="tsd-signature-symbol">:</span> <a href="interfaces/interactionupdatebinder.html" class="tsd-signature-type" data-tsd-kind="Interface">InteractionUpdateBinder</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/interaction.html" class="tsd-signature-type" data-tsd-kind="Interface">Interaction</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/widgetdata.html" class="tsd-signature-type" data-tsd-kind="Interface">WidgetData</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">HTMLInputElement</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="interfaces/widgetdata.html" class="tsd-signature-type" data-tsd-kind="Interface">WidgetData</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">HTMLInputElement</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/api/binding/Bindings.ts#L41">src/api/binding/Bindings.ts:41</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/api/binding/Bindings.ts#L41">src/api/binding/Bindings.ts:41</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3726,7 +3808,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Partial<wbr>Tap<wbr>Binder<span class="tsd-signature-symbol">:</span> <a href="interfaces/interactionupdatebinder.html" class="tsd-signature-type" data-tsd-kind="Interface">InteractionUpdateBinder</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/interaction.html" class="tsd-signature-type" data-tsd-kind="Interface">Interaction</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/tapdata.html" class="tsd-signature-type" data-tsd-kind="Interface">TapData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="interfaces/tapdata.html" class="tsd-signature-type" data-tsd-kind="Interface">TapData</a><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/api/binding/Bindings.ts#L47">src/api/binding/Bindings.ts:47</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/api/binding/Bindings.ts#L47">src/api/binding/Bindings.ts:47</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3736,7 +3818,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Partial<wbr>Text<wbr>Input<wbr>Binder<span class="tsd-signature-symbol">:</span> <a href="interfaces/interactionupdatebinder.html" class="tsd-signature-type" data-tsd-kind="Interface">InteractionUpdateBinder</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/interaction.html" class="tsd-signature-type" data-tsd-kind="Interface">Interaction</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/widgetdata.html" class="tsd-signature-type" data-tsd-kind="Interface">WidgetData</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">HTMLInputElement</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">HTMLTextAreaElement</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="interfaces/widgetdata.html" class="tsd-signature-type" data-tsd-kind="Interface">WidgetData</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">HTMLInputElement</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">HTMLTextAreaElement</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/api/binding/Bindings.ts#L43">src/api/binding/Bindings.ts:43</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/api/binding/Bindings.ts#L43">src/api/binding/Bindings.ts:43</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3746,7 +3828,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Partial<wbr>Touch<wbr>Binder<span class="tsd-signature-symbol">:</span> <a href="interfaces/interactionupdatebinder.html" class="tsd-signature-type" data-tsd-kind="Interface">InteractionUpdateBinder</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/interaction.html" class="tsd-signature-type" data-tsd-kind="Interface">Interaction</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/touchdata.html" class="tsd-signature-type" data-tsd-kind="Interface">TouchData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="interfaces/touchdata.html" class="tsd-signature-type" data-tsd-kind="Interface">TouchData</a><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/api/binding/Bindings.ts#L48">src/api/binding/Bindings.ts:48</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/api/binding/Bindings.ts#L48">src/api/binding/Bindings.ts:48</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3756,7 +3838,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Partial<wbr>Touch<wbr>Src<wbr>Tgt<wbr>Binder<span class="tsd-signature-symbol">:</span> <a href="interfaces/interactionupdatebinder.html" class="tsd-signature-type" data-tsd-kind="Interface">InteractionUpdateBinder</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/interaction.html" class="tsd-signature-type" data-tsd-kind="Interface">Interaction</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/srctgtpointsdata.html" class="tsd-signature-type" data-tsd-kind="Interface">SrcTgtPointsData</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/touchdata.html" class="tsd-signature-type" data-tsd-kind="Interface">TouchData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="interfaces/srctgtpointsdata.html" class="tsd-signature-type" data-tsd-kind="Interface">SrcTgtPointsData</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/touchdata.html" class="tsd-signature-type" data-tsd-kind="Interface">TouchData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/api/binding/Bindings.ts#L45">src/api/binding/Bindings.ts:45</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/api/binding/Bindings.ts#L45">src/api/binding/Bindings.ts:45</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3766,7 +3848,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Partial<wbr>Update<wbr>Point<wbr>Binder<span class="tsd-signature-symbol">:</span> <a href="interfaces/interactionupdatebinder.html" class="tsd-signature-type" data-tsd-kind="Interface">InteractionUpdateBinder</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/interaction.html" class="tsd-signature-type" data-tsd-kind="Interface">Interaction</a><span class="tsd-signature-symbol">&lt;</span><a href="interfaces/pointdata.html" class="tsd-signature-type" data-tsd-kind="Interface">PointData</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">, </span><a href="interfaces/pointdata.html" class="tsd-signature-type" data-tsd-kind="Interface">PointData</a><span class="tsd-signature-symbol">&gt;</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/api/binding/Bindings.ts#L51">src/api/binding/Bindings.ts:51</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/api/binding/Bindings.ts#L51">src/api/binding/Bindings.ts:51</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3776,7 +3858,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">Widget&lt;T&gt;<span class="tsd-signature-symbol">:</span> <a href="interfaces/eltref.html" class="tsd-signature-type" data-tsd-kind="Interface">EltRef</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">T</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/api/binder/BaseBinderBuilder.ts#L36">src/api/binder/BaseBinderBuilder.ts:36</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/api/binder/BaseBinderBuilder.ts#L36">src/api/binder/BaseBinderBuilder.ts:36</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3800,7 +3882,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">cat<wbr>Binding<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Category</span><span class="tsd-signature-symbol"> = ...</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/logging/ConfigLog.ts#L21">src/impl/logging/ConfigLog.ts:21</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/logging/ConfigLog.ts#L21">src/impl/logging/ConfigLog.ts:21</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3810,7 +3892,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">cat<wbr>Command<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Category</span><span class="tsd-signature-symbol"> = ...</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/logging/ConfigLog.ts#L20">src/impl/logging/ConfigLog.ts:20</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/logging/ConfigLog.ts#L20">src/impl/logging/ConfigLog.ts:20</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3820,7 +3902,7 @@ img {
 				<div class="tsd-signature tsd-kind-icon">catFSM<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Category</span><span class="tsd-signature-symbol"> = ...</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/logging/ConfigLog.ts#L22">src/impl/logging/ConfigLog.ts:22</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/logging/ConfigLog.ts#L22">src/impl/logging/ConfigLog.ts:22</a></li>
 					</ul>
 				</aside>
 			</section>
@@ -3830,17 +3912,17 @@ img {
 				<div class="tsd-signature tsd-kind-icon">cat<wbr>Interaction<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Category</span><span class="tsd-signature-symbol"> = ...</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/logging/ConfigLog.ts#L19">src/impl/logging/ConfigLog.ts:19</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/logging/ConfigLog.ts#L19">src/impl/logging/ConfigLog.ts:19</a></li>
 					</ul>
 				</aside>
 			</section>
 			<section class="tsd-panel tsd-member tsd-kind-variable">
 				<a name="eventtypes" class="tsd-anchor"></a>
 				<h3><span class="tsd-flag ts-flagConst">Const</span> event<wbr>Types</h3>
-				<div class="tsd-signature tsd-kind-icon">event<wbr>Types<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-type">&quot;mousedown&quot;</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> = ...</span></div>
+				<div class="tsd-signature tsd-kind-icon">event<wbr>Types<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">readonly </span><span class="tsd-signature-symbol">[</span><span class="tsd-signature-type">&quot;mousedown&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;mouseup&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;mousemove&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;mouseover&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;mouseout&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;mouseenter&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;mouseleave&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;mousemove&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;keydown&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;keyup&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;click&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;auxclick&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;input&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;scroll&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;change&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;touchstart&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;touchend&quot;</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">&quot;touchmove&quot;</span><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol"> = ...</span></div>
 				<aside class="tsd-sources">
 					<ul>
-						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/api/fsm/EventType.ts#L18">src/api/fsm/EventType.ts:18</a></li>
+						<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/api/fsm/EventType.ts#L18">src/api/fsm/EventType.ts:18</a></li>
 					</ul>
 				</aside>
 				<div class="tsd-comment tsd-typography">
@@ -3862,7 +3944,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/Events.ts#L29">src/impl/fsm/Events.ts:29</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/Events.ts#L29">src/impl/fsm/Events.ts:29</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -3899,7 +3981,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/Events.ts#L64">src/impl/fsm/Events.ts:64</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/Events.ts#L65">src/impl/fsm/Events.ts:65</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3922,7 +4004,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/Events.ts#L68">src/impl/fsm/Events.ts:68</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/Events.ts#L69">src/impl/fsm/Events.ts:69</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3945,7 +4027,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/Events.ts#L72">src/impl/fsm/Events.ts:72</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/Events.ts#L73">src/impl/fsm/Events.ts:73</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3968,7 +4050,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/Events.ts#L76">src/impl/fsm/Events.ts:76</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/Events.ts#L77">src/impl/fsm/Events.ts:77</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -3991,7 +4073,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/Events.ts#L80">src/impl/fsm/Events.ts:80</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/Events.ts#L81">src/impl/fsm/Events.ts:81</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4014,7 +4096,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/api/binder/BaseBinderBuilder.ts#L28">src/api/binder/BaseBinderBuilder.ts:28</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/api/binder/BaseBinderBuilder.ts#L28">src/api/binder/BaseBinderBuilder.ts:28</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4039,13 +4121,13 @@ img {
 				<a name="iseventtype" class="tsd-anchor"></a>
 				<h3>is<wbr>Event<wbr>Type</h3>
 				<ul class="tsd-signatures tsd-kind-function">
-					<li class="tsd-signature tsd-kind-icon">is<wbr>Event<wbr>Type<span class="tsd-signature-symbol">(</span>evtType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">evtType</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">&quot;mousedown&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;mouseup&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;mousemove&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;keydown&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;keyup&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;click&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;auxclick&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;input&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;scroll&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;change&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;touchstart&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;touchend&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;touchmove&quot;</span></li>
+					<li class="tsd-signature tsd-kind-icon">is<wbr>Event<wbr>Type<span class="tsd-signature-symbol">(</span>evtType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">evtType</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">&quot;mousedown&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;mouseup&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;mousemove&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;mouseover&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;mouseout&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;mouseenter&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;mouseleave&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;keydown&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;keyup&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;click&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;auxclick&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;input&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;scroll&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;change&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;touchstart&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;touchend&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;touchmove&quot;</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/Events.ts#L20">src/impl/fsm/Events.ts:20</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/Events.ts#L20">src/impl/fsm/Events.ts:20</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4054,7 +4136,7 @@ img {
 								<h5>evtType: <span class="tsd-signature-type">string</span></h5>
 							</li>
 						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">evtType</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">&quot;mousedown&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;mouseup&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;mousemove&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;keydown&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;keyup&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;click&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;auxclick&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;input&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;scroll&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;change&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;touchstart&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;touchend&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;touchmove&quot;</span></h4>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">evtType</span><span class="tsd-signature-symbol"> is </span><span class="tsd-signature-type">&quot;mousedown&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;mouseup&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;mousemove&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;mouseover&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;mouseout&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;mouseenter&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;mouseleave&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;keydown&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;keyup&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;click&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;auxclick&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;input&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;scroll&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;change&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;touchstart&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;touchend&quot;</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">&quot;touchmove&quot;</span></h4>
 					</li>
 				</ul>
 			</section>
@@ -4068,7 +4150,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/Events.ts#L88">src/impl/fsm/Events.ts:88</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/Events.ts#L89">src/impl/fsm/Events.ts:89</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4091,7 +4173,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/Events.ts#L97">src/impl/fsm/Events.ts:97</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/Events.ts#L98">src/impl/fsm/Events.ts:98</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4114,7 +4196,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/Events.ts#L60">src/impl/fsm/Events.ts:60</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/Events.ts#L61">src/impl/fsm/Events.ts:61</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4145,7 +4227,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/Events.ts#L101">src/impl/fsm/Events.ts:101</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/Events.ts#L102">src/impl/fsm/Events.ts:102</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4168,7 +4250,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/Events.ts#L105">src/impl/fsm/Events.ts:105</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/Events.ts#L106">src/impl/fsm/Events.ts:106</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4191,7 +4273,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/Events.ts#L51">src/impl/fsm/Events.ts:51</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/Events.ts#L51">src/impl/fsm/Events.ts:51</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4222,7 +4304,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/api/fsm/OutputState.ts#L48">src/api/fsm/OutputState.ts:48</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/api/fsm/OutputState.ts#L48">src/api/fsm/OutputState.ts:48</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4245,7 +4327,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/Events.ts#L109">src/impl/fsm/Events.ts:109</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/Events.ts#L110">src/impl/fsm/Events.ts:110</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4268,7 +4350,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/Events.ts#L84">src/impl/fsm/Events.ts:84</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/Events.ts#L85">src/impl/fsm/Events.ts:85</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4291,7 +4373,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/Events.ts#L92">src/impl/fsm/Events.ts:92</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/Events.ts#L93">src/impl/fsm/Events.ts:93</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4314,7 +4396,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/fsm/Events.ts#L43">src/impl/fsm/Events.ts:43</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/fsm/Events.ts#L43">src/impl/fsm/Events.ts:43</a></li>
 							</ul>
 						</aside>
 						<div class="tsd-comment tsd-typography">
@@ -4345,7 +4427,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/api/undo/Undoable.ts#L35">src/api/undo/Undoable.ts:35</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/api/undo/Undoable.ts#L41">src/api/undo/Undoable.ts:41</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-parameters-title">Parameters</h4>
@@ -4368,7 +4450,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/util/ArrayUtil.ts#L29">src/impl/util/ArrayUtil.ts:29</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/util/ArrayUtil.ts#L29">src/impl/util/ArrayUtil.ts:29</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -4397,7 +4479,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/util/ArrayUtil.ts#L15">src/impl/util/ArrayUtil.ts:15</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/util/ArrayUtil.ts#L15">src/impl/util/ArrayUtil.ts:15</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -4429,7 +4511,7 @@ img {
 					<li class="tsd-description">
 						<aside class="tsd-sources">
 							<ul>
-								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/2071fa6/src/impl/util/ArrayUtil.ts#L22">src/impl/util/ArrayUtil.ts:22</a></li>
+								<li>Defined in <a href="https://github.com/interacto/interacto-ts/blob/020334d/src/impl/util/ArrayUtil.ts#L22">src/impl/util/ArrayUtil.ts:22</a></li>
 							</ul>
 						</aside>
 						<h4 class="tsd-type-parameters-title">Type parameters</h4>
@@ -4630,7 +4712,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Viewport\": () => /* binding */ Viewport\n/* harmony export */ });\n/* harmony import */ var _EventTarget__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../EventTarget */ \"./default/assets/js/src/typedoc/EventTarget.ts\");\n/* harmony import */ var _utils_trottle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/trottle */ \"./default/assets/js/src/typedoc/utils/trottle.ts\");\nvar __extends = (undefined && undefined.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    };\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\n\n\n/**\n * A global service that monitors the window size and scroll position.\n */\nvar Viewport = /** @class */ (function (_super) {\n    __extends(Viewport, _super);\n    /**\n     * Create new Viewport instance.\n     */\n    function Viewport() {\n        var _this = _super.call(this) || this;\n        /**\n         * The current scroll position.\n         */\n        _this.scrollTop = 0;\n        /**\n         * The previous scrollTop.\n         */\n        _this.lastY = 0;\n        /**\n         * The width of the window.\n         */\n        _this.width = 0;\n        /**\n         * The height of the window.\n         */\n        _this.height = 0;\n        /**\n         * Boolean indicating whether the toolbar is shown.\n         */\n        _this.showToolbar = true;\n        _this.toolbar = (document.querySelector(\".tsd-page-toolbar\"));\n        _this.secondaryNav = (document.querySelector(\".tsd-navigation.secondary\"));\n        window.addEventListener(\"scroll\", (0,_utils_trottle__WEBPACK_IMPORTED_MODULE_1__.throttle)(function () { return _this.onScroll(); }, 10));\n        window.addEventListener(\"resize\", (0,_utils_trottle__WEBPACK_IMPORTED_MODULE_1__.throttle)(function () { return _this.onResize(); }, 10));\n        _this.onResize();\n        _this.onScroll();\n        return _this;\n    }\n    /**\n     * Trigger a resize event.\n     */\n    Viewport.prototype.triggerResize = function () {\n        var event = new CustomEvent(\"resize\", {\n            detail: {\n                width: this.width,\n                height: this.height,\n            },\n        });\n        this.dispatchEvent(event);\n    };\n    /**\n     * Triggered when the size of the window has changed.\n     */\n    Viewport.prototype.onResize = function () {\n        this.width = window.innerWidth || 0;\n        this.height = window.innerHeight || 0;\n        var event = new CustomEvent(\"resize\", {\n            detail: {\n                width: this.width,\n                height: this.height,\n            },\n        });\n        this.dispatchEvent(event);\n    };\n    /**\n     * Triggered when the user scrolled the viewport.\n     */\n    Viewport.prototype.onScroll = function () {\n        this.scrollTop = window.scrollY || 0;\n        var event = new CustomEvent(\"scroll\", {\n            detail: {\n                scrollTop: this.scrollTop,\n            },\n        });\n        this.dispatchEvent(event);\n        this.hideShowToolbar();\n    };\n    /**\n     * Handle hiding/showing of the toolbar.\n     */\n    Viewport.prototype.hideShowToolbar = function () {\n        var isShown = this.showToolbar;\n        this.showToolbar = this.lastY >= this.scrollTop || this.scrollTop === 0;\n        if (isShown !== this.showToolbar) {\n            this.toolbar.classList.toggle(\"tsd-page-toolbar--hide\");\n            this.secondaryNav.classList.toggle(\"tsd-navigation--toolbar-hide\");\n        }\n        this.lastY = this.scrollTop;\n    };\n    Viewport.instance = new Viewport();\n    return Viewport;\n}(_EventTarget__WEBPACK_IMPORTED_MODULE_0__.EventTarget));\n\n\n\n//# sourceURL=webpack:///./default/assets/js/src/typedoc/services/Viewport.ts?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"Viewport\": () => /* binding */ Viewport\n/* harmony export */ });\n/* harmony import */ var _EventTarget__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../EventTarget */ \"./default/assets/js/src/typedoc/EventTarget.ts\");\n/* harmony import */ var _utils_trottle__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/trottle */ \"./default/assets/js/src/typedoc/utils/trottle.ts\");\nvar __extends = (undefined && undefined.__extends) || (function () {\n    var extendStatics = function (d, b) {\n        extendStatics = Object.setPrototypeOf ||\n            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||\n            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };\n        return extendStatics(d, b);\n    };\n    return function (d, b) {\n        extendStatics(d, b);\n        function __() { this.constructor = d; }\n        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());\n    };\n})();\n\n\n/**\n * A global service that monitors the window size and scroll position.\n */\nvar Viewport = /** @class */ (function (_super) {\n    __extends(Viewport, _super);\n    /**\n     * Create new Viewport instance.\n     */\n    function Viewport() {\n        var _this = _super.call(this) || this;\n        /**\n         * The current scroll position.\n         */\n        _this.scrollTop = 0;\n        /**\n         * The previous scrollTop.\n         */\n        _this.lastY = 0;\n        /**\n         * The width of the window.\n         */\n        _this.width = 0;\n        /**\n         * The height of the window.\n         */\n        _this.height = 0;\n        /**\n         * Boolean indicating whether the toolbar is shown.\n         */\n        _this.showToolbar = true;\n        _this.toolbar = (document.querySelector(\".tsd-page-toolbar\"));\n        _this.secondaryNav = (document.querySelector(\".tsd-navigation.secondary\"));\n        window.addEventListener(\"scroll\", (0,_utils_trottle__WEBPACK_IMPORTED_MODULE_1__.throttle)(function () { return _this.onScroll(); }, 10));\n        window.addEventListener(\"resize\", (0,_utils_trottle__WEBPACK_IMPORTED_MODULE_1__.throttle)(function () { return _this.onResize(); }, 10));\n        _this.onResize();\n        _this.onScroll();\n        return _this;\n    }\n    /**\n     * Trigger a resize event.\n     */\n    Viewport.prototype.triggerResize = function () {\n        var event = new CustomEvent(\"resize\", {\n            detail: {\n                width: this.width,\n                height: this.height,\n            },\n        });\n        this.dispatchEvent(event);\n    };\n    /**\n     * Triggered when the size of the window has changed.\n     */\n    Viewport.prototype.onResize = function () {\n        this.width = window.innerWidth || 0;\n        this.height = window.innerHeight || 0;\n        var event = new CustomEvent(\"resize\", {\n            detail: {\n                width: this.width,\n                height: this.height,\n            },\n        });\n        this.dispatchEvent(event);\n    };\n    /**\n     * Triggered when the user scrolled the viewport.\n     */\n    Viewport.prototype.onScroll = function () {\n        this.scrollTop = window.scrollY || 0;\n        var event = new CustomEvent(\"scroll\", {\n            detail: {\n                scrollTop: this.scrollTop,\n            },\n        });\n        this.dispatchEvent(event);\n        this.hideShowToolbar();\n    };\n    /**\n     * Handle hiding/showing of the toolbar.\n     */\n    Viewport.prototype.hideShowToolbar = function () {\n        var isShown = this.showToolbar;\n        this.showToolbar = this.lastY >= this.scrollTop || this.scrollTop <= 0;\n        if (isShown !== this.showToolbar) {\n            this.toolbar.classList.toggle(\"tsd-page-toolbar--hide\");\n            this.secondaryNav.classList.toggle(\"tsd-navigation--toolbar-hide\");\n        }\n        this.lastY = this.scrollTop;\n    };\n    Viewport.instance = new Viewport();\n    return Viewport;\n}(_EventTarget__WEBPACK_IMPORTED_MODULE_0__.EventTarget));\n\n\n\n//# sourceURL=webpack:///./default/assets/js/src/typedoc/services/Viewport.ts?");
 
 /***/ }),
 

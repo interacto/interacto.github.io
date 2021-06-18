@@ -21,14 +21,14 @@ const Header = () => (
                 <a href={'https://github.com/interacto'}>
                     <StaticImage src={'../images/github.png'} alt={'Github logo'} layout={'constrained'} height={30} loading={"eager"}/>
                 </a>
-                <a href={'https://interacto.github.io/docs/index.html'}>
+                <a href={'https://interacto.github.io/ts-docs/index.html'}>
                     <StaticImage src={'../images/tsdoc.png'} alt={'TSDoc logo'} layout={'constrained'} height={25}/>
                 </a>
                 <a href={"https://www.npmjs.com/package/interacto"}>
-                    <img src="https://img.shields.io/npm/v/interacto" alt={"Lien interacto npm"}/>
+                    <img src="https://img.shields.io/npm/v/interacto" alt={"Interacto npm Link"}/>
                 </a>
                 <a href="https://search.maven.org/search?q=interacto">
-                    <img src="https://img.shields.io/maven-central/v/io.github.interacto/interacto-javafx" alt={"Lien interacto maven"}/>
+                    <img src="https://img.shields.io/maven-central/v/io.github.interacto/interacto-javafx" alt={"Maven Interacto Link"}/>
                 </a>
             </span>
         </nav>

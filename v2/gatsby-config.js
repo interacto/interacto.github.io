@@ -1,5 +1,4 @@
 module.exports = {
-  pathPrefix: "/interacto.github.io/v2",
   siteMetadata: {
     title: "Interacto doc",
   },

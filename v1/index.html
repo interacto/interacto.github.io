@@ -1,0 +1,1182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>Interacto</title>
+    <link href="css/interacto.css" rel="stylesheet">
+    <link href="css/default.min.css" rel="stylesheet">
+    <script src="js/highlight.pack.js" type="text/javascript"></script>
+    <script type="text/javascript">hljs.initHighlightingOnLoad();</script>
+</head>
+
+
+<body>
+
+<div class="header">
+    <div class="logo"><img src="../img/interacto.svg" width="60" /></div>
+    <div class="box left centerv"><a href="https://github.com/interacto">Github</a></div>
+    <div class="box left centerv"><a href="https://www.npmjs.com/package/interacto"><img src="https://img.shields.io/npm/v/interacto" /></a></div>
+    <div class="box left centerv"><a href="https://search.maven.org/search?q=interacto"><img src="https://img.shields.io/maven-central/v/io.github.interacto/interacto-javafx"/></a></div>
+</div>
+
+<div class="desc">
+    <h1>Interacto</h1>
+    <p>
+        <b>Interacto</b> is a front-end framework for processing user interface events.<br/>
+        With Interacto developers handle user interactions (DnD, drag-lock, double-click, button click, pan,
+        multi-touch, etc.) instead of low-level UI
+        events.<br/>
+        Developers configure how to turn a selected user interaction into a (undoable) UI command using a fluent API.
+    </p>
+</div>
+
+<div id="selector">
+    <div id="lge" class="filter">
+        <button id="ts" class="btn active">TypeScript / Angular</button>
+        <button id="jfx" class="btn">JavaFX</button>
+    </div>
+
+    <div id="topic" class="filter">
+        <button id="all" class="btn active">Show all</button>
+        <button id="install" class="btn">Install</button>
+        <button id="start" class="btn">How to Start</button>
+        <button id="interaction" class="btn">Interactions</button>
+        <button id="cmd" class="btn">Commands/Undo</button>
+        <button id="routine" class="btn">Routines</button>
+        <button id="testing" class="btn">Front-end Testing</button>
+        <button id="irl" class="btn">IRL Examples</button>
+    </div>
+    <br/><br/>
+<input type="text" id="filterInput" onkeyup="filter()" placeholder="Search...">
+<a href="../ts-docs/index.html">TSDoc</a>
+</div>
+
+<div id="content">
+    <div class="item start jfx install">
+        <div class="box line-title">JavaFX and Maven</div>
+        <div class="left box">
+<pre><code class="xml">&lt;dependency&gt;
+    &lt;groupId&gt;io.github.interacto&lt;/groupId&gt;
+    &lt;artifactId&gt;interacto-java-api&lt;/artifactId&gt;
+    &lt;version&gt;4.3.1&lt;/version&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;io.github.interacto&lt;/groupId&gt;
+    &lt;artifactId&gt;interacto-javafx&lt;/artifactId&gt;
+    &lt;version&gt;4.3.1&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+        </div>
+
+        <div class="center box">
+<pre><code class="xml">&lt;dependency&gt;
+    &lt;groupId&gt;io.github.interacto&lt;/groupId&gt;
+    &lt;artifactId&gt;interacto-javafx-test&lt;/artifactId&gt;
+    &lt;version&gt;4.3.1&lt;/version&gt;
+&lt;/dependency&gt;
+</code></pre>
+        </div>
+        <div class="right box">The library <code>interacto-javafx-test</code> is dedicated to JavaFX front-end
+            testing
+        </div>
+    </div>
+
+
+    <div class="item ts install start">
+        <div class="line-title box">Angular and npm</div>
+        <div class="left box">
+            <pre><code>npm install interacto</code></pre>
+        </div>
+
+        <!--        <div class="center box">-->
+        <!--        </div>-->
+
+        <!--        <div class="right box">-->
+        <!--        </div>-->
+    </div>
+
+
+
+
+    <div class="item ts start cmd">
+        <div class="line-title box">How to start: an example</div>
+        <div class="left box">
+<pre><code class="ts">ngAfterViewInit(): void {
+  buttonBinder()
+    .on(this.clearButton.nativeElement)
+    .toProduce(() => new ClearText(this.text))
+    .bind();
+}</code></pre>
+            The binding operates on <code>clearButton</code> to produce a command <code>ClearText</code>.
+            Bindings are defined in <code>ngAfterViewInit</code> of the component.
+            <br/>
+            The binding manages the (un-)registration with the button, the creation of the command on each button click,
+            and the move of the executed commands in a commands registry for undo/redo purposes.
+            <br/>
+            <br/>
+            A binder follows the builder pattern:
+            it configures the binding to define how to turn the selected user interaction into commands.
+            <br/>
+            The terminal routine <code>bind()</code> builds the binding.<br/><br/>
+            
+<pre><code class="ts">.toProduce(() => new ClearText(this.text))</code></pre>
+Note that the <code>toProduce</code> routine must produce a command (ie, an instance of <code>CommandBase</code>).<br/>
+See the code of <code>ClearText</code> on the right.
+See also the <code>AnonCmd</code> command introduced in this documentation if you do not want to define a class command.
+        </div>
+
+        <div class="center box">
+<pre><code class="ts">export class MyComponent implements AfterViewInit {
+   @ViewChild('clearbutton')
+   private clearButton: ElementRef<HTMLButtonElement>;
+...
+}</code></pre>
+            <code>clearButton</code> is a property of the component class.<br/>
+            This property refers to an HTML tag defined in the HTML document of the Angular component.
+            The angular id of this tag is <code>#clearButton</code>.
+<pre><code class="html">&#60;button #clearButton&#62;Clear&#60;/button&#62;</code></pre>
+        </div>
+
+        <div class="right box">
+<pre><code class="ts">export class ClearText extends CommandBase implements Undoable {
+   private memento: string;
+
+   public constructor(private text: TextData) { super(); }
+
+   protected createMemento(): void {
+     this.memento = this.text.text;
+   }
+
+   protected execution(): void {
+     this.text.text = '';
+   }
+
+   public undo(): void {
+     this.text.text = this.memento;
+   }
+
+   public redo(): void {
+     this.execution();
+   }
+
+   public getUndoName(): string {
+     return 'Clear text';
+   }
+}</code></pre>
+            <code>ClearText</code> is an undoable command.
+            The memento preserves the former content of text data.
+            The binding and commands registry automatically call the methods of this command.
+            You can place your commands wherever you want.
+            We suggest grouping them into a <code>command</code> folder.
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="item ts start interaction routine">
+        <div class="line-title box">How to select a user interaction</div>
+        <div class="left box">
+    <pre><code class="ts">clickBinder()
+  ...
+  .bind();</code></pre>
+            The user interaction selection is the goal of the first binding routine.
+            For each user interaction provided by Interacto, a dedicated routine exists.
+            Here <code>clickBinder()</code> for a <code>click</code> interaction.
+        </div>
+
+        <div class="center box">
+            Routines for standard user interactions:<br/>
+            <code>buttonBinder, checkboxBinder, colorPickerBinder, comboBoxBinder, spinnerBinder, dateBinder,
+                hyperlinkBinder, textInputBinder</code>
+            <br/>
+            <br/>
+            Routines for standard mouse-based interactions:<br/>
+            <code>clickBinder, dbleClickBinder, pressBinder, scrollBinder, dndBinder, dragLockBinder</code>
+        </div>
+
+        <div class="right box">
+            Routines for touch interactions:<br/>
+            <code>multiTouchBinder, tapBinder, longTouchBinder, swipeBinder, panBinder</code>
+            <br/>
+            <br/>
+            Routines for standard key-based interactions:<br/>
+            <code>keyPressBinder, keysPressBinder, keysTypeBinder, keyTypeBinder</code>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="item ts start routine interaction cmd">
+        <div class="line-title box">What are <code>i</code> and <code>c</code> in binding routines?</div>
+        <div class="left box">
+    <pre><code class="ts">multiTouchBinder(3)
+  .toProduce(i => ...)
+  .then((c, i) => ...)
+  ...
+  .bind();</code></pre>
+            The routines take different arguments.
+            For example <code>toProduce</code> and <code>then</code> take an argument <code>i</code>.
+            The type of <code>i</code> is a sub-class of <code>InteractionData</code>:
+            each user interaction exhibits specific data (we call interaction data) that routines can handle.
+            Here, the type of <code>i</code> is <code>MultiTouchData</code>.
+        </div>
+
+        <div class="center box">
+            <pre><code class="ts">multiTouchBinder(3)
+    .first((c, i) => ...)
+    .then((c, i) => ...)
+    .end((c, i) => ...)
+    ...
+    .bind();</code></pre>
+            The <code>then</code> routine (as many other routines) take an argument <code>c</code>.
+            The argument <code>c</code> refers to the ongoing command.
+            Developers can then update the command using this argument.
+        </div>
+
+<!--        <div class="right box">-->
+<!--        </div>-->
+    </div>
+
+
+
+
+
+
+
+    <div class="item ts start routine">
+        <div class="line-title box">How to register with widgets: the <code>on</code> and <code>onDynamic</code>
+            routines
+        </div>
+        <div class="left box">
+    <pre><code class="ts">buttonBinder()
+  .on(this.button.nativeElement)
+  ...
+  .bind();</code></pre>
+            The <code>on</code> routine identifies the widgets on which the user interaction will operate.
+            <br/>
+            A binding can operate on several widgets:
+            <pre><code class="ts">buttonBinder()
+  .on(this.button1.nativeElement, this.button2.nativeElement)
+  ...
+  .bind();</code></pre>
+        </div>
+
+        <div class="center box">
+    <pre><code class="ts">longTouchBinder(2000)
+  .onDynamic(this.canvas.nativeElement)
+  ...
+  .bind();</code></pre>
+            The registration to widgets can be dynamic:<br/>
+            a binding can listen for changes in the children list of a given widget.
+            For each new child, the binding will operate on it.
+            For each removed child, the binding will not operate on it any more.
+        </div>
+
+        <div class="right box">
+    <pre><code class="ts">dndBinder()
+  .on(this.canvas.nativeElement)
+  ...
+  .bind();</code></pre>
+            <b>Optimization</b>: a user interaction does not listen for all the UI events that concern it.
+            <br/>
+            For example a DnD is an assembly of press, drag, release, and key type events.
+            The user interaction registers with the strictly necessary events at a given instant:
+            a DnD starts with a pressure, so that the interaction listens for a pressure event.
+            The pressure must be followed by moves, so that the interaction listens for move events only, etc.
+        </div>
+    </div>
+
+
+
+
+    <div class="item ts routine">
+        <div class="line-title box">Angular: using <code>on</code> with <code>ViewChildren</code></div>
+
+        <div class="left box">
+            Let's say you have a property in you Angular component that refers to a list of divs:
+            <pre><code class="ts">@ViewChildren('divs')
+private divs: QueryList&#60;ElementRef&#60;HTMLDivElement&#62;&#62;;</code></pre>
+
+To register all the <code>div</code> of <code>divs</code>, you can write this <code>on</code> routine:
+    <pre><code class="ts">clickBinder()
+  .on(...this.divs.toArray().map(e => e.nativeElement))
+  ....bind();</code></pre>
+  This converts the <code>queryList</code> as an array of <code>div</code> objects.
+        </div>
+
+        <!-- <div class="center box">
+        </div> -->
+
+        <!-- <div class="right box">
+        </div> -->
+    </div>
+
+
+
+    <div class="item ts routine">
+        <div class="line-title box">The routine <code>toProduce</code>: command creation</div>
+        <div class="left box">
+            <pre><code class="ts">dragLockBinder()
+   .toProduce(d => new Translate(d.getSrcObject())
+   ...bind();</code></pre>
+            The routine <code>toProduce</code> focuses on the production of a command.<br/>
+            This routine takes as argument an anonymous function that returns a command.<br/>
+            The binding calls the provided anonymous function while running to create a new command.<br/>
+            In the example, the routine <code>toProduce</code> is used to create <code>Translate</code> commands.
+        </div>
+
+        <!--        <div class="center box">-->
+        <!--        </div>-->
+
+        <!--        <div class="right box">-->
+        <!--        </div>-->
+    </div>
+
+
+
+
+    <div class="item ts start routine">
+        <div class="line-title box">How to filter user interaction data: the <code>when</code> routine (and <code>strictStart</code>)
+        </div>
+        <div class="left box">
+    <pre><code class="ts">longTouchBinder(2000)
+  .onDynamic(this.canvas.nativeElement)
+  .when(i => i.getSrcObject() instanceof SVGElement)
+  ...
+  .bind();</code></pre>
+            The <code>when</code> routine defines a contract that the user interaction data must fulfil to
+            create/execute a command.
+            On this example <code>when</code> checks that the interaction operates on an SVG element contained by the
+            canvas.
+            <br/>
+            If <code>when</code> is never true, the binding does not create or executed a command.<br/><br/>
+            The results of <code>when</code> may change during the execution of the interaction, for examples:<br/>
+            - it may be false on interaction start to be then true, so that the command is created only
+            <code>when</code> is true to be executed on when the interaction ends;
+            <br/>
+            - it may be true on interaction start to be then false, so that the command is first created (and possibly
+            updated), but never executed as <code>when</code> must be true at the end of the interaction for executing
+            the command.
+        </div>
+
+        <div class="center box">
+    <pre><code class="ts">dndBinder()
+  .onDynamic(this.canvas.nativeElement)
+  .when(i => i.getTgtObject() instanceof SVGElement)
+  .strictStart()
+  ...
+  .bind();</code></pre>
+            The <code>strictStart</code> routine requires the routine <code>when</code> to return true on interaction
+            start.
+            Otherwise the binding will cancel the ongoing user interaction.<br/>
+            For example with the code example, if the target object of the DnD is not an SVG element when the
+            interaction starts,
+            then the binding will cancel the DnD.
+        </div>
+
+<!--        <div class="right box">-->
+<!--        </div>-->
+    </div>
+
+
+
+
+    <div class="item ts routine">
+        <div class="line-title box">The routine <code>first</code>: interaction start</div>
+        <div class="left box">
+            <pre><code class="ts">dragLockBinder()
+   .toProduce(i => new Translate(d.getSrcObject())
+   .onDynamic(this.canvas.nativeElement)
+   .first((i, c) => i.getSrcObject().setEffect(new DropShadow()))
+   .bind();</code></pre>
+            A binding calls the <code>first</code> routine right after the instantiation of a command, when the interaction starts.<br/>
+            It takes as arguments the current interaction data (<code>i</code>) and the current command (<code>c</code>).<br/>
+            The goal of <code>first</code> is to update command parameters or to provide specific user feedback at the beginning of an interaction execution.<br/>
+            For example with the example, <code>first</code> applies a blurred-shadow effect on the object to be moved.
+        </div>
+
+        <!--        <div class="center box">-->
+        <!--        </div>-->
+
+        <!--        <div class="right box">-->
+        <!--        </div>-->
+    </div>
+
+
+
+
+    <div class="item ts routine">
+        <div class="line-title box">The routine <code>then</code>: interaction update</div>
+        <div class="left box">
+            <pre><code class="ts">dragLockBinder()
+   .toProduce(i => new Translate(i.getSrcObject())
+   .onDynamic(this.canvas.nativeElement)
+   .then((i, c) => c.setCoord(
+      c.getShape().getX() + i.getEndX() - i.getSrcX(),
+      c.getShape().getY() + i.getEndY() - i.getSrcY()))
+   .bind();</code></pre>
+            On each update of the running user interaction, the <code>then</code> routine is called.<br/>
+            This routine takes as arguments the current interaction data (<code>i</code>) and the current command (<code>c</code>).<br/>
+            The main goal of the then routine is to update the parameters of the ongoing command using the current interaction data.<br/>
+            In the example, <code>then</code> updates the translation vector to move an object.
+        </div>
+
+        <!--        <div class="center box">-->
+        <!--        </div>-->
+
+        <!--        <div class="right box">-->
+        <!--        </div>-->
+    </div>
+
+
+
+
+
+    <div class="item ts routine">
+        <div class="line-title box">The routine <code>end</code>, <code>cancel</code>, <code>endOrCancel</code>: Interaction Ends, Cancels, Ends or Canceled</div>
+        <div class="left box">
+            <pre><code class="ts">buttonBinder()
+   .toProduce(_i => new Clear())
+   .on(this.erase.nativeElement)
+   ....
+   .end((_c, _i) => this.status.nativeElement.textContent = 'Cleared')
+   .bind();</code></pre>
+            When the interaction ends, the binding calls the routine `end` (if the <code>when</code> predicate is respected).
+            This routine takes as arguments the current interaction data (<code>_i</code>) and the current command (<code>_c</code>).<br/>
+            In the example, <code>end</code> changes the text message of a text widget.
+        </div>
+
+        <div class="center box">
+            <pre><code class="ts">dndBinder(true)
+   .toProduce(_i => new MoveObject())
+   .on(this.canvas.nativeElement)
+   ....
+   .cancel(i => this.showCancelAnimation(i))
+   .bind();</code></pre>
+            Users can cancel some user interactions, such the DnD (when passing as argument <code>true</code> to specify that the interaction is cancellable).<br/><br/>
+            Using the DnD, pressing the <code>escape</code> key cancels the ongoing DnD: the interaction is stopped and reinitialized and the ongoing command aborted.<br/><br/>
+            So, when the interaction is cancelled the binding calls the routine <code>cancel</code>.<br/>
+            This routine takes as arguments the current interaction data (<code>i</code>).<br/>
+            In the example, <code>cancel</code> calls a method for showing an animation on the concerned node.
+        </div>
+
+        <div class="right box">
+            <pre><code class="ts">dndBinder(true)
+   ....
+   .endOrCancel(i => (i.getSrcObject() as HTMLElement).style.visibility = 'hidden')
+   .bind();</code></pre>
+            When the interaction ends or is cancelled, the binding calls the routine <code>endOrCancel</code> (if the <code>when</code> predicate is respected for <code>end</code>).<br/><br/>
+            This routine takes as arguments the current interaction data (<code>i</code>).<br/>
+            This routine does not replace <code>end</code> or <code>cancel</code>: the binding calls this routine right after <code>end</code> or <code>cancel</code>.<br/><br/>
+            In the example, <code>endOrCancel</code> changes the style of the source object of the DnD.
+        </div>
+    </div>
+
+
+
+
+
+    <div class="item ts routine">
+        <div class="line-title box">The routine <code>log</code>: logging</div>
+        <div class="left box">
+            <pre><code class="ts">nodeBinder()
+   ....
+   .log(LogLevel.interaction)
+   .bind();</code></pre>
+   Bindings support logging systems at different levels.<br/>
+   In the example the binding logs the user interaction execution. <br/>
+   This feature is useful for debugging a binding.
+        </div>
+
+        <div class="center box">
+            There exists three logging logging levels:
+            
+            <pre><code>LogLevel.interaction</code></pre>
+            This levels logs information related to the executiong of the user interaction.<br/><br/>
+
+            <pre><code>LogLevel.command</code></pre>
+            This levels logs information related to the production of commands.<br/><br/>
+
+            <pre><code>LogLevel.binding</code></pre>
+            This levels logs information related to the behavior of the binding.
+        </div>
+
+        <!--        <div class="right box">-->
+        <!--        </div>-->
+    </div>
+
+
+
+
+
+    <div class="item ts routine">
+        <div class="line-title box">The routine <code style="font-size: smaller;">stopImmediate</code> <code style="font-size: smaller;">Propagation</code></div>
+        <div class="left box">
+            <pre><code class="ts">swipeBinder(false, 200, 100, 20)
+   ....
+   .stopImmediatePropagation()
+   .bind();</code></pre>
+The routine <code>stopImmediatePropagation</code> follows the same idea that the method <code>stopImmediatePropagation</code> of the class <code>Event</code>:
+it stops the propagation of the current event processed by the user interaction to the next bindings (and their user interaction)
+        </div>
+
+        <div class="center box">
+            See the documentation related to <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/stopImmediatePropagation"><code>Event.stopImmediatePropagation()</code></a>
+        </div>
+
+        <div class="right box">
+            An example:
+            <pre><code class="ts">longTouchBinder(2000)
+    ....
+    // Consumes the events before the 
+    // multi-touch interaction use them
+    .stopImmediatePropagation()
+    .bind();
+          
+multiTouchBinder(2)
+    ....
+    .bind();</code></pre>
+    In this example the first binding consumes the touch event its long touch interaction will process.<br/>
+    This prevents the multi-touch interaction to start while doing a long touch.
+        </div>
+    </div>
+
+
+
+
+
+
+    <div class="item ts routine">
+        <div class="line-title box">The routine <code style="font-size: smaller;">preventDefault</code></div>
+        <div class="left box">
+            <pre><code class="ts">longTouchBinder(2000)
+   // Prevents the context menu to pop-up
+   .preventDefault()
+   .bind();</code></pre>
+The routine <code>preventDefault</code> follows the same idea that the method <code>preventDefault</code> of the class <code>Event</code>:
+it stops the default behavior of the browser on the event.<br/><br/>
+
+In the example, a long touch will lead the browser to show the context menu.
+The use of <code>preventDefault</code> prevents this default behavior.
+
+        </div>
+
+        <div class="center box">
+            See the documentation related to <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault"><code>Event.preventDefault()</code></a>
+        </div>
+
+        <!-- <div class="right box"> -->
+        <!-- </div> -->
+    </div>
+
+
+
+
+
+
+    <div class="item ts routine">
+        <div class="line-title box">The routine <code>throttle</code></div>
+        <div class="left box">
+This routine is not implemented in TypeScript yet (even if provided by the API, this has no effect).
+        </div>
+
+        <!-- <div class="center box"> -->
+        <!-- </div> -->
+
+        <!-- <div class="right box"> -->
+        <!-- </div> -->
+    </div>
+
+
+
+
+
+
+
+
+    <div class="item ts cmd">
+        <div class="line-title box">Anonymous command: <code>AnonCmd</code></div>
+        <div class="left box">
+    <pre><code class="ts">clickBinder()
+  .on(this.canvas.nativeElement)
+  .toProduce(i => new AnonCmd(() => {
+     console.log(i.getSrcClientX());
+  }))
+  .bind();</code></pre>
+            If you do not want to code your own command you can use the <code>AnonCmd</code> class.
+            This command takes as argument a lambda to be called on the execution of the command.
+            This lambda can use the interaction data.
+        </div>
+
+<!--        <div class="center box">-->
+<!--        </div>-->
+
+<!--        <div class="right box">-->
+<!--        </div>-->
+    </div>
+
+
+
+
+
+
+
+    <div class="item ts cmd start">
+        <div class="line-title box">Undo/Redo</div>
+        <div class="left box">
+<pre><code class="ts">export class DeleteAll
+    extends CommandBase implements Undoable {
+  private mementoContent: Array<Node> = [];
+
+  public constructor(private readonly svgDoc: SVGSVGElement) { super(); }
+
+  protected createMemento(): void {
+    this.mementoContent =
+        Array.from(this.svgDoc.children);
+  }
+
+  protected execution(): void {
+    this.redo();
+  }
+
+  public undo(): void {
+    this.mementoContent
+        .forEach(node => this.svgDoc.appendChild(node));
+  }
+
+  public redo(): void {
+    Array.from(this.svgDoc.children)
+        .forEach(node => node.remove());
+  }
+
+  public getUndoName(): string {
+    return 'Delete all the SVG elements';
+  }
+}</code></pre>
+            An undoable command has to implements the interface <code>Undoable</code>.<br/>
+            The command must then implements the methods <code>undo</code>, <code>redo</code>, and
+            <code>getUndoName</code>.
+            The method <code>getUndoName</code> is useful to display a message in undo/redo widgets such as
+            buttons.<br/><br/>
+            Developers do not directly call these methods:
+            when an undoable command is executed, the binding put it in a specific registry.
+            Developers should write bindings that use the predefined commands <code>Undo</code> and <code>Redo</code>,
+            as detailed in the examples on the right.
+        </div>
+
+        <div class="center box">
+<pre><code class="ts">buttonBinder()
+  .toProduce(() => new Undo())
+  .on(this.undoButton.nativeElement)
+  .bind();</code></pre>
+            To undo the latest executed undoable command, developers should define a dedicated binding.
+            This binding must use the predefined <code>Undo</code> command that asks to undoable commands registry to
+            undo its latest undoable command.
+            Once undone, the registry put this command on the top of a stack of redoable commands.
+        </div>
+
+        <div class="right box">
+<pre><code class="ts">buttonBinder()
+  .toProduce(() => new Redo())
+  .on(this.redoButton.nativeElement)
+  .bind();</code></pre>
+            To redo the latest undone command, developers should define a dedicated binding.
+            This binding must use the predefined <code>Redo</code> command that asks to undoable commands registry to
+            redo its latest undone command.
+            Once redone, the registry put this command on the top of a stack of undoable commands.
+        </div>
+    </div>
+
+
+
+    <div class="item ts interaction">
+        <div class="line-title box">Pressure, Click, Double-click</div>
+        <div class="left box">
+            <pre><code class="ts">pressBinder()....bind();</code></pre>
+            The <code>press</code> interaction refers to a single mouse pressure.
+        </div>
+
+        <div class="center box">
+            <pre><code class="ts">clickBinder()....bind();</code></pre>
+            The <code>click</code> interaction refers to a single mouse click.
+            For touch devices, see the <code>tap</code> interaction.
+        </div>
+
+        <div class="right box">
+            <pre><code class="ts">dbleClickBinder()....bind();</code></pre>
+            The <code>double click</code> interaction refers to double click made using a mouse.<br/>
+            Moving between the two clicks cancels the interaction<br/>
+            There is a maximal duration between the two clicks. By default this duration is 300 ms but one can change it.<br/>
+            For touch devices, see the <code>tap</code> interaction.
+        </div>
+    </div>
+
+
+    <div class="item ts interaction">
+        <div class="line-title box">Click, Pressure, etc.: how to use point data</div>
+        <div class="left box">
+Click-like interactions provide <code>PointData</code> interaction data:
+<img src="../img/pointData.svg" alt="pointdata" />
+<br/>
+The documentation of this interface is <a href="https://interacto.github.io/ts-docs/interfaces/_api_interaction_pointdata_.pointdata.html">defined here</a>.
+        </div>
+
+        <div class="center box">
+For example, if you want to get the HTML element at the origin of a click to get the value of its attribute <code>x</code>:
+<pre><code class="ts">clickBinder()
+  .toProduce(i => { // (i: PointData)
+    const elt = (i.getSrcObject() as Element).getAttribute('x');
+    ...
+  })....bind();
+</code></pre>
+This example uses <code>toProduce</code> but this works for any routine that provides an <code>i</code> parameter (eg <code>first</code>, <code>then</code>).
+        </div>
+
+        <div class="right box">
+
+        </div>
+    </div>
+
+
+
+
+
+    <div class="item ts interaction">
+        <div class="line-title box">DnD, Draglock</div>
+        <div class="left box">
+            <pre><code class="ts">dndBinder(true)....bind();</code></pre>
+            The <code>DnD</code> refers to a Drag-And-Drop interaction.<br/>
+            This DnD does not aim at dragging an object from a place to another one.
+            The DnD is the sequence of a mouse pressure, followed by a set of mouse moves (at least one), that ends with a mouse release.<br/>
+            This is up to the developer to decide what to do using the DnD.<br/><br/>
+            The DnD takes one boolean argument: is the DnD cancellable (<code>true</code>) or not (<code>false</code>)?
+            To cancel a DnD, press the key <code>escape</code>.
+        </div>
+
+        <div class="center box">
+            <pre><code class="ts">dragLockBinder()....bind();</code></pre>
+            The drag-lock interaction is a special kind of DnD.<br/>
+            A drag-lock starts by double-clicking on a source node.
+            The user can then move the locked node until she double-clicks again at the dropping location.<br/>
+            To cancel a drag-lock, press the key <code>escape</code>.
+        </div>
+
+       <div class="right box">
+           Using these two interactions, the variable <code>i</code> in the routines (the interaction data) is of type <code>SrcTgtPointsData</code>.<br/>
+        <img src="../img/srctgtpointdata.svg" alt="SrcTgtPointsData" />
+        <br/>
+        The documentation of this interface is <a href="https://interacto.github.io/ts-docs/interfaces/_api_interaction_srctgtpointsdata_.srctgtpointsdata.html">defined here</a>.
+       </div>
+    </div>
+
+
+    <div class="item ts interaction command routine">
+        <div class="line-title box">Drag-n-Drop (DnD) examples</div>
+        <div class="left box">
+            A drag-and-drop interaction follows this sequence of mouse events:<br/>
+            one pressure, one or several moves, one release.<br/>
+            Using Interacto, the routine <code>first</code> captures the instant when the DnD starts.<br/>
+            The routine <code>then</code> captures when the DnD is running (i.e. on move).<br/>
+            The routine <code>end</code> captures when the DnD stops (i.e. on release).<br/>
+            For example this binding draws a line in an HTML canvas 
+            (see <a href="https://stackoverflow.com/questions/62237719/implementing-undo-and-redo-in-canvas-whiteboard-using-typescript/64563793#64563793">the full example</a>):<br/>
+            <pre><code class="ts">const rect = this.canvas.nativeElement.getBoundingClientRect();
+dndBinder(false)
+  // The command to produce
+  .toProduce(() => new AddShape(this.canvas.nativeElement))
+  // What to do when the interaction starts
+  .first((c: AddShape, i: SrcTgtTouchData) => {
+    // Note that i refers to the current data of the DnD.
+    // See the class diagram of SrcTgtTouchData above.
+    // And c refers to the ongoing command that can be updated here
+    c.shape.lines.push([i.getSrcClientX() - rect.left, i.getSrcClientY() - rect.top]);
+  })
+  // What to do when the interaction updates
+  .then((c: AddShape, i: SrcTgtTouchData) => {
+    // The values of 'i' change on each change of the DnD
+    c.shape.lines.push([i.getTgtClientX() - rect.left, i.getTgtClientY() - rect.top]);
+  })
+  // When the interaction stops
+  .end((c: AddShape, i: SrcTgtTouchData) => {
+    //...
+  })
+  // On which widget the interaction operates
+  .on(this.canvas.nativeElement)
+  // continuous execution means that the command is executed each time the interaction updates
+  .continuousExecution()
+  .bind();</code></pre>
+        </div>
+
+        <div class="center box">
+            The command used in the previous box is partly defined as follows:
+            <pre><code class="ts">export class AddShape extends CommandBase implements Undoable {
+  shape: Shape;
+  mementoData: ImageData;
+
+  constructor(private canvas: HTMLCanvasElement) {
+    this.shape = new Shape();
+  }
+  protected createMemento() {
+    const rect = this.canvas.getBoundingClientRect();
+    this.mementoData = this.canvas.getContext('2d').getImageData(0, 0, rect.width, rect.height);
+  }
+  protected execution(): void {
+    const cx = this.canvas.getContext('2d');
+    cx.beginPath();
+    cx.moveTo(this.shape.lines[this.shape.lines.length - 2][0], this.shape.lines[this.shape.lines.length - 2][1]);
+    cx.lineTo(this.shape.lines[this.shape.lines.length - 1][0], this.shape.lines[this.shape.lines.length - 1][1]);
+    cx.stroke();
+  }
+  canExecute(): boolean {
+    return this.shape.lines.length > 1;
+  }
+  redo(): void {
+    this.drawShape();
+  }
+  undo(): void {
+    this.canvas.getContext('2d').putImageData(this.mementoData, 0, 0);
+  }
+  // ...
+}}</code></pre>
+        </div>
+
+       <!-- <div class="right box">
+       </div> -->
+    </div>
+
+
+
+
+
+    <div class="item ts interaction">
+        <div class="line-title box">N-clicks</div>
+        <div class="left box">
+            <pre><code class="ts">clicksBinder(3)....bind();</code></pre>
+            The N-clicks interaction permits a user to click N times.<br/>
+            For example, a double-click refers to <code>clicksBinder(2)</code>.
+            An N-click interaction stops after a delay of 1 second without any click.<br/>
+            For example, if one clicks two times and stops for one second, the binding based on <code>clicksBinder(3)</code> does not produce any command.<br/>
+            if one clicks three times, the same binding produces one command.<br/>
+            if one clicks four times and stops for one second, this binding produces one command.
+        </div>
+
+        <div class="center box">
+            Using an N-clicks interaction, the variable <code>i</code> in the routines (the interaction data) is of type <code>PointsData</code>.<br/>
+            <img src="../img/pointsdata.svg" alt="PointsData" />
+            <br/>
+        The documentation of this interface is <a href="https://interacto.github.io/ts-docs/interfaces/_api_interaction_pointsdata_.pointsdata.html">defined here</a>.
+        </div>
+
+       <!-- <div class="right box">
+       </div> -->
+    </div>
+
+
+
+
+    <div class="item ts interaction">
+        <div class="line-title box">Long pressure</div>
+        <div class="left box">
+            <pre><code class="ts">longPressBinder(2000)...bind();</code></pre>
+            The interaction <code>long pressure</code> is similar to a long touch but using a mouse instead of a touch device.
+            The expected duration of the pressure is the argument of the binder (here 2000 ms).
+        </div>
+
+        <!-- <div class="center box">
+        </div> -->
+
+       <!-- <div class="right box">
+       </div> -->
+    </div>
+
+
+
+
+
+    <div class="item ts interaction">
+        <div class="line-title box">Tap, Multi-touch, Touch DnD</div>
+        <div class="left box">
+            <pre><code class="ts">tapBinder(3)....bind();</code></pre>
+            The <code>tap</code> interaction consists in a set of successive taps.<br/>
+            This interaction has a single argument: the number of taps expected to end the interaction.
+            If this number of taps is not reached after a timeout (1 second by default), the interaction is cancelled.<br/>
+            The timeout (re-)starts after each tap. So a user does not have to do the interaction in one second.
+            A user have to do not next tap before one second after the last tap.
+            A user does not have to tap on the same exact location.
+        </div>
+
+        <div class="center box">
+            <pre><code class="ts">multiTouchBinder(2)....bind();</code></pre>
+            The <code>multi-touch</code> interaction implies the pressure of specific number of touches.
+            The number of required touches is the argument of the binder (here 2 touches).<br/>
+            A multi-touch starts when all its required touches have started.
+            Touches can move.
+            A multi-touch ends when the number of required touches is greater than the number of touches.<br/>
+            For example with the example, after the two touch pressures, if the user releases one of it the interaction stops.
+        </div>
+
+        <div class="right box">
+            <pre><code class="ts">touchDnDBinder()....bind();</code></pre>
+            The <code>touch DnD</code> interaction is a drag-and-drop interaction performed using one touch point.<br/>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="item ts interaction">
+        <div class="line-title box">Long Touch, Swipe, Pan</div>
+        <div class="left box">
+<pre><code class="ts">longTouchBinder(2000)...bind();</code></pre>
+        The interaction <code>long touch</code> refers to a long touch, which duration is the argument of the binder (here 2000 ms).
+        </div>
+
+        <div class="center box">
+            <pre><code class="ts">panBinder(true, 500, 50)...bind();</code></pre>
+            The <code>pan</code> interaction is a directional one-touch gesture.
+            Using one touch pressure, the user drags it in a specific direction to reach a minimal distance.<br/><br/>
+            The first argument is the direction: <code>true</code>: horizontal pan; <code>false</code>: vertical pan.<br/>
+            The second argument is the minimal distance from the starting point to the release point for validating the pan.<br/>
+            The last argument is tolerance rate in pixels accepted while executing the pan.
+        </div>
+
+        <div class="right box">
+            <pre><code class="ts">swipeBinder(true, 300, 500, 50)...bind();</code></pre>
+            The <code>swipe</code> interaction is a special kind of the <code>pan</code> interaction.
+            Using one touch pressure, the user drags it in a specific direction and with a specific velocity to reach a minimal distance.<br/><br/>
+            The first argument is the direction: <code>true</code>: horizontal swipe; <code>false</code>: vertical swipe.<br/>
+            The second argument is the minimal velocity to reach for validating the swipe. In pixels per second.<br/>
+            The third argument is the minimal distance from the starting point to the release point for validating the swipe.<br/>
+            The last argument is tolerance rate in pixels accepted while executing the swipe.
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="item ts interaction routine">
+        <div class="line-title box">Keyboard interactions and the <code>with</code> routine</div>
+        <div class="left box">
+<pre><code class="ts">keyTypeBinder(false)
+  .with('KeyC')
+  ...
+  .bind();</code></pre>
+            Keyboard interactions have a specific (optional) routine <code>with</code>.<br/>
+            In the example, the binding operates only if the <code>c</code> key is used.
+            This refers to the <code>code</code> of the keyboard event.<br/><br/>
+            The interaction <code>key type</code> refers to a key typing.
+        </div>
+
+        <div class="center box">
+<pre><code class="ts">keysTypeBinder()
+  .with('KeyC', 'KeyL', 'KeyE', 'KeyA', 'KeyR')
+  ...
+  .bind();</code></pre>
+            You can define several codes in the <code>with</code> routine.
+            In this example the user have to type the keys 'c' 'l' 'e' 'a' 'r' (in any order) to produce the
+            command.<br/><br/>
+            The <code>keys type</code> interaction refers to a sequence of key typed that ends after a delay of 1
+            second:
+            if 1 second elapses after the last key typing, the interaction ends.
+            This permits to write a sequence and to then execute a command.
+        </div>
+
+        <div class="right box">
+<pre><code class="ts">keyPressBinder(false)
+  ...
+  .bind();</code></pre>
+            The <code>key press</code> interaction refers to a pressure of a key.
+            This interaction takes one boolean argument: does the interaction have to capture key modifier events
+            (true).
+        </div>
+    </div>
+
+
+
+
+
+    <div class="item ts interaction">
+        <div class="line-title box">Button, Checkbox, Color</div>
+        <div class="left box">
+            <pre><code class="ts">buttonBinder()....bind();</code></pre>
+            The combox box interaction refers to the use of an HTML <code>button</code>.
+        </div>
+
+        <div class="center box">
+            <pre><code class="ts">checkboxBinder()....bind();</code></pre>
+            The combox box interaction refers to the use of an HTML <code>input</code> of type <code>checkbox</code>.
+        </div>
+
+        <div class="right box">
+            <pre><code class="ts">colorPickerBinder()....bind();</code></pre>
+            The combox box interaction refers to the use of an HTML <code>input</code> of type <code>color</code>.
+        </div>
+    </div>
+
+
+
+
+
+    <div class="item ts interaction">
+        <div class="line-title box">Combobox, Date, Hyperlink</div>
+        <div class="left box">
+            <pre><code class="ts">comboBoxBinder()....bind();</code></pre>
+            The combox box interaction refers to the use of an HTML <code>select</code> widget.
+        </div>
+
+        <div class="center box">
+            <pre><code class="ts">dateBinder()....bind();</code></pre>
+            The combox box interaction refers to the use of an HTML date widget.
+        </div>
+
+        <div class="right box">
+            <pre><code class="ts">hyperlinkBinder()....bind();</code></pre>
+            The combox box interaction refers to the use of an HTML <code>anchor</code>.
+        </div>
+    </div>
+
+
+
+
+
+    <div class="item ts interaction command">
+        <div class="line-title box">Text Input, Spinner, Scroll</div>
+        <div class="left box">
+<pre><code class="ts">textInputBinder()
+  .on(this.textarea.nativeElement)
+  ...
+  .bind();</code></pre>
+            The text input interaction refers to the use of a text input widget (eg a <code>textarea</code>).<br/>
+            <b>Warning</b>: the binding triggers the command after a delay of 1 second after the last key interaction from the user 
+            (the delay can be changed: <code>textInputBinder(2)</code> uses a delay of 2 seconds). 
+        </div>
+
+        <div class="center box">
+<pre><code class="ts">textInputBinder()
+  .on(this.code.nativeElement)
+  .toProduce(() => new UpdateCode(this.http, this.dataSource))
+  .then((c: UpdateCode, i: WidgetData&#60;HTMLInputElement | HTMLTextAreaElement&#62;) => {
+    c.code = i.getWidget().value;
+  })
+  .bind();</code></pre>
+  In this code, the timeout delay of the text input interaction is 3 seconds.<br/><br/>
+  Each time the user types text (and when the interaction stops) the routine <code>then</code> is called (developers can for example update the command).<br/><br/>
+  The documentation of the <code>WidgetData</code> interaction data <a href="https://interacto.github.io/ts-docs/interfaces/_api_interaction_widgetdata_.widgetdata.html">is here</a>.
+  <img src="../img/widgetData.svg" alt="widgetdata" />
+        </div>
+
+        <div class="right box">
+<pre><code class="ts">export class UpdateCode extends CommandBase {
+  code: string;
+  constructor(private readonly http: HttpClient, 
+    private dataSource: MatTreeNestedDataSource<ASTNode>){}
+
+  protected execution(): void {
+    this.http
+      .post('spoon/ast', { code: this.code })
+      .subscribe((ast: ASTNode) => {
+        this.dataSource.data = [ast];
+      });
+  }
+}</code></pre>
+This code is another example of a command (the command used in the next-door box).<br/>
+It shows how one can send REST queries from commands.<br/>
+<code>dataSource</code> is the data source of an Angular Material tree.
+        </div>
+    </div>
+    
+    <div class="item ts interaction">
+        <div class="line-title box">Spinner, Scroll</div>
+        <div class="left box">
+<pre><code class="ts">spinnerBinder()
+  .on(this.inputElt.nativeElement)
+  ...
+  .bind();</code></pre>
+            The <code>spinner</code> interaction refers to the use of an HTML input element.
+        </div>
+
+        <div class="center box">
+<pre><code class="ts">scrollBinder()
+  ...
+  .bind();</code></pre>
+            The <code>scroll</code> interaction refers to scrolling.
+        </div>
+
+<!--        <div class="right box">-->
+<!--        </div>-->
+    </div>
+
+
+
+
+
+    <div class="item ts irl">
+        <div class="line-title box">stackoverflow questions</div>
+        <div class="left box">
+            <h3>Undo/redo in an Angular canvas whiteboard</h3>
+            In this <a href="https://stackoverflow.com/questions/62237719/implementing-undo-and-redo-in-canvas-whiteboard-using-typescript/64563793">stackoverflow question</a> 
+            we show how to create two undoable commands (to add and erase shapes), and how to use them on an HTML canvas in an Angular app.
+        </div>
+
+        <!-- <div class="center box"> -->
+        <!-- </div> -->
+
+        <!-- <div class="right box"> -->
+        <!-- </div> -->
+    </div>
+
+
+
+    <div class="item ts irl">
+        <div class="line-title box">Demonstration apps</div>
+        <div class="left box">
+            We developed <a href="https://github.com/interacto/example-angular">an Angular app</a> to illustrate the different features.<br/><br/>
+        </div>
+
+        <!-- <div class="center box"> -->
+        <!-- </div> -->
+
+        <!-- <div class="right box"> -->
+        <!-- </div> -->
+    </div>
+
+
+    <div class="item jfx irl">
+        <div class="line-title box">Applications that use Interacto</div>
+        <div class="left box">
+            <h3>LaTeXDraw</h3>
+            <a href="https://github.com/latexdraw/latexdraw">A vector drawing editor for LaTeX</a>
+        </div>
+
+        <div class="center box">
+            <h3>Spoon Visualisation</h3>
+            <a href="https://github.com/INRIA/spoon/tree/master/spoon-visualisation">A tool for visualizing Java (Spoon) ASTs (abstract syntax tree)</a>.<br/>
+        </div>
+
+        <!-- <div class="right box"> -->
+        <!-- </div> -->
+    </div>
+
+
+</div>
+
+
+<script src="js/interacto.js" type="text/javascript"></script>
+</body>
+</html>
+

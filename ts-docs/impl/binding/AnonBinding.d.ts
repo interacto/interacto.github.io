@@ -1,0 +1,31 @@
+import type { InteractionData } from "../../api/interaction/InteractionData";
+import { LogLevel } from "../../api/logging/LogLevel";
+import { BindingImpl } from "./BindingImpl";
+import type { Command } from "../../api/command/Command";
+import type { Interaction } from "../../api/interaction/Interaction";
+import type { UndoHistory } from "../../api/undo/UndoHistory";
+import type { Logger } from "../../api/logging/Logger";
+export declare class AnonBinding<C extends Command, I extends Interaction<D>, D extends InteractionData> extends BindingImpl<C, I, D> {
+    private readonly firstFn?;
+    private readonly thenFn?;
+    private readonly whenFn?;
+    private readonly cancelFn?;
+    private readonly endOrCancelFn?;
+    private readonly hadEffectsFn?;
+    private readonly hadNoEffectFn?;
+    private readonly cannotExecFn?;
+    private readonly onEndFn?;
+    private readonly onErrFn?;
+    constructor(continuousExec: boolean, interaction: I, undoHistory: UndoHistory, logger: Logger, cmdSupplierFn: (d: D) => C, widgets: ReadonlyArray<EventTarget>, dynamicNodes: ReadonlyArray<Node>, strict: boolean, loggers: ReadonlyArray<LogLevel>, timeoutThrottle: number, stopPropagation: boolean, prevDefault: boolean, firstFn?: (c: C, i: D) => void, thenFn?: (c: C, i: D) => void, whenFn?: (i: D) => boolean, endFn?: (c: C, i: D) => void, cancelFn?: (i: D) => void, endOrCancelFn?: (i: D) => void, hadEffectsFn?: (c: C, i: D) => void, hadNoEffectFn?: (c: C, i: D) => void, cannotExecFn?: (c: C, i: D) => void, onErrFn?: (ex: unknown) => void, name?: string);
+    private configureLoggers;
+    first(): void;
+    then(): void;
+    end(): void;
+    cancel(): void;
+    endOrCancel(): void;
+    ifCmdHadNoEffect(): void;
+    ifCmdHadEffects(): void;
+    ifCannotExecuteCmd(): void;
+    when(): boolean;
+    catch(err: unknown): void;
+}

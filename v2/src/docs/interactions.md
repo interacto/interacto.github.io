@@ -81,7 +81,7 @@ Using these two interactions, the variable `i` in the routines (the interaction 
     <img src="srctgtpointdata.png" alt="SrcTgtPointData class diagram"/>
 </div>
 
-The documentation of this interface is defined [here](https://interacto.github.io/docs/interfaces/srctgtpointsdata.html).
+The documentation of this interface is defined [here](https://interacto.github.io/ts-docs/interfaces/srctgtpointsdata.html).
 
 ## Keyboard interactions and the `with` routine
 

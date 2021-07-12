@@ -19,8 +19,16 @@ h1 {
 }
 
 h2 {
-    padding-top: 75px;
-    margin-top: -75px;
+    /* Makes room above the heading for the header bar when an anchor link is used to go to his heading */
+    padding-top: 65px;
+    /* Pushes the gap created by the padding upwards to hide it. */
+    /* At least part of the gap has to stay visible because the area covered by the padding blocks interactions on
+    the elements behind it.*/
+    margin-top: -20px;
+}
+
+h3 {
+    margin-top: 30px;
 }
 
 /*Local rules*/

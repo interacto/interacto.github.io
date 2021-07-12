@@ -14,11 +14,6 @@ ngAfterViewInit(): void {
 }
 ```
 
-```java
-    // This is only to demonstrate the collapsing feature, no code here.
-```
-
-
 The binding operates on `clearButton` to produce a command `ClearText`. Bindings are defined in `ngAfterViewInit` of the component.
 The binding manages the (un-)registration with the button, the creation of the command on each button click, and the move of the executed commands in a commands registry for undo/redo purposes.
 

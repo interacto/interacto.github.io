@@ -3,9 +3,15 @@ title: "Commands/Undo"
 index: 4
 ---
 
-## Commands
+In Interacto, actions triggered by user interactions are represented by **commands**.
+Each command is a class with methods indicating how to execute, and if necessary how to undo and redo an action.
+This makes them easily reusable across your code and projects, and gives you access to Interacto's undo/redo system.
 
-### Anonymous command: AnonCmd
+Commands all implement the `Command` interface, and the `Undoable` interface if they are undoable.
+The simplest way to create a new command is to create a new class inheriting the provided `CommandBase` class, or, if the command
+must be undoable, the `UndoableCommand` class.
+
+## Anonymous command: AnonCmd
 
 ```ts
 clickBinder()
@@ -18,7 +24,7 @@ clickBinder()
 
 If you do not want to code your own command and prefer to use an anonymous function instead you can use the `AnonCmd` class.
 This command takes as argument a lambda to be called on the execution of the command.
-This lambda can use the interaction data `i`.
+This lambda can use the [interaction data `i`](/routines#the-i-argument).
 
 ## Undo/Redo
 

@@ -45,6 +45,12 @@ multiTouchBinder(3)
 The `then` routine (and many others) takes an argument called `c`.
 `c` refers to the ongoing command, allowing you to update it during the interaction.
 
+## Where to begin: selecting a user interaction
+
+When configuring a binding, the first routine allows you to decide which user interaction to use.
+See the [interaction documentation](./interactions) for details.
+
+
 ## How to register with widgets: the `on` and `onDynamic` routines
 
 ```ts
@@ -218,7 +224,7 @@ In the example, `end` changes the text message of a text widget when a button is
 the execution of a command that clears the contents of a text field.
 
 ```ts
-    buttonBinder()
+buttonBinder()
     .toProduce(_i => new Clear())
     .on(this.erase.nativeElement)
     ...
@@ -318,7 +324,7 @@ In this example, pressing the button executes a command that tries to purchase a
 funds are insufficient.
 
 ```ts
-    buttonBinder()
+buttonBinder()
     .toProduce(i => new PurchaseItem())
     .on(this.myButton.nativeElement)
     ...

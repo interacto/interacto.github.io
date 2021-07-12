@@ -3,21 +3,27 @@ title: "Interactions"
 index: 3
 ---
 
+Interacto supports a wide range of user interactions, whether they involve keyboard, mouse or touchscreen events.
+
 ## How to select a user interaction
+
+The first [routine](./routines) in the binding configuration process allows you to select a user interaction.
+For each user interaction provided by Interacto, a dedicated routine exists.
+For example, `clickBinder()` to use a click interaction for the binding:
 
 ```ts
 clickBinder()
   ...
   .bind();
 ```
-The user interaction selection is the goal of the first binding routine. For each user interaction provided by Interacto,
-a dedicated routine exists. Here `clickBinder()` for a click interaction.
 
 Routines for standard user interactions:
-`buttonBinder, checkboxBinder, colorPickerBinder, comboBoxBinder, spinnerBinder, dateBinder, hyperlinkBinder, textInputBinder`
+`buttonBinder, checkboxBinder, colorPickerBinder, comboBoxBinder, spinnerBinder, dateBinder,
+hyperlinkBinder, textInputBinder`.
 
 Routines for standard mouse-based interactions:
-`clickBinder, dbleClickBinder, pressBinder, scrollBinder, dndBinder, dragLockBinder`
+`clickBinder, dbleClickBinder, pressBinder, scrollBinder, dndBinder, dragLockBinder,
+mousemoveBinder, mouseoutBinder, mouseoverBinder`.
 
 Some of these routines will be covered in the following sections.
 
@@ -59,8 +65,11 @@ dndBinder(true)
 ```
 
 The DnD refers to a Drag-And-Drop interaction.
-This DnD does not aim at dragging an object from a place to another one. The DnD is the sequence of a mouse pressure, followed by a set of mouse moves (at least one), that ends with a mouse release.
-This is up to the developer to decide what to do using the DnD.
+Note that the goal of the DnD is not to drag an element from a place to another.
+A DnD is a sequence composed of a mouse button pressure, followed by a set of mouse movements(at least one),
+that ends with a mouse button release.
+It is up to the developer to decide what to do using the DnD: it could be used to move elements,
+but also for totally different purposes.
 
 The DnD takes one boolean argument: is the DnD cancellable (`true`) or not (`false`)? To cancel a DnD, press the key `escape`.
 
@@ -77,8 +86,8 @@ To cancel a drag-lock, press the key `escape`.
 Using these two interactions, the variable `i` in the routines (the interaction data) is of type `SrcTgtPointsData`.
 
 
-<div style="width: 300px; margin-left: auto; margin-right: auto">
-    <img src="srctgtpointdata.png" alt="SrcTgtPointData class diagram"/>
+<div style="width: 500px; margin-left: auto; margin-right: auto">
+    <img src="srctgtpointdata2.png" alt="SrcTgtPointData class diagram"/>
 </div>
 
 The documentation of this interface is defined [here](https://interacto.github.io/ts-docs/interfaces/srctgtpointsdata.html).

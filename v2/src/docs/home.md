@@ -14,6 +14,8 @@ of this documentation, but both implementations are fairly similar. While most o
 that you are using Angular with the TypeScript implementation of Interacto, Interacto can also be used with
 Vue.js or React.
 
+If you are discovering Interacto, make sure to take a look at our [Getting Started](./how-to-start) page.
+
 
 ## Academic usage
 

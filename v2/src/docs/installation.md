@@ -4,6 +4,17 @@ index: 1
 ---
 
 ## Angular and npm
+
+[interacto-angular](https://github.com/interacto/interacto-angular)
+provides tools for using Interacto within Angular projects,
+in particular Angular directives and DI.
+
+```bash
+npm install interacto
+npm install interacto-angular
+```
+
+## Vue.js/React and npm
 ```bash
 npm install interacto
 ```
@@ -29,5 +40,5 @@ npm install interacto
 </dependency>
 ```
 
-The library interacto-javafx-test is dedicated to JavaFX front-end testing.
+The interacto-javafx-test library is dedicated to JavaFX front-end testing.
 

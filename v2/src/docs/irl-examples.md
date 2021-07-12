@@ -3,11 +3,14 @@ title: "IRL Examples"
 index: 7
 ---
 
-## With TypeScript / Angular
+## With TypeScript
 
 ### Demonstration apps
 
 We developed an [Angular app](https://github.com/interacto/example-angular) to illustrate the different features.
+[Vue.js](https://github.com/interacto/example-vuejs)
+and [React](https://github.com/interacto/example-react)
+versions are also available.
 
 ### Stack Overflow questions
 

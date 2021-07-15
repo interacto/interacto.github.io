@@ -150,18 +150,26 @@ simply omitted the `with` routine.
 ```ts
 keyTypeBinder()
     .on(window.document.body)
-    .with('KeyC')
+    .with(false, 'c')
     ...
     .bind();
 ```
 
-Here, `.on(window.document.body)` allows us to specify that we want the keyboard event to be captured at the highest level
+The first argument for `with` specifies whether the strings specified correspond to key values, or to key codes.
+If true, the strings are considered to be key codes.
+Key codes, unlike key values, don't take into account the user's actual keyboard layout. Both the "Q" key on QWERTY
+keyboards and the "A" key on AZERTY keyboards have the same "KeyQ" key code, because they share the same physical position
+on a keyboard. When using key values on the other hand, a key marked "Q" will return "q" and a key marked "A" will return "a",
+regardless of the keyboard layout. Refer to the [KeyboardEvent](https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent) 
+documentation for more information on the difference between the two.
+
+`.on(window.document.body)` allows us to specify that we want the keyboard event to be captured at the highest level
 in the page hierarchy, in order to be sure to not miss it. Keyboard events are triggered on the currently selected element,
 which means that if your interaction is not configured to target the right one, you might miss them.
 But thanks to [event bubbling](https://developer.mozilla.org/fr/docs/Learn/JavaScript/Building_blocks/Events#Event_bubbling_and_capture), 
 events are also transmitted to the source element's parent and to their parent's parent, until they reach the highest level at the root
-of the document. If we want to capture the key press no matter which element was selected by the user (which is the
-case in most situations), this will ensure that we get the expected behaviour.
+of the document. If we want to capture the key press no matter which element was selected by the user,
+this will ensure that we get the expected behaviour.
 
 The `key type` interaction corresponds to the user pressing, then releasing a single key. The similar `key press` interaction
 corresponds to the user pressing a key and triggers the command without waiting for the key to be released.
@@ -193,7 +201,7 @@ In the following example the user has to type the keys 'c', 'l', 'e', 'a' and 'r
 ```ts
 keysTypeBinder()
     .on(window.document.body)
-    .with('KeyC', 'KeyL', 'KeyE', 'KeyA', 'KeyR')
+    .with(true, 'KeyC', 'KeyL', 'KeyE', 'KeyA', 'KeyR')
     ...
     .bind();
 ```

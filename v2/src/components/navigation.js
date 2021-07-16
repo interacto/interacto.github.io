@@ -76,7 +76,7 @@ export default function Navigation() {
                             <li key={page.slug}>
                                 {page.headings.length > 0 ?
                                     // If there are any sections (h2-level headings) for the page, then we create a submenu with a link to each section
-                                    <CollapsibleMenu title={page.frontmatter.title} isOpened={false} headerUrl={'/' + page.slug}>
+                                    <CollapsibleMenu title={page.frontmatter.title} isOpened={false} hasContent={true} headerUrl={'/' + page.slug}>
                                         <div className={submenu}>
                                             {page.headings.map(heading =>
                                                 // Creates a button linking to one of the sections of the page for every section
@@ -88,7 +88,8 @@ export default function Navigation() {
                                         </div>
                                     </CollapsibleMenu>
                                     : // If there are no sections (h2-level headings), then no section links are created
-                                    <button onClick={()=> navigate('/' + page.slug)}>{page.frontmatter.title}</button>
+                                    <CollapsibleMenu title={page.frontmatter.title} isOpened={false} hasContent={false} headerUrl={'/' + page.slug}>
+                                    </CollapsibleMenu>
                                 }
                             </li>
                         )}

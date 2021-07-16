@@ -30,24 +30,28 @@ class CollapsibleMenu extends  React.Component {
 
                     <span className={chevron}>
                         <button onClick={(e)=>this.handleClick(e)}>
-                            {this.state.open ? ( // Displays the chevrons depending on the state of the collapsible
-                                <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-down" width="15"
-                                     height="15" viewBox="0 0 20 20" strokeWidth="2" stroke="#000000" fill="none" strokeLinecap="round"
-                                     strokeLinejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                    <polyline points="6 9 12 15 18 9"/>
-                                </svg>
-                            ) : <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-right"
-                                     width="15" height="15" viewBox="0 0 20 20" strokeWidth="2" stroke="#000000" fill="none"
-                                     strokeLinecap="round" strokeLinejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                <polyline points="9 6 15 12 9 18"/>
-                            </svg>
+                            {this.props.hasContent ? // Displays the chevrons if the collapsible has contents
+                                this.state.open ? ( // Displays the chevrons depending on the state of the collapsible
+                                        <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-down" width="15"
+                                             height="15" viewBox="0 0 20 20" strokeWidth="2" stroke="#000000" fill="none" strokeLinecap="round"
+                                             strokeLinejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <polyline points="6 9 12 15 18 9"/>
+                                        </svg>
+                                    ) : <svg xmlns="http://www.w3.org/2000/svg" className="icon icon-tabler icon-tabler-chevron-right"
+                                             width="15" height="15" viewBox="0 0 20 20" strokeWidth="2" stroke="#000000" fill="none"
+                                             strokeLinecap="round" strokeLinejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                        <polyline points="9 6 15 12 9 18"/>
+                                    </svg>
+                                :
+                                <></>
                             }
+
                         </button>
                     </span>
                 </div>
-                {this.state.open ? ( // Displays the contents of the collapsible if its is expanded
+                {this.state.open && this.props.hasContent ? ( // Displays the contents of the collapsible if its is expanded
                     <div className={content}>
                         {this.props.children}
                     </div>

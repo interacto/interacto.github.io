@@ -4,7 +4,12 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-image`,
-    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        icon: 'src/images/interacto-logo.png'
+      }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-remark-images`,
     {

@@ -70,6 +70,18 @@ buttonBinder()
     .bind();
 ```
 
+Note: the `on` routine is cumulative, therefore you could also write the same binder by combining two `on` routines
+instead of using just one (see the following example). This behaviour is unique to `on` and `when`:
+with other routines, using the same routine twice in the same binder will lead to the second one overriding the first one.
+
+```ts
+buttonBinder()
+    .on(this.button1.nativeElement)
+    .on(this.button2.nativeElement)
+    ...
+    .bind();
+```
+
 The registration to widgets can be dynamic:
 a binding can listen for changes in the children list of a given widget.
 When new children are added, the binding will operate on them.
@@ -158,6 +170,20 @@ In this case, the command is created when `when` becomes true and is executed wh
 - It may be true when the interaction starts, but then become false.
 In this case, the command is created (and possibly updated) at the beginning of the interaction,
 but never executed as `when` must be true at the end of the interaction in order to execute the command.
+
+`when` is also cumulative: if the `when` routine is used several times in the same binder, the conditions
+from each routine are combined.
+
+```ts
+longTouchBinder(2000)
+    .onDynamic(this.canvas.nativeElement)
+    .when(i => conditionA)
+    .when(i => conditionB)
+    ...
+    .bind();
+```
+
+In this example, a command will only be executed if conditionA **and** conditionB are true.
 
 ### The `strictStart` routine
 

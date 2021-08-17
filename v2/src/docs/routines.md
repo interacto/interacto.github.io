@@ -19,7 +19,8 @@ multiTouchBinder(3)
     .bind();
 ```
 
-Routines take different arguments, the two most common being `i` and `c`.
+Many routines accept an arrow function as an argument, that will be called when the routine is executed.
+Arrow functions in routines take different arguments, the two most common being `i` and `c`.
 
 ### The `i` argument
 
@@ -44,6 +45,29 @@ multiTouchBinder(3)
 
 The `then` routine (and many others) takes an argument called `c`.
 `c` refers to the ongoing command, allowing you to update it during the interaction.
+
+## Cumulative routines
+
+Most routines that take arguments, like routines accepting
+an arrow function (`when`, `first`, `then`, `cancel`...) or the `on` routine are cumulative.
+This means that if you use the same routine several times in one binder, their effects will be combined.
+For example, in the case of routines accepting arrow functions, the respective the arrow functions will all
+be called when the routine is called, in the order they were declared.
+
+```ts
+longTouchBinder(2000)
+    .onDynamic(this.canvas.nativeElement)
+    .first(() => console.log('A'))
+    .first(() => console.log('B'))
+    ...
+    .bind();
+```
+
+In this example, 'A', then 'B', are displayed in the console when the interaction starts.
+
+If a routine is not cumulative, then the last use of the routine in the binder will override any previous ones.
+However, most non-cumulative routines like `stopImmediatePropagation` or `preventDefault` don't accept any arguments, so
+using the same routine several times in this case will have no visible impact.
 
 ## Where to begin: selecting a user interaction
 

@@ -99,11 +99,12 @@ mousemoveBinder()
     .bind();
 ```
 
-## DnD, Draglock
+## DnD, Touch DnD, Draglock
+### DnD and Reciprocal DnD
 
 The DnD refers to a Drag-And-Drop interaction.
 Note that the goal of the DnD is not to drag an element from a place to another.
-A DnD is a sequence composed of a mouse button pressure, followed by a set of mouse movements(at least one),
+A DnD is a sequence composed of a mouse button pressure, followed by a set of mouse movements (at least one),
 that ends with a mouse button release.
 It is up to the developer to decide what to do using the DnD: it could be used to move elements,
 but also for totally different purposes.
@@ -115,6 +116,67 @@ dndBinder(true)
     ...
     .bind();
 ```
+
+There also is a second method available to cancel a DnD. If the mouse button is released over an element with the
+"ioDwellSpring" class, the interaction is cancelled. This feature is demonstrated by the Reciprocal DnD interaction,
+in which a special spring widget appears when the user stops moving their mouse during a DnD, to allow them to cancel
+the interaction.
+
+In this example, we used the Reciprocal DnD to allow the user to move a rectangle around and cancel the interaction
+at any time by releasing the mouse cursor over the red handle element. The rectangle then returns to its previous position.
+
+<div style="width: 400px; margin-left: auto; margin-right: auto">
+    <img src="reciprocalDnD.png" alt="A reciprocal DnD interaction"/>
+</div>
+
+To use this interaction, you must first declare a spring (the line which will show the user the original position that
+the element will go back to) and a handle (the widget that the user interacts with to cancel the DnD).
+The following example is a good starting point for web applications:
+
+```html
+  <svg width="100%" height="100%" style="z-index:999; position: absolute; pointer-events: none; top: 0; left: 0; bottom: 0; right: 0;">
+    <line #spring style="stroke:rgb(100,100,100); stroke-width:2; z-index:999;"></line>
+    <circle #handle class="ioDwellSpring" cx="30" cy="30" r="15" style="fill:rgb(255,0,0); z-index:999; pointer-events: all;"></circle>
+  </svg>
+```
+
+Note that the handle element has the "ioDwellSpring" class to signal to Interacto that it can cancel a DnD.
+
+Then, create references to the spring and handle elements and pass them to the Reciprocal DnD binder:
+
+```ts
+reciprocalDndBinder(true, handle, spring)
+    .on(...)
+    .toProduce(...)
+    .bind();
+```
+
+The spring widget will now automatically appear after one second if the user stops moving during the interaction.
+As long as the command passed in toProduce() is undoable, releasing the mouse over the widget will cancel the command.
+
+### Touch DnD and Reciprocal Touch DnD
+
+The Touch DnD is a special kind of DnD that is realised using a touchscreen instead of a mouse.
+The user touches the screen, moves the contact point and then releases it to complete the interaction.
+A Touch DnD can also be cancelled, but only by using an element with the "ioDwellSpring" class.
+
+```ts
+touchDndBinder(true)
+    ...
+    .bind();
+```
+
+Just like DnD, Touch DnD has a reciprocal variant that allows you to quickly create a cancellable interaction
+using this mechanism.
+
+```ts
+reciprocalTouchDndBinder(true, handle, spring)
+    .on(...)
+    .toProduce(...)
+    .bind();
+```
+
+### Drag-lock
 
 The drag-lock interaction is a special kind of DnD.
 A drag-lock starts by double-clicking on a source node.

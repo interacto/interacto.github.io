@@ -49,10 +49,12 @@ The `then` routine (and many others) takes an argument called `c`.
 ## Cumulative routines
 
 Most routines that take arguments, like routines accepting
-an arrow function (`when`, `first`, `then`, `cancel`...) or the `on` routine are cumulative.
-This means that if you use the same routine several times in one binder, their effects will be combined.
-For example, in the case of routines accepting arrow functions, the respective the arrow functions will all
-be called when the routine is called, in the order they were declared.
+an arrow function (`when`, `first`...) or the `on` routine are cumulative.
+This means that if you use the same routine several times in one binder, the binder will combine their
+effects.
+
+For example, let's say a routine takes an arrow function as argument and you use it several times.
+When the routine is called, the binder will call all the arrow functions you defined, in the order they were declared.
 
 ```ts
 longTouchBinder(2000)
@@ -63,15 +65,19 @@ longTouchBinder(2000)
     .bind();
 ```
 
-In this example, 'A', then 'B', are displayed in the console when the interaction starts.
+In this example, 'A', then 'B', are displayed in the console when the interaction starts and the `first` routine is called.
 
 If a routine is not cumulative, then the last use of the routine in the binder will override any previous ones.
 However, most non-cumulative routines like `stopImmediatePropagation` or `preventDefault` don't accept any arguments, so
 using the same routine several times in this case will have no visible impact.
 
+The complete list of cumulative routines is
+`on`, `onDynamic`, `when`, `first`, `then`, `cancel`, `endOrCancel`, `end`, `catch`, `ifHadEffects`, `ifHadNoEffect`,
+`ifCannotExecute`, `log`.
+
 ## Where to begin: selecting a user interaction
 
-When configuring a binding, the first routine allows you to decide which user interaction to use.
+When configuring a binding, the initial routine allows you to decide which user interaction to use.
 See the [interaction documentation](./interactions) for details.
 
 

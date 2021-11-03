@@ -1,6 +1,6 @@
 ---
 title: "Front-end testing"
-index: 6
+index: 7
 ---
 
 (Coming soon)

@@ -21,7 +21,7 @@ const Header = () => (
                 <a href={'https://github.com/interacto'}>
                     <StaticImage src={'../images/github.png'} alt={'Github logo'} layout={'constrained'} height={30} loading={"eager"}/>
                 </a>
-                <a href={'https://interacto.github.io/ts-docs/index.html'}>
+                <a href={'ts-docs/index.html'}>
                     <StaticImage src={'../images/tsdoc.png'} alt={'TSDoc logo'} layout={'constrained'} height={25}/>
                 </a>
                 <a href={"https://www.npmjs.com/package/interacto"}>

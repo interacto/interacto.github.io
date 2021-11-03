@@ -1,6 +1,6 @@
 ---
 title: "IRL Examples"
-index: 7
+index: 8
 ---
 
 ## With TypeScript

@@ -5,15 +5,19 @@ index: 2
 
 ## Main concepts
 
-Interacto aims to make the lives of UI developers easier by defining a new,
-higher level user interaction processing model.
-Instead of combining low-level UI events, using Interacto you directly manipulate **user interactions** such
-as a Drag-and-Drop or a double click, without worrying about how to implement them.
-This lets you focus on what's really important: the actions, or **commands**, triggered by these interactions.
-The core concept of Interacto is **to turn user interaction executions into (undoable) commands.**
+Interacto aims to make the job of UI developers easier by defining a novel input event processing model, namely the **user interaction processing model**.
+Instead of combining low-level UI events, using Interacto you directly manipulate **user interactions** such as a Drag-and-Drop or a double click, without worrying about how to implement them.
+This lets developers focused on what does really matter: **how user interactions are turned into user actions (we call commands).**
 
 But how do we link together a user interaction and a command to execute?
-In order to do this, Interacto introduces a new tool: **bindings**.
+Using Interacto's **bindings**.
+
+The next examples briefly illustrate Interacto and its *bindings* [using Angular/TypeScript code](./angular-integration).
+
+
+
+
+
 
 ### Bindings and binders
 

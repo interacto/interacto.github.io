@@ -27,9 +27,9 @@ export class AppModule { }
 
 You have two ways to define Interacto bindings in Angular components: by defining bindings in `ngAfterViewInit`, or using dedicated Interacto directive in the HTML.
 
-## Interacto Angular directives
+## Using Interacto Angular directives
 
-Example:
+The first way to use Interacto in Angular is to use dedicated Interacto directives. This follows the way developers usually program Angular apps. Let's start with a small example:
 ```html
 <button [ioWidget]="binderClickEndGame">End game</button>
 ```
@@ -42,7 +42,7 @@ public binderClickEndGame(binder: PartialButtonBinder): void {
     .bind();
 }
 ```
-This method `binderClickEndGame` takes as argument a pre-configured Interacto binding that you can complete in the method. The user interaction is already selected as `ioWidget` looks at the HTML tag to identify the user interaction (here a button pressure). The widget on which the binding will operate is also selected: it is the HTML tag. So there is no need to use the routines `usingInteraction` and `on` in `binderClickEndGame`.
+This method `binderClickEndGame` takes as argument a partly-configured Interacto binding that you can complete in the method. The user interaction is already selected as `ioWidget` looks at the HTML tag to identify the user interaction (here a button pressure). The widget on which the binding will operate is also selected: it is the HTML tag. So there is no need to use the routines `usingInteraction` and `on` in `binderClickEndGame`.
 
 The type of the parameter of methods associated to directives depends on the selected Interacto directive. For example with `ioWidget` on a button, it is the type returned by `buttonBinder()`, so `PartialButtonBinder`. Please, refer to [the return type of the methods of `Bindings` methods](ts-docs/classes/bindings.html).
 
@@ -77,4 +77,38 @@ By default, putting an Interacto directive on an HTML element uses the `on` rout
 ```html
 <div ioOnDynamic [ioClick]="eltSelect" />
 ```
+
+## Using `ngAfterViewInit`
+
+You can define Interacto bindings without using Interacto directives. To do so your component needs to implements `AfterViewInit` to implement the Angular life-cycle method `ngAfterViewInit`: after the HTML view being initialized, you can handle its widgets to define Interacto bindings.
+
+Second, you have to inject a `Bindings` instance in your component constructor, like this:
+```ts
+public constructor(public undoHistory: UndoHistory, public bindings: Bindings) {
+}
+```
+
+Note that you can also inject the local undo history (you can already access through your `Bindings` instance).
+
+Then, you can define Interacto bindings in the `ngAfterViewInit` method like this:
+
+```ts
+ngAfterViewInit(): void {
+  this.bindings.reciprocalDndBinder(this.appComponent.handle, this.appComponent.spring)
+    .onDynamic(this.canvas)
+    .toProduce(i => new MoveRect(i.src.target as SVGRectElement))
+    ...
+    .bind();
+}
+```
+
+Note that this way you need to have your widgets (here `this.canvas`) as attributes of your component class. This is the drawback of this may of defining bindings (quite verbose):
+
+```ts
+  @ViewChild('canvas')
+  private canvas: ElementRef<SVGSVGElement>;
+```
+
+
+
 

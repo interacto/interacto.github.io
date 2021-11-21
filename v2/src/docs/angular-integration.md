@@ -47,23 +47,37 @@ This method `binderClickEndGame` takes as argument a partly-configured Interacto
 The type of the parameter of methods associated to directives depends on the selected Interacto directive. For example with `ioWidget` on a button, it is the type returned by `buttonBinder()`, so `PartialButtonBinder`. Please, refer to [the return type of the methods of `Bindings` methods](ts-docs/classes/bindings.html).
 
 Here is an exhaustive list of the directives. All Interacto directives start with the `io` prefix:
-- `ioWidget`. To use on HTML widgets, namely: button (use `buttonBinder()`), input (for radio and checkbox, use `checkboxBinder()`; for color `colorPickerBinder()`; for date `dateBinder()`; for number `spinnerBinder()`; for text `textInputBinder()`) , select (uses `comboBoxBinder()`), anchor (uses `hyperlinkBinder()`), textarea (uses `textInputBinder()`).
-- `ioClick` for click
-- `ioClicks` for clicks
-- `ioDoubleClick` for double click
-- `ioDnd` for DnD
-- `ioDragLock` for drag lock
-- `ioKeyPress` for key pressure
-- `ioKeysPress` for keys pressures
-- `ioKeyType` for key typing
-- `ioKeysType` for keys typing
-- `ioLongPress` for long pressure
-- `ioLongTouch` for long touch 
-- `ioMultiTouch` for multi-touches
-- `ioPan` for panning
-- `ioPress` for mouse pressure
-- `ioSwipe` for swiping
-- `ioTap` for tapping
+- `ioClick` for click. `PartialPointBinder` as parameter type.
+- `ioClicks` for clicks. `PartialPointsBinder` as parameter type.
+- `ioDoubleClick` for double click. `PartialUpdatePointBinder` as parameter type.
+- `ioDnd` for DnD. `PartialPointSrcTgtBinder` as parameter type.
+- `ioDragLock` for drag lock. `PartialPointSrcTgtBinder` as parameter type.
+- `ioLongMousedown` for long pressure. `PartialUpdatePointBinder` as parameter type.
+- `ioMousedown` for mouse pressure. `PartialPointBinder` as parameter type.
+- `ioMouseup` for mouse release. `PartialPointBinder` as parameter type.
+- `ioMouseenter` for mouse entering. `PartialPointBinder` as parameter type.
+- `ioMouseleave` for mouse leaving. `PartialPointBinder` as parameter type.
+- `ioKeydown` for key pressure. `PartialKeyBinder` as parameter type.
+- `ioMousemove` for mouse move. `PartialPointBinder` as parameter type.
+- `ioKeyup` for key release. `PartialKeyBinder` as parameter type.
+- `ioKeysdown` for keys pressures. `PartialKeysBinder` as parameter type.
+- `ioKeyType` for key typing. `PartialKeyBinder` as parameter type.
+- `ioKeysType` for keys typing. `PartialKeysBinder` as parameter type.
+- `ioLongTouch` for long touch. `PartialTouchBinder` as parameter type.
+- `ioMultiTouch` for multi-touches. `PartialMultiTouchBinder` as parameter type.
+- `ioPan` for panning. `PartialMultiTouchBinder` as parameter type.
+- `ioSwipe` for swiping. `PartialMultiTouchBinder` as parameter type.
+- `ioTap` for tapping. `PartialTapBinder` as parameter type.
+- `ioWidget`. To use on HTML widgets, namely: 
+  - button (uses `buttonBinder()`, `PartialButtonBinder`)
+  - input radio and checkbox (uses `checkboxBinder()`, `PartialInputBinder`)
+  - input color  (uses `colorPickerBinder()`, `PartialInputBinder`)
+  - input date (uses `dateBinder()`, `PartialInputBinder`);
+  - input number (uses `spinnerBinder()`, `PartialSpinnerBinder`);
+  - input text (uses `textInputBinder()`, `PartialTextInputBinder`)
+  - select (uses `comboBoxBinder()`, `PartialSelectBinder`)
+  - anchor (uses `hyperlinkBinder()`, `PartialAnchorBinder`)
+  - textarea (uses `textInputBinder()`, `PartialTextInputBinder`)
 
 For undo and redo, you can add `ioUndo` and `ioRedo` on specific buttons. These two buttons will then work with the undo history of Interacto. For example:
 
@@ -77,6 +91,33 @@ By default, putting an Interacto directive on an HTML element uses the `on` rout
 ```html
 <div ioOnDynamic [ioClick]="eltSelect" />
 ```
+
+Interacto also provides the HTML element that produced the user interaction as second parameter of the method that creates the Interacto binder, for example:
+
+```ts
+public binderClickEndGame(binder: PartialButtonBinder, elt: HTMLDivElement): void {
+  binder
+    .toProduce(() => new AnonCmd(() => this.showEndGame()))
+    .bind();
+}
+```
+
+If you want to pass extra parameters, you have to do as follows:
+
+```html
+<div [ioClick] (ioBinder)="binderClickLoad($event, m)" *ngFor="let m of myList">
+  Play with '{{m}}'
+</div>
+```
+
+In this code the directive has no value, so that it creates a partial binder and triggers and event with it. This event corresponds to the `ioBinder` parameter in which the method `binderClickLoad` is called with as parameters the created partial binder (the event `$event`) and additional parameters (here `m`). `binderClickLoad` looks like:
+
+```ts
+public binderClickLoad(binder: PartialPointBinder, name: string): void {
+  ...
+}
+```
+
 
 ## Using `ngAfterViewInit`
 

@@ -24,7 +24,7 @@ class CollapsibleMenu extends  React.Component {
         return (
             <div className={container}>
                 <div className={header}>
-                    <button onClick={()=> navigate(this.props.headerUrl)}>
+                    <button onClick={(e)=> {navigate(this.props.headerUrl); this.handleClick(e);}}>
                         {this.props.title}
                     </button>
 

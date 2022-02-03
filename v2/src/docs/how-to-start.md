@@ -12,11 +12,43 @@ This lets developers focused on what does really matter: **how user interactions
 But how do we link together a user interaction and a command to execute?
 Using Interacto's **bindings**.
 
-The next examples briefly illustrate Interacto and its *bindings* [using Angular/TypeScript code](./angular-integration).
+The next examples briefly illustrate Interacto and its *bindings*.
 
 
+If you use Interacto within Angular, [look at the dedicated page](./angular-integration).
 
 
+### The `Bindings` object
+
+A `Bindings` object is the entry point for developers to use Interacto.
+Using Angular, you should not create a `Bindings` instance, [but use dependency injection](./angular-integration).
+Anyway, in an illustrative purpose, creating a `Bindings` instance requires an undo/redo history.
+For example, the two following methods we provide for Angular DI, create their own `Bindings` instance [by selecting a specific undo/redo algorithm](./commands#undoredo-algorithms).
+
+```ts
+/**
+ * Provides a Bindings object that uses a standard linear undo history
+ */
+export function bindingsLinearUndoHistoryFactory(): Bindings<UndoHistory> {
+  return new BindingsImpl(new UndoHistoryImpl());
+}
+
+/**
+ * Provides a Bindings object that uses a standard linear undo history
+ */
+export function bindingsTreeUndoHistoryFactory(): Bindings<TreeUndoHistory> {
+  return new BindingsImpl(new TreeUndoHistoryImpl());
+}
+```
+
+Using such an instance, developers can define Interacto bindings as illustrated in the following sections.
+By convention, in the whole documentation we will consider a class attribute `bindings` of type `Bindings` for defining bindings. For example:
+
+```ts
+this.bindings.buttonBinder()
+    ...
+    .bind();
+```
 
 
 ### Bindings and binders

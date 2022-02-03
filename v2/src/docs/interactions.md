@@ -15,12 +15,10 @@ For each user interaction provided by Interacto, a dedicated routine exists.
 For example, `clickBinder()` to use a click interaction for the binding:
 
 ```ts
-bindings.clickBinder()
+this.bindings.clickBinder()
   ...
   .bind();
 ```
-
-`bindings` is a `Bindings` object.
 
 here are all the user interaction routines with pointers to their documentation (the documentation details the parameters of these routines). 
 

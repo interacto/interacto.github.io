@@ -32,6 +32,47 @@ export class AppModule { }
 This will enable dependency injection and import all the interacto features.
 
 
+## Using Interacto in Angular components
+
+By default, you can inject as constructor parameters Interacto objects into your Angular components: the undo/redo history; and [the `Bindings` object](../ts-docs/classes/Bindings.html) (that permits the creation of Interacto bindings or access various Interacto data). For example:
+
+```ts
+public constructor(private undoHistory: UndoHistory, private bindings: Bindings) {
+}
+```
+
+## Setting a specific undo/redo algorithm for an Angular component
+
+By default, your app share a single undo/redo linear history created by the Interacto module.
+In some cases, you may want to a specific undo/redo history for one Angular component, or you may use another undo algorithm.
+
+Currently we provide two algorithms: the linear one (the standard we use by default); the tree algorithm (that keeps traces of undo/redo branches).
+The following example uses the function `interactoTreeUndoProviders` we provide for injecting Interacto in this component to use the tree algorithm.
+
+```ts
+@Component({
+  selector: 'app-tab-shapes',
+  templateUrl: './tab-shapes.component.html',
+  styleUrls: ['./tab-shapes.component.css'],
+  // This provider is optional. It permits to have a specific Bindings and thus a specific UndoHistory for this
+  // component. Useful when you want to have different undo histories.
+  providers: [interactoTreeUndoProviders()]
+})
+export class TabShapesComponent { ... }
+```
+
+Similarly, to use a specific yet linear history for one component, you can use the method `interactoProviders` as depicted as follows:
+
+```ts
+@Component({
+  selector: 'app-tab-text',
+  templateUrl: './tab-text.component.html',
+  styleUrls: ['./tab-text.component.css'],
+  providers: [interactoProviders()]
+})
+export class TabTextComponent { ... }
+```
+
 
 ## Defining Interacto bindings
 
@@ -195,13 +236,7 @@ The `xxxBinder` directive is proper to the user interaction you use. Here are al
 
 You can define Interacto bindings without using Interacto directives. To do so your component needs to implements `AfterViewInit` to implement the Angular life-cycle method `ngAfterViewInit`: after the HTML view being initialized, you can handle its widgets to define Interacto bindings.
 
-Second, you have to inject a `Bindings` instance in your component constructor, like this:
-```ts
-public constructor(public undoHistory: UndoHistory, public bindings: Bindings) {
-}
-```
-
-Note that you can also inject the local undo history (you can already access through your `Bindings` instance).
+Second, you have to [inject a `Bindings` instance in your component constructor](./angular-integration/#using-interacto-in-angular-components).
 
 Then, you can define Interacto bindings in the `ngAfterViewInit` method like this:
 
@@ -222,6 +257,24 @@ Note that this way you need to have your widgets (here `this.canvas`) as attribu
   private canvas: ElementRef<SVGSVGElement>;
 ```
 
+## Showing the undo/redo history
 
+In the documentation we illustrate the undo/redo features using two buttons `undo` and `redo`.
+For Angular, we also provide Angular components for displaying in a more sophisticated way the undo/redo history.
+This component is called `io-linear-history`, and you can use it like in the following example:
+
+```html
+<as-split direction="horizontal">
+  <as-split-area #h [size]="20">
+    <io-linear-history></io-linear-history>
+  </as-split-area>
+
+  <as-split-area [size]="80">
+    <textarea [ioTextarea]="writeTextBinder" rows="16" cols="100" value="{{dataService.txt}}"></textarea>
+    <br/>
+    <button [ioButton]="clearClicksBinder" class="clearTextButton">Clear text</button>
+  </as-split-area>
+</as-split>
+```
 
 

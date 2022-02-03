@@ -9,9 +9,17 @@ index: 1
 provides tools for using Interacto within Angular projects,
 in particular Angular directives and DI.
 
+For Angular 13:
+
 ```bash
-npm install interacto
-npm install interacto-angular
+npm install interacto interacto-angular
+```
+
+
+For Angular 12:
+
+```bash
+npm install interacto@7.0 interacto-angular@7.12
 ```
 
 ## Vue.js/React and npm

@@ -5,7 +5,7 @@
   "description": "Interacto doc",
   "author": "Rémi Daniel",
   "keywords": [
-    "gatsby"
+    "interacto", "gatsby"
   ],
   "scripts": {
     "develop": "gatsby develop",
@@ -18,22 +18,23 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
-    "gatsby": "^3.6.2",
-    "gatsby-plugin-image": "^1.6.0",
-    "gatsby-plugin-layout": "^2.7.0",
-    "gatsby-plugin-mdx": "^2.6.0",
-    "gatsby-plugin-sharp": "^3.6.0",
-    "gatsby-remark-autolink-headers": "^4.4.0",
-    "gatsby-remark-images": "^5.3.0",
-    "gatsby-remark-prismjs": "^5.3.0",
-    "gatsby-source-filesystem": "^3.6.0",
-    "gatsby-transformer-sharp": "^3.6.0",
-    "prismjs": "^1.23.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "gatsby": "^4.6.1",
+    "gatsby-plugin-image": "^2.6.0",
+    "gatsby-plugin-mdx": "^3.6.0",
+    "gatsby-plugin-image": "^2.6.0",
+    "gatsby-plugin-layout": "^3.6.0",
+    "gatsby-plugin-sharp": "^4.6.0",
+    "gatsby-remark-autolink-headers": "^5.6.0",
+    "gatsby-remark-images": "^6.6.0",
+    "gatsby-remark-prismjs": "^6.6.0",
+    "gatsby-source-filesystem": "^4.6.0",
+    "gatsby-transformer-sharp": "^4.6.0",
+    "prismjs": "^1.26.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "gh-pages": "^3.2.1",
-    "postcss": "^8.3.0"
+    "gh-pages": "^3.2.3",
+    "postcss": "^8.4.6"
   }
 }

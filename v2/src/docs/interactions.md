@@ -3,29 +3,43 @@ title: "Interactions"
 index: 3
 ---
 
-Interacto supports a wide range of user interactions, whether they involve keyboard, mouse or touchscreen events.
+Interacto supports a wide range of user interactions, based on keyboard, mouse or touchscreen.
+
 
 ## How to select a user interaction
+
+If you use Angular, [please refer to the Angular documentation](./angular-integration#defining-interacto-bindings): we provide dedicated Angular features for selecting user interactions.
 
 The first [routine](./routines) in the binding configuration process allows you to select a user interaction.
 For each user interaction provided by Interacto, a dedicated routine exists.
 For example, `clickBinder()` to use a click interaction for the binding:
 
 ```ts
-clickBinder()
+bindings.clickBinder()
   ...
   .bind();
 ```
 
-Routines for standard user interactions:
-`buttonBinder, checkboxBinder, colorPickerBinder, comboBoxBinder, spinnerBinder, dateBinder,
-hyperlinkBinder, textInputBinder`.
+`bindings` is a `Bindings` object.
 
-Routines for standard mouse-based interactions:
-`clickBinder, dbleClickBinder, pressBinder, scrollBinder, dndBinder, dragLockBinder,
-mousemoveBinder, mouseoutBinder, mouseoverBinder`.
+here are all the user interaction routines with pointers to their documentation (the documentation details the parameters of these routines). 
 
-Some of these routines will be covered in the following sections.
+Routines are for mouse interactions:
+[`clickBinder`](../ts-docs/classes/Bindings.html#clickBinder), [`clicksBinder`](../../ts-docs/classes/Bindings.html#clicksBinder), [`dbleClickBinder`](ts-docs/classes/Bindings.html#dbleClickBinder), [`dndBinder`](../ts-docs/classes/Bindings.html#dndBinder), [`dragLockBinder`](../ts-docs/classes/Bindings.html#dragLockBinder), [`longMouseDownBinder`](../ts-docs/classes/Bindings.html#longMouseDownBinder), [`mouseDownBinder`](../ts-docs/classes/Bindings.html#mouseDownBinder), [`mouseEnterBinder`](../ts-docs/classes/Bindings.html#mouseEnterBinder), [`mouseLeaveBinder`](../ts-docs/classes/Bindings.html#mouseLeaveBinder), [`mouseMoveBinder`](../ts-docs/classes/Bindings.html#mouseMoveBinder), [`mouseUpBinder`](../ts-docs/classes/Bindings.html#mouseUpBinder), [`reciprocalDndBinder`](../ts-docs/classes/Bindings.html#reciprocalDndBinder), [`scrollBinder`](../ts-docs/classes/Bindings.html#scrollBinder), [`wheelBinder`](../ts-docs/classes/Bindings.html#wheelBinder)
+
+For standard widgets:
+[`buttonBinder`](../ts-docs/classes/Bindings.html#buttonBinder), [`checkboxBinder`](../ts-docs/classes/Bindings.html#checkboxBinder), [`colorPickerBinder`](../ts-docs/classes/Bindings.html#colorPickerBinder), [`comboBoxBinder`](../ts-docs/classes/Bindings.html#comboBoxBinder), [`dateBinder`](../ts-docs/classes/Bindings.html#dateBinder), [`hyperlinkBinder`](../ts-docs/classes/Bindings.html#hyperlinkBinder), [`spinnerBinder`](../ts-docs/classes/Bindings.html#spinnerBinder), [`textInputBinder`](../ts-docs/classes/Bindings.html#textInputBinder)
+
+
+For keyboard interactions:
+[`keyDownBinder`](../ts-docs/classes/Bindings.html#keyDownBinder), [`keyTypeBinder`](../ts-docs/classes/Bindings.html#keyTypeBinder), [`keyUpBinder`](../ts-docs/classes/Bindings.html#keyUpBinder), [`keysDownBinder`](../ts-docs/classes/Bindings.html#keysDownBinder), [`keysTypeBinder`](../ts-docs/classes/Bindings.html#keysTypeBinder)
+
+For touch interactions:
+[`longTouchBinder`](../ts-docs/classes/Bindings.html#longTouchBinder), [`multiTouchBinder`](../ts-docs/classes/Bindings.html#multiTouchBinder), [`panBinder`](../ts-docs/classes/Bindings.html#panBinder), [`pinchBinder`](../ts-docs/classes/Bindings.html#pinchBinder), [`reciprocalTouchDnDBinder`](../ts-docs/classes/Bindings.html#reciprocalTouchDnDBinder), [`touchDnDBinder`](../ts-docs/classes/Bindings.html#touchDnDBinder), [`swipeBinder`](../ts-docs/classes/Bindings.html#swipeBinder), [`tapBinder`](../ts-docs/classes/Bindings.html#tapBinder)
+
+
+We will detail these routines in the next sections.
+
 
 ## Press, click, double-click
 

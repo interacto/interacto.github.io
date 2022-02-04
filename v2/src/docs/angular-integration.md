@@ -34,16 +34,20 @@ This will enable dependency injection and import all the interacto features.
 
 ## Using Interacto in Angular components
 
-By default, you can inject as constructor parameters Interacto objects into your Angular components: the undo/redo history; and [the `Bindings` object](../ts-docs/classes/Bindings.html) (that permits the creation of Interacto bindings or access various Interacto data). For example:
+You can inject as constructor parameters Interacto objects into your Angular components: the undo/redo history; and [the `Bindings` object](./how-to-start#the-bindings-object) (the factory that permits the creation of Interacto bindings or access various Interacto data). For example:
 
 ```ts
 public constructor(private undoHistory: UndoHistory, private bindings: Bindings) {
 }
 ```
 
+These injections are optional. We will see in this section that you can develop your Angular app with it.
+
+
+
 ## Setting a specific undo/redo algorithm for an Angular component
 
-By default, your app share a single undo/redo linear history created by the Interacto module.
+By default, your app shares the same undo/redo linear history to all the Angular components a single.
 In some cases, you may want to a specific undo/redo history for one Angular component, or you may use another undo algorithm.
 
 Currently we provide two algorithms: the linear one (the standard we use by default); the tree algorithm (that keeps traces of undo/redo branches).
@@ -61,7 +65,7 @@ The following example uses the function `interactoTreeUndoProviders` we provide 
 export class TabShapesComponent { ... }
 ```
 
-Similarly, to use a specific yet linear history for one component, you can use the method `interactoProviders` as depicted as follows:
+Similarly, to use a specific yet linear history for one component, you can use the method `interactoProviders`:
 
 ```ts
 @Component({
@@ -181,7 +185,7 @@ By default, putting an Interacto directive on an HTML element uses the `on` rout
 
 
 
-#### Passing extra parameters to the binder methods
+#### Passing extra parameters
 
 
 If you want to pass extra parameters, you have to do as follows:
@@ -192,7 +196,7 @@ If you want to pass extra parameters, you have to do as follows:
 </div>
 ```
 
-In this code the directive has no value, so that it creates a partial binder and triggers and event with it. This event corresponds to the `clickBinder` directive that calls the method `binderClickLoad` with as parameters the created partial binder (the event `$event`) and additional parameters (here `m`). `binderClickLoad` looks like:
+In this code the directive `ioClick` has no value, so that it creates a partial binder and triggers an Angular event with it. This event corresponds to the `clickBinder` directive that calls the method `binderClickLoad` with as parameters the created partial binder (the event `$event`) and additional parameters (here `m`). `binderClickLoad` now looks like:
 
 ```ts
 // in your component
@@ -232,7 +236,7 @@ The `xxxBinder` directive is proper to the user interaction you use. Here are al
 
 
 
-## Using `ngAfterViewInit`
+### Using `ngAfterViewInit`
 
 You can define Interacto bindings without using Interacto directives. To do so your component needs to implements `AfterViewInit` to implement the Angular life-cycle method `ngAfterViewInit`: after the HTML view being initialized, you can handle its widgets to define Interacto bindings.
 

@@ -37,3 +37,10 @@ If you use Interacto for academic purposes, please cite:
 }
 
 ```
+
+## Report Issues
+
+If you find issues in the documentation, or if something is not clear, please [fill a bug report on Github](https://github.com/interacto/interacto.github.io/issues).
+
+
+If you find issues in Interacto, or if you have suggestions, please [fill a bug report on Github](https://github.com/interacto/interacto-ts/issues). 

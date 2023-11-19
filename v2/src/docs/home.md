@@ -16,6 +16,33 @@ Vue.js or React.
 
 If you are discovering Interacto, make sure to take a look at our [Getting Started](./how-to-start) page.
 
+Try it [On StackBlitz](https://stackblitz.com/edit/interacto-angular-example-1?file=src%2Fapp%2Ftab-text%2Ftab-text.component.ts)
+
+
+## Small Example
+
+```ts
+// This code follows the builder pattern: a developer configures how
+// the executions of a selected user interaction will produce (undoable) user commands.
+
+// The developer selects the long touch, with a timeout delay of 2000 ms
+this.bindings.longTouchBinder(2000)
+  // On each long touch of 2000 ms, a command DeleteElt will be executed. This command is
+  // undoable and Interacto automatically records it in the current command history for undo/redo.
+  .toProduce(i => new DeleteElt(this.canvas.nativeElement, i.currentTarget as SVGElement))
+  // The long touch will operate on all the children (current and future) of 'canvas'
+  .onDynamic(this.canvas)
+  // Constraining the execution of the command:
+  // nothing done is the targeted element is not the canvas (and not a children of it)
+  .when(i => i.target !== this.canvas.nativeElement)
+  // Prevents the context menu from popping up
+  .preventDefault()
+  // This code follows the builder pattern. So, 'bind' is the 'build' equivalent method
+  // as it creates as output the corresponding Interacto binding.
+  .bind();
+```
+
+
 
 ## Academic usage
 
@@ -43,4 +70,4 @@ If you use Interacto for academic purposes, please cite:
 If you find issues in the documentation, or if something is not clear, please [fill a bug report on Github](https://github.com/interacto/interacto.github.io/issues).
 
 
-If you find issues in Interacto, or if you have suggestions, please [fill a bug report on Github](https://github.com/interacto/interacto-ts/issues). 
+If you find issues in Interacto, or if you have suggestions, please [fill a bug report on Github](https://github.com/interacto/interacto-ts/issues).

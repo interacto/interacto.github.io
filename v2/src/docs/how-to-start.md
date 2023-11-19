@@ -3,6 +3,11 @@ title: "Getting started"
 index: 2
 ---
 
+## Training
+
+The best way to learn is to exercise. You can clone this Github repository (https://github.com/interacto/interacto-training) that contains exercises to learn Interacto while developing an Angular app (Angular skills required)
+
+
 ## Main concepts
 
 Interacto aims to make the job of UI developers easier by defining a novel input event processing model, namely the **user interaction processing model**.
@@ -91,15 +96,15 @@ You can take a look at the different types of interactions Interacto offers [her
 
 ### Commands
 
-When users perform a given interaction, they expect to be able to perform actions on your app, like displaying a page or deleting a to-do list item. 
-With Interacto, developers encapsulate those actions inside **UI command classes**. 
+When users perform a given interaction, they expect to be able to perform actions on your app, like displaying a page or deleting a to-do list item.
+With Interacto, developers encapsulate those actions inside **UI command classes**.
 This has two main benefits:
 - It separates the command logic from the UI setup and description code,
 making code clearer, more easily reusable and more testable.
 - It gives support of undo/redo features to allow developers to make their commands undoable.
 
 Here is how we can turn our previous Hello World example into a proper Interacto app.
-Instead of producing an anonymous command, we created our own command class and instantiate it within the `toProduce` routine. 
+Instead of producing an anonymous command, we created our own command class and instantiate it within the `toProduce` routine.
 Of course there is not much point to this exercise given the simplicity of the command to execute here, but commands quickly become one of the main building blocks of your application as its complexity increases.
 
 ```ts
@@ -145,7 +150,7 @@ In this example, we want to build an Angular application with a text field that 
 Those edits should be undoable, so we will have to use Interacto's undo/redo features.
 
 First, make sure to have Interacto properly [installed](./installation) in your project.
-Then let us add some basic HTML elements (a text field and a button), and set up a binding that will clear the text field when the button is pressed. 
+Then let us add some basic HTML elements (a text field and a button), and set up a binding that will clear the text field when the button is pressed.
 We will also create a service to store the current state of the text inside the field.
 
 ```html
@@ -176,12 +181,12 @@ Note that for Angular [there is another way of defining bindings, more in the ph
 export class AppComponent implements AfterViewInit {
     @ViewChild('clearButton')
     public clearButton: HTMLButtonElement;
-    
+
     public constructor(public dataService: DataService, private bindings: Bindings) {
         // With Interacto-angular you can inject in components a Bindings single-instance that allows you
         // to define binders and bindings in ngAfterViewInit.
     }
-    
+
     public ngAfterViewInit(): void {
         this.bindings.buttonBinder()
             .on(this.clearButton)
@@ -193,7 +198,7 @@ export class AppComponent implements AfterViewInit {
 
 
 
-As you can see here, you can define bindings in the `ngAfterViewInit` method of the component. 
+As you can see here, you can define bindings in the `ngAfterViewInit` method of the component.
 This is because Interacto needs references to DOM elements to register our binding with the buttons and widgets that the user interacts with.
 References to DOM elements are created in various ways depending on which library you are working with, but here is how we can reference our button in Angular:
 
@@ -223,32 +228,32 @@ This binding operates on the `clearButton` element to produce a `ClearText` comm
 It manages the registration and un-registration of the button, the creation of the command on each button click, and takes care of adding the command to a special undo/redo registry once it has been executed.
 Thanks to this, our application automatically keeps a trace of the user's actions and we'll be able to easily add undo/redo features later on.
 
-Ok, it is now time to write our `ClearText` command class. 
+Ok, it is now time to write our `ClearText` command class.
 We usually place command classes inside a folder named "commands" to keep everything tidy, but you can use whatever system works for you.
 
 ```ts
 // commands/ClearText.ts
 export class ClearText extends UndoableCommand {
     private memento: string;
-    
+
     public constructor(private text: TextData) { }
-    
+
     protected override createMemento(): void {
         this.memento = this.text.text;
     }
-    
+
     protected execution(): void {
         this.text.text = '';
     }
-    
+
     public undo(): void {
         this.text.text = this.memento;
     }
-    
+
     public redo(): void {
         this.execution();
     }
-    
+
     public override getUndoName(): string {
         return 'Clear text';
     }
@@ -263,7 +268,7 @@ There are a few methods you need to implement to make an undoable command work:
 - `execution()` is universal to all commands and specifies the action that should be executed by the command. Here, we set the text from our DataService service to an empty string to empty the text field.
 - `createMemento()` indicates to the binding how to take a "snapshot" of our application's state (create a memento) before executing the command, to be able to restore it if the user asks to undo the command.
 Here, we only need to save the initial text content of the text field inside our `memento` property, since the command does not affect anything else.
-- `undo()` specifies what the application should do when the user asks to undo the command. 
+- `undo()` specifies what the application should do when the user asks to undo the command.
 In our example, we use the `memento` property that still contains our old text to restore the DataService's text property to its previous value.
 - `redo()` specifies what the application should do when the user asks to redo the command. A redo operation is
 simply executing a command again after undoing it, so we can just reuse our `execution()` method.

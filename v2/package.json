@@ -13,7 +13,7 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "deploy": "gatsby build && rm -Rf ../docs/ && mkdir ../docs && cp -r public/* ../docs"
+    "deploy": "gatsby clean && gatsby build && rm -Rf ../docs/ && mkdir ../docs && cp -r public/* ../docs && cp -r ../ts-docs/ ../docs"
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.6.22",

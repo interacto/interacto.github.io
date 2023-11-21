@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "private": true,
   "description": "Interacto doc",
-  "author": "Rémi Daniel",
+  "author": "Arnaud Blouin",
+  "contributors": [
+    "Rémi Daniel"
+  ],
   "keywords": [
-    "interacto", "gatsby"
+    "interacto"
   ],
   "scripts": {
     "develop": "gatsby develop",

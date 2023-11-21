@@ -42,7 +42,7 @@ this.bindings.longTouchBinder(2000)
   .bind();
 ```
 
-See the [gallery]() for real examples.
+See the [gallery](irl-examples) for real examples.
 
 ## Academic usage
 

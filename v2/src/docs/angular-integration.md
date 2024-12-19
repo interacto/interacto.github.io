@@ -97,7 +97,7 @@ In the HTML file of a component, we define a button that has the `ioButton` dire
 
 ```ts
 // In your component
-public binderClickEndGame(binder: PartialButtonBinder): void {
+public binderClickEndGame(binder: PartialButtonTypedBinder): void {
   binder
     .toProduceAnon(() => this.showEndGame())
     .bind();
@@ -110,7 +110,7 @@ Interacto also provides the HTML element that produced the user interaction as s
 
 ```ts
 // in your component
-public binderClickEndGame(binder: PartialButtonBinder, button: HTMLButtonElement): void {
+public binderClickEndGame(binder: PartialButtonTypedBinder, button: HTMLButtonElement): void {
   binder
     .toProduce(() => new AnonCmd(() => this.showEndGame()))
     .bind();
@@ -123,45 +123,45 @@ The parameter's type of the directive method depends on the selected Interacto d
 Here is an exhaustive list of the directives. All Interacto directives start with the `io` prefix.
 
 Mouse interactions:
-- `ioClick` for click. `PartialPointBinder` as parameter type
-- `ioClicks` for clicks. `PartialPointsBinder` as parameter type
-- `ioDoubleClick` for double click. `PartialUpdatePointBinder` as parameter type
-- `ioDnd` for DnD. `PartialPointSrcTgtBinder` as parameter type
-- `ioDragLock` for drag lock. `PartialPointSrcTgtBinder` as parameter type
-- `ioMousemove` for mouse move. `PartialPointBinder` as parameter type
-- `ioLongMousedown` for long pressure. `PartialUpdatePointBinder` as parameter type
-- `ioMousedown` for mouse pressure. `PartialPointBinder` as parameter type
-- `ioMouseup` for mouse release. `PartialPointBinder` as parameter type
-- `ioMouseenter` for mouse entering. `PartialPointBinder` as parameter type
-- `ioMouseleave` for mouse leaving. `PartialPointBinder` as parameter type
+- `ioClick` for click. `PartialPointTypedBinder` as parameter type
+- `ioClicks` for clicks. `PartialPointsTypedBinder` as parameter type
+- `ioDoubleClick` for double click. `PartialUpdatePointTypedBinder` as parameter type
+- `ioDnd` for DnD. `PartialPointSrcTgtTypedBinder` as parameter type
+- `ioDragLock` for drag lock. `PartialPointSrcTgtTypedBinder` as parameter type
+- `ioMousemove` for mouse move. `PartialPointTypedBinder` as parameter type
+- `ioLongMousedown` for long pressure. `PartialUpdatePointTypedBinder` as parameter type
+- `ioMousedown` for mouse pressure. `PartialPointTypedBinder` as parameter type
+- `ioMouseup` for mouse release. `PartialPointTypedBinder` as parameter type
+- `ioMouseenter` for mouse entering. `PartialPointTypedBinder` as parameter type
+- `ioMouseleave` for mouse leaving. `PartialPointTypedBinder` as parameter type
 
 
 Touch interactions:
-- `ioLongTouch` for long touch. `PartialTouchBinder` as parameter type
-- `ioMultiTouch` for multi-touches. `PartialMultiTouchBinder` as parameter type
-- `ioPan` for panning. `PartialMultiTouchBinder` as parameter type
-- `ioSwipe` for swiping. `PartialMultiTouchBinder` as parameter type
-- `ioTap` for tapping. `PartialTapBinder` as parameter type
+- `ioLongTouch` for long touch. `PartialTouchTypedBinder` as parameter type
+- `ioMultiTouch` for multi-touches. `PartialMultiTouchTypedBinder` as parameter type
+- `ioPan` for panning. `PartialMultiTouchTypedBinder` as parameter type
+- `ioSwipe` for swiping. `PartialMultiTouchTypedBinder` as parameter type
+- `ioTap` for tapping. `PartialTapTypedBinder` as parameter type
 
 Keyboard interactions:
-- `ioKeydown` for key pressure. `PartialKeyBinder` as parameter type
-- `ioKeyup` for key release. `PartialKeyBinder` as parameter type
-- `ioKeysdown` for keys pressures. `PartialKeysBinder` as parameter type
-- `ioKeyType` for key typing. `PartialKeyBinder` as parameter type
-- `ioKeysType` for keys typing. `PartialKeysBinder` as parameter type
+- `ioKeydown` for key pressure. `PartialKeyTypedBinder` as parameter type
+- `ioKeyup` for key release. `PartialKeyTypedBinder` as parameter type
+- `ioKeysdown` for keys pressures. `PartialKeysTypedBinder` as parameter type
+- `ioKeyType` for key typing. `PartialKeyTypedBinder` as parameter type
+- `ioKeysType` for keys typing. `PartialKeysTypedBinder` as parameter type
 
 
 Widget interactions:
-- `ioButton` for buttons (uses `buttonBinder()`, `PartialButtonBinder`)
-- `ioAnchor` for `a` tags (uses `hyperlinkBinder()`, `PartialAnchorBinder`)
-- `ioSelect` for `select` tags (uses `comboBoxBinder()`, `PartialSelectBinder`)
-- `ioTextarea` for `textarea` tags (uses `textInputBinder()`, `PartialTextInputBinder`)
-- `ioTextinput` for text `input` tags (uses `textInputBinder()`, `PartialTextInputBinder`)
+- `ioButton` for buttons (uses `buttonBinder()`, `PartialButtonTypedBinder`)
+- `ioAnchor` for `a` tags (uses `hyperlinkBinder()`, `PartialAnchorTypedBinder`)
+- `ioSelect` for `select` tags (uses `comboBoxBinder()`, `PartialSelectTypedBinder`)
+- `ioTextarea` for `textarea` tags (uses `textInputBinder()`, `PartialTextInputTypedBinder`)
+- `ioTextinput` for text `input` tags (uses `textInputBinder()`, `PartialTextInputTypedBinder`)
 - `ioInput` for the following input types:
-  - input radio and checkbox (uses `checkboxBinder()`, `PartialInputBinder`)
-  - input color  (uses `colorPickerBinder()`, `PartialInputBinder`)
-  - input date (uses `dateBinder()`, `PartialInputBinder`);
-  - input number (uses `spinnerBinder()`, `PartialSpinnerBinder`);
+  - input radio and checkbox (uses `checkboxBinder()`, `PartialInputTypedBinder`)
+  - input color  (uses `colorPickerBinder()`, `PartialInputTypedBinder`)
+  - input date (uses `dateBinder()`, `PartialInputTypedBinder`);
+  - input number (uses `spinnerBinder()`, `PartialSpinnerTypedBinder`);
 
 
 
@@ -200,7 +200,7 @@ In this code the directive `ioClick` has no value, so that it creates a partial 
 
 ```ts
 // in your component
-public binderClickLoad(binder: PartialPointBinder, name: string): void {
+public binderClickLoad(binder: PartialPointTypedBinder, name: string): void {
   ...
 }
 ```
